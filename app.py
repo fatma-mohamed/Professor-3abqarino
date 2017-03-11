@@ -33,7 +33,7 @@ def requestUserName(req):
     data = originalRequest.get("data")
     sender = data.get("sender")
     id = sender.get("id")
-    access_token = "EAAakZAfZC3c7YBAK2XvtLEnE8JMJ5PrIXra7CYubA7wguEqItfCRdzHoGL63ltNCXtuNbLmU4fJgz8kSAcKvinpJVXsWEPaQAcR39KGoWjiJvVsLyZAvxl76ut7fpWZArZCN3O0zes2heBhQ7E08oZCHbWCusxUAUPRQvDypNdSAZDZD"
+    access_token = "EAAOSFv52vZAYBAFnqlPlZAsGuUdVGrrjaktAkZAbBoFZAFEWhPIM0rqL8BSXCPPfjjipakdjZCNWZCPVOWUcZBEiFAhfSNPZBbNY3ExCZAw9bzdnpWic0ZCwdUwCS43hwZCNRVZBZCMsZAWD5EnHbqPR4YeBvK41ZCcDBUTNKlUUqmSpCYmwwZDZD"
     rs = urllib.urlopen("https://graph.facebook.com/v2.6/" + id + "?fields=first_name&access_token="+ access_token)
     name = json.load(rs).get("first_name")
     print(name)
@@ -42,7 +42,7 @@ def requestUserName(req):
         "displayText": "",
         "data": {},
         "contextOut": [],
-        "source": "apiai-test",
+        "source": "prof-3abqarino",
         "followupEvent": {"name":"c_event","data":{"user":name}}
     }
 
