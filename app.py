@@ -43,7 +43,7 @@ def requestUserName(req):
         "data": {},
         "contextOut": [],
         "source": "prof-3abqarino",
-        "followupEvent": {"name":"c_event","data":{"user":name}}
+        "followupEvent": {"name":"name_event","data":{"user":name}}
     }
 
 def makeWebhookResult(req):
