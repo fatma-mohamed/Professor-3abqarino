@@ -1,0 +1,6 @@
+##DATABASE
+DATABASE_NAME = ""
+USER = ""
+PASSWORD = ""
+HOST = ""
+PORT = ""
