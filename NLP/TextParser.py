@@ -1,2 +1,2 @@
 class TextParser:
-    dummy_data = "dummy_data"
+    input_data = ""
