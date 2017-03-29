@@ -29,8 +29,8 @@ class Database:
     def __createTables__(self, conn):
         print "--------in Database createTables--------"
         self.createTable_Answers(self.connection)
-        self.createTable_Answers_Keywords(conn)
         self.createTable_Keywords(conn)
+        self.createTable_Answers_Keywords(conn)
         self.createTable_Synonyms(conn)
         self.createTable_Questions_Answers(conn)
         print "--------Tables created successfully--------"
@@ -68,7 +68,21 @@ class Database:
         print "--------Table Answers deleted successfully--------"
 
 
-    def createTable_Answers_Keywords(conn):
+    def createTable_Keywords(self, conn):
+        cur = conn.cursor()
+        cur.execute('''CREATE TABLE "Keywords"
+               (ID SERIAL PRIMARY KEY NOT NULL,
+               Keyword TEXT NOT NULL,
+               Category TEXT NOT NULL);''')
+        print "--------Table Keywords created successfully--------"
+
+    def deleteTable_Keywords(conn):
+        cur = conn.cursor()
+        cur.execute('''DROP TABLE "Keywords";''')
+        print "--------Table Keywords deleted successfully--------"
+
+
+    def createTable_Answers_Keywords(self, conn):
         cur = conn.cursor()
         cur.execute('''CREATE TABLE "Answers_Keywords"
                (Answer_ID INT NOT NULL,
@@ -82,20 +96,6 @@ class Database:
         cur = conn.cursor()
         cur.execute('''DROP TABLE "Answers_Keywords";''')
         print "--------Table Answers_Keywords deleted successfully--------"
-
-
-    def createTable_Keywords(conn):
-        cur = conn.cursor()
-        cur.execute('''CREATE TABLE "Keywords"
-               (ID SERIAL PRIMARY KEY NOT NULL,
-               Keyword TEXT NOT NULL,
-               Category TEXT NOT NULL);''')
-        print "--------Table Keywords created successfully--------"
-
-    def deleteTable_Keywords(conn):
-        cur = conn.cursor()
-        cur.execute('''DROP TABLE "Keywords";''')
-        print "--------Table Keywords deleted successfully--------"
 
 
     def createTable_Synonyms(conn):
