@@ -29,19 +29,19 @@
       <file leaf-file-name="Database.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Data/Database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="95" column="27" lean-forward="true" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+            <state relative-caret-position="1446">
+              <caret line="127" column="44" lean-forward="false" selection-start-line="127" selection-start-column="44" selection-end-line="127" selection-end-column="44" />
               <folding>
-                <marker date="1490827247402" expanded="true" signature="1697:1804" ph="CREATE TABLE... Answers" />
-                <marker date="1490827247402" expanded="true" signature="2028:2048" ph="DROP TABLE &quot;... " />
-                <marker date="1490827247402" expanded="true" signature="2216:2364" ph="CREATE TABLE... Keywords" />
-                <marker date="1490827247402" expanded="true" signature="2526:2547" ph="DROP TABLE &quot;... " />
-                <marker date="1490827247402" expanded="true" signature="2724:3018" ph="CREATE TABLE... Answers_Keywords" />
-                <marker date="1490827247402" expanded="true" signature="3196:3225" ph="DROP TABLE &quot;... " />
-                <marker date="1490827247402" expanded="true" signature="3396:3602" ph="CREATE TABLE... Synonyms" />
-                <marker date="1490827247402" expanded="true" signature="3764:3785" ph="DROP TABLE &quot;... " />
-                <marker date="1490827247402" expanded="true" signature="3957:4239" ph="CREATE TABLE... Questions_Answers" />
-                <marker date="1490827247402" expanded="true" signature="4420:4450" ph="DROP TABLE &quot;... " />
+                <marker date="1490827535814" expanded="true" signature="1686:1793" ph="CREATE TABLE... Answers" />
+                <marker date="1490827535814" expanded="true" signature="2023:2043" ph="DROP TABLE &quot;... " />
+                <marker date="1490827535814" expanded="true" signature="2211:2359" ph="CREATE TABLE... Keywords" />
+                <marker date="1490827535814" expanded="true" signature="2527:2548" ph="DROP TABLE &quot;... " />
+                <marker date="1490827535814" expanded="true" signature="2725:3019" ph="CREATE TABLE... Answers_Keywords" />
+                <marker date="1490827535814" expanded="true" signature="3203:3232" ph="DROP TABLE &quot;... " />
+                <marker date="1490827535814" expanded="true" signature="3409:3615" ph="CREATE TABLE... Synonyms" />
+                <marker date="1490827535814" expanded="true" signature="3783:3804" ph="DROP TABLE &quot;... " />
+                <marker date="1490827535814" expanded="true" signature="3982:4264" ph="CREATE TABLE... Questions_Answers" />
+                <marker date="1490827535814" expanded="true" signature="4451:4481" ph="DROP TABLE &quot;... " />
               </folding>
             </state>
           </provider>
@@ -375,16 +375,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1490827247402" expanded="true" signature="1697:1804" ph="CREATE TABLE... Answers" />
-            <marker date="1490827247402" expanded="true" signature="2028:2048" ph="DROP TABLE &quot;... " />
-            <marker date="1490827247402" expanded="true" signature="2216:2364" ph="CREATE TABLE... Keywords" />
-            <marker date="1490827247402" expanded="true" signature="2526:2547" ph="DROP TABLE &quot;... " />
-            <marker date="1490827247402" expanded="true" signature="2724:3018" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1490827247402" expanded="true" signature="3196:3225" ph="DROP TABLE &quot;... " />
-            <marker date="1490827247402" expanded="true" signature="3396:3602" ph="CREATE TABLE... Synonyms" />
-            <marker date="1490827247402" expanded="true" signature="3764:3785" ph="DROP TABLE &quot;... " />
-            <marker date="1490827247402" expanded="true" signature="3957:4239" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1490827247402" expanded="true" signature="4420:4450" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="1686:1793" ph="CREATE TABLE... Answers" />
+            <marker date="1490827535814" expanded="true" signature="2023:2043" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="2211:2359" ph="CREATE TABLE... Keywords" />
+            <marker date="1490827535814" expanded="true" signature="2527:2548" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="2725:3019" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1490827535814" expanded="true" signature="3203:3232" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="3409:3615" ph="CREATE TABLE... Synonyms" />
+            <marker date="1490827535814" expanded="true" signature="3783:3804" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="3982:4264" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1490827535814" expanded="true" signature="4451:4481" ph="DROP TABLE &quot;... " />
           </folding>
         </state>
       </provider>
@@ -404,16 +404,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1490827247402" expanded="true" signature="1697:1804" ph="CREATE TABLE... Answers" />
-            <marker date="1490827247402" expanded="true" signature="2028:2048" ph="DROP TABLE &quot;... " />
-            <marker date="1490827247402" expanded="true" signature="2216:2364" ph="CREATE TABLE... Keywords" />
-            <marker date="1490827247402" expanded="true" signature="2526:2547" ph="DROP TABLE &quot;... " />
-            <marker date="1490827247402" expanded="true" signature="2724:3018" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1490827247402" expanded="true" signature="3196:3225" ph="DROP TABLE &quot;... " />
-            <marker date="1490827247402" expanded="true" signature="3396:3602" ph="CREATE TABLE... Synonyms" />
-            <marker date="1490827247402" expanded="true" signature="3764:3785" ph="DROP TABLE &quot;... " />
-            <marker date="1490827247402" expanded="true" signature="3957:4239" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1490827247402" expanded="true" signature="4420:4450" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="1686:1793" ph="CREATE TABLE... Answers" />
+            <marker date="1490827535814" expanded="true" signature="2023:2043" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="2211:2359" ph="CREATE TABLE... Keywords" />
+            <marker date="1490827535814" expanded="true" signature="2527:2548" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="2725:3019" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1490827535814" expanded="true" signature="3203:3232" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="3409:3615" ph="CREATE TABLE... Synonyms" />
+            <marker date="1490827535814" expanded="true" signature="3783:3804" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="3982:4264" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1490827535814" expanded="true" signature="4451:4481" ph="DROP TABLE &quot;... " />
           </folding>
         </state>
       </provider>
@@ -438,19 +438,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/Database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="95" column="27" lean-forward="true" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+        <state relative-caret-position="1446">
+          <caret line="127" column="44" lean-forward="false" selection-start-line="127" selection-start-column="44" selection-end-line="127" selection-end-column="44" />
           <folding>
-            <marker date="1490827247402" expanded="true" signature="1697:1804" ph="CREATE TABLE... Answers" />
-            <marker date="1490827247402" expanded="true" signature="2028:2048" ph="DROP TABLE &quot;... " />
-            <marker date="1490827247402" expanded="true" signature="2216:2364" ph="CREATE TABLE... Keywords" />
-            <marker date="1490827247402" expanded="true" signature="2526:2547" ph="DROP TABLE &quot;... " />
-            <marker date="1490827247402" expanded="true" signature="2724:3018" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1490827247402" expanded="true" signature="3196:3225" ph="DROP TABLE &quot;... " />
-            <marker date="1490827247402" expanded="true" signature="3396:3602" ph="CREATE TABLE... Synonyms" />
-            <marker date="1490827247402" expanded="true" signature="3764:3785" ph="DROP TABLE &quot;... " />
-            <marker date="1490827247402" expanded="true" signature="3957:4239" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1490827247402" expanded="true" signature="4420:4450" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="1686:1793" ph="CREATE TABLE... Answers" />
+            <marker date="1490827535814" expanded="true" signature="2023:2043" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="2211:2359" ph="CREATE TABLE... Keywords" />
+            <marker date="1490827535814" expanded="true" signature="2527:2548" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="2725:3019" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1490827535814" expanded="true" signature="3203:3232" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="3409:3615" ph="CREATE TABLE... Synonyms" />
+            <marker date="1490827535814" expanded="true" signature="3783:3804" ph="DROP TABLE &quot;... " />
+            <marker date="1490827535814" expanded="true" signature="3982:4264" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1490827535814" expanded="true" signature="4451:4481" ph="DROP TABLE &quot;... " />
           </folding>
         </state>
       </provider>
