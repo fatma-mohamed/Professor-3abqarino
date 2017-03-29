@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from Data import Database
+import Data.Database
 
 import urllib
 import json
