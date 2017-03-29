@@ -14,7 +14,7 @@ class Database:
     __db_cur = None
 
     def __init(self):
-        print "in Database __init"
+        print "--------in Database __init--------"
         urlparse.uses_netloc.append("postgres")
         url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
@@ -26,7 +26,7 @@ class Database:
         port=url.port
         )
 
-        print "Opened database successfully"
+        print "--------Opened database successfully--------"
 
     def __createTables__(self, conn):
         self.createTable_Answers(conn)
@@ -34,7 +34,7 @@ class Database:
         self.createTable_Keywords(conn)
         self.createTable_Synonyms(conn)
         self.createTable_Questions_Answers(conn)
-        print "Tables created successfully"
+        print "--------Tables created successfully--------"
 
         return {
         "speech" : "Created tables",
@@ -50,7 +50,7 @@ class Database:
         self.deleteTable_Synonyms(conn)
         self.deleteTable_Keywords(conn)
         self.deleteTable_Questions_Answers(conn)
-        print "Tables deleted successfully"
+        print "--------Tables deleted successfully--------"
 
 
     def createTable_Answers(conn):
@@ -58,12 +58,12 @@ class Database:
         cur.execute('''CREATE TABLE "Answers"
                (ID SERIAL PRIMARY KEY NOT NULL,
                Answer TEXT NOT NULL);''')
-        print "Table Answers created successfully"
+        print "--------Table Answers created successfully--------"
 
     def deleteTable_Answers(conn):
         cur = conn.cursor()
         cur.execute('''DROP TABLE "Answers";''')
-        print "Table Answers deleted successfully"
+        print "--------Table Answers deleted successfully--------"
 
         
     def createTable_Answers_Keywords(conn):
@@ -74,12 +74,12 @@ class Database:
                FOREIGN KEY (Answer_ID) REFERENCES "Answers"(ID),
                FOREIGN KEY (Keyword_ID) REFERENCES "Keywords"(ID),
                PRIMARY KEY(Answer_ID, Keyword_ID));''')
-        print "Table Answers_Keywords created successfully"
+        print "--------Table Answers_Keywords created successfully--------"
 
     def deleteTable_Answers_Keywords(conn):
         cur = conn.cursor()
         cur.execute('''DROP TABLE "Answers_Keywords";''')
-        print "Table Answers_Keywords deleted successfully"
+        print "--------Table Answers_Keywords deleted successfully--------"
 
         
     def createTable_Keywords(conn):
@@ -88,12 +88,12 @@ class Database:
                (ID SERIAL PRIMARY KEY NOT NULL,
                Keyword TEXT NOT NULL,
                Category TEXT NOT NULL);''')
-        print "Table Keywords created successfully"
+        print "--------Table Keywords created successfully--------"
 
     def deleteTable_Keywords(conn):
         cur = conn.cursor()
         cur.execute('''DROP TABLE "Keywords";''')
-        print "Table Keywords deleted successfully"
+        print "--------Table Keywords deleted successfully--------"
 
         
     def createTable_Synonyms(conn):
@@ -103,12 +103,12 @@ class Database:
                Synonym TEXT NOT NULL,
                FOREIGN KEY (Key_ID) REFERENCES "Keywords"(ID),
                PRIMARY KEY(Key_ID, Synonym));''')
-        print "Table Synonyms created successfully"
+        print "--------Table Synonyms created successfully--------"
 
     def deleteTable_Synonyms(conn):
         cur = conn.cursor()
         cur.execute('''DROP TABLE "Synonyms";''')
-        print "Table Synonyms deleted successfully"
+        print "--------Table Synonyms deleted successfully--------"
 
 
     def createTable_Questions_Answers(conn):
@@ -120,10 +120,10 @@ class Database:
                Answer_2 TEXT NOT NULL,
                Answer_3 TEXT NOT NULL,
                Correct_AnswerID INT NOT NULL);''')
-        print "Table Questions_Answers created successfully"
+        print "--------Table Questions_Answers created successfully--------"
 
 
     def deleteTable_Questions_Answers(conn):
         cur = conn.cursor()
         cur.execute('''DROP TABLE "Questions_Answers";''')
-        print "Table Questions_Answers deleted successfully"
+        print "--------Table Questions_Answers deleted successfully--------"
