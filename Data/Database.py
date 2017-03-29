@@ -13,7 +13,7 @@ class Database:
     __db_connection = None
     __db_cur  = None
 
-    def __init(self, co):
+    def __init__(self, co):
         print "--------in Database __init--------"
         urlparse.uses_netloc.append("postgres")
         url = urlparse.urlparse(os.environ["DATABASE_URL"])
