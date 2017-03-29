@@ -53,7 +53,7 @@ class Database:
         print "--------Tables deleted successfully--------"
 
 
-    def createTable_Answers(conn):
+    def createTable_Answers(self, conn):
         print "--------in Database createTable_Answers--------"
         cur = conn.cursor()
         cur.execute('''CREATE TABLE "Answers"
