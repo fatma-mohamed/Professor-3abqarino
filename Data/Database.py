@@ -11,14 +11,14 @@ import urlparse
 
 class Database:
     __db_connection = None
-    __db_cur = None
+    __db_cur  = None
 
-    def __init(self):
+    def __init(self, co):
         print "--------in Database __init--------"
         urlparse.uses_netloc.append("postgres")
         url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
-        self.__db_connection = psycopg2.connect(
+        self.c = psycopg2.connect(
         database=url.path[1:],
         user=url.username,
         password=url.password,
@@ -65,7 +65,7 @@ class Database:
         cur.execute('''DROP TABLE "Answers";''')
         print "--------Table Answers deleted successfully--------"
 
-        
+
     def createTable_Answers_Keywords(conn):
         cur = conn.cursor()
         cur.execute('''CREATE TABLE "Answers_Keywords"
@@ -81,7 +81,7 @@ class Database:
         cur.execute('''DROP TABLE "Answers_Keywords";''')
         print "--------Table Answers_Keywords deleted successfully--------"
 
-        
+
     def createTable_Keywords(conn):
         cur = conn.cursor()
         cur.execute('''CREATE TABLE "Keywords"
@@ -95,7 +95,7 @@ class Database:
         cur.execute('''DROP TABLE "Keywords";''')
         print "--------Table Keywords deleted successfully--------"
 
-        
+
     def createTable_Synonyms(conn):
         cur = conn.cursor()
         cur.execute('''CREATE TABLE "Synonyms"
