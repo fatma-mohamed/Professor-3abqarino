@@ -51,7 +51,7 @@ def makeWebhookResult(req):
         return requestUserName(req)
     elif req.get("result").get("action") == "createDB":
         conn = Database.Database()
-        return Database.__createTables__(conn)
+        return Database.__createTables__(conn.c)
     else:
         return {}
 
