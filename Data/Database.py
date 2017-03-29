@@ -13,8 +13,8 @@ class Database:
     __db_connection = None
     __db_cur  = None
 
-    def __init__(self, co):
-        print "--------in Database __init--------"
+    def __init__(self):
+        print "--------in Database __init__--------"
         urlparse.uses_netloc.append("postgres")
         url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
@@ -29,6 +29,8 @@ class Database:
         print "--------Opened database successfully--------"
 
     def __createTables__(self, conn):
+        print "--------in Database createTables--------"
+        ###conn = self.c
         self.createTable_Answers(conn)
         self.createTable_Answers_Keywords(conn)
         self.createTable_Keywords(conn)
