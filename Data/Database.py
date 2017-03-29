@@ -14,6 +14,7 @@ class Database:
     __db_cur = None
 
     def __init(self):
+        print "in Database __init"
         urlparse.uses_netloc.append("postgres")
         url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
@@ -26,7 +27,6 @@ class Database:
         )
 
         print "Opened database successfully"
-        return self.__db_connection
 
     def __createTables__(self, conn):
         self.createTable_Answers(conn)
