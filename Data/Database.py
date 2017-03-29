@@ -10,15 +10,13 @@ import psycopg2
 import urlparse
 
 class Database:
-    __db_connection = None
-    __db_cur  = None
 
     def __init__(self):
         print "--------in Database __init__--------"
         urlparse.uses_netloc.append("postgres")
         url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
-        self.c = psycopg2.connect(
+        self.connection = psycopg2.connect(
         database=url.path[1:],
         user=url.username,
         password=url.password,
@@ -30,8 +28,7 @@ class Database:
 
     def __createTables__(self, conn):
         print "--------in Database createTables--------"
-        ###conn = self.c
-        self.createTable_Answers(conn)
+        self.createTable_Answers(self.connection)
         self.createTable_Answers_Keywords(conn)
         self.createTable_Keywords(conn)
         self.createTable_Synonyms(conn)
@@ -47,6 +44,7 @@ class Database:
         }
 
     def __deleteTables__(self, conn):
+        print "--------in Database deleteTables--------"
         self.deleteTable_Answers_Keywords(conn)
         self.deleteTable_Answers(conn)
         self.deleteTable_Synonyms(conn)
@@ -56,6 +54,7 @@ class Database:
 
 
     def createTable_Answers(conn):
+        print "--------in Database createTable_Answers--------"
         cur = conn.cursor()
         cur.execute('''CREATE TABLE "Answers"
                (ID SERIAL PRIMARY KEY NOT NULL,
@@ -63,6 +62,7 @@ class Database:
         print "--------Table Answers created successfully--------"
 
     def deleteTable_Answers(conn):
+        print "--------in Database deleteTable_Answers--------"
         cur = conn.cursor()
         cur.execute('''DROP TABLE "Answers";''')
         print "--------Table Answers deleted successfully--------"
