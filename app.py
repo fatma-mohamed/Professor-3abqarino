@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import Data.Database
+from Data import Database
 
 import urllib
 import json
@@ -50,8 +50,8 @@ def makeWebhookResult(req):
     if req.get("result").get("action") == "request_user_name":
         return requestUserName(req)
     elif req.get("result").get("action") == "createDB":
-        conn = Data.Database()
-        return Data.Database.__createTables__(conn)
+        conn = Database()
+        return Database.__createTables__(conn)
     else:
         return {}
 
