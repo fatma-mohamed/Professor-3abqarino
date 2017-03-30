@@ -29,7 +29,7 @@ class Database:
 
     def __createTables__(self, conn):
         print "--------in Database createTables--------"
-        self.createTable_Answers(self.connection)
+        self.createTable_Answers(conn)
         self.createTable_Keywords(conn)
         self.createTable_Answers_Keywords(conn)
         self.createTable_Synonyms(conn)
@@ -57,7 +57,7 @@ class Database:
     def createTable_Answers(self, conn):
         print "--------in Database createTable_Answers--------"
         cur = conn.cursor()
-        cur.execute('''CREATE TABLE "Answers"
+        cur.execute('''CREATE TABLE Answers
                (ID SERIAL PRIMARY KEY NOT NULL,
                Answer TEXT NOT NULL);''')
         print "--------Table Answers created successfully--------"
