@@ -25,6 +25,7 @@ class Database:
         )
 
         print "--------Opened database successfully--------"
+        self.createTable_Answers(self.connection)
 
     def __createTables__(self, conn):
         print "--------in Database createTables--------"
