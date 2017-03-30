@@ -10,7 +10,8 @@ import psycopg2
 import urlparse
 
 class Database:
-
+    connection = None
+    
     def __init__(self):
         print "--------in Database __init__--------"
         urlparse.uses_netloc.append("postgres")
