@@ -25,6 +25,7 @@ class Database:
         port=url.port
         )
 
+        self.createTable_Answers(self.connection)
         print "--------Opened database successfully--------"
 
     def __createTables__(self, conn):
@@ -70,6 +71,7 @@ class Database:
 
 
     def createTable_Keywords(self, conn):
+        print "--------in Database createTable_Keywords--------"
         cur = conn.cursor()
         cur.execute('''CREATE TABLE "Keywords"
                (ID SERIAL PRIMARY KEY NOT NULL,
@@ -78,12 +80,14 @@ class Database:
         print "--------Table Keywords created successfully--------"
 
     def deleteTable_Keywords(self, conn):
+        print "--------in Database deleteTable_Keywords--------"
         cur = conn.cursor()
         cur.execute('''DROP TABLE "Keywords";''')
         print "--------Table Keywords deleted successfully--------"
 
 
     def createTable_Answers_Keywords(self, conn):
+        print "--------in Database createTable_Answers_Keywords--------"
         cur = conn.cursor()
         cur.execute('''CREATE TABLE "Answers_Keywords"
                (Answer_ID INT NOT NULL,
@@ -94,12 +98,14 @@ class Database:
         print "--------Table Answers_Keywords created successfully--------"
 
     def deleteTable_Answers_Keywords(self, conn):
+        print "--------in Database deleteTable_Answers_Keywords--------"
         cur = conn.cursor()
         cur.execute('''DROP TABLE "Answers_Keywords";''')
         print "--------Table Answers_Keywords deleted successfully--------"
 
 
     def createTable_Synonyms(self, conn):
+        print "--------in Database createTable_Synonyms--------"
         cur = conn.cursor()
         cur.execute('''CREATE TABLE "Synonyms"
                (Key_ID INT NOT NULL,
@@ -109,12 +115,14 @@ class Database:
         print "--------Table Synonyms created successfully--------"
 
     def deleteTable_Synonyms(self, conn):
+        print "--------in Database deleteTable_Synonyms--------"
         cur = conn.cursor()
         cur.execute('''DROP TABLE "Synonyms";''')
         print "--------Table Synonyms deleted successfully--------"
 
 
     def createTable_Questions_Answers(self, conn):
+        print "--------in Database createTable_Questions_Answers--------"
         cur = conn.cursor()
         cur.execute('''CREATE TABLE "Questions_Answers"
                (ID SERIAL PRIMARY KEY NOT NULL,
@@ -127,6 +135,7 @@ class Database:
 
 
     def deleteTable_Questions_Answers(self, conn):
+        print "--------in Database deleteTable_Questions_Answers--------"
         cur = conn.cursor()
         cur.execute('''DROP TABLE "Questions_Answers";''')
         print "--------Table Questions_Answers deleted successfully--------"
