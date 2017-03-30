@@ -29,7 +29,7 @@ class Database:
 
     def __createTables__(self, conn):
         print "--------in Database createTables--------"
-        self.createTable_Answers(conn)
+        self.createTable_Answers(self.connection)
         self.createTable_Keywords(conn)
         self.createTable_Answers_Keywords(conn)
         self.createTable_Synonyms(conn)
