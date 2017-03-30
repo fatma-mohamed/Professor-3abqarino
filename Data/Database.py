@@ -18,11 +18,11 @@ class Database:
         url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
         self.connection = psycopg2.connect(
-        database="d900nnad4hkqpu",
-        user="sblxwzvgymoeks",
-        password="8aa889eacf673d3cf3993f3233cde177b67c19b19d56612aa2887724f9036edc",
-        host="ec2-23-21-96-70.compute-1.amazonaws.com",
-        port="5432"
+        database=url.path[1:],
+        user=url.username,
+        password=url.password,
+        host=url.hostname,
+        port=url.port
         )
 
         self.createTable_Answers(self.connection)
@@ -30,7 +30,7 @@ class Database:
 
     def __createTables__(self, conn):
         print "--------in Database createTables--------"
-      ###  self.createTable_Answers(conn)
+     ###   self.createTable_Answers(conn)
         self.createTable_Keywords(conn)
         self.createTable_Answers_Keywords(conn)
         self.createTable_Synonyms(conn)
