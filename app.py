@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 from Data import Database
+from Data import Gamemode
 
 import urllib
 import json
@@ -52,6 +53,8 @@ def makeWebhookResult(req):
     elif req.get("result").get("action") == "createDB":
         conn = Database.Database()
         return conn.__createTables__()
+    elif req.get("result").get("action") == "request-game":
+        return Gamemode.getRandomQuestion()
     else:
         return {}
 
