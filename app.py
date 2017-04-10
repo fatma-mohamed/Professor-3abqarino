@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import Data
+from Data import Database
 
 import urllib
 import json
@@ -9,7 +9,6 @@ from flask import Flask
 from flask import request
 from flask import make_response
 from ResponseSelection import*
-
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -34,6 +33,9 @@ def webhook():
 def makeWebhookResult(req):
     if req.get("result").get("action") == "request_user_name":
         return responseSelector.requestUserName(req)
+    elif req.get("result").get("action") == "createDB":
+        conn = Database.Database()
+        return conn.__createTables__()
     else:
         return {}
 

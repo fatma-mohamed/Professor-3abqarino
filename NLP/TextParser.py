@@ -13,4 +13,3 @@ class TextParser:
             return filtered_words
 
         return extractKeywords(tokenize(input))
-
