@@ -1,5 +1,6 @@
+from Data import Database
+
 class DataPreprocessing:
-    dummy_data = "dummy_data"
 
     @staticmethod
     def __run__(db):

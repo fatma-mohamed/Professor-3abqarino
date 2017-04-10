@@ -1,2 +1,4 @@
+from nltk.tokenize import word_tokenize
+
 class TextParser:
-    input_data = ""
+    #dummy_data = "dummuy"
