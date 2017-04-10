@@ -1,3 +1,5 @@
+import psycopg2
+
 class DataAccess:
 
     def getRandomQuestion(self):
