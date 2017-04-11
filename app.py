@@ -13,12 +13,7 @@ from ResponseSelection import*
 
 # Flask app should start in global layout
 app = Flask(__name__)
-<<<<<<< HEAD
 responseSelector = ResponseSelector.ResponseSelector()
-=======
-responseSelector = ResponseSelector()
-
->>>>>>> feature#1
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
     req = request.get_json(silent=True, force=True)
@@ -36,14 +31,9 @@ def webhook():
 
 
 def makeWebhookResult(req):
-<<<<<<< HEAD
     action = req.get("result").get("action")
     if "request_user_name" in action:
         return responseSelector.requestUserName(req, action)
-=======
-    if req.get("result").get("action") == "request_user_name":
-        return responseSelector.requestUserName(req)
->>>>>>> feature#1
     else:
         return {}
 
