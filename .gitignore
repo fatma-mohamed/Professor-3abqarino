@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 .idea
 
 *.yml
 *.xml
+=======
+.idea/
+
+*.yml
+>>>>>>> feature#1
