@@ -2,4 +2,6 @@ from ResponseSelection import ResponseSelector
 
 
 class FeatureOneSelector(ResponseSelector):
-    dummy_data = "dummy"
+
+    def __init__(self):
+        dummy_data = "dummy"
