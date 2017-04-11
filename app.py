@@ -32,8 +32,9 @@ def webhook():
 
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") == "request_user_name":
-        return responseSelector.requestUserName(req)
+    action = req.get("result").get("action")
+    if "request_user_name" in action:
+        return responseSelector.requestUserName(req, action)
     else:
         return {}
 

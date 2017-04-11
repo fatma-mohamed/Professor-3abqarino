@@ -5,7 +5,7 @@ from Preprocessing import  config
 class ResponseSelector:
 
 
-    def requestUserName(req):
+    def requestUserName(req, action):
         originalRequest = req.get("originalRequest")
         data = originalRequest.get("data")
         sender = data.get("sender")
@@ -14,11 +14,16 @@ class ResponseSelector:
         rs = urllib.urlopen("https://graph.facebook.com/v2.6/" + id + "?fields=first_name&access_token=" + access_token)
         name = json.load(rs).get("first_name")
         print(name)
+        event_name = ""
+        if ("welcome" in action):
+            event_name = "FACEBOOK_WELCOME"
+        elif ("help" in action):
+            event_name = "help_name_event"
         return {
             "speech": "",
             "displayText": "",
             "data": {},
             "contextOut": [],
             "source": "prof-3abqarino",
-            "followupEvent": {"name": "name_event", "data": {"user": name}}
+            "followupEvent": {"name": event_name, "data": {"user": name}}
         }
