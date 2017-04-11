@@ -13,7 +13,7 @@ from ResponseSelection import*
 
 # Flask app should start in global layout
 app = Flask(__name__)
-responseSelector = ResponseSelector()
+responseSelector = ResponseSelector
 
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
