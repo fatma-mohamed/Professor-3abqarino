@@ -1,6 +1,6 @@
 import json
 import urllib
-from Preprocessing import  config
+from Preprocessing import config
 
 class ResponseSelector:
 
