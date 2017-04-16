@@ -9,6 +9,7 @@ from flask import Flask
 from flask import request
 from flask import make_response
 from ResponseSelection import*
+from Preprocessing import *
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -35,7 +36,9 @@ def makeWebhookResult(req):
         return responseSelector.requestUserName(req)
     elif req.get("result").get("action") == "createDB":
         conn = Database.Database()
-        return conn.__createTables__()
+        return DataPreprocessing.__run__(conn)
+    elif req.get("result").get("action") == "InsertQuestions_Answers":
+        return DataPreprocessing.insertQuestions_Answers()
     elif req.get("result").get("action") == "request-game":
         return FeatureTwoSelector.getRandomQuestion()
     else:
