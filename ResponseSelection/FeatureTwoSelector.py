@@ -5,5 +5,5 @@ class FeatureTwoSelector:
     
     def getRandomQuestion(self):
         row = DataAccess.DataAccess().getRandomQuestion()
-        print "------------" + row + "---------"
-        
+        print "------------" + row[1] + "---------"
+
