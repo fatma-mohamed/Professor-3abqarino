@@ -32,4 +32,4 @@ class DataAccess:
             print "CA_ID = ", CA_ID, "\n"
         print "--------Got question--------"
 
-        return rows
+        return rows[0]
