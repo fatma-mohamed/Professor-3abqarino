@@ -8,7 +8,7 @@ class DataAccess:
         conn.alterTable_Questions_Answers()
         cur = conn.connection.cursor()
         print "--------Adding question to DB--------"
-        cur.execute('''INSERT INTO "Questions_Answers" (Question, Answer_1, Answer_2, Answer_3, Correct_AnswerID) VALUES (''' + "'" + Question + "'" + ", " + "'" + A1 + "'" + ", " + "'" + A2 + "'" + ", " + "'" + A3 + "'" + ", " + (str)(CA_ID) + ")" + "ON CONFLICT (Question) DO NOTHING")
+        cur.execute('''INSERT INTO "Questions_Answers" (Question, Answer_1, Answer_2, Answer_3, Correct_AnswerID) VALUES (''' + "'" + Question + "'" + ", " + "'" + A1 + "'" + ", " + "'" + A2 + "'" + ", " + "'" + A3 + "'" + ", " + (str)(CA_ID) + ")" + "ON CONFLICT (uniqueQAs) DO NOTHING")
         conn.connection.commit()
         print "--------Rows inserted--------"
         return
