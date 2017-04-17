@@ -1,3 +1,5 @@
+from Data import Database
+
 import psycopg2
 
 class DataAccess:

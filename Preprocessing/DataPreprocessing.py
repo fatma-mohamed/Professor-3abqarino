@@ -1,9 +1,6 @@
 from Data import *
 
 class DataPreprocessing:
-    def __init__(self):
-        return
-
     @staticmethod
     def __run__(self, db):
         db.__createTables__()
