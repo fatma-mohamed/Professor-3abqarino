@@ -8,7 +8,7 @@ import os
 from flask import Flask
 from flask import request
 from flask import make_response
-from ResponseSelection import * 
+from ResponseSelection import ResponseSelector, FeatureTwoSelector
 from Preprocessing import *
 
 # Flask app should start in global layout
