@@ -125,7 +125,8 @@ class Database:
                Answer_1 TEXT NOT NULL,
                Answer_2 TEXT NOT NULL,
                Answer_3 TEXT NOT NULL,
-               Correct_AnswerID INT NOT NULL);''')
+               Correct_AnswerID INT NOT NULL
+               CONSTRAINT uniqueQAs UNIQUE (Question, Answer_1, Answer_2, Answer_3, Coorect_AnswerID));''')
         print ("--------Table Questions_Answers created successfully--------")
 
 
@@ -134,3 +135,9 @@ class Database:
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE "Questions_Answers";''')
         print("--------Table Questions_Answers deleted successfully--------")
+
+    def alterTable_Questions_Answers(self):
+        print("----------altering table--------")
+        self.deleteTable_Questions_Answers()
+        self.createTable_Questions_Answers()
+        print("---------finished altering----")
