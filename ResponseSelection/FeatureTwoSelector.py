@@ -1,7 +1,7 @@
 from ResponseSelection.ResponseSelector import ResponseSelector
 from Data import DataAccess
 
-class FeatureTwoSelector(ResponseSelector):
+class FeatureTwoSelector:
     
     def getRandomQuestion(self):
         row = DataAccess.getRandomQuestion()
