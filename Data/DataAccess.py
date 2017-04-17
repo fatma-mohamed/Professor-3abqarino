@@ -20,15 +20,15 @@ class DataAccess:
         rows = cur.fetchall()
 
         for row in rows:
-            Question = row[0]
+            Question = row[1]
             print "Question = ", Question, "\n"
-            A1 = row[1]
+            A1 = row[2]
             print "A1 = ", A1, "\n"
-            A2 = row[2]
+            A2 = row[3]
             print "A2 = ", A2, "\n"
-            A3 = row[3]
+            A3 = row[4]
             print "A3 = ", A3, "\n"
-            CA_ID = row[4]
+            CA_ID = row[5]
             print "CA_ID = ", CA_ID, "\n"
         print "--------Got question--------"
 
