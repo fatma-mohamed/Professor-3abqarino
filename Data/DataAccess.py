@@ -7,7 +7,7 @@ class DataAccess:
         conn = Database.Database()
         cur = conn.connection.cursor()
         print "--------Adding question to DB--------"
-        cur.execute('''INSERT INTO "Questions_Answers" (Question, Answer_1, Answer_2, Answer_3, Correct_AnswerID) VALUES (''' + "'" + Question + "'" + ", " + "'" + A1 + "'" + ", " + "'" + A2 + "'" + ", " + "'" + A3 + "'" + ", " + (str)(CA_ID) + ")" + "ON CONFLICT (Question) DO NOTHING")
+        cur.execute('''INSERT INTO "Questions_Answers" (Question, Answer_1, Answer_2, Answer_3, Correct_AnswerID) VALUES (''' + "'" + Question + "'" + ", " + "'" + A1 + "'" + ", " + "'" + A2 + "'" + ", " + "'" + A3 + "'" + ", " + (str)(CA_ID) + ")" + "ON CONFLICT (Question, Answer_1, Answer_2, Answer_3, Correct_AnswerID) DO NOTHING")
         conn.connection.commit()
         print "--------Rows inserted--------"
         return
