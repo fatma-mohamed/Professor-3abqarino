@@ -135,10 +135,3 @@ class Database:
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE "Questions_Answers";''')
         print("--------Table Questions_Answers deleted successfully--------")
-
-    def alterTable_Questions_Answers(self):
-        print("----------altering table--------")
-      ###  self.deleteTable_Questions_Answers()
-        self.createTable_Questions_Answers()
-        self.connection.commit()
-        print("---------finished altering----")
