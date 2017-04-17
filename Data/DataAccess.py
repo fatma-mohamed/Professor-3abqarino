@@ -14,7 +14,7 @@ class DataAccess:
         conn = Database.Database()
         cur = conn.cursor()
         print "--------Getting a random Question--------"
-        cur.execute("SELECT * FROM "Questions_Answers" OFFSET floor(random()*(SELECT COUNT(*) FROM "Questions_Answers")) LIMIT 1")
+        cur.execute('''SELECT * FROM "Questions_Answers" OFFSET floor(random()*(SELECT COUNT(*) FROM "Questions_Answers")) LIMIT 1''')
         rows = cur.fetchall()
 
         for row in rows:
