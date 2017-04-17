@@ -4,7 +4,7 @@ lotus
 papyrus
 3
 Why is the Rosetta Stone significant?
-It was King Tut's throne
+It was King Tut`s throne
 It was used to translate hieroglyphs
 It had spells to be used in the passage to the afterlife
 2
@@ -103,7 +103,7 @@ Double Crown
 The Great Pyramids
 Trade
 1
-The time when Egypt's early pharaohs worked to build unity in the country.
+The time when Egypt`s early pharaohs worked to build unity in the country.
 The Middle Kingdom
 The Old Kingdom
 The Ancient Times
