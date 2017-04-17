@@ -1,6 +1,7 @@
 from Data import *
 
 class DataPreprocessing:
+    def __init__(self):
 
     @staticmethod
     def __run__(self, db):
