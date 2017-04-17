@@ -19,7 +19,8 @@ class DataPreprocessing:
         ##rest of the preprocessing
 
     def insertQuestions_Answers(self):
-        f = open("Question_Answers.txt", 'r')
+        ff = open("requirements.txt", 'r')
+        f = open('''Question_Answers.txt''', 'r')
         i=0
         while True:
             Question = f.readline().rstrip()
