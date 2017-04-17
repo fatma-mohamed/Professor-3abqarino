@@ -36,11 +36,11 @@ def makeWebhookResult(req):
         return responseSelector.requestUserName(req)
     elif req.get("result").get("action") == "createDB":
         conn = Database.Database()
-        return DataPreprocessing.__run__(conn)
+        return DataPreprocessing.DataPreprocessing().__run__(conn)
     elif req.get("result").get("action") == "InsertQuestions_Answers":
         return DataPreprocessing.DataPreprocessing().insertQuestions_Answers()
     elif req.get("result").get("action") == "request-game":
-        return FeatureTwoSelector.getRandomQuestion()
+        return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
     else:
         return {}
 
