@@ -126,7 +126,7 @@ class Database:
                Answer_2 TEXT NOT NULL,
                Answer_3 TEXT NOT NULL,
                Correct_AnswerID INT NOT NULL,
-               CONSTRAINT uniqueQAs UNIQUE (Question, Answer_1, Answer_2, Answer_3, Coorect_AnswerID));''')
+               CONSTRAINT uniqueQAs UNIQUE (Question, Answer_1, Answer_2, Answer_3, Correct_AnswerID));''')
         print ("--------Table Questions_Answers created successfully--------")
 
 
