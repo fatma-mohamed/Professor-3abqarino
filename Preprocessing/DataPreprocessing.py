@@ -6,12 +6,20 @@ class DataPreprocessing:
 
     @staticmethod
     def __run__(self, db):
-        return db.__createTables__()
+        db.__createTables__()
+
+        return {
+            "speech": "Created tables",
+            "displayText": "",
+            "data": {},
+            "contextOut": [],
+            "source": "create-database"
+        }
 
         ##rest of the preprocessing
 
     def insertQuestions_Answers(self):
-        f = open("Questions_Answers.txt", 'r')
+        f = open("Question_Answers.txt", 'r')
         i=0
         while True:
             Question = f.readline().rstrip()
@@ -27,4 +35,10 @@ class DataPreprocessing:
             print "-----Row " + (str)(i) + " -----"
             DataAccess.insertQuestion_Answers(Question, A1, A2, A3, CA_ID)
 
-        return
+        return {
+            "speech": "Inserted Questions_Answers rows",
+            "displayText": "",
+            "data": {},
+            "contextOut": [],
+            "source": "insert-Questions_Answers-rows"
+        }

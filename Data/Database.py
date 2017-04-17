@@ -37,14 +37,7 @@ class Database:
 
        ### conn.close()
        ### print "--------Connection closed--------"
-        
-        return {
-        "speech" : "Created tables",
-        "displayText": "",
-        "data": {},
-        "contextOut": [],
-        "source": "create-database"
-        }
+        return
 
     def __deleteTables__(self):
         print ("--------in Database deleteTables--------")
