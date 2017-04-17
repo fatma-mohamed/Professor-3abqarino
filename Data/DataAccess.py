@@ -5,7 +5,7 @@ import psycopg2
 class DataAccess:
     def insertQuestion_Answers(self, Question, A1, A2, A3, CA_ID):
         conn = Database.Database()
-        cur = conn.cursor()
+        cur = conn.connection.cursor()
         print "--------Adding question to DB--------"
         cur.execute('''INSERT INTO "Questions_Answers" (Question, Answer_1, Answer_2, Answer_3, Correct_AnswerID) VALUES (" + Question + " , " + A1 + " , " + A2 + " , " + A3 + " , " + CA_ID + ");''')
         conn.commit()
@@ -14,7 +14,7 @@ class DataAccess:
 
     def getRandomQuestion(self):
         conn = Database.Database()
-        cur = conn.cursor()
+        cur = conn.connection.cursor()
         print "--------Getting a random Question--------"
         cur.execute('''SELECT * FROM "Questions_Answers" OFFSET floor(random()*(SELECT COUNT(*) FROM "Questions_Answers")) LIMIT 1''')
         rows = cur.fetchall()
