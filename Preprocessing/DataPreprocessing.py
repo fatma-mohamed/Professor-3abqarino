@@ -33,7 +33,7 @@ class DataPreprocessing:
 
             i += 1
             print "-----Row " + (str)(i) + " -----"
-            DataAccess.insertQuestion_Answers(Question, A1, A2, A3, CA_ID)
+            DataAccess.DataAccess().insertQuestion_Answers(Question, A1, A2, A3, CA_ID)
 
         return {
             "speech": "Inserted Questions_Answers rows",
