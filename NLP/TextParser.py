@@ -7,7 +7,7 @@ class TextParser:
         return list
 
 
-    def extractKeywords(list):
+    def removeStopWords(list):
         stopList = set(line.strip() for line in open('stoplist'))
         filtered_words = [word for word in list if word not in stopList]
         return filtered_words
