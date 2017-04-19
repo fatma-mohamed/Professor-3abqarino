@@ -1,2 +1,3 @@
 Flask==0.10.1
 psycopg2==2.7.1
+http://pyyaml.org/download/pyyaml/PyYAML-3.10.tar.gz
