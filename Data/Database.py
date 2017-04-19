@@ -137,4 +137,13 @@ class Database:
         print("--------Table Questions_Answers deleted successfully--------")
 
     def insert(self, table_name, cols, values, conflict_fields, conflict_do):
-        return
+        cur = self.connection.cursor()
+        if (conflict_fields == ""):
+            cur.execute('''INSERT INTO "''' + table_name + '''"( ''' + cols + " ) VALUES ( " + values + " )");
+        else:
+            if (conflict_do == ''):
+                cur.execute('''INSERT INTO "''' + table_name + '''"( ''' + cols + " ) VALUES ( " + values + " ) " +
+                            "ON CONFLICT ( " + conflict_fields + " ) DO NOTHING");
+            else:
+                cur.execute('''INSERT INTO "''' + table_name + '''"( ''' + cols + " ) VALUES ( " + values + " ) " +
+                            "ON CONFLICT ( " + conflict_fields + " ) DO " + conflict_do);
