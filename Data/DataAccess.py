@@ -2,7 +2,6 @@ from Data import Database
 
 import psycopg2
 
-
 class DataAccess:
     def selectRandom(self, tableName):
         conn = Database.Database()
@@ -27,3 +26,15 @@ class DataAccess:
             print "--------Got question--------"
 
         return rows[0]
+
+    def select(self, table_name, cols, condition, value):
+        conn = Database.Database()
+        cur = conn.connection.cursor()
+        if (condition == ""):
+            cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''"''')
+        else:
+            cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''" WHERE ''' + condition + " = " + value)
+
+        rows = cur.fetchall()
+        conn.close()
+        return rows
