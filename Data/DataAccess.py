@@ -6,9 +6,9 @@ class DataAccess:
         conn = Database.Database()
         cur = conn.connection.cursor()
         if (condition == ""):
-            cur.execute("SELECT ( " + cols + " ) from " + table_name)
+            cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''"''')
         else:
-            cur.execute("SELECT ( " + cols + " ) from " + table_name + " WHERE " + condition + " = " + value)
+            cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''" WHERE ''' + condition + " = " + value)
 
         rows = cur.fetchall()
         conn.close()
