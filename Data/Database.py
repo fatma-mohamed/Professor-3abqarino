@@ -135,3 +135,6 @@ class Database:
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE "Questions_Answers";''')
         print("--------Table Questions_Answers deleted successfully--------")
+
+    def insert(self, table_name, cols, values, conflict_fields, conflict_do):
+        return
