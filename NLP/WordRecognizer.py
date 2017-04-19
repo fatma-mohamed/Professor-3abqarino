@@ -1,8 +1,6 @@
 from nltk.corpus import wordnet as wn
 from nltk import word_tokenize, pos_tag, ne_chunk
-import TextParser
 class WordRecognizer:
-    dummy_data = "dummy_data"
 	
 	def getSynonym(word):
 		list = []
@@ -11,9 +9,8 @@ class WordRecognizer:
 		return list
 
 
-	def namedEntity(sentence):
-	    tokns= tokenize(sentence)
-	    tags = pos_tag(tokns)
+	def namedEntity(tokens):
+	    tags = pos_tag(tokens)
 	    ner= ne_chunk(tags)
 	    return ner
 
