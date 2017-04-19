@@ -4,10 +4,7 @@ from NLP.TextParser import TextParser
 class DataPreprocessing:
 
     @staticmethod
-    def __run__(self):
-        self.insertAnswers_and_keywords()
-
-    def insertAnswers_and_keywords(self):
+    def insertAnswers_and_keywords():
         file = open("essay_questions.txt", "r")
 
         while True:
