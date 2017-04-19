@@ -1,4 +1,5 @@
-from ResponseSelection import ResponseSelector
+from ResponseSelection.ResponseSelector import ResponseSelector
 
 class FeatureOneSelector(ResponseSelector):
-    dummy_data = "dummy"
+    def getAnswer(self, question):
+        x = 5
