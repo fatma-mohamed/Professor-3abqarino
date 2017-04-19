@@ -8,12 +8,13 @@ import os
 from flask import Flask
 from flask import request
 from flask import make_response
-from ResponseSelection import*
+from ResponseSelection import ResponseSelector
+from ResponseSelection import FeatureOneSelector
 
 
 # Flask app should start in global layout
 app = Flask(__name__)
-responseSelector = ResponseSelector.ResponseSelector()
+responseSelector = None
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
     req = request.get_json(silent=True, force=True)
@@ -33,7 +34,13 @@ def webhook():
 def makeWebhookResult(req):
     action = req.get("result").get("action")
     if "request_user_name" in action:
+        responseSelector = ResponseSelector.ResponseSelector()
         return responseSelector.requestUserName(req, action)
+    elif action == "Ask-a-question.Ask-a-question-custom":
+        responseSelector = FeatureOneSelector.FeatureOneSelector()
+        question = (req.get("result")).get("resolvedQuery")
+        print (question)
+        return responseSelector.getAnswer(question)
     else:
         return {}
 
