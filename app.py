@@ -11,6 +11,7 @@ from flask import make_response
 from ResponseSelection import ResponseSelector
 from ResponseSelection import FeatureOneSelector
 
+from Preprocessing.DataPreprocessing import DataPreprocessing
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -41,6 +42,8 @@ def makeWebhookResult(req):
         question = (req.get("result")).get("resolvedQuery")
         print (question)
         return responseSelector.getAnswer(question)
+    elif action == "insert":
+        DataPreprocessing.__run__()
     else:
         return {}
 
