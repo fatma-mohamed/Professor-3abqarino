@@ -1,4 +1,7 @@
 .idea/*
 
+.idea/workspace.xml
+
 *.yml
+
 *.xml
