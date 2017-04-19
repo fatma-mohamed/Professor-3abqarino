@@ -4,7 +4,7 @@ from Data import DataAccess
 class FeatureTwoSelector:
     
     def getRandomQuestion(self):
-        row = DataAccess.DataAccess().getRandomQuestion()
+        row = DataAccess.DataAccess().selectRandom('''Questions_Answers''')
         return {
         "speech" : "",
         "displayText": "",
