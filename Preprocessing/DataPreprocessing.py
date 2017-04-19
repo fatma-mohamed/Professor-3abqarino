@@ -5,7 +5,7 @@ class DataPreprocessing:
 
     @staticmethod
     def insertAnswers_and_keywords():
-        file = open("Preprocessing\essay_questions.txt", "r")
+        file = open("Preprocessing/essay_questions.txt", "r")
 
         while True:
             line = file.readline()
