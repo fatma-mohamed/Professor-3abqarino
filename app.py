@@ -43,7 +43,7 @@ def makeWebhookResult(req):
         print (question)
         return responseSelector.getAnswer(question)
     elif action == "insert":
-        DataPreprocessing.__run__()
+        DataPreprocessing.insertAnswers_and_keywords()
     else:
         return {}
 
