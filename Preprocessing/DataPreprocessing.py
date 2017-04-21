@@ -7,6 +7,8 @@ class DataPreprocessing:
     @staticmethod
     def insertAnswers_and_keywords():
         db = Database()
+        parser = TextParser()
+        recognizer  = WordRecognizer()
         file = open("Preprocessing/essay_questions.txt", "r")
 
         while True:
@@ -22,8 +24,8 @@ class DataPreprocessing:
             answer = line.strip('\n')
             print("Question: ", question , "\nAnswer: ", answer)
             answer_id = db.insert("Answers", "answer", "'"+answer+"'", "" , "")
-            tokens = TextParser.tokenize(question)
-            keywords = TextParser.removeStopWords(tokens)
+            tokens = parser.tokenize(question)
+            keywords = parser.removeStopWords(tokens)
             keywords_id = []
             for k in keywords:
                 print("Keyword: " , k)
@@ -31,7 +33,7 @@ class DataPreprocessing:
                 if(keyword_id == None):
                     id = db.insert("Keywords", "keyword", "'"+k+"'", "keyword", "")
                     keywords_id.append(id)
-                    synonyms = WordRecognizer.getSynonym(k)
+                    synonyms = recognizer.getSynonym(k)
                     for s in synonyms:
                         db.insert("Synonyms", "key_id, synonym" , id + ", '"+s+"'" , "", "")
                 else:
