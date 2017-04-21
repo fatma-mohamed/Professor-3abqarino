@@ -14,12 +14,12 @@ class DataPreprocessing:
             if (line == ''):
                 print("no question!")
                 break
-            question = line.strip('-')
+            question = line.strip('-','\n')
             line = file.readline()
             if (line == ''):
                 print("no answer!")
                 break
-            answer = line
+            answer = line.strip('\n')
             print("Question: ", question , "\nAnswer: ", answer)
             answer_id = db.insert("Answers", "answer", "'"+answer+"'", "" , "")
             tokens = TextParser.tokenize(question)

@@ -3,13 +3,13 @@ from nltk import word_tokenize, pos_tag, ne_chunk
 
 class WordRecognizer:
 
-    def getSynonym(word):
+    def getSynonym(self, word):
         list = set()
         for w in wn.synsets(word):
             list.add(w.lemmas()[0].name())
         return list
 
-    def namedEntity(tokens):
+    def namedEntity(self, tokens):
         tags = pos_tag(tokens)
         ner = ne_chunk(tags)
         return ner
