@@ -4,9 +4,9 @@ from nltk import word_tokenize, pos_tag, ne_chunk
 class WordRecognizer:
 
     def getSynonym(word):
-        list = []
+        list = set()
         for w in wn.synsets(word):
-            list.append(w.lemmas()[0].name())
+            list.add(w.lemmas()[0].name())
         return list
 
     def namedEntity(tokens):
