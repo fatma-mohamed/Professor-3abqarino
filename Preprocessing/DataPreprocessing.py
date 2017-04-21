@@ -21,15 +21,19 @@ class DataPreprocessing:
                 break
             answer = line
             print("Question: ", question , "\nAnswer: ", answer)
-            answer_id = db.insert("Answers", "answer", answer, "" , "")
+            answer_id = db.insert("Answers", "answer", "'"+answer+"'", "" , "")
             tokens = TextParser.tokenize(question)
             keywords = TextParser.removeStopWords(tokens)
             keywords_id = []
             for k in keywords:
                 print("Keyword: " , k)
-                keyword_id = db.select("Keywords", "id", "keyword", k)
+                keyword_id = db.select("Keywords", "id", "keyword", "'"+k+"'")
                 if(keyword_id == None):
-                    keywords_id.append(db.insert("Keywords", "keyword", k, "keyword, category", ""))
+                    id = db.insert("Keywords", "keyword", "'"+k+"'", "keyword", "")
+                    keywords_id.append(id)
+                    synonyms = WordRecognizer.getSynonym(k)
+                    for s in synonyms:
+                        db.insert("Synonyms", "key_id, synonym" , id + ", '"+s+"'" , "", "")
                 else:
                     keywords_id.append(keyword_id)
             for id in keywords_id:
