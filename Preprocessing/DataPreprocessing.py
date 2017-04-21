@@ -14,7 +14,7 @@ class DataPreprocessing:
             if (line == ''):
                 print("no question!")
                 break
-            question = line.strip('-','\n')
+            question = line.strip('-')
             line = file.readline()
             if (line == ''):
                 print("no answer!")
