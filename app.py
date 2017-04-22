@@ -45,8 +45,7 @@ def makeWebhookResult(req):
         DataPreprocessing.insertAnswers_and_keywords()
     elif action == "xxx":
         db = Database()
-        db.deleteTable_Keywords()
-        db.createTable_Keywords()
+        db.alterTable()
     else:
         return {}
 

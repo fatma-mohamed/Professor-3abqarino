@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DataAccess.py" afterPath="$PROJECT_DIR$/Data/DataAccess.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Database.py" afterPath="$PROJECT_DIR$/Data/Database.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,7 +28,7 @@
       <file leaf-file-name="DataPreprocessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
+            <state relative-caret-position="544">
               <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
@@ -39,23 +40,25 @@
       <file leaf-file-name="Database.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Data/Database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="366">
+              <caret line="82" column="18" lean-forward="false" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="18" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1492860202791" expanded="true" signature="1850:1963" ph="CREATE TABLE... Answers" />
-                <marker date="1492860202791" expanded="true" signature="2200:2220" ph="DROP TABLE &quot;... " />
-                <marker date="1492860202791" expanded="true" signature="2459:2615" ph="CREATE TABLE... Keywords" />
-                <marker date="1492860202791" expanded="true" signature="2855:2876" ph="DROP TABLE &quot;... " />
-                <marker date="1492860202791" expanded="true" signature="3132:3441" ph="CREATE TABLE... Answers_Keywords" />
-                <marker date="1492860202791" expanded="true" signature="3705:3734" ph="DROP TABLE &quot;... " />
-                <marker date="1492860202791" expanded="true" signature="3982:4200" ph="CREATE TABLE... Synonyms" />
-                <marker date="1492860202791" expanded="true" signature="4440:4461" ph="DROP TABLE &quot;... " />
-                <marker date="1492860202791" expanded="true" signature="4719:5019" ph="CREATE TABLE... Questions_Answers" />
-                <marker date="1492860202791" expanded="true" signature="5286:5316" ph="DROP TABLE &quot;... " />
-                <marker date="1492860202791" expanded="true" signature="5583:5663" ph="INSERT INTO &quot;missing_value&quot;... " />
-                <marker date="1492860202791" expanded="true" signature="5748:5912" ph="INSERT INTO &quot;missing_value&quot;... " />
-                <marker date="1492860202791" expanded="true" signature="5965:6122" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1492864387173" expanded="true" signature="1850:1963" ph="CREATE TABLE... Answers" />
+                <marker date="1492864387173" expanded="true" signature="2200:2220" ph="DROP TABLE &quot;... " />
+                <marker date="1492864387173" expanded="true" signature="2459:2615" ph="CREATE TABLE... Keywords" />
+                <marker date="1492864387173" expanded="true" signature="2778:2833" ph="ALTER TABLE &quot;Keywords&quot;... " />
+                <marker date="1492864387173" expanded="true" signature="2861:2919" ph="ALTER TABLE &quot;Keywords&quot;... " />
+                <marker date="1492864387173" expanded="true" signature="3158:3179" ph="DROP TABLE &quot;... " />
+                <marker date="1492864387173" expanded="true" signature="3435:3744" ph="CREATE TABLE... Answers_Keywords" />
+                <marker date="1492864387173" expanded="true" signature="4008:4037" ph="DROP TABLE &quot;... " />
+                <marker date="1492864387173" expanded="true" signature="4285:4503" ph="CREATE TABLE... Synonyms" />
+                <marker date="1492864387173" expanded="true" signature="4743:4764" ph="DROP TABLE &quot;... " />
+                <marker date="1492864387173" expanded="true" signature="5022:5322" ph="CREATE TABLE... Questions_Answers" />
+                <marker date="1492864387173" expanded="true" signature="5589:5619" ph="DROP TABLE &quot;... " />
+                <marker date="1492864387173" expanded="true" signature="5884:5964" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1492864387173" expanded="true" signature="6049:6213" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1492864387173" expanded="true" signature="6266:6423" ph="INSERT INTO &quot;missing_value&quot;... " />
               </folding>
             </state>
           </provider>
@@ -74,8 +77,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="39" column="64" lean-forward="false" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="64" />
+            <state relative-caret-position="227">
+              <caret line="47" column="23" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
               <folding>
                 <element signature="e#22#56#0" expanded="true" />
               </folding>
@@ -104,9 +107,9 @@
         <option value="$PROJECT_DIR$/nltk.txt" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
         <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
+        <option value="$PROJECT_DIR$/Data/DataAccess.py" />
         <option value="$PROJECT_DIR$/Data/Database.py" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/Data/DataAccess.py" />
       </list>
     </option>
   </component>
@@ -720,12 +723,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492861977102</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Preprocessing: insertAnswers_and_keywords">
+      <created>1492863849774</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1492863849774</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="449" y="0" width="917" height="728" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25416204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -950,9 +959,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
+        <state relative-caret-position="544">
           <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
@@ -962,41 +979,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="39" column="64" lean-forward="false" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="64" />
+        <state relative-caret-position="227">
+          <caret line="47" column="23" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
           <folding>
             <element signature="e#22#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/Database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="366">
+          <caret line="82" column="18" lean-forward="false" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="18" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1492860202791" expanded="true" signature="1850:1963" ph="CREATE TABLE... Answers" />
-            <marker date="1492860202791" expanded="true" signature="2200:2220" ph="DROP TABLE &quot;... " />
-            <marker date="1492860202791" expanded="true" signature="2459:2615" ph="CREATE TABLE... Keywords" />
-            <marker date="1492860202791" expanded="true" signature="2855:2876" ph="DROP TABLE &quot;... " />
-            <marker date="1492860202791" expanded="true" signature="3132:3441" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1492860202791" expanded="true" signature="3705:3734" ph="DROP TABLE &quot;... " />
-            <marker date="1492860202791" expanded="true" signature="3982:4200" ph="CREATE TABLE... Synonyms" />
-            <marker date="1492860202791" expanded="true" signature="4440:4461" ph="DROP TABLE &quot;... " />
-            <marker date="1492860202791" expanded="true" signature="4719:5019" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1492860202791" expanded="true" signature="5286:5316" ph="DROP TABLE &quot;... " />
-            <marker date="1492860202791" expanded="true" signature="5583:5663" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1492860202791" expanded="true" signature="5748:5912" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1492860202791" expanded="true" signature="5965:6122" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1492864387173" expanded="true" signature="1850:1963" ph="CREATE TABLE... Answers" />
+            <marker date="1492864387173" expanded="true" signature="2200:2220" ph="DROP TABLE &quot;... " />
+            <marker date="1492864387173" expanded="true" signature="2459:2615" ph="CREATE TABLE... Keywords" />
+            <marker date="1492864387173" expanded="true" signature="2778:2833" ph="ALTER TABLE &quot;Keywords&quot;... " />
+            <marker date="1492864387173" expanded="true" signature="2861:2919" ph="ALTER TABLE &quot;Keywords&quot;... " />
+            <marker date="1492864387173" expanded="true" signature="3158:3179" ph="DROP TABLE &quot;... " />
+            <marker date="1492864387173" expanded="true" signature="3435:3744" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1492864387173" expanded="true" signature="4008:4037" ph="DROP TABLE &quot;... " />
+            <marker date="1492864387173" expanded="true" signature="4285:4503" ph="CREATE TABLE... Synonyms" />
+            <marker date="1492864387173" expanded="true" signature="4743:4764" ph="DROP TABLE &quot;... " />
+            <marker date="1492864387173" expanded="true" signature="5022:5322" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1492864387173" expanded="true" signature="5589:5619" ph="DROP TABLE &quot;... " />
+            <marker date="1492864387173" expanded="true" signature="5884:5964" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1492864387173" expanded="true" signature="6049:6213" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1492864387173" expanded="true" signature="6266:6423" ph="INSERT INTO &quot;missing_value&quot;... " />
           </folding>
         </state>
       </provider>
