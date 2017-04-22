@@ -38,7 +38,7 @@ class DataPreprocessing:
                     keywords_id.append(id)
                     synonyms = recognizer.getSynonym(k)
                     for s in synonyms:
-                        db.insert("Synonyms", "key_id, synonym" , id + ", '"+s+"'" , "", "")
+                        db.insert("Synonyms", "key_id, synonym" , str(id) + ", '"+s+"'" , "", "")
                 else:
                     keywords_id.append(keyword_id)
             print("KEYWORDS: ", keywords_id)
