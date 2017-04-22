@@ -36,15 +36,14 @@ class DataPreprocessing:
                 if len(keyword_id) == 0:
                     db.insert("Keywords", "keyword", "'"+k+"'", "keyword", "")
                     id = db_access.select("Keywords", "id", "keyword", "'"+k+"'")
-                    print("NEW ID: " ,id)
                     keywords_id.append(id)
                     synonyms = recognizer.getSynonym(k)
                     for s in synonyms:
-                        db.insert("Synonyms", "key_id, synonym" , str(id) + ", '"+s+"'" , "", "")
+                        print("SYN: ",s)
+                        z = str(id) + ", '" + s + "'"
+                        db.insert("Synonyms", "key_id, synonym" , z, "", "")
                 else:
                     keywords_id.append(keyword_id)
-            print("KEYWORDS: ", keywords_id)
             for i in keywords_id:
-                print("K_ID: ", i)
                 v = str(answer_id) + "," + str(i)
                 db.insert("Answers_Keywords", "answer_id, keyword_id", v,"answer_id, keyword_id","")
