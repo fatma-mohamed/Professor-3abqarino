@@ -1,12 +1,14 @@
+
+
 from ResponseSelection.ResponseSelector import ResponseSelector
 from Data import DataAccess
 
 class FeatureTwoSelector:
     
-    def getRandomQuestion(self):
+    def getRandomQuestion(self,answerFeedback = ""):
         row = DataAccess.DataAccess().selectRandom('''Questions_Answers''')
         return {
-        "speech" : "",
+        "speech" : answerFeedback,
         "displayText": "",
         "data": {},
         "contextOut": [],
@@ -23,30 +25,14 @@ class FeatureTwoSelector:
             }
         }
 
-    def CheckAnswerCorrectness(response):
-        if response.get("result").get("parameters").get("correctAnsweID") == response.get("result").get(
+    def CheckAnswerCorrectness(self,response):
+        if response.get("result").get("parameters").get("correctAnswerID") == response.get("result").get(
                 "parameters").get("chosenAnswer"):
-            return {
-                "speech": "Correct Answer :)",
-                "displayText": "",
-                "data": {},
-                "contextOut": [],
-                "source": "get-random-question",
-                "followupEvent": {
-                    "name": "Question_Answers"
-                }
-            }
-        elif response.get("result").get("parameters").get("correctAnsweID") != response.get("result").get(
-                "parameters").get("chosenAnswer"):
-            return {
-                "speech": "Wrong Answer :(",
-                "displayText": "",
-                "data": {},
-                "contextOut": [],
-                "source": "get-random-question",
-                "followupEvent": {"name": "Question_Answers"}
-            }
+            return self.getRandomQuestion("Correct Answer :)")
 
+        elif response.get("result").get("parameters").get("correctAnswerID") != response.get("result").get(
+                "parameters").get("chosenAnswer"):
+            return self.getRandomQuestion("Wrong Answer :(")
 
 
 
