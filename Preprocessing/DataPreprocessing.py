@@ -25,7 +25,8 @@ class DataPreprocessing:
                 break
             answer = line.strip('\n')
             print("Question: ", question , "\nAnswer: ", answer)
-            answer_id = db.insert("Answers", "answer", "'"+answer+"'", "" , "")
+            db.insert("Answers", "answer", "'"+answer+"'", "" , "")
+            answer_id = db_access.select("Answers", "id", "answer", "'"+answer+"'")
             tokens = parser.tokenize(question)
             keywords = parser.removeStopWords(tokens)
             keywords_id = []
@@ -33,7 +34,8 @@ class DataPreprocessing:
                 print("Keyword: " , k)
                 keyword_id = db_access.select("Keywords", "id", "keyword", "'"+k+"'")
                 if len(keyword_id) == 0:
-                    id = db.insert("Keywords", "keyword", "'"+k+"'", "keyword", "")
+                    db.insert("Keywords", "keyword", "'"+k+"'", "keyword", "")
+                    id = db_access.select("Keywords", "id", "keyword", "'"+k+"'")
                     print("NEW ID: " ,id)
                     keywords_id.append(id)
                     synonyms = recognizer.getSynonym(k)
