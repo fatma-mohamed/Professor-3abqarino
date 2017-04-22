@@ -136,6 +136,15 @@ class Database:
         cur.execute('''DROP TABLE "Questions_Answers";''')
         print("--------Table Questions_Answers deleted successfully--------")
 
+    def deleteData(self):
+        cur = self.connection.cursor()
+        cur.execute('''DELETE FROM "Answers_Keywords";''')
+        cur.execute('''DELETE FROM "Answers";''')
+        cur.execute('''DELETE FROM "Keywords";''')
+        cur.execute('''DELETE FROM "Synonyms";''')
+        self.connection.commit()
+
+
     def insert(self, table_name, cols, values, conflict_fields, conflict_do):
         cur = self.connection.cursor()
         if (conflict_fields == ""):
