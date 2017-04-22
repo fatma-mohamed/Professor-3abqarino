@@ -22,3 +22,32 @@ class FeatureTwoSelector:
                 }
             }
         }
+
+    def CheckAnswerCorrectness(response):
+        if response.get("result").get("parameters").get("correctAnsweID") == response.get("result").get(
+                "parameters").get("chosenAnswer"):
+            return {
+                "speech": "Correct Answer :)",
+                "displayText": "",
+                "data": {},
+                "contextOut": [],
+                "source": "get-random-question",
+                "followupEvent": {
+                    "name": "Question_Answers"
+                }
+            }
+        elif response.get("result").get("parameters").get("correctAnsweID") != response.get("result").get(
+                "parameters").get("chosenAnswer"):
+            return {
+                "speech": "Wrong Answer :(",
+                "displayText": "",
+                "data": {},
+                "contextOut": [],
+                "source": "get-random-question",
+                "followupEvent": {"name": "Question_Answers"}
+            }
+
+
+
+
+
