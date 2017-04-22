@@ -147,4 +147,3 @@ class Database:
             else:
                 cur.execute('''INSERT INTO "''' + table_name + '''"( ''' + cols + " ) VALUES ( " + values + " ) " +
                             "ON CONFLICT ( " + conflict_fields + " ) DO " + conflict_do);
-        return cur.lastrowid
