@@ -4,6 +4,7 @@ from Preprocessing import config
 
 class ResponseSelector:
 
+    @staticmethod
     def requestUserName(req, action):
         originalRequest = req.get("originalRequest")
         data = originalRequest.get("data")
