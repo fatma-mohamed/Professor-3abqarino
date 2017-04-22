@@ -43,4 +43,4 @@ class DataPreprocessing:
             for id in keywords_id:
                 print("K_ID: ", id)
                 v = str(answer_id) + "," + str(id)
-                db.insert("Answers_Keywords", "answer_id, keyword_id", v)
+                db.insert("Answers_Keywords", "answer_id, keyword_id", v,"answer_id, keyword_id","")
