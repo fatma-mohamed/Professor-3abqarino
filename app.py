@@ -39,7 +39,15 @@ def makeWebhookResult(req):
         print ("i get a question :D ")
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
-        return responseSelector.getAnswer()
+        answer =  responseSelector.getAnswer()
+        return {
+            "speech": answer,
+            "displayText": answer,
+            "data": {},
+            "contextOut": [],
+            "source": "prof-3abqarino",
+        }
+
     else:
         return {}
 
