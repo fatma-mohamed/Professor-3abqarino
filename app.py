@@ -41,11 +41,11 @@ def makeWebhookResult(req):
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         answer =  responseSelector.getAnswer()
         return {
-            "fulfillment": {
+
             "speech": answer,
             "source": "prof-3abqarino_webhook",
             "displayText": answer
-    }
+
         }
 
     else:
