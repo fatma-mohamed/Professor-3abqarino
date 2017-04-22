@@ -24,14 +24,12 @@ class DataPreprocessing:
                 print("no answer!")
                 break
             answer = DataPreprocessing.removeSinqleQuotes(line.strip('\n'))
-            print("Question: ", question , "\nAnswer: ", answer)
             db.insert("Answers", "answer", "'"+answer+"'", "" , "")
             answer_id = db_access.select("Answers", "id", "answer", "'"+answer+"'")
             tokens = parser.tokenize(question)
             keywords = parser.removeStopWords(tokens)
             keywords_id = []
             for k in keywords:
-                print("Keyword: " , k)
                 keyword_id = db_access.select("Keywords", "id", "keyword", "'"+k+"'")
                 if len(keyword_id) == 0:
                     db.insert("Keywords", "keyword", "'"+k+"'", "keyword", "")
@@ -39,7 +37,6 @@ class DataPreprocessing:
                     keywords_id.append(id[0][0])
                     synonyms = recognizer.getSynonym(k)
                     for s in synonyms:
-                        print("SYN: ",s , "ID: " , id)
                         z = str(id[0][0]) + ", '" + s + "'"
                         db.insert("Synonyms", "key_id, synonym" , z, "", "")
                 else:
