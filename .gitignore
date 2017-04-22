@@ -1,6 +1,9 @@
-.idea/
+.idea/*
+
+.idea/workspace.xml
 
 *.yml
+
 *.xml
 
 */__pycache__
