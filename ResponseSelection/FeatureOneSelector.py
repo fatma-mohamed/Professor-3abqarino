@@ -43,7 +43,7 @@ class FeatureOneSelector(ResponseSelector):
         print ("________in retriveAnswersID _______________ ")
         print(keywordsIDs)
         for id in keywordsIDs:
-            ids = Da.select("Answers_Keywords", "answer_id", "keyword_id = " + id)
+            ids = Da.select("Answers_Keywords", "answer_id", "keyword_id = " + id[0])
             answersID += ids
 
         return Counter(answersID).most_common(3)
