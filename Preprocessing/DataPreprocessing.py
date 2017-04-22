@@ -32,7 +32,7 @@ class DataPreprocessing:
             for k in keywords:
                 print("Keyword: " , k)
                 keyword_id = db_access.select("Keywords", "id", "keyword", "'"+k+"'")
-                if keyword_id == "[]":
+                if len(keyword_id) == 0:
                     id = db.insert("Keywords", "keyword", "'"+k+"'", "keyword", "")
                     print("NEW ID: " ,id)
                     keywords_id.append(id)
