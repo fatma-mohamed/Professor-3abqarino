@@ -25,12 +25,12 @@ class FeatureTwoSelector:
             }
         }
 
-    def CheckAnswerCorrectness(self,response):
-        if response.get("result").get("parameters").get("correctAnswerID") == response.get("result").get(
+    def CheckAnswerCorrectness(self,request):
+        if request.get("result").get("parameters").get("correctAnswerID") == request.get("result").get(
                 "parameters").get("chosenAnswer"):
             return self.getRandomQuestion("Correct Answer :)")
 
-        elif response.get("result").get("parameters").get("correctAnswerID") != response.get("result").get(
+        elif request.get("result").get("parameters").get("correctAnswerID") != request.get("result").get(
                 "parameters").get("chosenAnswer"):
             return self.getRandomQuestion("Wrong Answer :(")
 
