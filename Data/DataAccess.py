@@ -10,7 +10,7 @@ class DataAccess:
             cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''" WHERE ''' + condition + " = " + value)
 
         rows = cur.fetchall()
-        conn.close()
+        cur.close()
         return rows
 
     # def select(self, table_name, cols, condition1, value1, condition2, value2):
@@ -22,5 +22,5 @@ class DataAccess:
     #         cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''" WHERE ''' + condition1 + " = " + value1 + " AND " + condition2 + " = " + value2)
     #
     #     rows = cur.fetchall()
-    #     conn.close()
+    #     cur.close()
     #     return rows
