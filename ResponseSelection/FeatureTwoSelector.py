@@ -27,6 +27,8 @@ class FeatureTwoSelector:
         }
 
     def CheckAnswerCorrectness(self,request):
+        print (request.get("result").get("parameters").get("correctAnswerID"))
+        print(request.get("result").get("parameters").get("chosenAnswer"))
         if request.get("result").get("parameters").get("correctAnswerID") == request.get("result").get(
                 "parameters").get("chosenAnswer"):
             return self.getRandomQuestion("Correct Answer :)")
