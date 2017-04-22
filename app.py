@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-import Data
-
+from Data.Database import Database
 import urllib
 import json
 import os
@@ -45,7 +44,7 @@ def makeWebhookResult(req):
     elif action == "insert":
         DataPreprocessing.insertAnswers_and_keywords()
     elif action == "xxx":
-        db = Data.Database()
+        db = Database()
         db.deleteTable_Keywords()
         db.createTable_Keywords()
     else:
