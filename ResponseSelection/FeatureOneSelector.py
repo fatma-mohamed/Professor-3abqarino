@@ -1,7 +1,6 @@
 from ResponseSelection.ResponseSelector import ResponseSelector
 from NLP.TextParser import TextParser
 
-
 class FeatureOneSelector(ResponseSelector):
     def getAnswer(self, question):
         tokens = TextParser.tokenize(question)
