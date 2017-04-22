@@ -42,9 +42,9 @@ def makeWebhookResult(req):
         answer =  responseSelector.getAnswer()
         return {
 
-            "speech": answer,
+            "speech": "jhjhjh",
             "source": "prof-3abqarino_webhook",
-            "displayText": answer
+            "displayText": "kjjkhjh"
 
         }
 
