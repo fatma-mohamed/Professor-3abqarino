@@ -81,7 +81,7 @@ class Database:
 
 
     def alterTable(self):
-        cur = self.connection.cursor
+        cur = self.connection.cursor()
         cur.execute('''ALTER TABLE "Keywords" ADD CONSTRAINT x UNIQUE(keyword)''')
         cur.execute('''ALTER TABLE "Keywords" ALTER COLUMN category DROP NOT NULL''')
         print("--------Table Keywords altered successfully--------")
