@@ -41,12 +41,6 @@ def makeWebhookResult(req):
         question = (req.get("result")).get("resolvedQuery")
         print (question)
         return responseSelector.getAnswer(question)
-    elif action == "insert":
-        DataPreprocessing.insertAnswers_and_keywords()
-    elif action == "drop":
-        db = Database()
-        db.deleteData();
-        print("DATA DELETED!!")
     else:
         return {}
 
