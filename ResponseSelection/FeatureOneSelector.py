@@ -1,3 +1,4 @@
+from NLP.TextParser import TextParser
 from ResponseSelection.ResponseSelector import ResponseSelector
 from NLP import *
 from Data import DataAccess
@@ -11,8 +12,9 @@ class FeatureOneSelector(ResponseSelector):
         self.question = question
 
     def getAnswer(self):
-        t = TextParser.tokenize(self.question)
-        k = TextParser.extractKeywords(t)
+        Tx = TextParser()
+        t = Tx.tokenize(self.question)
+        k = Tx.removeStopWords(t)
         keywordsID = self.retriveSynonymID(k)
         # ner = WordRecognizer.namedEntity(k)
         mostCommenAnswers = self.retriveAnswersID(keywordsID)
