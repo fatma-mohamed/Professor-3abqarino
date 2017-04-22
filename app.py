@@ -46,11 +46,18 @@ def makeWebhookResult(req):
     elif action == "xxx":
         db = Database()
         db.deleteTable_Answers_Keywords()
+        db.connection.commit()
         db.deleteTable_Synonyms()
+        db.connection.commit()
         db.deleteTable_Keywords()
+        db.connection.commit()
         db.createTable_Keywords()
+        db.connection.commit()
         db.createTable_Synonyms()
+        db.connection.commit()
         db.createTable_Answers_Keywords()
+        db.connection.commit()
+        db.connection.close()
     else:
         return {}
 
