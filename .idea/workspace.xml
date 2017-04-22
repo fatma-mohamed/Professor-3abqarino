@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="add print">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLP/TextParser.py" afterPath="$PROJECT_DIR$/NLP/TextParser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" afterPath="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,8 +48,8 @@
       <file leaf-file-name="FeatureOneSelector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="88">
+              <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -133,9 +133,9 @@
         <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
         <option value="$PROJECT_DIR$/Data/Database.py" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
         <option value="$PROJECT_DIR$/NLP/TextParser.py" />
+        <option value="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" />
       </list>
     </option>
   </component>
@@ -1200,8 +1200,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="88">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>

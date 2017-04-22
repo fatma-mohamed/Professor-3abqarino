@@ -1,6 +1,6 @@
 from NLP.TextParser import TextParser
 from ResponseSelection.ResponseSelector import ResponseSelector
-from NLP import *
+from NLP import TextParser,WordRecognizer
 from Data import DataAccess
 from collections import Counter
 
@@ -12,7 +12,7 @@ class FeatureOneSelector(ResponseSelector):
         self.question = question
 
     def getAnswer(self):
-        Tx = TextParser()
+        Tx = TextParser.TextParser()
         t = Tx.tokenize(self.question)
         k = Tx.removeStopWords(t)
         keywordsID = self.retriveSynonymID(k)
