@@ -8,7 +8,7 @@ class FeatureTwoSelector:
     def getRandomQuestion(self,answerFeedback = ""):
         row = DataAccess.DataAccess().selectRandom('''Questions_Answers''')
         return {
-        "speech" : answerFeedback,
+        "speech" : "",
         "displayText": "",
         "data": {},
         "contextOut": [],
@@ -20,7 +20,8 @@ class FeatureTwoSelector:
                 "A1": row[2],
                 "A2": row[3],
                 "A3": row[4],
-                "CA_ID": row[5]
+                "CA_ID": row[5],
+                "AnswerFeedback": answerFeedback
                 }
             }
         }
