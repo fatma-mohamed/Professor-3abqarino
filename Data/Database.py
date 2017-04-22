@@ -148,4 +148,3 @@ class Database:
                 cur.execute('''INSERT INTO "''' + table_name + '''"( ''' + cols + " ) VALUES ( " + values + " ) " +
                             "ON CONFLICT ( " + conflict_fields + " ) DO " + conflict_do);
         self.connection.commit()
-        return cur.lastrowid
