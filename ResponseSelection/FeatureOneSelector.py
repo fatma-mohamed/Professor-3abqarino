@@ -50,5 +50,5 @@ class FeatureOneSelector(ResponseSelector):
     def retriveAnswer(self, IDs):
         Da = DataAccess.DataAccess()
         print (IDs)
-        Answer = Da.select("Answers", "answers", "id = " + str(IDs[0][0][0]))
+        Answer = Da.select("Answers", "answer", "id = " + str(IDs[0][0][0]))
         return Answer
