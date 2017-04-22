@@ -41,6 +41,8 @@ def makeWebhookResult(req):
         return DataPreprocessing.DataPreprocessing().insertQuestions_Answers()
     elif req.get("result").get("action") == "request-game":
         return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
+    elif req.get("result").get("action") == "check-answer":
+        return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness()
     else:
         return {}
 
