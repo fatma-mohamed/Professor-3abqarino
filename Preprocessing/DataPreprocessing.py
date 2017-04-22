@@ -40,7 +40,8 @@ class DataPreprocessing:
                         db.insert("Synonyms", "key_id, synonym" , id + ", '"+s+"'" , "", "")
                 else:
                     keywords_id.append(keyword_id)
-            for id in keywords_id:
-                print("K_ID: ", id)
-                v = str(answer_id) + "," + str(id)
+            print("KEYWORDS: ", keywords_id)
+            for i in keywords_id:
+                print("K_ID: ", i)
+                v = str(answer_id) + "," + str(i)
                 db.insert("Answers_Keywords", "answer_id, keyword_id", v,"answer_id, keyword_id","")
