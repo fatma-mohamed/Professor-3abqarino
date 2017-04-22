@@ -79,6 +79,13 @@ class Database:
                   Category TEXT );''')
         print("--------Table Keywords created successfully--------")
 
+
+    def alterTable(self):
+        cur = self.connection.cursor
+        cur.execute('''ALTER TABLE "Keywords" ADD CONSTRAINT x UNIQUE(keyword)''')
+        cur.execute('''ALTER TABLE "Keywords" ALTER COLUMN category DROP NOT NULL''')
+        print("--------Table Keywords altered successfully--------")
+
     def deleteTable_Keywords(self):
         print("--------in Database deleteTable_Keywords--------")
         cur = self.connection.cursor()
@@ -135,8 +142,6 @@ class Database:
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE "Questions_Answers";''')
         print("--------Table Questions_Answers deleted successfully--------")
-
-
 
     def insert(self, table_name, cols, values, conflict_fields, conflict_do):
         cur = self.connection.cursor()
