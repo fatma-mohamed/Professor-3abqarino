@@ -2,3 +2,5 @@
 
 *.yml
 *.xml
+
+*/__pycache__
