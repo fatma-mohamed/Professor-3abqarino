@@ -18,12 +18,12 @@ class DataPreprocessing:
             if (line == ''):
                 print("no question!")
                 break
-            question = line.strip('-')
+            question = DataPreprocessing.removeSinqleQuotes(line.strip('-'))
             line = file.readline()
             if (line == ''):
                 print("no answer!")
                 break
-            answer = line.strip('\n')
+            answer = DataPreprocessing.removeSinqleQuotes(line.strip('\n'))
             print("Question: ", question , "\nAnswer: ", answer)
             db.insert("Answers", "answer", "'"+answer+"'", "" , "")
             answer_id = db_access.select("Answers", "id", "answer", "'"+answer+"'")
@@ -47,3 +47,8 @@ class DataPreprocessing:
             for i in keywords_id:
                 v = str(answer_id[0][0]) + "," + str(i)
                 db.insert("Answers_Keywords", "answer_id, keyword_id", v,"answer_id, keyword_id","")
+
+    @staticmethod
+    def removeSinqleQuotes(self, s):
+        res = s.replace("'", '"')
+        return res
