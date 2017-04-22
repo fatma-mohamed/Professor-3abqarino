@@ -1,4 +1,5 @@
 from Data.Database import Database
+from Data.DataAccess import DataAccess
 from NLP.TextParser import TextParser
 from NLP.WordRecognizer import WordRecognizer
 
@@ -7,6 +8,7 @@ class DataPreprocessing:
     @staticmethod
     def insertAnswers_and_keywords():
         db = Database()
+        db_access = DataAccess()
         parser = TextParser()
         recognizer  = WordRecognizer()
         file = open("Preprocessing/essay_questions.txt", "r")
@@ -29,7 +31,7 @@ class DataPreprocessing:
             keywords_id = []
             for k in keywords:
                 print("Keyword: " , k)
-                keyword_id = db.select("Keywords", "id", "keyword", "'"+k+"'")
+                keyword_id = db_access.select("Keywords", "id", "keyword", "'"+k+"'")
                 if(keyword_id == None):
                     id = db.insert("Keywords", "keyword", "'"+k+"'", "keyword", "")
                     keywords_id.append(id)
