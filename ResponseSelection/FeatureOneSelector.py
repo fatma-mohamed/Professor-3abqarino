@@ -40,6 +40,8 @@ class FeatureOneSelector(ResponseSelector):
     def retriveAnswersID(self, keywordsIDs):
         Da = DataAccess.DataAccess()
         answersID = []
+        print ("________in retriveAnswersID _______________ ")
+        print(keywordsIDs)
         for id in keywordsIDs:
             ids = Da.select("Answers_Keywords", "answer_id", "keyword_id = " + id)
             answersID += ids
