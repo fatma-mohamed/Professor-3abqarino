@@ -34,6 +34,7 @@ class DataPreprocessing:
                 keyword_id = db_access.select("Keywords", "id", "keyword", "'"+k+"'")
                 if keyword_id == "[]":
                     id = db.insert("Keywords", "keyword", "'"+k+"'", "keyword", "")
+                    print("NEW ID: " ,id)
                     keywords_id.append(id)
                     synonyms = recognizer.getSynonym(k)
                     for s in synonyms:
