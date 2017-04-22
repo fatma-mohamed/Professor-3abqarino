@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" afterPath="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,54 +21,18 @@
     <SUITE FILE_PATH="coverage/professor_3abqarino$scratch_1.coverage" NAME="scratch_1 Coverage Results" MODIFIED="1492749084188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/professor_3abqarino$DataPreprocessing.coverage" NAME="DataPreprocessing Coverage Results" MODIFIED="1492857932534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Preprocessing" />
     <SUITE FILE_PATH="coverage/professor_3abqarino$scratch_2.coverage" NAME="scratch_2 Coverage Results" MODIFIED="1492808168651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/professor_3abqarino$scratch_6.coverage" NAME="scratch_6 Coverage Results" MODIFIED="1492866908983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataPreprocessing.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DataPreprocessing.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state relative-caret-position="323">
+              <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Database.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Data/Database.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="53" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1492864694053" expanded="true" signature="1850:1963" ph="CREATE TABLE... Answers" />
-                <marker date="1492864694053" expanded="true" signature="2200:2220" ph="DROP TABLE &quot;... " />
-                <marker date="1492864694053" expanded="true" signature="2459:2615" ph="CREATE TABLE... Keywords" />
-                <marker date="1492864694053" expanded="true" signature="2855:2876" ph="DROP TABLE &quot;... " />
-                <marker date="1492864694053" expanded="true" signature="3132:3441" ph="CREATE TABLE... Answers_Keywords" />
-                <marker date="1492864694053" expanded="true" signature="3705:3734" ph="DROP TABLE &quot;... " />
-                <marker date="1492864694053" expanded="true" signature="3982:4200" ph="CREATE TABLE... Synonyms" />
-                <marker date="1492864694053" expanded="true" signature="4440:4461" ph="DROP TABLE &quot;... " />
-                <marker date="1492864694053" expanded="true" signature="4719:5019" ph="CREATE TABLE... Questions_Answers" />
-                <marker date="1492864694053" expanded="true" signature="5286:5316" ph="DROP TABLE &quot;... " />
-                <marker date="1492864694053" expanded="true" signature="5581:5661" ph="INSERT INTO &quot;missing_value&quot;... " />
-                <marker date="1492864694053" expanded="true" signature="5746:5910" ph="INSERT INTO &quot;missing_value&quot;... " />
-                <marker date="1492864694053" expanded="true" signature="5963:6120" ph="INSERT INTO &quot;missing_value&quot;... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="52" column="41" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding>
-                <element signature="e#22#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,10 +58,11 @@
         <option value="$PROJECT_DIR$/NLP/TextParser.py" />
         <option value="$PROJECT_DIR$/nltk.txt" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
         <option value="$PROJECT_DIR$/Data/DataAccess.py" />
         <option value="$PROJECT_DIR$/Data/Database.py" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py" />
       </list>
     </option>
   </component>
@@ -222,26 +188,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.scratch_5">
-    <configuration default="false" name="scratch_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="professor-3abqarino" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.scratch_6">
     <configuration default="false" name="scratch_3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -313,6 +260,25 @@
       <module name="professor-3abqarino" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="scratch_6" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="professor-3abqarino" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -487,19 +453,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.professor-3abqarino" />
-      <item index="1" class="java.lang.String" itemvalue="Python.scratch_2" />
-      <item index="2" class="java.lang.String" itemvalue="Python.scratch_3" />
-      <item index="3" class="java.lang.String" itemvalue="Python.DataAccess" />
-      <item index="4" class="java.lang.String" itemvalue="Python.DataPreprocessing" />
-      <item index="5" class="java.lang.String" itemvalue="Python.scratch_5" />
+      <item index="1" class="java.lang.String" itemvalue="Python.scratch_3" />
+      <item index="2" class="java.lang.String" itemvalue="Python.DataAccess" />
+      <item index="3" class="java.lang.String" itemvalue="Python.DataPreprocessing" />
+      <item index="4" class="java.lang.String" itemvalue="Python.scratch_5" />
+      <item index="5" class="java.lang.String" itemvalue="Python.scratch_6" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.scratch_5" />
-        <item index="1" class="java.lang.String" itemvalue="Python.DataPreprocessing" />
-        <item index="2" class="java.lang.String" itemvalue="Python.DataAccess" />
-        <item index="3" class="java.lang.String" itemvalue="Python.scratch_3" />
-        <item index="4" class="java.lang.String" itemvalue="Python.scratch_2" />
+        <item index="0" class="java.lang.String" itemvalue="Python.scratch_6" />
+        <item index="1" class="java.lang.String" itemvalue="Python.scratch_5" />
+        <item index="2" class="java.lang.String" itemvalue="Python.DataPreprocessing" />
+        <item index="3" class="java.lang.String" itemvalue="Python.DataAccess" />
+        <item index="4" class="java.lang.String" itemvalue="Python.scratch_3" />
       </list>
     </recent_temporary>
   </component>
@@ -738,14 +704,28 @@
       <option name="project" value="LOCAL" />
       <updated>1492864958812</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Preprocessing: insertAnswers_and_keywords">
+      <created>1492865182530</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1492865182530</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Preprocessing: insertAnswers_and_keywords">
+      <created>1492866598841</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1492866598841</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="449" y="0" width="917" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25416204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25416204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -779,7 +759,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17904994" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25416204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -976,45 +956,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        <state relative-caret-position="244">
+          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#22#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/Database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="53" selection-end-column="35" />
+        <state relative-caret-position="179">
+          <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1492864694053" expanded="true" signature="1850:1963" ph="CREATE TABLE... Answers" />
-            <marker date="1492864694053" expanded="true" signature="2200:2220" ph="DROP TABLE &quot;... " />
-            <marker date="1492864694053" expanded="true" signature="2459:2615" ph="CREATE TABLE... Keywords" />
-            <marker date="1492864694053" expanded="true" signature="2855:2876" ph="DROP TABLE &quot;... " />
-            <marker date="1492864694053" expanded="true" signature="3132:3441" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1492864694053" expanded="true" signature="3705:3734" ph="DROP TABLE &quot;... " />
-            <marker date="1492864694053" expanded="true" signature="3982:4200" ph="CREATE TABLE... Synonyms" />
-            <marker date="1492864694053" expanded="true" signature="4440:4461" ph="DROP TABLE &quot;... " />
-            <marker date="1492864694053" expanded="true" signature="4719:5019" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1492864694053" expanded="true" signature="5286:5316" ph="DROP TABLE &quot;... " />
-            <marker date="1492864694053" expanded="true" signature="5581:5661" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1492864694053" expanded="true" signature="5746:5910" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1492864694053" expanded="true" signature="5963:6120" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1492865773800" expanded="true" signature="1850:1963" ph="CREATE TABLE... Answers" />
+            <marker date="1492865773800" expanded="true" signature="2200:2220" ph="DROP TABLE &quot;... " />
+            <marker date="1492865773800" expanded="true" signature="2459:2615" ph="CREATE TABLE... Keywords" />
+            <marker date="1492865773800" expanded="true" signature="2855:2876" ph="DROP TABLE &quot;... " />
+            <marker date="1492865773800" expanded="true" signature="3132:3441" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1492865773800" expanded="true" signature="3705:3734" ph="DROP TABLE &quot;... " />
+            <marker date="1492865773800" expanded="true" signature="3982:4200" ph="CREATE TABLE... Synonyms" />
+            <marker date="1492865773800" expanded="true" signature="4440:4461" ph="DROP TABLE &quot;... " />
+            <marker date="1492865773800" expanded="true" signature="4719:5019" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1492865773800" expanded="true" signature="5286:5316" ph="DROP TABLE &quot;... " />
+            <marker date="1492865773800" expanded="true" signature="5581:5661" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1492865773800" expanded="true" signature="5746:5910" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1492865773800" expanded="true" signature="5963:6120" ph="INSERT INTO &quot;missing_value&quot;... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="52" column="41" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state relative-caret-position="34">
+          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
           <folding>
-            <element signature="e#22#56#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
