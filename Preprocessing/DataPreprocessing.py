@@ -49,6 +49,6 @@ class DataPreprocessing:
                 db.insert("Answers_Keywords", "answer_id, keyword_id", v,"answer_id, keyword_id","")
 
     @staticmethod
-    def removeSinqleQuotes(self, s):
+    def removeSinqleQuotes(s):
         res = s.replace("'", '"')
         return res
