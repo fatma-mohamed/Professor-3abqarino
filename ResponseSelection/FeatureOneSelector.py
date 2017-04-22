@@ -45,10 +45,10 @@ class FeatureOneSelector(ResponseSelector):
         for id in keywordsIDs:
             ids = Da.select("Answers_Keywords", "answer_id", "keyword_id = " + str(id[0]))
             answersID += ids
-
         return Counter(answersID).most_common(3)
 
     def retriveAnswer(self, IDs):
         Da = DataAccess.DataAccess()
+        print (IDs)
         Answer = Da.select("Answers", "Answers", "id = " + IDs[0][0])
         return Answer
