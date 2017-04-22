@@ -2,8 +2,8 @@ from Data import Database
 
 class DataAccess:
     def select(self, table_name, cols, condition, value):
-        conn = Database.Database()
-        cur = conn.connection.cursor()
+        db = Database.Database()
+        cur = db.connection.cursor()
         if (condition == ""):
             cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''"''')
         else:
@@ -14,8 +14,8 @@ class DataAccess:
         return rows
 
     # def select(self, table_name, cols, condition1, value1, condition2, value2):
-    #     conn = Database.Database()
-    #     cur = conn.connection.cursor()
+    #     db = Database.Database()
+    #     cur = db.connection.cursor()
     #     if (condition1 == ""):
     #         cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''"''')
     #     else:
