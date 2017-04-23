@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import Data
+from Data import Database
 
 import urllib
 import json
@@ -8,12 +8,13 @@ import os
 from flask import Flask
 from flask import request
 from flask import make_response
-from ResponseSelection import*
-
+from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
+from Preprocessing import *
 
 # Flask app should start in global layout
 app = Flask(__name__)
 responseSelector = ResponseSelector.ResponseSelector()
+
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
     req = request.get_json(silent=True, force=True)
@@ -48,7 +49,15 @@ def makeWebhookResult(req):
             "displayText": "okk"
 
         }
-
+    elif req.get("result").get("action") == "createDB":
+        conn = Database.Database()
+        return DataPreprocessing.DataPreprocessing().__run__(conn)
+    elif req.get("result").get("action") == "InsertQuestions_Answers":
+        return DataPreprocessing.DataPreprocessing().insertQuestions_Answers()
+    elif req.get("result").get("action") == "request-game":
+        return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
+    elif req.get("result").get("action") == "check-answer":
+        return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
     else:
         return {}
 

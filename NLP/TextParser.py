@@ -2,7 +2,6 @@ from nltk.tokenize import word_tokenize
 
 class TextParser:
 
-
     def tokenize(self, input):
         list = word_tokenize(input)
         return list
