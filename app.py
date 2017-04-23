@@ -33,7 +33,22 @@ def webhook():
 def makeWebhookResult(req):
     action = req.get("result").get("action")
     if "request_user_name" in action:
+        responseSelector = ResponseSelector.ResponseSelector()
         return responseSelector.requestUserName(req, action)
+    elif action == "Ask-a-question.Ask-a-question-custom":
+        print ("i get a question :D ")
+        question = (req.get("result")).get("resolvedQuery")
+        responseSelector = FeatureOneSelector.FeatureOneSelector(question)
+        answer =  responseSelector.getAnswer()
+        print (answer)
+        return {
+
+            "speech": answer,
+            "source": "prof-3abqarino_webhook",
+            "displayText": "okk"
+
+        }
+
     else:
         return {}
 
