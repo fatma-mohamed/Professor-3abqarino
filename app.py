@@ -40,6 +40,7 @@ def makeWebhookResult(req):
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         answer =  responseSelector.getAnswer()
+        print (answer)
         return {
 
             "speech": answer,
