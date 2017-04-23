@@ -1,4 +1,10 @@
-.idea/*
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/professor-3abqarino.iml
+
+.idea/vcs.xml
 
 .idea/workspace.xml
 
