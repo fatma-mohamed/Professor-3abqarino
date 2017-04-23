@@ -21,7 +21,7 @@ class FeatureOneSelector(ResponseSelector):
         if len(mostCommenAnswers) == 0:
             return "sorry i have no answers to this question ! :("
         answer = self.retriveAnswer(mostCommenAnswers)
-        return answer[0]
+        return answer[0][0]
 
     def retriveSynonymID(self, keywords):
         synonymKey = []
