@@ -44,7 +44,7 @@ def makeWebhookResult(req):
 
             "speech": "ok",
             "source": "prof-3abqarino_webhook",
-            "displayText": answer
+            "displayText": "okk"
 
         }
 
