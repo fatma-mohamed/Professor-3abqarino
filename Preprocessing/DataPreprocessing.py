@@ -3,8 +3,20 @@ from Data.DataAccess import DataAccess
 from NLP.TextParser import TextParser
 from NLP.WordRecognizer import WordRecognizer
 
+
 class DataPreprocessing:
 
+
+    def __run__(self, db):
+        db.__createTables__()
+
+        return {
+            "speech": "Created tables",
+            "displayText": "",
+            "data": {},
+            "contextOut": [],
+            "source": "create-database"
+        }
 
     @staticmethod
     def insertAnswers_and_keywords():
@@ -25,26 +37,47 @@ class DataPreprocessing:
                 print("no answer!")
                 break
             answer = DataPreprocessing.removeSinqleQuotes(line.strip('\n'))
-            db.insert("Answers", "answer", "'" + answer + "'", "", "")
-            answer_id = db_access.select("Answers", "id", "answer", "'" + answer + "'")
+            cols = ["answer"]
+            values = ["'" + answer + "'"]
+            db.insert("Answers", cols, values, "", "")
+
+            cols = ["id"]
+            parameters = ["answer"]
+            values = ["'" + answer + "'"]
+            answer_id = db_access.select("Answers", cols, parameters, values, "")
+
             tokens = parser.tokenize(question)
             keywords = parser.removeStopWords(tokens)
             keywords_id = []
             for k in keywords:
-                keyword_id = db_access.select("Keywords", "id", "keyword", "'" + k + "'")
+
+                cols = ["id"]
+                parameters = ["keyword"]
+                values = [ "'" + k + "'"]
+                keyword_id = db_access.select("Keywords", cols, parameters,values,"")
                 if len(keyword_id) == 0:
-                    db.insert("Keywords", "keyword", "'" + k + "'", "keyword", "")
-                    id = db_access.select("Keywords", "id", "keyword", "'" + k + "'")
+                    cols = ["keyword"]
+                    values = ["'" + k + "'"]
+                    conflict_fields = ["keyword"]
+                    db.insert("Keywords", cols, values, conflict_fields, "")
+
+                    cols = ["id"]
+                    parameters = ["keyword"]
+                    values = ["'" + k + "'"]
+                    id = db_access.select("Keywords", cols, parameters, values, "")
                     keywords_id.append(id[0][0])
                     synonyms = recognizer.getSynonym(k)
                     for s in synonyms:
-                        z = str(id[0][0]) + ", '" + s + "'"
-                        db.insert("Synonyms", "key_id, synonym", z, "", "")
+                        cols = ["key_id", "synonym"]
+                        values = [str(id[0][0]) + ", '" + s + "'"]
+                        db.insert("Synonyms", cols, values, "", "")
                 else:
                     keywords_id.append(keyword_id[0][0])
             for i in keywords_id:
-                v = str(answer_id[0][0]) + "," + str(i)
-                db.insert("Answers_Keywords", "answer_id, keyword_id", v, "answer_id, keyword_id", "")
+                cols = ["answer_id", "keyword_id"]
+                values = [str(answer_id[0][0]) + "," + str(i)]
+                conflict_fields = ["answer_id", "keyword_id"]
+                db.insert("Answers_Keywords", cols, values, conflict_fields, "")
 
     @staticmethod
     def removeSinqleQuotes(s):
