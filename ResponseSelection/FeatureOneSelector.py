@@ -1,5 +1,5 @@
 from NLP.TextParser import TextParser
-from NLP import TextParser,WordRecognizer
+from NLP.WordRecognizer import WordRecognizer
 from Data import DataAccess
 from collections import Counter
 
@@ -11,7 +11,7 @@ class FeatureOneSelector():
         self.question = question
 
     def getAnswer(self):
-        Tx = TextParser.TextParser()
+        Tx = TextParser()
         t = Tx.tokenize(self.question)
         k = Tx.removeStopWords(t)
         keywordsID = self.retriveSynonymID(k)
