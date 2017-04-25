@@ -10,6 +10,21 @@ class FeatureOneSelector():
     def __init__(self, question):
         self.question = question
 
+
+    def getResult(self,question):
+        answer = self.getAnswer()
+        return {
+
+            "speech": answer,
+            "source": "prof-3abqarino_webhook",
+            "displayText": answer
+
+        }
+
+
+
+
+
     def getAnswer(self):
         Tx = TextParser()
         t = Tx.tokenize(self.question)
@@ -33,7 +48,7 @@ class FeatureOneSelector():
         for word in keywords:
             w="'"+word+"'"
             word =w
-            ids = Da.select("Synonyms", "key_id", "synonym =" + word)
+            ids = Da.select("Synonyms", ["key_id"], ["synonym"],[word],"")
             synonymKey += ids
             # for  id  in ids:
             #     keyWord =Da.select("Keywords","keyword","id = "+id)
@@ -47,12 +62,12 @@ class FeatureOneSelector():
         print ("________in retriveAnswersID _______________ ")
         print(keywordsIDs)
         for id in keywordsIDs:
-            ids = Da.select("Answers_Keywords", "answer_id", "keyword_id = " + str(id[0]))
+            ids = Da.select("Answers_Keywords", ["answer_id"], ["keyword_id"] , [str(id[0])],"")
             answersID += ids
         return Counter(answersID).most_common(3)
 
     def retriveAnswer(self, IDs):
         Da = DataAccess.DataAccess()
         print (IDs)
-        Answer = Da.select("Answers", "answer", "id = " + str(IDs[0][0][0]))
+        Answer = Da.select("Answers", ["answer"], ["id"] , [str(IDs[0][0][0])],"")
         return Answer
