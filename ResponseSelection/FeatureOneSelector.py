@@ -11,7 +11,7 @@ class FeatureOneSelector():
         self.question = question
 
 
-    def getResult(self,question):
+    def getResult(self):
         answer = self.getAnswer()
         return {
 
