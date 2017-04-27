@@ -13,7 +13,7 @@ class FeatureOneSelector():
 
     def getResult(self):
         answer = self.getAnswer()
-        if self.found:
+        if "sorry" in answer:
             print(str(self.found))
             return {
                 "speech": answer,
