@@ -138,12 +138,44 @@ class Database:
 
     def insert(self, table_name, cols, values, conflict_fields, conflict_do):
         cur = self.connection.cursor()
-        if (conflict_fields == ""):
-            cur.execute('''INSERT INTO "''' + table_name + '''"( ''' + cols + " ) VALUES ( " + values + " )");
+
+        cols_str = "( "
+        cols_size = len(cols)
+        for i in range(0, cols_size):
+            if i == cols_size - 1:
+                cols_str += str(cols[i])
+                break
+            cols_str += (str(cols[i]) + ", ")
+        cols_str += (" )")
+
+        values_str = "( "
+        values_size = len(values)
+        for i in range(0, values_size):
+            if i == values_size - 1:
+                values_str += str(values[i])
+                break
+            values_str += (str(values[i]) + ", ")
+        values_str += (" )")
+
+        conflict_fields_str = "( "
+        conflict_fields_size = len(conflict_fields)
+        for i in range(0, conflict_fields_size):
+            if i == conflict_fields_size - 1:
+                conflict_fields_str += str(conflict_fields[i])
+                break
+            conflict_fields_str += (str(conflict_fields[i]) + ", ")
+        conflict_fields_str += (" )")
+
+        if (not conflict_fields):
+            cur.execute('''INSERT INTO "''' + table_name + '''" ''' + cols_str + " VALUES " + values_str);
         else:
             if (conflict_do == ''):
-                cur.execute('''INSERT INTO "''' + table_name + '''"( ''' + cols + " ) VALUES ( " + values + " ) " +
-                            "ON CONFLICT ( " + conflict_fields + " ) DO NOTHING");
+                cur.execute('''INSERT INTO "''' + table_name + '''" ''' + cols_str + " VALUES " + values_str +
+                            " ON CONFLICT " + conflict_fields_str + " DO NOTHING");
             else:
-                cur.execute('''INSERT INTO "''' + table_name + '''"( ''' + cols + " ) VALUES ( " + values + " ) " +
-                            "ON CONFLICT ( " + conflict_fields + " ) DO " + conflict_do);
+                cur.execute('''INSERT INTO "''' + table_name + '''" ''' + cols_str + " VALUES " + values_str +
+                            " ON CONFLICT " + conflict_fields_str + " DO " + conflict_do);
+
+        self.connection.commit()
+        cur.close()
+
