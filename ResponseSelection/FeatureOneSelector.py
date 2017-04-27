@@ -21,7 +21,7 @@ class FeatureOneSelector():
                 "data": {},
                 "contextOut": [],
                 "source": "prof-3abqarino_webhook",
-                "followupEvent": {"name": "gif_event", "data": {"url": url}}
+                "followupEvent": {"name": "ask_question_event", "data": {"url": url}}
             }
         else:
             return {
