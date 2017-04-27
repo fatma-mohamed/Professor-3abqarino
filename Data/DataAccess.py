@@ -23,7 +23,7 @@ class DataAccess:
             conditions += (str(parameters[j]) + " = " + str(values[j]) + " " + str(operators[j]) + " ")
 
         cur.execute('''SELECT ''' + cols_str + ''' FROM "''' + table_name + '''" WHERE ''' + conditions +
-                    ''' OFFSET floor(random()*(SELECT COUNT(*) FROM "''' + table_name + '''" WHERE ''' + conditions + ''')) LIMIT 1''')
+                    ''' ORDER BY RANDOM() LIMIT 1''')
         rows = cur.fetchall()
         cur.close()
         print (rows)
