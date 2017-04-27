@@ -17,12 +17,13 @@ class FeatureOneSelector():
             url = "https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif"
             print ("URL: ", url)
             return {
-                "speech": answer,
-                "displayText": answer,
+                "speech": "",
+                "displayText": "",
                 "data": {},
                 "contextOut": [],
                 "source": "prof-3abqarino_webhook",
-                "followupEvent": {"name": "ask_question_event", "data": {"url": url}}
+                "followupEvent": {"name": "ask_question_event",
+                                  "data": {"imageURL": url, "speech":answer}}
             }
         else:
             return {
