@@ -16,6 +16,9 @@ class DataPreprocessing:
         ##rest of the preprocessing
 
     def insertQuestions_Answers(self):
+        Database.Database().deleteTable_Questions_Answers()
+        Database.Database().createTable_Questions_Answers()
+        
         f = open("Question_Answers.txt", 'r')
         i=0
         while True:
