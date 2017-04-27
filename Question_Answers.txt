@@ -213,7 +213,7 @@ sixth
 first
 fourth
 2
-What organ didn't get removed during mummification?
+What organ didn`t get removed during mummification?
 stomach
 heart
 lungs
