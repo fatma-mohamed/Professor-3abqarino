@@ -1,26 +1,31 @@
 from Data import Database
 
 class DataAccess:
-    def select(self, table_name, cols, condition, value):
+    def select(self, table_name, cols, parameters, values, operators):
         db = Database.Database()
         cur = db.connection.cursor()
-        if (condition == ""):
-            cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''"''')
+
+        cols_str = "( "
+        cols_size = len(cols)
+        for i in range(0, cols_size):
+            if i == cols_size - 1:
+                cols_str += str(cols[i])
+                break
+            cols_str += (str(cols[i]) + ", ")
+        cols_str += (" )")
+
+        if (not parameters):
+            cur.execute("SELECT " + cols_str + ''' from "''' + table_name + '''"''')
         else:
-            cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''" WHERE ''' + condition + " = " + value)
+            parameters_size = len(parameters)
+            conditions = ""
+            for j in range(0, parameters_size):
+                if j == parameters_size - 1:
+                    conditions += (str(parameters[j]) + " = " + str(values[j]))
+                    break
+                conditions += (str(parameters[j]) + " = " + str(values[j]) + " " + str(operators[j]) + " ")
+            cur.execute("SELECT " + cols_str + ''' from "''' + table_name + '''" WHERE ''' + conditions)
 
         rows = cur.fetchall()
         cur.close()
         return rows
-
-    # def select(self, table_name, cols, condition1, value1, condition2, value2):
-    #     db = Database.Database()
-    #     cur = db.connection.cursor()
-    #     if (condition1 == ""):
-    #         cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''"''')
-    #     else:
-    #         cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''" WHERE ''' + condition1 + " = " + value1 + " AND " + condition2 + " = " + value2)
-    #
-    #     rows = cur.fetchall()
-    #     cur.close()
-    #     return rows
