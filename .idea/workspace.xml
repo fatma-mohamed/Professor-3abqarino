@@ -61,8 +61,8 @@
       <file leaf-file-name="FeatureOneSelector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+            <state relative-caret-position="153">
+              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -513,13 +513,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491849634099</updated>
     </task>
-    <task id="LOCAL-00001" summary="Preprocessing: insertAnswers_and_keywords">
-      <created>1492632946833</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1492632946833</updated>
-    </task>
     <task id="LOCAL-00002" summary="Preprocessing: insertAnswers_and_keywords">
       <created>1492635338351</created>
       <option name="number" value="00002" />
@@ -856,11 +849,19 @@
       <option name="project" value="LOCAL" />
       <updated>1493261299192</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="GIFs added to response">
+      <created>1493264637318</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1493264637318</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="683" y="0" width="683" height="728" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4917541" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1203,8 +1204,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        <state relative-caret-position="153">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>

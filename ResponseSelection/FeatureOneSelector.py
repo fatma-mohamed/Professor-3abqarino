@@ -13,7 +13,7 @@ class FeatureOneSelector():
 
     def getResult(self):
         answer = self.getAnswer()
-        if False == self.found:
+        if not self.found:
             url = "https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif"
             print ("URL: ", url)
             return {
@@ -26,6 +26,7 @@ class FeatureOneSelector():
                                   "data": {"imageURL": url, "speech":answer}}
             }
         else:
+            print(str(self.found))
             return {
                 "speech": answer,
                 "source": "prof-3abqarino_webhook",
