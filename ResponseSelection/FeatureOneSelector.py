@@ -15,6 +15,7 @@ class FeatureOneSelector():
         answer = self.getAnswer()
         if False == self.found:
             url = "https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif"
+            print ("URL: ", url)
             return {
                 "speech": answer,
                 "displayText": answer,
