@@ -1,7 +1,8 @@
 from Data import Database
 
 class DataAccess:
-    def select(self, table_name, cols, parameters, values, operators):
+
+    def select(self, table_name, cols, parameters, values , operators):
         db = Database.Database()
         cur = db.connection.cursor()
 

@@ -1,5 +1,6 @@
 from ResponseSelection.ResponseSelector import ResponseSelector
+from Data import DataAccess
 
-
-class FeatureTwoSelector(ResponseSelector):
-    dummy_data = "dummy"
+class FeatureTwoSelector:
+    
+    dummy=""

@@ -10,6 +10,7 @@ class FeatureOneSelector():
     def __init__(self, question):
         self.question = question
 
+
     def getResult(self):
         answer = self.getAnswer()
         if "sorry" in answer:
@@ -26,9 +27,9 @@ class FeatureOneSelector():
             }
         else:
             return {
-                "speech": "ok",
+                "speech": answer,
                 "source": "prof-3abqarino_webhook",
-                "displayText": "ok"
+                "displayText": answer
 
             }
 

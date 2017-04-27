@@ -6,7 +6,6 @@ class TextParser:
         list = word_tokenize(input)
         return list
 
-
     def removeStopWords(self, list):
         stopList = set(line.strip() for line in open('NLP/stoplist'))
         filtered_words = [word for word in list if word not in stopList]
