@@ -44,7 +44,7 @@ def makeWebhookResult(req):
         return  responseSelector.getResult()
     elif action == "insert":
         d = DataAccess.DataAccess()
-        d.selectGifsRandom("Gifs",["Url"],["Tag"],["'sad'"],"")
+        d.selectGifsRandom("Gifs",["url"],["tag"],["'correct'"],"")
     else:
         return {}
 
