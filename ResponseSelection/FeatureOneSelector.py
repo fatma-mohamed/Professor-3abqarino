@@ -13,9 +13,16 @@ class FeatureOneSelector():
 
     def getResult(self):
         answer = self.getAnswer()
-        if not self.found:
+        if self.found:
+            print(str(self.found))
+            return {
+                "speech": answer,
+                "source": "prof-3abqarino_webhook",
+                "displayText": answer
+            }
+        else:
             url = "https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif"
-            print ("URL: ", url)
+            print("URL: ", url)
             return {
                 "speech": "",
                 "displayText": "",
@@ -23,15 +30,7 @@ class FeatureOneSelector():
                 "contextOut": [],
                 "source": "prof-3abqarino_webhook",
                 "followupEvent": {"name": "ask_question_event",
-                                  "data": {"imageURL": url, "speech":answer}}
-            }
-        else:
-            print(str(self.found))
-            return {
-                "speech": answer,
-                "source": "prof-3abqarino_webhook",
-                "displayText": answer
-
+                                  "data": {"imageURL": url, "speech": answer}}
             }
 
     def getAnswer(self):
