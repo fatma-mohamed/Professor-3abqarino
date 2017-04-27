@@ -54,10 +54,10 @@
       <file leaf-file-name="DataAccess.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="80" lean-forward="false" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
+            <state relative-caret-position="425">
+              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
               <folding>
-                <marker date="1493273841315" expanded="true" signature="838:1023" ph="SELECT * FRO... missing_value" />
+                <marker date="1493273916171" expanded="true" signature="838:1023" ph="SELECT * FRO... missing_value" />
               </folding>
             </state>
           </provider>
@@ -398,13 +398,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491849634099</updated>
     </task>
-    <task id="LOCAL-00013" summary="Updated nltk.txt">
-      <created>1492856586301</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1492856586301</updated>
-    </task>
     <task id="LOCAL-00014" summary="Preprocessing: insertAnswers_and_keywords">
       <created>1492856821036</created>
       <option name="number" value="00014" />
@@ -741,7 +734,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493273418163</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="createTable_Gifs, deleteTable_Gifs, Gifs preprocessing">
+      <created>1493273850015</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1493273850015</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -933,7 +933,7 @@
         <state relative-caret-position="510">
           <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding>
-            <marker date="1493273841315" expanded="true" signature="838:1023" ph="SELECT * FRO... missing_value" />
+            <marker date="1493273916171" expanded="true" signature="838:1023" ph="SELECT * FRO... missing_value" />
           </folding>
         </state>
       </provider>
@@ -1290,10 +1290,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="80" lean-forward="false" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
+        <state relative-caret-position="425">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding>
-            <marker date="1493273841315" expanded="true" signature="838:1023" ph="SELECT * FRO... missing_value" />
+            <marker date="1493273916171" expanded="true" signature="838:1023" ph="SELECT * FRO... missing_value" />
           </folding>
         </state>
       </provider>
