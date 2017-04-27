@@ -22,8 +22,8 @@ class DataAccess:
                 break
             conditions += (str(parameters[j]) + " = " + str(values[j]) + " " + str(operators[j]) + " ")
 
-        cur.execute('''SELECT ''' + cols_str + ''' FROM "''' + table_name + ''' WHERE ''' + conditions +
-                    '''" OFFSET floor(random()*(SELECT COUNT(*) FROM "''' + table_name + '''")) LIMIT 1''')
+        cur.execute('''SELECT ''' + cols_str + ''' FROM "''' + table_name + '''" WHERE ''' + conditions +
+                    ''' OFFSET floor(random()*(SELECT COUNT(*) FROM "''' + table_name + '''")) LIMIT 1''')
         rows = cur.fetchall()
         cur.close()
         print (rows)
