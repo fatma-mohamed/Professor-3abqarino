@@ -9,7 +9,7 @@ from flask import Flask
 from flask import request
 from flask import make_response
 from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
-from Preprocessing import *
+from Preprocessing import DataPreprocessing
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -37,9 +37,7 @@ def makeWebhookResult(req):
         responseSelector = ResponseSelector.ResponseSelector()
         return responseSelector.requestUserName(req, action)
     elif action == "create":
-        db = Database.Database()
-        db.createTable_Gifs()
-        DataPreprocessing.insertGifs()
+        DataPreprocessing.DataPreprocessing.insertGifs()
     elif action == "Ask-a-question.Ask-a-question-custom":
         print ("i get a question :D ")
         question = (req.get("result")).get("resolvedQuery")

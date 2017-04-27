@@ -219,7 +219,6 @@ class Database:
                        Name TEXT NOT NULL,
                        Url TEXT NOT NULL,
                        Tag TEXT NOT NULL);''')
-        self.connection.commit()
         print("--------Table Gifs created successfully--------")
 
     def deleteTable_Gifs(self):
