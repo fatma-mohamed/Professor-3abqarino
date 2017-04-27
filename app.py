@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import Data
+from Data import Database
 
 import urllib
 import json
@@ -8,12 +8,13 @@ import os
 from flask import Flask
 from flask import request
 from flask import make_response
-from ResponseSelection import*
-
+from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
+from Preprocessing import *
 
 # Flask app should start in global layout
 app = Flask(__name__)
-responseSelector = ResponseSelector.ResponseSelector()
+responseSelector = None
+
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
     req = request.get_json(silent=True, force=True)
@@ -36,9 +37,10 @@ def makeWebhookResult(req):
         responseSelector = ResponseSelector.ResponseSelector()
         return responseSelector.requestUserName(req, action)
     elif action == "Ask-a-question.Ask-a-question-custom":
+        print ("i get a question :D ")
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
-        return responseSelector.getResult()
+        return  responseSelector.getResult()
     else:
         return {}
 
