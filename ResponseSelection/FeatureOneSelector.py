@@ -25,11 +25,10 @@ class FeatureOneSelector():
                                   "data": {"imageURL": url, "speech":answer}}
             }
         else:
-            print(str(self.found))
             return {
-                "speech": answer,
+                "speech": "ok",
                 "source": "prof-3abqarino_webhook",
-                "displayText": answer
+                "displayText": "ok"
 
             }
 
