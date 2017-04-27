@@ -41,7 +41,7 @@ class FeatureOneSelector():
         # ner = WordRecognizer.namedEntity(k)
         mostCommenAnswers = self.retriveAnswersID(keywordsID)
         if len(mostCommenAnswers) == 0:
-            return "sorry I have no answers to this question! :("
+            return "sorry I have no answers to this question!"
         answer = self.retriveAnswer(mostCommenAnswers)
         print (answer)
         print ("__________")
