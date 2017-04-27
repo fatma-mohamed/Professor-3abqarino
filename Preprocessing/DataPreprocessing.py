@@ -80,6 +80,22 @@ class DataPreprocessing:
                 db.insert("Answers_Keywords", cols, values, conflict_fields, "")
 
     @staticmethod
+    def insertGifs(self):
+        db = Database()
+        file = open("Preprocessing/gifs.txt", "r")
+
+        while True:
+            line = file.readline()
+            if (line == ''):
+                print("EOF!")
+                break
+            arr = line.split(" ")
+            name = "'" + arr[0] + "'"
+            url = "'" + arr[1] + "'"
+            tag = "'" + arr[2] + "'"
+            db.insert("Gifs", ["Name", "Url" , "Tag"], [name,url,tag],"","")
+
+    @staticmethod
     def removeSinqleQuotes(s):
         res = s.replace("'", '"')
         return res

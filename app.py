@@ -36,6 +36,10 @@ def makeWebhookResult(req):
     if "request_user_name" in action:
         responseSelector = ResponseSelector.ResponseSelector()
         return responseSelector.requestUserName(req, action)
+    elif action == "create":
+        db = Database.Database()
+        db.createTable_Gifs()
+        DataPreprocessing.insertGifs()
     elif action == "Ask-a-question.Ask-a-question-custom":
         print ("i get a question :D ")
         question = (req.get("result")).get("resolvedQuery")
