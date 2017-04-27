@@ -128,12 +128,13 @@ class Database:
                Correct_AnswerID INT NOT NULL,
                CONSTRAINT uniqueQAs UNIQUE (Question, Answer_1, Answer_2, Answer_3, Correct_AnswerID));''')
         print ("--------Table Questions_Answers created successfully--------")
-
+        self.connection.commit()
 
     def deleteTable_Questions_Answers(self):
         print ("--------in Database deleteTable_Questions_Answers--------")
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE "Questions_Answers";''')
+        self.connection.commit()
         print("--------Table Questions_Answers deleted successfully--------")
 
     def insert(self, table_name, cols, values, conflict_fields, conflict_do):
