@@ -54,10 +54,10 @@
       <file leaf-file-name="DataAccess.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            <state relative-caret-position="408">
+              <caret line="24" column="105" lean-forward="false" selection-start-line="24" selection-start-column="105" selection-end-line="24" selection-end-column="105" />
               <folding>
-                <marker date="1493273916171" expanded="true" signature="838:1023" ph="SELECT * FRO... missing_value" />
+                <marker date="1493274170210" expanded="true" signature="838:1052" ph="SELECT * FRO... missing_value" />
               </folding>
             </state>
           </provider>
@@ -99,8 +99,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="571" />
-    <option name="width" value="795" />
+    <option name="x" value="223" />
+    <option name="width" value="1143" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -397,13 +397,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491849634099</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Preprocessing: insertAnswers_and_keywords">
-      <created>1492856821036</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1492856821036</updated>
     </task>
     <task id="LOCAL-00015" summary="Preprocessing: insertAnswers_and_keywords">
       <created>1492857098421</created>
@@ -741,11 +734,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493273850015</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="selectGifsRandom">
+      <created>1493273933401</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1493273933403</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="571" y="0" width="795" height="728" extended-state="0" />
+    <frame x="223" y="0" width="1143" height="728" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3504493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -806,7 +806,8 @@
     <MESSAGE value="Preprocessing: insertAnswers_and_keywords" />
     <MESSAGE value="GIFs added to response" />
     <MESSAGE value="createTable_Gifs, deleteTable_Gifs, Gifs preprocessing" />
-    <option name="LAST_COMMIT_MESSAGE" value="createTable_Gifs, deleteTable_Gifs, Gifs preprocessing" />
+    <MESSAGE value="selectGifsRandom" />
+    <option name="LAST_COMMIT_MESSAGE" value="selectGifsRandom" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -933,7 +934,7 @@
         <state relative-caret-position="510">
           <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding>
-            <marker date="1493273916171" expanded="true" signature="838:1023" ph="SELECT * FRO... missing_value" />
+            <marker date="1493274170210" expanded="true" signature="838:1052" ph="SELECT * FRO... missing_value" />
           </folding>
         </state>
       </provider>
@@ -1290,10 +1291,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state relative-caret-position="408">
+          <caret line="24" column="105" lean-forward="false" selection-start-line="24" selection-start-column="105" selection-end-line="24" selection-end-column="105" />
           <folding>
-            <marker date="1493273916171" expanded="true" signature="838:1023" ph="SELECT * FRO... missing_value" />
+            <marker date="1493274170210" expanded="true" signature="838:1052" ph="SELECT * FRO... missing_value" />
           </folding>
         </state>
       </provider>
