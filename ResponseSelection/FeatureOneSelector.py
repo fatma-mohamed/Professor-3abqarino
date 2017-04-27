@@ -6,7 +6,6 @@ from collections import Counter
 
 class FeatureOneSelector():
     question = ""
-    found = False
 
     def __init__(self, question):
         self.question = question
@@ -14,15 +13,8 @@ class FeatureOneSelector():
     def getResult(self):
         answer = self.getAnswer()
         if "sorry" in answer:
-            print(str(self.found))
-            return {
-                "speech": answer,
-                "source": "prof-3abqarino_webhook",
-                "displayText": answer
-            }
-        else:
             url = "https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif"
-            print("URL: ", url)
+            print ("URL: ", url)
             return {
                 "speech": "",
                 "displayText": "",
@@ -30,7 +22,15 @@ class FeatureOneSelector():
                 "contextOut": [],
                 "source": "prof-3abqarino_webhook",
                 "followupEvent": {"name": "ask_question_event",
-                                  "data": {"imageURL": url, "speech": answer}}
+                                  "data": {"imageURL": url, "speech":answer}}
+            }
+        else:
+            print(str(self.found))
+            return {
+                "speech": answer,
+                "source": "prof-3abqarino_webhook",
+                "displayText": answer
+
             }
 
     def getAnswer(self):
@@ -48,7 +48,6 @@ class FeatureOneSelector():
         print (answer [0])
         print("_______")
         print (answer[0][0])
-        self.found = True
         return answer[0][0]
 
     def retriveSynonymID(self, keywords):
