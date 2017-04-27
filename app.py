@@ -38,7 +38,7 @@ def makeWebhookResult(req):
     elif action == "Ask-a-question.Ask-a-question-custom":
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
-        return responseSelector.getAnswer()
+        return responseSelector.getResult()
     else:
         return {}
 
