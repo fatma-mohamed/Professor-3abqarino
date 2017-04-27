@@ -80,7 +80,7 @@ class DataPreprocessing:
                 db.insert("Answers_Keywords", cols, values, conflict_fields, "")
 
     @staticmethod
-    def insertGifs(self):
+    def insertGifs():
         db = Database()
         file = open("Preprocessing/gifs.txt", "r")
 
