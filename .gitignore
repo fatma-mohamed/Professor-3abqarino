@@ -1,0 +1,17 @@
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/professor-3abqarino.iml
+
+.idea/vcs.xml
+
+.idea
+
+.idea/workspace.xml
+
+*.yml
+
+*.xml
+
+*/__pycache__
