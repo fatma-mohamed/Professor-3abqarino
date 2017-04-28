@@ -24,7 +24,7 @@ class DataAccess:
 
         query = '''SELECT ''' + cols_str + ''' FROM "''' + table_name + '''" WHERE ''' + conditions
         number_rows_query = "SELECT COUNT (*) FROM ( " + query + " )"
-        random_query = query + " OFFSET floor(random()*" + number_rows_query + ") LIMIT 1;"
+        random_query = query + " OFFSET floor(random()* (" + number_rows_query + ")) LIMIT 1;"
         cur.execute(random_query)
         rows = cur.fetchall()
         cur.close()
