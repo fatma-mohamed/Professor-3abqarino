@@ -90,9 +90,9 @@ class DataPreprocessing:
                 print("EOF!")
                 break
             arr = line.split(" ")
-            name = "'" + arr[0] + "'"
-            url = "'" + arr[1] + "'"
-            tag = "'" + arr[2] + "'"
+            name = "'" + arr[0].strip("\n") + "'"
+            url = "'" + arr[1].strip("\n") + "'"
+            tag = "'" + arr[2].strip("\n") + "'"
             db.insert("Gifs", ["Name", "Url" , "Tag"], [name,url,tag],"","")
 
     @staticmethod

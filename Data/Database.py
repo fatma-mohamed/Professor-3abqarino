@@ -233,6 +233,7 @@ class Database:
         cur.execute('''DELETE FROM "Answers";''')
         cur.execute('''DELETE FROM "Synonyms";''')
         cur.execute('''DELETE FROM "Keywords";''')
+        cur.execute('''DELETE FROM "Gifs";''')
         self.connection.commit()
 
 
