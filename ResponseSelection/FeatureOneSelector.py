@@ -1,25 +1,48 @@
 from NLP.TextParser import TextParser
-from ResponseSelection.ResponseSelector import ResponseSelector
-from NLP import TextParser,WordRecognizer
+from NLP.WordRecognizer import WordRecognizer
 from Data import DataAccess
 from collections import Counter
 
 
-class FeatureOneSelector(ResponseSelector):
+class FeatureOneSelector():
     question = ""
 
     def __init__(self, question):
         self.question = question
 
+
+    def getResult(self):
+        answer = self.getAnswer()
+        if "sorry" in answer:
+            db = DataAccess.DataAccess()
+            url = db.selectGifsRandom("Gifs", ["url"] , ["tag"] , ["'question-mark'"] , "")
+            print ("URL: ", url)
+            return {
+                "speech": "",
+                "displayText": "",
+                "data": {},
+                "contextOut": [],
+                "source": "prof-3abqarino_webhook",
+                "followupEvent": {"name": "ask_question_event",
+                                  "data": {"imageURL": url, "speech":answer}}
+            }
+        else:
+            return {
+                "speech": answer,
+                "source": "prof-3abqarino_webhook",
+                "displayText": answer
+
+            }
+
     def getAnswer(self):
-        Tx = TextParser.TextParser()
+        Tx = TextParser()
         t = Tx.tokenize(self.question)
         k = Tx.removeStopWords(t)
         keywordsID = self.retriveSynonymID(k)
         # ner = WordRecognizer.namedEntity(k)
         mostCommenAnswers = self.retriveAnswersID(keywordsID)
         if len(mostCommenAnswers) == 0:
-            return "sorry i have no answers to this question ! :("
+            return "sorry I have no answers to this question!"
         answer = self.retriveAnswer(mostCommenAnswers)
         print (answer)
         print ("__________")
@@ -34,7 +57,7 @@ class FeatureOneSelector(ResponseSelector):
         for word in keywords:
             w="'"+word+"'"
             word =w
-            ids = Da.select("Synonyms", "key_id", "synonym =" + word)
+            ids = Da.select("Synonyms", ["key_id"], ["synonym"],[word],"")
             synonymKey += ids
             # for  id  in ids:
             #     keyWord =Da.select("Keywords","keyword","id = "+id)
@@ -48,12 +71,12 @@ class FeatureOneSelector(ResponseSelector):
         print ("________in retriveAnswersID _______________ ")
         print(keywordsIDs)
         for id in keywordsIDs:
-            ids = Da.select("Answers_Keywords", "answer_id", "keyword_id = " + str(id[0]))
+            ids = Da.select("Answers_Keywords", ["answer_id"], ["keyword_id"] , [str(id[0])],"")
             answersID += ids
         return Counter(answersID).most_common(3)
 
     def retriveAnswer(self, IDs):
         Da = DataAccess.DataAccess()
         print (IDs)
-        Answer = Da.select("Answers", "answer", "id = " + str(IDs[0][0][0]))
+        Answer = Da.select("Answers", ["answer"], ["id"] , [str(IDs[0][0][0])],"")
         return Answer

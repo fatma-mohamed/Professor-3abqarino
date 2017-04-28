@@ -1,0 +1,10 @@
+penguin-bye-bye https://media.giphy.com/media/3o7btQsLqXMJAPu6Na/giphy.gif bye
+penguins-clapping http://media.giphy.com/media/cAgj5qHLp3qhy/giphy.gif correct
+moana https://media.giphy.com/media/26tkmH4VvEh4m0jiU/giphy.gif correct
+horray https://media.giphy.com/media/6Bgd6Ydh4tBJe/giphy.gif correct
+spongebob-crying https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif sad
+dancing-stick-man https://media.giphy.com/media/OFhB9mzG1hACQ/giphy.gif correct
+dancing-donald-duck https://media.giphy.com/media/6jO349v4edkLm/giphy.gif correct
+wrong-answer https://media.giphy.com/media/3o6Mb43PiNTQS5WgLu/giphy.gif incorrect
+question-mark-eyes https://media.giphy.com/media/xTiN0IuPQxRqzxodZm/giphy.gif question-mark
+question-mark-mickey https://media.giphy.com/media/Z1Exz24FbX3Ko/giphy.gif question-mark

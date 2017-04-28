@@ -9,11 +9,12 @@ from flask import Flask
 from flask import request
 from flask import make_response
 from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
-from Preprocessing import *
+from Preprocessing import DataPreprocessing
+from Data import DataAccess
 
 # Flask app should start in global layout
 app = Flask(__name__)
-responseSelector = ResponseSelector.ResponseSelector()
+responseSelector = None
 
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
@@ -37,27 +38,9 @@ def makeWebhookResult(req):
         responseSelector = ResponseSelector.ResponseSelector()
         return responseSelector.requestUserName(req, action)
     elif action == "Ask-a-question.Ask-a-question-custom":
-        print ("i get a question :D ")
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
-        answer =  responseSelector.getAnswer()
-        print (answer)
-        return {
-
-            "speech": answer,
-            "source": "prof-3abqarino_webhook",
-            "displayText": "okk"
-
-        }
-    elif req.get("result").get("action") == "createDB":
-        conn = Database.Database()
-        return DataPreprocessing.DataPreprocessing().__run__(conn)
-    elif req.get("result").get("action") == "InsertQuestions_Answers":
-        return DataPreprocessing.DataPreprocessing().insertQuestions_Answers()
-    elif req.get("result").get("action") == "request-game":
-        return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
-    elif req.get("result").get("action") == "check-answer":
-        return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
+        return  responseSelector.getResult()
     else:
         return {}
 
