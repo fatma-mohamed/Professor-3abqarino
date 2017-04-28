@@ -38,13 +38,13 @@ def makeWebhookResult(req):
         responseSelector = ResponseSelector.ResponseSelector()
         return responseSelector.requestUserName(req, action)
     elif action == "Ask-a-question.Ask-a-question-custom":
-        print ("i get a question :D ")
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         return  responseSelector.getResult()
-    elif action == "gif":
-        d = DataAccess.DataAccess()
-        d.selectGifsRandom("Gifs",["url"],["tag"],["'sad'"],"")
+    elif action =="insert":
+        db = Database.Database()
+        db.deleteData()
+        DataPreprocessing.DataPreprocessing.insertGifs()
     else:
         return {}
 
