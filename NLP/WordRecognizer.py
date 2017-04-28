@@ -1,2 +1,14 @@
+from nltk.corpus import wordnet as wn
+from nltk import word_tokenize, pos_tag, ne_chunk
 class WordRecognizer:
-    dummy_data = "dummy_data"
+
+	def getSynonym(self, word):
+		list = set()
+		for w in wn.synsets(word):
+			list.add(w.lemmas()[0].name())
+		return list
+
+	def namedEntity(self, tokens):
+		tags = pos_tag(tokens)
+		ner = ne_chunk(tags)
+		return ner
