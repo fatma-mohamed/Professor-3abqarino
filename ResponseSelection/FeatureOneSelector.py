@@ -14,7 +14,8 @@ class FeatureOneSelector():
     def getResult(self):
         answer = self.getAnswer()
         if "sorry" in answer:
-            url = "https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif"
+            db = DataAccess.DataAccess()
+            url = db.selectGifsRandom("Gifs", ["url"] , ["tag"] , ["question-mark"] , "")
             print ("URL: ", url)
             return {
                 "speech": "",
