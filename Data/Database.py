@@ -34,19 +34,11 @@ class Database:
         self.createTable_Questions_Answers()
         self.createTable_Gifs()
         self.connection.commit()
-        print("--------Tables created successfully--------")
+        print ("--------Tables created successfully--------")
 
-        ### conn.close()
-        ### print "--------Connection closed--------"
-
-        return {
-            "speech": "Created tables",
-            "displayText": "",
-            "data": {},
-            "contextOut": [],
-            "source": "create-database"
-        }
-
+       ### conn.close()
+       ### print "--------Connection closed--------"
+        return
 
     def __deleteTables__(self):
         print ("--------in Database deleteTables--------")
@@ -57,53 +49,7 @@ class Database:
         self.deleteTable_Questions_Answers()
         self.deleteTable_Gifs()
         self.connection.commit()
-        print("--------Tables deleted successfully--------")
-
-    def createTable_Answers(self):
-        print("--------in Database createTable_Answers--------")
-        cur = self.connection.cursor()
-        cur.execute('''CREATE TABLE "Answers"
-                  (ID SERIAL PRIMARY KEY NOT NULL,
-                  Answer TEXT NOT NULL);''')
-        print("--------Table Answers created successfully--------")
-
-    def deleteTable_Answers(self):
-        print("--------in Database deleteTable_Answers--------")
-        cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "Answers";''')
-        print("--------Table Answers deleted successfully--------")
-
-    def createTable_Keywords(self):
-        print("--------in Database createTable_Keywords--------")
-        cur = self.connection.cursor()
-        cur.execute('''CREATE TABLE "Keywords"
-                  (ID SERIAL PRIMARY KEY NOT NULL,
-                  Keyword TEXT NOT NULL,
-                  Category TEXT NOT NULL);''')
-        print("--------Table Keywords created successfully--------")
-
-    def deleteTable_Keywords(self):
-        print("--------in Database deleteTable_Keywords--------")
-        cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "Keywords";''')
-        print("--------Table Keywords deleted successfully--------")
-
-    def createTable_Answers_Keywords(self):
-        print("--------in Database createTable_Answers_Keywords--------")
-        cur = self.connection.cursor()
-        cur.execute('''CREATE TABLE "Answers_Keywords"
-                  (Answer_ID INT NOT NULL,
-                  Keyword_ID INT NOT NULL,
-                  FOREIGN KEY (Answer_ID) REFERENCES "Answers"(ID),
-                  FOREIGN KEY (Keyword_ID) REFERENCES "Keywords"(ID),
-                  PRIMARY KEY(Answer_ID, Keyword_ID));''')
-        print("--------Table Answers_Keywords created successfully--------")
-
-    def deleteTable_Answers_Keywords(self):
-        print("--------in Database deleteTable_Answers_Keywords--------")
-        cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "Answers_Keywords";''')
-        print("--------Table Answers_Keywords deleted successfully--------")
+        print ("--------Tables deleted successfully--------")
 
 
     def createTable_Answers(self):
@@ -165,30 +111,11 @@ class Database:
                PRIMARY KEY(Key_ID, Synonym));''')
         print ("--------Table Synonyms created successfully--------")
 
-
     def deleteTable_Synonyms(self):
         print("--------in Database deleteTable_Synonyms--------")
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE "Synonyms";''')
-        print("--------Table Synonyms deleted successfully--------")
-
-    def createTable_Questions_Answers(self):
-        print("--------in Database createTable_Questions_Answers--------")
-        cur = self.connection.cursor()
-        cur.execute('''CREATE TABLE "Questions_Answers"
-                  (ID SERIAL PRIMARY KEY NOT NULL,
-                  Question TEXT NOT NULL,
-                  Answer_1 TEXT NOT NULL,
-                  Answer_2 TEXT NOT NULL,
-                  Answer_3 TEXT NOT NULL,
-                  Correct_AnswerID INT NOT NULL);''')
-        print("--------Table Questions_Answers created successfully--------")
-
-    def deleteTable_Questions_Answers(self):
-        print("--------in Database deleteTable_Questions_Answers--------")
-        cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "Questions_Answers";''')
-        print("--------Table Questions_Answers deleted successfully--------")
+        print ("--------Table Synonyms deleted successfully--------")
 
 
     def createTable_Questions_Answers(self):
@@ -271,11 +198,10 @@ class Database:
             cur.execute('''INSERT INTO "''' + table_name + '''" ''' + cols_str + " VALUES " + values_str);
         else:
             if (conflict_do == ''):
-                cur.execute('''INSERT INTO "''' + table_name + '''" ''' + cols_str + " VALUES " + values_str +
-                            " ON CONFLICT " + conflict_fields_str + " DO NOTHING");
+                cur.execute('''INSERT INTO "''' + table_name + '''"( ''' + cols + " ) VALUES ( " + values + " ) " +
+                            "ON CONFLICT ( " + conflict_fields + " ) DO NOTHING");
             else:
-                cur.execute('''INSERT INTO "''' + table_name + '''" ''' + cols_str + " VALUES " + values_str +
-                            " ON CONFLICT " + conflict_fields_str + " DO " + conflict_do);
-
+                cur.execute('''INSERT INTO "''' + table_name + '''" ''' + cols_str + "  VALUES  " + values_str +
+                            "ON CONFLICT  " + conflict_fields_str + "  DO " + conflict_do);
         self.connection.commit()
         cur.close()

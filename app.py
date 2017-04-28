@@ -41,6 +41,10 @@ def makeWebhookResult(req):
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         return  responseSelector.getResult()
+    elif req.get("result").get("action") == "request-game":
+        return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
+    elif req.get("result").get("action") == "check-answer":
+        return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
     else:
         return {}
 
