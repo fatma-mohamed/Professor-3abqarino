@@ -52,18 +52,18 @@ class FeatureTwoSelector:
         randomNum = randint(0,19)
         if correctAnswer == chosenAnswer:
             if randomNum < 10:
-                return self.getRandomQuestion("Correct Answer :)")
+                return self.getRandomQuestion(answerFeedback="Correct Answer :)")
             else:
                 d = DataAccess.DataAccess()
                 url = d.selectGifsRandom("Gifs" , ["url"] , ["tag"] , ["'correct'"], "")
-                return self.getRandomQuestion("Correct Answer :)", url)
+                return self.getRandomQuestion(answerFeedback="Correct Answer :)", imageURL=url)
         elif correctAnswer != chosenAnswer:
             if randomNum < 10:
-                return self.getRandomQuestion("Wrong Answer :(")
+                return self.getRandomQuestion(answerFeedback="Wrong Answer :(")
             else:
                 d = DataAccess.DataAccess()
                 url = d.selectGifsRandom("Gifs" , ["url"] , ["tag"] , ["'incorrect'"], "")
-                return self.getRandomQuestion("Wrong Answer :(", url)
+                return self.getRandomQuestion(answerFeedback="Wrong Answer :(", imageURL=url)
 
 
 
