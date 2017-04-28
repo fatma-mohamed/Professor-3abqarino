@@ -23,7 +23,7 @@ class DataAccess:
             conditions += (str(parameters[j]) + " = " + str(values[j]) + " " + str(operators[j]) + " ")
 
         cur.execute('''SELECT ''' + cols_str + ''' FROM "''' + table_name +
-                    ''''" WHERE ''' + conditions + ''' ORDER BY RANDOM() limit 1;''')
+                    '''" WHERE ''' + conditions + ''' ORDER BY RANDOM() limit 1;''')
         rows = cur.fetchall()
         cur.close()
         print (rows)
