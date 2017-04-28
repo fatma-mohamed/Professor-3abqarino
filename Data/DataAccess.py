@@ -23,7 +23,7 @@ class DataAccess:
             conditions += (str(parameters[j]) + " = " + str(values[j]) + " " + str(operators[j]) + " ")
 
         query = '''SELECT ''' + cols_str + ''' FROM "''' + table_name + '''" WHERE ''' + conditions
-        number_rows_query = "SELECT COUNT (*) FROM ( " + query + " )"
+        number_rows_query = "SELECT COUNT (*) FROM ( " + query + " ) AS subquery"
         random_query = query + " OFFSET floor(random()* (" + number_rows_query + ")) LIMIT 1;"
         cur.execute(random_query)
         rows = cur.fetchall()
