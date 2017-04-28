@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import Data
+from Data import Database
 
 import urllib
 import json
@@ -8,10 +8,12 @@ import os
 from flask import Flask
 from flask import request
 from flask import make_response
-
+from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
+from Preprocessing import *
 
 # Flask app should start in global layout
 app = Flask(__name__)
+responseSelector = ResponseSelector.ResponseSelector()
 
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
@@ -29,27 +31,33 @@ def webhook():
     return r
 
 
-def requestUserName(req):
-    originalRequest = req.get("originalRequest")
-    data = originalRequest.get("data")
-    sender = data.get("sender")
-    id = sender.get("id")
-    access_token = "EAAOSFv52vZAYBAFnqlPlZAsGuUdVGrrjaktAkZAbBoFZAFEWhPIM0rqL8BSXCPPfjjipakdjZCNWZCPVOWUcZBEiFAhfSNPZBbNY3ExCZAw9bzdnpWic0ZCwdUwCS43hwZCNRVZBZCMsZAWD5EnHbqPR4YeBvK41ZCcDBUTNKlUUqmSpCYmwwZDZD"
-    rs = urllib.urlopen("https://graph.facebook.com/v2.6/" + id + "?fields=first_name&access_token="+ access_token)
-    name = json.load(rs).get("first_name")
-    print(name)
-    return {
-        "speech" : "",
-        "displayText": "",
-        "data": {},
-        "contextOut": [],
-        "source": "prof-3abqarino",
-        "followupEvent": {"name":"name_event","data":{"user":name}}
-    }
-
 def makeWebhookResult(req):
-    if req.get("result").get("action") == "request_user_name":
-        return requestUserName(req)
+    action = req.get("result").get("action")
+    if "request_user_name" in action:
+        responseSelector = ResponseSelector.ResponseSelector()
+        return responseSelector.requestUserName(req, action)
+    elif action == "Ask-a-question.Ask-a-question-custom":
+        print ("i get a question :D ")
+        question = (req.get("result")).get("resolvedQuery")
+        responseSelector = FeatureOneSelector.FeatureOneSelector(question)
+        answer =  responseSelector.getAnswer()
+        print (answer)
+        return {
+
+            "speech": answer,
+            "source": "prof-3abqarino_webhook",
+            "displayText": "okk"
+
+        }
+    elif req.get("result").get("action") == "createDB":
+        conn = Database.Database()
+        return DataPreprocessing.DataPreprocessing().__run__(conn)
+    elif req.get("result").get("action") == "InsertQuestions_Answers":
+        return DataPreprocessing.DataPreprocessing().insertQuestions_Answers()
+    elif req.get("result").get("action") == "request-game":
+        return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
+    elif req.get("result").get("action") == "check-answer":
+        return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
     else:
         return {}
 
