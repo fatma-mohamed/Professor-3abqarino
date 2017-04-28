@@ -43,6 +43,11 @@ def makeWebhookResult(req):
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         return  responseSelector.getResult()
     elif action == "insert":
+        db = Database.Database()
+        db.deleteData()
+        DataPreprocessing.DataPreprocessing.insertGifs()
+        DataPreprocessing.DataPreprocessing.insertAnswers_and_keywords()
+    elif action == "gif":
         d = DataAccess.DataAccess()
         d.selectGifsRandom("Gifs",["url"],["tag"],["'sad'"],"")
     else:
