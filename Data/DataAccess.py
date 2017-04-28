@@ -22,10 +22,8 @@ class DataAccess:
                 break
             conditions += (str(parameters[j]) + " = " + str(values[j]) + " " + str(operators[j]) + " ")
 
-        query = '''SELECT ''' + cols_str + ''' FROM "''' + table_name + '''" WHERE ''' + conditions
-        number_rows_query = "SELECT COUNT (*) FROM ( " + query + " ) AS subquery"
-        random_query = query + " OFFSET floor(random()* (" + number_rows_query + ")) LIMIT 1;"
-        cur.execute(random_query)
+        cur.execute('''SELECT ''' + cols_str + ''' FROM "''' + table_name +
+                    ''''" WHERE ''' + conditions + ''' ORDER BY RANDOM() limit 1;''')
         rows = cur.fetchall()
         cur.close()
         print (rows)
