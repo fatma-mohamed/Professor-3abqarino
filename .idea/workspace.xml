@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Database.py" afterPath="$PROJECT_DIR$/Data/Database.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/config.py" afterPath="$PROJECT_DIR$/Preprocessing/config.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,21 +20,40 @@
     <SUITE FILE_PATH="coverage/professor_3abqarino$scratch_7.coverage" NAME="scratch_7 Coverage Results" MODIFIED="1492873531770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/professor_3abqarino$scratch_1.coverage" NAME="scratch_1 Coverage Results" MODIFIED="1492749084188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/professor_3abqarino$DataPreprocessing.coverage" NAME="DataPreprocessing Coverage Results" MODIFIED="1492857932534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Preprocessing" />
-    <SUITE FILE_PATH="coverage/professor_3abqarino$scratch_2.coverage" NAME="scratch_2 Coverage Results" MODIFIED="1492808168651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/professor_3abqarino$scratch_2.coverage" NAME="scratch_2 Coverage Results" MODIFIED="1493356533650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/professor_3abqarino$scratch_6.coverage" NAME="scratch_6 Coverage Results" MODIFIED="1492866908983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="173">
-              <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+              <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
               <folding>
                 <element signature="e#22#47#0" expanded="true" />
-                <marker date="1493351705046" expanded="true" signature="1243:1271" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scratch_2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -52,7 +70,6 @@
         <option value="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" />
         <option value="$PROJECT_DIR$/Preprocessing/__init__.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
         <option value="$PROJECT_DIR$/NLP/WordRecognizer.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
         <option value="$PROJECT_DIR$/NLP/TextParser.py" />
@@ -63,10 +80,12 @@
         <option value="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" />
         <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
-        <option value="$PROJECT_DIR$/Data/DataAccess.py" />
         <option value="$PROJECT_DIR$/Preprocessing/gifs.txt" />
-        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/Data/DataAccess.py" />
         <option value="$PROJECT_DIR$/Data/Database.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/config.py" />
       </list>
     </option>
   </component>
@@ -77,8 +96,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="683" />
-    <option name="width" value="683" />
+    <option name="x" value="356" />
+    <option name="width" value="1010" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -97,8 +116,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -169,6 +186,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,7 +212,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.scratch">
+  <component name="RunManager" selected="Python.scratch_2">
     <configuration default="false" name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -208,6 +227,25 @@
       <module name="professor-3abqarino" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="scratch_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="professor-3abqarino" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -380,13 +418,15 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.professor-3abqarino" />
       <item index="1" class="java.lang.String" itemvalue="Python.scratch" />
+      <item index="2" class="java.lang.String" itemvalue="Python.scratch_2" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.scratch" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.scratch_2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.scratch" />
       </list>
     </recent_temporary>
   </component>
@@ -400,20 +440,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491849634099</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Preprocessing: insertAnswers_and_keywords">
-      <created>1492860021980</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1492860021980</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Preprocessing: insertAnswers_and_keywords">
-      <created>1492861542640</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1492861542640</updated>
     </task>
     <task id="LOCAL-00028" summary="Preprocessing: insertAnswers_and_keywords">
       <created>1492861977102</created>
@@ -744,18 +770,33 @@
       <option name="project" value="LOCAL" />
       <updated>1493351587454</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Random GIFs as response&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;Data/DataAccess.py&#10;#&#9;Data/Database.py&#10;#&#9;Preprocessing/config.py&#10;#&#9;ResponseSelection/FeatureTwoSelector.py&#10;#&#9;app.py">
+      <created>1493355078366</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1493355078366</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Random GIFs as response&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;Data/DataAccess.py&#10;#&#9;Data/Database.py&#10;#&#9;Preprocessing/config.py&#10;#&#9;ResponseSelection/FeatureTwoSelector.py">
+      <created>1493355706501</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1493355706501</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="0" width="683" height="728" extended-state="0" />
+    <frame x="356" y="0" width="1010" height="728" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37031484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24849094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27993527" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -812,34 +853,16 @@
     <MESSAGE value="Updated deleteData function , Preprocessing update" />
     <MESSAGE value="selectGifsRandom" />
     <MESSAGE value="Preprocessing: modified gifs urls" />
-    <option name="LAST_COMMIT_MESSAGE" value="Preprocessing: modified gifs urls" />
+    <MESSAGE value="Random GIFs as response&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;Data/DataAccess.py&#10;#&#9;Data/Database.py&#10;#&#9;Preprocessing/config.py&#10;#&#9;ResponseSelection/FeatureTwoSelector.py&#10;#&#9;app.py" />
+    <MESSAGE value="Random GIFs as response&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;Data/DataAccess.py&#10;#&#9;Data/Database.py&#10;#&#9;Preprocessing/config.py&#10;#&#9;ResponseSelection/FeatureTwoSelector.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Random GIFs as response&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;Data/DataAccess.py&#10;#&#9;Data/Database.py&#10;#&#9;Preprocessing/config.py&#10;#&#9;ResponseSelection/FeatureTwoSelector.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/NLP/TextParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py" />
     <entry file="file://$PROJECT_DIR$/nltk.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -847,13 +870,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
     <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -862,28 +879,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding>
             <element signature="e#22#47#0" expanded="true" />
-            <marker date="1493351705046" expanded="true" signature="1243:1271" ph="..." />
           </folding>
         </state>
       </provider>
@@ -893,34 +896,26 @@
         <state relative-caret-position="1077">
           <caret line="188" column="19" lean-forward="false" selection-start-line="188" selection-start-column="19" selection-end-line="188" selection-end-column="19" />
           <folding>
-            <marker date="1493351713521" expanded="true" signature="1903:2016" ph="CREATE TABLE... Answers" />
-            <marker date="1493351713521" expanded="true" signature="2253:2273" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="2512:2669" ph="CREATE TABLE... Keywords" />
-            <marker date="1493351713521" expanded="true" signature="2909:2930" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="3186:3495" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1493351713521" expanded="true" signature="3759:3788" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="4036:4143" ph="CREATE TABLE... Answers" />
-            <marker date="1493351713521" expanded="true" signature="4382:4402" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="4644:4792" ph="CREATE TABLE... Keywords" />
-            <marker date="1493351713521" expanded="true" signature="5034:5055" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="5314:5608" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1493351713521" expanded="true" signature="5874:5903" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="6154:6360" ph="CREATE TABLE... Synonyms" />
-            <marker date="1493351713521" expanded="true" signature="6602:6623" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="6881:7181" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1493351713521" expanded="true" signature="7448:7478" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="7747:8132" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1493351713521" expanded="true" signature="8402:8432" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="8673:8875" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1493351713521" expanded="true" signature="9104:9121" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="9281:9311" ph="DELETE FROM " />
-            <marker date="1493351713521" expanded="true" signature="9340:9361" ph="DELETE FROM " />
-            <marker date="1493351713521" expanded="true" signature="9390:9412" ph="DELETE FROM " />
-            <marker date="1493351713521" expanded="true" signature="9441:9463" ph="DELETE FROM " />
-            <marker date="1493351713521" expanded="true" signature="9492:9510" ph="DELETE FROM " />
-            <marker date="1493351713521" expanded="true" signature="10652:10715" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1493351713521" expanded="true" signature="10813:10973" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1493351713521" expanded="true" signature="11026:11179" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1493355499014" expanded="true" signature="1726:1833" ph="CREATE TABLE... Answers" />
+            <marker date="1493355499014" expanded="true" signature="2072:2092" ph="DROP TABLE &quot;... " />
+            <marker date="1493355499014" expanded="true" signature="2334:2482" ph="CREATE TABLE... Keywords" />
+            <marker date="1493355499014" expanded="true" signature="2724:2745" ph="DROP TABLE &quot;... " />
+            <marker date="1493355499014" expanded="true" signature="3004:3298" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1493355499014" expanded="true" signature="3564:3593" ph="DROP TABLE &quot;... " />
+            <marker date="1493355499014" expanded="true" signature="3844:4050" ph="CREATE TABLE... Synonyms" />
+            <marker date="1493355499014" expanded="true" signature="4291:4312" ph="DROP TABLE &quot;... " />
+            <marker date="1493355499014" expanded="true" signature="4573:4958" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1493355499014" expanded="true" signature="5228:5258" ph="DROP TABLE &quot;... " />
+            <marker date="1493355499014" expanded="true" signature="5499:5701" ph="CREATE TABLE... Gifs" />
+            <marker date="1493355499014" expanded="true" signature="5930:5947" ph="DROP TABLE &quot;... " />
+            <marker date="1493355499014" expanded="true" signature="6107:6137" ph="DELETE FROM " />
+            <marker date="1493355499014" expanded="true" signature="6166:6187" ph="DELETE FROM " />
+            <marker date="1493355499014" expanded="true" signature="6216:6238" ph="DELETE FROM " />
+            <marker date="1493355499014" expanded="true" signature="6267:6289" ph="DELETE FROM " />
+            <marker date="1493355499014" expanded="true" signature="6318:6336" ph="DELETE FROM " />
+            <marker date="1493355499014" expanded="true" signature="7478:7541" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1493355499014" expanded="true" signature="7639:7803" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1493355499014" expanded="true" signature="7856:8012" ph="INSERT INTO &quot;missing_value&quot;... " />
           </folding>
         </state>
       </provider>
@@ -930,8 +925,8 @@
         <state relative-caret-position="510">
           <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding>
-            <marker date="1493350781198" expanded="true" signature="838:970" ph="SELECT (url)... Gifs" />
-            <marker date="1493350781198" expanded="true" signature="1079:1553" ph="select(self,... " />
+            <element signature="e#0#25#0" expanded="true" />
+            <marker date="1493355454962" expanded="true" signature="256:391" ph="SELECT * FRO... missing_value" />
           </folding>
         </state>
       </provider>
@@ -941,7 +936,7 @@
         <state relative-caret-position="119">
           <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -962,19 +957,11 @@
           <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
             <element signature="e#22#47#0" expanded="true" />
-            <marker date="1493351705046" expanded="true" signature="1243:1271" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
     <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -990,7 +977,7 @@
         <state relative-caret-position="357">
           <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1001,19 +988,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#22#47#0" expanded="true" />
-            <marker date="1493351705046" expanded="true" signature="1243:1271" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
     <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -1030,19 +1009,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#22#47#0" expanded="true" />
-            <marker date="1493351705046" expanded="true" signature="1243:1271" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
     <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -1069,7 +1040,6 @@
           <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
           <folding>
             <element signature="e#22#47#0" expanded="true" />
-            <marker date="1493351705046" expanded="true" signature="1243:1271" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1082,20 +1052,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/essay_questions.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1123,37 +1079,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="75" lean-forward="false" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NLP/WordRecognizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NLP/TextParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1161,27 +1087,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nltk.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
     <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1189,44 +1096,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_11.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_11.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <marker date="1493355454962" expanded="true" signature="256:391" ph="SELECT * FRO... missing_value" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+          <folding>
+            <marker date="1493355499014" expanded="true" signature="1726:1833" ph="CREATE TABLE... Answers" />
+            <marker date="1493355499014" expanded="true" signature="2072:2092" ph="DROP TABLE &quot;... " />
+            <marker date="1493355499014" expanded="true" signature="2334:2482" ph="CREATE TABLE... Keywords" />
+            <marker date="1493355499014" expanded="true" signature="2724:2745" ph="DROP TABLE &quot;... " />
+            <marker date="1493355499014" expanded="true" signature="3004:3298" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1493355499014" expanded="true" signature="3564:3593" ph="DROP TABLE &quot;... " />
+            <marker date="1493355499014" expanded="true" signature="3844:4050" ph="CREATE TABLE... Synonyms" />
+            <marker date="1493355499014" expanded="true" signature="4291:4312" ph="DROP TABLE &quot;... " />
+            <marker date="1493355499014" expanded="true" signature="4573:4958" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1493355499014" expanded="true" signature="5228:5258" ph="DROP TABLE &quot;... " />
+            <marker date="1493355499014" expanded="true" signature="5499:5701" ph="CREATE TABLE... Gifs" />
+            <marker date="1493355499014" expanded="true" signature="5930:5947" ph="DROP TABLE &quot;... " />
+            <marker date="1493355499014" expanded="true" signature="6107:6137" ph="DELETE FROM " />
+            <marker date="1493355499014" expanded="true" signature="6166:6187" ph="DELETE FROM " />
+            <marker date="1493355499014" expanded="true" signature="6216:6238" ph="DELETE FROM " />
+            <marker date="1493355499014" expanded="true" signature="6267:6289" ph="DELETE FROM " />
+            <marker date="1493355499014" expanded="true" signature="6318:6336" ph="DELETE FROM " />
+            <marker date="1493355499014" expanded="true" signature="7478:7541" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1493355499014" expanded="true" signature="7639:7803" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1493355499014" expanded="true" signature="7856:8012" ph="INSERT INTO &quot;missing_value&quot;... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/WordRecognizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/TextParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="88" column="28" lean-forward="false" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+        <state relative-caret-position="1292">
+          <caret line="76" column="31" lean-forward="false" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-579">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nltk.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Question_Answers.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4592">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/essay_questions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1238,72 +1220,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="231" column="2" lean-forward="true" selection-start-line="231" selection-start-column="2" selection-end-line="234" selection-end-column="50" />
-          <folding>
-            <marker date="1493351713521" expanded="true" signature="1903:2016" ph="CREATE TABLE... Answers" />
-            <marker date="1493351713521" expanded="true" signature="2253:2273" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="2512:2669" ph="CREATE TABLE... Keywords" />
-            <marker date="1493351713521" expanded="true" signature="2909:2930" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="3186:3495" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1493351713521" expanded="true" signature="3759:3788" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="4036:4143" ph="CREATE TABLE... Answers" />
-            <marker date="1493351713521" expanded="true" signature="4382:4402" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="4644:4792" ph="CREATE TABLE... Keywords" />
-            <marker date="1493351713521" expanded="true" signature="5034:5055" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="5314:5608" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1493351713521" expanded="true" signature="5874:5903" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="6154:6360" ph="CREATE TABLE... Synonyms" />
-            <marker date="1493351713521" expanded="true" signature="6602:6623" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="6881:7181" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1493351713521" expanded="true" signature="7448:7478" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="7747:8132" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1493351713521" expanded="true" signature="8402:8432" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="8673:8875" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1493351713521" expanded="true" signature="9104:9121" ph="DROP TABLE &quot;... " />
-            <marker date="1493351713521" expanded="true" signature="9281:9311" ph="DELETE FROM " />
-            <marker date="1493351713521" expanded="true" signature="9340:9361" ph="DELETE FROM " />
-            <marker date="1493351713521" expanded="true" signature="9390:9412" ph="DELETE FROM " />
-            <marker date="1493351713521" expanded="true" signature="9441:9463" ph="DELETE FROM " />
-            <marker date="1493351713521" expanded="true" signature="9492:9510" ph="DELETE FROM " />
-            <marker date="1493351713521" expanded="true" signature="10652:10715" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1493351713521" expanded="true" signature="10813:10973" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1493351713521" expanded="true" signature="11026:11179" ph="INSERT INTO &quot;missing_value&quot;... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding>
-            <marker date="1493350781198" expanded="true" signature="838:970" ph="SELECT (url)... Gifs" />
-            <marker date="1493350781198" expanded="true" signature="1079:1553" ph="select(self,... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
-          <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding>
             <element signature="e#22#47#0" expanded="true" />
-            <marker date="1493351705046" expanded="true" signature="1243:1271" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
