@@ -229,10 +229,10 @@ class Database:
 
     def deleteData(self):
         cur = self.connection.cursor()
-        # cur.execute('''DELETE FROM "Answers_Keywords";''')
-        # cur.execute('''DELETE FROM "Answers";''')
-        # cur.execute('''DELETE FROM "Synonyms";''')
-        # cur.execute('''DELETE FROM "Keywords";''')
+        cur.execute('''DELETE FROM "Answers_Keywords";''')
+        cur.execute('''DELETE FROM "Answers";''')
+        cur.execute('''DELETE FROM "Synonyms";''')
+        cur.execute('''DELETE FROM "Keywords";''')
         cur.execute('''DELETE FROM "Gifs";''')
         self.connection.commit()
 
