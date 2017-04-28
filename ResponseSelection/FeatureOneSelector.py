@@ -8,7 +8,7 @@ class FeatureOneSelector():
     question = ""
 
     def __init__(self, question):
-        self.question = question
+        self.question = self.removeSinqleQuotes(question)
 
 
     def getResult(self):
@@ -80,3 +80,9 @@ class FeatureOneSelector():
         print (IDs)
         Answer = Da.select("Answers", ["answer"], ["id"] , [str(IDs[0][0][0])],"")
         return Answer
+
+
+    @staticmethod
+    def removeSinqleQuotes(s):
+        res = s.replace("'", '"')
+        return res
