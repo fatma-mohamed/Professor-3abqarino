@@ -8,7 +8,7 @@ class MenuPreprocessing:
     def __run__(self, db):
         return;
 
-    def addMenu():
+    def addMenu(self):
         access_token = config.access_token
         url = "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=" + access_token
 
@@ -68,7 +68,7 @@ class MenuPreprocessing:
         print(r.text[:300] + '...')
         print "--------------------->>>>>>>>>>>>>>" + "<<<<<<<<<<<<--------------------"
 
-    def deleteMenu():
+    def deleteMenu(self):
         access_token = config.access_token
         url = "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=" + access_token
 
