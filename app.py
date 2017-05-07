@@ -8,13 +8,12 @@ import os
 from flask import Flask
 from flask import request
 from flask import make_response
-from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
-from Preprocessing import DataPreprocessing, MenuPreprocessing
-from Data import DataAccess
+from ResponseSelection import ResponseSelector, FeatureTwoSelector
+from Preprocessing import *
 
 # Flask app should start in global layout
 app = Flask(__name__)
-responseSelector = None
+responseSelector = ResponseSelector.ResponseSelector()
 
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
@@ -33,14 +32,13 @@ def webhook():
 
 
 def makeWebhookResult(req):
-    action = req.get("result").get("action")
-    if "request_user_name" in action:
-        responseSelector = ResponseSelector.ResponseSelector()
-        return responseSelector.requestUserName(req, action)
-    elif action == "Ask-a-question.Ask-a-question-custom":
-        question = (req.get("result")).get("resolvedQuery")
-        responseSelector = FeatureOneSelector.FeatureOneSelector(question)
-        return  responseSelector.getResult()
+    if req.get("result").get("action") == "request_user_name":
+        return responseSelector.requestUserName(req)
+    elif req.get("result").get("action") == "createDB":
+        conn = Database.Database()
+        return DataPreprocessing.DataPreprocessing().__run__(conn)
+    elif req.get("result").get("action") == "InsertQuestions_Answers":
+        return DataPreprocessing.DataPreprocessing().insertQuestions_Answers()
     elif req.get("result").get("action") == "request-game":
         return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
     elif req.get("result").get("action") == "check-answer":
