@@ -15,6 +15,15 @@ from Data import DataAccess
 # Flask app should start in global layout
 app = Flask(__name__)
 responseSelector = None
+@app.route('/',methods=['POST','GET'])
+def Home():
+    x=5
+    
+
+@app.route('/notify',methods=['POST','GET'])
+def notify():
+    print("hanoma")
+
 
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
