@@ -22,7 +22,8 @@ def Home():
 
 @app.route('/notify',methods=['POST','GET'])
 def notify():
-    print("hanoma")
+    responseSelector = ResponseSelector.ResponseSelector()
+    responseSelector.notification()
 
 
 @app.route('/webhook', methods=['POST','GET'])
