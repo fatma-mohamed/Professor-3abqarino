@@ -1,1 +1,1 @@
-__all__ = ['config','DataPreprocessing']
+__all__ = ['config','DataPreprocessing','MenuPreprocessing']

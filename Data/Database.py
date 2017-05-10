@@ -204,4 +204,3 @@ class Database:
 
         self.connection.commit()
         cur.close()
-
