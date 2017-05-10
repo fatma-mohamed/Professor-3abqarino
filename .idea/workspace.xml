@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Database.py" afterPath="$PROJECT_DIR$/Data/Database.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" afterPath="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,33 +36,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Database.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Database.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Data/Database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="102">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
-                <marker date="1494427158085" expanded="true" signature="1726:1833" ph="CREATE TABLE... Answers" />
-                <marker date="1494427158085" expanded="true" signature="2072:2092" ph="DROP TABLE &quot;... " />
-                <marker date="1494427158085" expanded="true" signature="2334:2482" ph="CREATE TABLE... Keywords" />
-                <marker date="1494427158085" expanded="true" signature="2724:2745" ph="DROP TABLE &quot;... " />
-                <marker date="1494427158085" expanded="true" signature="3004:3298" ph="CREATE TABLE... Answers_Keywords" />
-                <marker date="1494427158085" expanded="true" signature="3564:3593" ph="DROP TABLE &quot;... " />
-                <marker date="1494427158085" expanded="true" signature="3844:4050" ph="CREATE TABLE... Synonyms" />
-                <marker date="1494427158085" expanded="true" signature="4291:4312" ph="DROP TABLE &quot;... " />
-                <marker date="1494427158085" expanded="true" signature="4573:4958" ph="CREATE TABLE... Questions_Answers" />
-                <marker date="1494427158085" expanded="true" signature="5227:5257" ph="DROP TABLE &quot;... " />
-                <marker date="1494427158085" expanded="true" signature="5498:5748" ph="CREATE TABLE... Gifs" />
-                <marker date="1494427158085" expanded="true" signature="5977:5994" ph="DROP TABLE &quot;... " />
-                <marker date="1494427158085" expanded="true" signature="6154:6184" ph="DELETE FROM " />
-                <marker date="1494427158085" expanded="true" signature="6213:6234" ph="DELETE FROM " />
-                <marker date="1494427158085" expanded="true" signature="6263:6285" ph="DELETE FROM " />
-                <marker date="1494427158085" expanded="true" signature="6314:6336" ph="DELETE FROM " />
-                <marker date="1494427158085" expanded="true" signature="6365:6383" ph="DELETE FROM " />
-                <marker date="1494427158085" expanded="true" signature="7524:7587" ph="INSERT INTO &quot;missing_value&quot;... " />
-                <marker date="1494427158085" expanded="true" signature="7685:7845" ph="INSERT INTO &quot;missing_value&quot;... " />
-                <marker date="1494427158085" expanded="true" signature="7898:8051" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1494427297282" expanded="true" signature="1726:1833" ph="CREATE TABLE... Answers" />
+                <marker date="1494427297282" expanded="true" signature="2072:2092" ph="DROP TABLE &quot;... " />
+                <marker date="1494427297282" expanded="true" signature="2334:2482" ph="CREATE TABLE... Keywords" />
+                <marker date="1494427297282" expanded="true" signature="2724:2745" ph="DROP TABLE &quot;... " />
+                <marker date="1494427297282" expanded="true" signature="3004:3298" ph="CREATE TABLE... Answers_Keywords" />
+                <marker date="1494427297282" expanded="true" signature="3564:3593" ph="DROP TABLE &quot;... " />
+                <marker date="1494427297282" expanded="true" signature="3844:4050" ph="CREATE TABLE... Synonyms" />
+                <marker date="1494427297282" expanded="true" signature="4291:4312" ph="DROP TABLE &quot;... " />
+                <marker date="1494427297282" expanded="true" signature="4573:4958" ph="CREATE TABLE... Questions_Answers" />
+                <marker date="1494427297282" expanded="true" signature="5227:5257" ph="DROP TABLE &quot;... " />
+                <marker date="1494427297282" expanded="true" signature="5498:5748" ph="CREATE TABLE... Gifs" />
+                <marker date="1494427297282" expanded="true" signature="5977:5994" ph="DROP TABLE &quot;... " />
+                <marker date="1494427297282" expanded="true" signature="6154:6184" ph="DELETE FROM " />
+                <marker date="1494427297282" expanded="true" signature="6213:6234" ph="DELETE FROM " />
+                <marker date="1494427297282" expanded="true" signature="6263:6285" ph="DELETE FROM " />
+                <marker date="1494427297282" expanded="true" signature="6314:6336" ph="DELETE FROM " />
+                <marker date="1494427297282" expanded="true" signature="6365:6383" ph="DELETE FROM " />
+                <marker date="1494427297282" expanded="true" signature="7524:7587" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1494427297282" expanded="true" signature="7685:7845" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1494427297282" expanded="true" signature="7898:8051" ph="INSERT INTO &quot;missing_value&quot;... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataPreprocessing.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="319">
-              <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+              <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
               <folding>
                 <marker date="1494426907161" expanded="true" signature="256:391" ph="SELECT * FRO... missing_value" />
               </folding>
@@ -123,7 +133,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
         <option value="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$PROJECT_DIR$/Preprocessing/gifs.txt" />
         <option value="$PROJECT_DIR$/Data/DataAccess.py" />
@@ -132,6 +141,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
         <option value="$PROJECT_DIR$/Preprocessing/config.py" />
         <option value="$PROJECT_DIR$/Data/Database.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
       </list>
     </option>
   </component>
@@ -142,9 +152,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="683" />
-    <option name="width" value="683" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -390,13 +401,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491849634099</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Preprocessing: insertAnswers_and_keywords">
-      <created>1492864581865</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1492864581865</updated>
     </task>
     <task id="LOCAL-00032" summary="Preprocessing: insertAnswers_and_keywords">
       <created>1492864958812</created>
@@ -734,17 +738,24 @@
       <option name="project" value="LOCAL" />
       <updated>1493359712412</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="createTable_Gifs, deleteTable_Gifs, Gifs preprocessing">
+      <created>1494427188311</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1494427188312</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="0" width="683" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25337332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12371889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32018927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27993527" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -798,14 +809,14 @@
     <MESSAGE value="Preprocessing: replacing single quotes with double" />
     <MESSAGE value="Preprocessing: insertAnswers_and_keywords" />
     <MESSAGE value="GIFs added to response" />
-    <MESSAGE value="createTable_Gifs, deleteTable_Gifs, Gifs preprocessing" />
     <MESSAGE value="Updated deleteData function , Preprocessing update" />
     <MESSAGE value="selectGifsRandom" />
     <MESSAGE value="Preprocessing: modified gifs urls" />
     <MESSAGE value="Random GIFs as response&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;Data/DataAccess.py&#10;#&#9;Data/Database.py&#10;#&#9;Preprocessing/config.py&#10;#&#9;ResponseSelection/FeatureTwoSelector.py&#10;#&#9;app.py" />
     <MESSAGE value="Random GIFs as response&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;Data/DataAccess.py&#10;#&#9;Data/Database.py&#10;#&#9;Preprocessing/config.py&#10;#&#9;ResponseSelection/FeatureTwoSelector.py" />
     <MESSAGE value="Never-expire token" />
-    <option name="LAST_COMMIT_MESSAGE" value="Never-expire token" />
+    <MESSAGE value="createTable_Gifs, deleteTable_Gifs, Gifs preprocessing" />
+    <option name="LAST_COMMIT_MESSAGE" value="createTable_Gifs, deleteTable_Gifs, Gifs preprocessing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1000,13 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="76" column="31" lean-forward="false" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-579">
@@ -1084,7 +1088,7 @@
     <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
-          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
           <folding>
             <marker date="1494426907161" expanded="true" signature="256:391" ph="SELECT * FRO... missing_value" />
           </folding>
@@ -1093,30 +1097,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/Database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        <state relative-caret-position="102">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding>
-            <marker date="1494427158085" expanded="true" signature="1726:1833" ph="CREATE TABLE... Answers" />
-            <marker date="1494427158085" expanded="true" signature="2072:2092" ph="DROP TABLE &quot;... " />
-            <marker date="1494427158085" expanded="true" signature="2334:2482" ph="CREATE TABLE... Keywords" />
-            <marker date="1494427158085" expanded="true" signature="2724:2745" ph="DROP TABLE &quot;... " />
-            <marker date="1494427158085" expanded="true" signature="3004:3298" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1494427158085" expanded="true" signature="3564:3593" ph="DROP TABLE &quot;... " />
-            <marker date="1494427158085" expanded="true" signature="3844:4050" ph="CREATE TABLE... Synonyms" />
-            <marker date="1494427158085" expanded="true" signature="4291:4312" ph="DROP TABLE &quot;... " />
-            <marker date="1494427158085" expanded="true" signature="4573:4958" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1494427158085" expanded="true" signature="5227:5257" ph="DROP TABLE &quot;... " />
-            <marker date="1494427158085" expanded="true" signature="5498:5748" ph="CREATE TABLE... Gifs" />
-            <marker date="1494427158085" expanded="true" signature="5977:5994" ph="DROP TABLE &quot;... " />
-            <marker date="1494427158085" expanded="true" signature="6154:6184" ph="DELETE FROM " />
-            <marker date="1494427158085" expanded="true" signature="6213:6234" ph="DELETE FROM " />
-            <marker date="1494427158085" expanded="true" signature="6263:6285" ph="DELETE FROM " />
-            <marker date="1494427158085" expanded="true" signature="6314:6336" ph="DELETE FROM " />
-            <marker date="1494427158085" expanded="true" signature="6365:6383" ph="DELETE FROM " />
-            <marker date="1494427158085" expanded="true" signature="7524:7587" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1494427158085" expanded="true" signature="7685:7845" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1494427158085" expanded="true" signature="7898:8051" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1494427297282" expanded="true" signature="1726:1833" ph="CREATE TABLE... Answers" />
+            <marker date="1494427297282" expanded="true" signature="2072:2092" ph="DROP TABLE &quot;... " />
+            <marker date="1494427297282" expanded="true" signature="2334:2482" ph="CREATE TABLE... Keywords" />
+            <marker date="1494427297282" expanded="true" signature="2724:2745" ph="DROP TABLE &quot;... " />
+            <marker date="1494427297282" expanded="true" signature="3004:3298" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1494427297282" expanded="true" signature="3564:3593" ph="DROP TABLE &quot;... " />
+            <marker date="1494427297282" expanded="true" signature="3844:4050" ph="CREATE TABLE... Synonyms" />
+            <marker date="1494427297282" expanded="true" signature="4291:4312" ph="DROP TABLE &quot;... " />
+            <marker date="1494427297282" expanded="true" signature="4573:4958" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1494427297282" expanded="true" signature="5227:5257" ph="DROP TABLE &quot;... " />
+            <marker date="1494427297282" expanded="true" signature="5498:5748" ph="CREATE TABLE... Gifs" />
+            <marker date="1494427297282" expanded="true" signature="5977:5994" ph="DROP TABLE &quot;... " />
+            <marker date="1494427297282" expanded="true" signature="6154:6184" ph="DELETE FROM " />
+            <marker date="1494427297282" expanded="true" signature="6213:6234" ph="DELETE FROM " />
+            <marker date="1494427297282" expanded="true" signature="6263:6285" ph="DELETE FROM " />
+            <marker date="1494427297282" expanded="true" signature="6314:6336" ph="DELETE FROM " />
+            <marker date="1494427297282" expanded="true" signature="6365:6383" ph="DELETE FROM " />
+            <marker date="1494427297282" expanded="true" signature="7524:7587" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1494427297282" expanded="true" signature="7685:7845" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1494427297282" expanded="true" signature="7898:8051" ph="INSERT INTO &quot;missing_value&quot;... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
