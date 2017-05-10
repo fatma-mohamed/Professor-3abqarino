@@ -32,13 +32,10 @@ def webhook():
 
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") == "request_user_name":
-        return responseSelector.requestUserName(req)
-    elif req.get("result").get("action") == "createDB":
-        conn = Database.Database()
-        return DataPreprocessing.DataPreprocessing().__run__(conn)
-    elif req.get("result").get("action") == "InsertQuestions_Answers":
-        return DataPreprocessing.DataPreprocessing().insertQuestions_Answers()
+    action = req.get("result").get("action")
+    if "request_user_name" in action:
+        responseSelector = ResponseSelector.ResponseSelector()
+        return responseSelector.requestUserName(req, action)
     elif req.get("result").get("action") == "request-game":
         return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
     elif req.get("result").get("action") == "check-answer":
