@@ -32,6 +32,7 @@ class Database:
         self.createTable_Answers_Keywords()
         self.createTable_Synonyms()
         self.createTable_Questions_Answers()
+        self.createTable_Gifs()
         self.connection.commit()
         print ("--------Tables created successfully--------")
 
@@ -46,6 +47,7 @@ class Database:
         self.deleteTable_Synonyms()
         self.deleteTable_Keywords()
         self.deleteTable_Questions_Answers()
+        self.deleteTable_Gifs()
         self.connection.commit()
         print ("--------Tables deleted successfully--------")
 
@@ -134,6 +136,31 @@ class Database:
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE "Questions_Answers";''')
         print("--------Table Questions_Answers deleted successfully--------")
+
+    def createTable_Gifs(self):
+        print("--------in Database createTable_Gifs--------")
+        cur = self.connection.cursor()
+        cur.execute('''CREATE TABLE "Gifs"
+                                   (ID SERIAL PRIMARY KEY NOT NULL,
+                                   Name TEXT NOT NULL,
+                                   Url TEXT NOT NULL,
+                                   Tag TEXT NOT NULL);''')
+        print("--------Table Gifs created successfully--------")
+
+    def deleteTable_Gifs(self):
+        print ("--------in Database deleteTable_Gifs--------")
+        cur = self.connection.cursor()
+        cur.execute('''DROP TABLE "Gifs";''')
+        print("--------Table Gifs deleted successfully--------")
+
+    def deleteData(self):
+        cur = self.connection.cursor()
+        cur.execute('''DELETE FROM "Answers_Keywords";''')
+        cur.execute('''DELETE FROM "Answers";''')
+        cur.execute('''DELETE FROM "Synonyms";''')
+        cur.execute('''DELETE FROM "Keywords";''')
+        cur.execute('''DELETE FROM "Gifs";''')
+        self.connection.commit()
 
     def insert(self, table_name, cols, values, conflict_fields, conflict_do):
         cur = self.connection.cursor()

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/config.py" afterPath="$PROJECT_DIR$/Preprocessing/config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Database.py" afterPath="$PROJECT_DIR$/Data/Database.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,12 +26,55 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Preprocessing/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Database.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Data/Database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+              <folding>
+                <marker date="1494427158085" expanded="true" signature="1726:1833" ph="CREATE TABLE... Answers" />
+                <marker date="1494427158085" expanded="true" signature="2072:2092" ph="DROP TABLE &quot;... " />
+                <marker date="1494427158085" expanded="true" signature="2334:2482" ph="CREATE TABLE... Keywords" />
+                <marker date="1494427158085" expanded="true" signature="2724:2745" ph="DROP TABLE &quot;... " />
+                <marker date="1494427158085" expanded="true" signature="3004:3298" ph="CREATE TABLE... Answers_Keywords" />
+                <marker date="1494427158085" expanded="true" signature="3564:3593" ph="DROP TABLE &quot;... " />
+                <marker date="1494427158085" expanded="true" signature="3844:4050" ph="CREATE TABLE... Synonyms" />
+                <marker date="1494427158085" expanded="true" signature="4291:4312" ph="DROP TABLE &quot;... " />
+                <marker date="1494427158085" expanded="true" signature="4573:4958" ph="CREATE TABLE... Questions_Answers" />
+                <marker date="1494427158085" expanded="true" signature="5227:5257" ph="DROP TABLE &quot;... " />
+                <marker date="1494427158085" expanded="true" signature="5498:5748" ph="CREATE TABLE... Gifs" />
+                <marker date="1494427158085" expanded="true" signature="5977:5994" ph="DROP TABLE &quot;... " />
+                <marker date="1494427158085" expanded="true" signature="6154:6184" ph="DELETE FROM " />
+                <marker date="1494427158085" expanded="true" signature="6213:6234" ph="DELETE FROM " />
+                <marker date="1494427158085" expanded="true" signature="6263:6285" ph="DELETE FROM " />
+                <marker date="1494427158085" expanded="true" signature="6314:6336" ph="DELETE FROM " />
+                <marker date="1494427158085" expanded="true" signature="6365:6383" ph="DELETE FROM " />
+                <marker date="1494427158085" expanded="true" signature="7524:7587" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1494427158085" expanded="true" signature="7685:7845" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1494427158085" expanded="true" signature="7898:8051" ph="INSERT INTO &quot;missing_value&quot;... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataAccess.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+              <folding>
+                <marker date="1494426907161" expanded="true" signature="256:391" ph="SELECT * FRO... missing_value" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,11 +127,11 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$PROJECT_DIR$/Preprocessing/gifs.txt" />
         <option value="$PROJECT_DIR$/Data/DataAccess.py" />
-        <option value="$PROJECT_DIR$/Data/Database.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
         <option value="$PROJECT_DIR$/Preprocessing/config.py" />
+        <option value="$PROJECT_DIR$/Data/Database.py" />
       </list>
     </option>
   </component>
@@ -99,8 +142,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="167" />
-    <option name="width" value="1199" />
+    <option name="x" value="683" />
+    <option name="width" value="683" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -119,40 +162,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
+              <option name="myItemId" value="GP-Professor-3abqarino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
+              <option name="myItemId" value="GP-Professor-3abqarino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
+              <option name="myItemId" value="GP-Professor-3abqarino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ResponseSelection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
+              <option name="myItemId" value="GP-Professor-3abqarino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -162,25 +190,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
+              <option name="myItemId" value="GP-Professor-3abqarino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NLP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
+              <option name="myItemId" value="GP-Professor-3abqarino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -190,6 +204,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -723,9 +738,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="167" y="0" width="1199" height="728" extended-state="0" />
+    <frame x="683" y="0" width="683" height="728" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25443786" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25337332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -971,20 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NLP/WordRecognizer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1075,8 +1076,47 @@
     <entry file="file://$PROJECT_DIR$/Preprocessing/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <marker date="1494426907161" expanded="true" signature="256:391" ph="SELECT * FRO... missing_value" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding>
+            <marker date="1494427158085" expanded="true" signature="1726:1833" ph="CREATE TABLE... Answers" />
+            <marker date="1494427158085" expanded="true" signature="2072:2092" ph="DROP TABLE &quot;... " />
+            <marker date="1494427158085" expanded="true" signature="2334:2482" ph="CREATE TABLE... Keywords" />
+            <marker date="1494427158085" expanded="true" signature="2724:2745" ph="DROP TABLE &quot;... " />
+            <marker date="1494427158085" expanded="true" signature="3004:3298" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1494427158085" expanded="true" signature="3564:3593" ph="DROP TABLE &quot;... " />
+            <marker date="1494427158085" expanded="true" signature="3844:4050" ph="CREATE TABLE... Synonyms" />
+            <marker date="1494427158085" expanded="true" signature="4291:4312" ph="DROP TABLE &quot;... " />
+            <marker date="1494427158085" expanded="true" signature="4573:4958" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1494427158085" expanded="true" signature="5227:5257" ph="DROP TABLE &quot;... " />
+            <marker date="1494427158085" expanded="true" signature="5498:5748" ph="CREATE TABLE... Gifs" />
+            <marker date="1494427158085" expanded="true" signature="5977:5994" ph="DROP TABLE &quot;... " />
+            <marker date="1494427158085" expanded="true" signature="6154:6184" ph="DELETE FROM " />
+            <marker date="1494427158085" expanded="true" signature="6213:6234" ph="DELETE FROM " />
+            <marker date="1494427158085" expanded="true" signature="6263:6285" ph="DELETE FROM " />
+            <marker date="1494427158085" expanded="true" signature="6314:6336" ph="DELETE FROM " />
+            <marker date="1494427158085" expanded="true" signature="6365:6383" ph="DELETE FROM " />
+            <marker date="1494427158085" expanded="true" signature="7524:7587" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1494427158085" expanded="true" signature="7685:7845" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1494427158085" expanded="true" signature="7898:8051" ph="INSERT INTO &quot;missing_value&quot;... " />
+          </folding>
         </state>
       </provider>
     </entry>
