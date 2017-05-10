@@ -15,9 +15,11 @@ from Data import DataAccess
 # Flask app should start in global layout
 app = Flask(__name__)
 responseSelector = None
+
+@app.route('/index')
 @app.route('/',methods=['POST','GET'])
 def Home():
-    x=5
+    return render_template('index.html')
     
 
 @app.route('/notify',methods=['POST','GET'])
