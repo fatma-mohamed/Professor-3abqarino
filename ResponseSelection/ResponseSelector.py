@@ -1,7 +1,7 @@
 import json
 import urllib
 from Preprocessing import config
-
+from Data import DataAccess
 class ResponseSelector:
 
     @staticmethod
@@ -17,6 +17,9 @@ class ResponseSelector:
         event_name = ""
         if ("welcome" in action):
             event_name = "FACEBOOK_WELCOME"
+            da  = DataAccess.DataAccess()
+            da.insert("User","FBID",id)
+
         elif ("help" in action):
             event_name = "help_name_event"
         return {
