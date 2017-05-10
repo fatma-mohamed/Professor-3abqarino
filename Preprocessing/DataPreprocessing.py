@@ -41,3 +41,19 @@ class DataPreprocessing:
             "contextOut": [],
             "source": "insert-Questions_Answers-rows"
         }
+
+    @staticmethod
+    def insertGifs():
+        db = Database()
+        file = open("Preprocessing/gifs.txt", "r")
+
+        while True:
+            line = file.readline()
+            if (line == ''):
+                print("EOF!")
+                break
+            arr = line.split(" ")
+            name = "'" + arr[0].strip("\n") + "'"
+            url = "'" + arr[1].strip("\n") + "'"
+            tag = "'" + arr[2].strip("\n") + "'"
+            db.insert("Gifs", ["Name", "Url" , "Tag"], [name,url,tag],"","")
