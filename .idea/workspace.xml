@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/config.py" afterPath="$PROJECT_DIR$/Preprocessing/config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Database.py" afterPath="$PROJECT_DIR$/Data/Database.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/gifs.txt" afterPath="$PROJECT_DIR$/Preprocessing/gifs.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,32 +28,74 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Preprocessing/config.py">
+      <file leaf-file-name="gifs.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/gifs.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="195" lean-forward="false" selection-start-line="1" selection-start-column="195" selection-end-line="1" selection-end-column="195" />
+            <state relative-caret-position="306">
+              <caret line="18" column="116" lean-forward="false" selection-start-line="18" selection-start-column="116" selection-end-line="18" selection-end-column="116" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResponseSelector.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
+      <file leaf-file-name="DataPreprocessing.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="72" lean-forward="false" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="89" />
+            <state relative-caret-position="74">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scratch_3.py" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="188" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="188" />
-              <folding />
+            <state relative-caret-position="244">
+              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="e#22#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Database.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data/Database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-935">
+              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <folding>
+                <marker date="1494880124511" expanded="true" signature="1903:2016" ph="CREATE TABLE... Answers" />
+                <marker date="1494880124511" expanded="true" signature="2253:2273" ph="DROP TABLE &quot;... " />
+                <marker date="1494880124511" expanded="true" signature="2512:2669" ph="CREATE TABLE... Keywords" />
+                <marker date="1494880124511" expanded="true" signature="2909:2930" ph="DROP TABLE &quot;... " />
+                <marker date="1494880124511" expanded="true" signature="3186:3495" ph="CREATE TABLE... Answers_Keywords" />
+                <marker date="1494880124511" expanded="true" signature="3759:3788" ph="DROP TABLE &quot;... " />
+                <marker date="1494880124511" expanded="true" signature="4036:4143" ph="CREATE TABLE... Answers" />
+                <marker date="1494880124511" expanded="true" signature="4382:4402" ph="DROP TABLE &quot;... " />
+                <marker date="1494880124511" expanded="true" signature="4644:4792" ph="CREATE TABLE... Keywords" />
+                <marker date="1494880124511" expanded="true" signature="5034:5055" ph="DROP TABLE &quot;... " />
+                <marker date="1494880124511" expanded="true" signature="5314:5608" ph="CREATE TABLE... Answers_Keywords" />
+                <marker date="1494880124511" expanded="true" signature="5874:5903" ph="DROP TABLE &quot;... " />
+                <marker date="1494880124511" expanded="true" signature="6154:6360" ph="CREATE TABLE... Synonyms" />
+                <marker date="1494880124511" expanded="true" signature="6602:6623" ph="DROP TABLE &quot;... " />
+                <marker date="1494880124511" expanded="true" signature="6881:7181" ph="CREATE TABLE... Questions_Answers" />
+                <marker date="1494880124511" expanded="true" signature="7448:7478" ph="DROP TABLE &quot;... " />
+                <marker date="1494880124511" expanded="true" signature="7747:8132" ph="CREATE TABLE... Questions_Answers" />
+                <marker date="1494880124511" expanded="true" signature="8402:8432" ph="DROP TABLE &quot;... " />
+                <marker date="1494880124511" expanded="true" signature="8673:8875" ph="CREATE TABLE... Gifs" />
+                <marker date="1494880124511" expanded="true" signature="9104:9121" ph="DROP TABLE &quot;... " />
+                <marker date="1494880124511" expanded="true" signature="9281:9311" ph="DELETE FROM " />
+                <marker date="1494880124511" expanded="true" signature="9340:9361" ph="DELETE FROM " />
+                <marker date="1494880124511" expanded="true" signature="9390:9412" ph="DELETE FROM " />
+                <marker date="1494880124511" expanded="true" signature="9441:9463" ph="DELETE FROM " />
+                <marker date="1494880124511" expanded="true" signature="9492:9510" ph="DELETE FROM " />
+                <marker date="1494880124511" expanded="true" signature="9642:9660" ph="DELETE FROM " />
+                <marker date="1494880124511" expanded="true" signature="10802:10865" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1494880124511" expanded="true" signature="10963:11123" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1494880124511" expanded="true" signature="11176:11329" ph="INSERT INTO &quot;missing_value&quot;... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,16 +123,16 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
-        <option value="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" />
         <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/gifs.txt" />
         <option value="$PROJECT_DIR$/Data/DataAccess.py" />
-        <option value="$PROJECT_DIR$/Data/Database.py" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
+        <option value="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" />
         <option value="$PROJECT_DIR$/Preprocessing/config.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/gifs.txt" />
+        <option value="$PROJECT_DIR$/Data/Database.py" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -99,9 +143,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="382" />
-    <option name="width" value="984" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -119,39 +164,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
+              <option name="myItemId" value="GP-Professor-3abqarino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
+              <option name="myItemId" value="GP-Professor-3abqarino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
+              <option name="myItemId" value="GP-Professor-3abqarino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ResponseSelection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
+              <option name="myItemId" value="GP-Professor-3abqarino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -161,25 +194,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
+              <option name="myItemId" value="GP-Professor-3abqarino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NLP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="professor-3abqarino" />
+              <option name="myItemId" value="GP-Professor-3abqarino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -189,8 +208,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,7 +232,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.GP-Professor-3abqarino">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -364,6 +381,28 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
+    <configuration default="false" name="GP-Professor-3abqarino" type="PythonConfigurationType" factoryName="Python" singleton="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="GP-Professor-3abqarino" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.GP-Professor-3abqarino" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -723,13 +762,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="382" y="0" width="984" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25516528" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2246596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27993527" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27993527" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -798,19 +838,12 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py" />
-    <entry file="file://$PROJECT_DIR$/nltk.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/nltk.txt" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
     <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,9 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding>
-            <element signature="e#22#47#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -830,28 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1077">
           <caret line="188" column="19" lean-forward="false" selection-start-line="188" selection-start-column="19" selection-end-line="188" selection-end-column="19" />
-          <folding>
-            <marker date="1493359607796" expanded="true" signature="1726:1833" ph="CREATE TABLE... Answers" />
-            <marker date="1493359607796" expanded="true" signature="2072:2092" ph="DROP TABLE &quot;... " />
-            <marker date="1493359607796" expanded="true" signature="2334:2482" ph="CREATE TABLE... Keywords" />
-            <marker date="1493359607796" expanded="true" signature="2724:2745" ph="DROP TABLE &quot;... " />
-            <marker date="1493359607796" expanded="true" signature="3004:3298" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1493359607796" expanded="true" signature="3564:3593" ph="DROP TABLE &quot;... " />
-            <marker date="1493359607796" expanded="true" signature="3844:4050" ph="CREATE TABLE... Synonyms" />
-            <marker date="1493359607796" expanded="true" signature="4291:4312" ph="DROP TABLE &quot;... " />
-            <marker date="1493359607796" expanded="true" signature="4573:4958" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1493359607796" expanded="true" signature="5228:5258" ph="DROP TABLE &quot;... " />
-            <marker date="1493359607796" expanded="true" signature="5499:5701" ph="CREATE TABLE... Gifs" />
-            <marker date="1493359607796" expanded="true" signature="5930:5947" ph="DROP TABLE &quot;... " />
-            <marker date="1493359607796" expanded="true" signature="6107:6137" ph="DELETE FROM " />
-            <marker date="1493359607796" expanded="true" signature="6166:6187" ph="DELETE FROM " />
-            <marker date="1493359607796" expanded="true" signature="6216:6238" ph="DELETE FROM " />
-            <marker date="1493359607796" expanded="true" signature="6267:6289" ph="DELETE FROM " />
-            <marker date="1493359607796" expanded="true" signature="6318:6336" ph="DELETE FROM " />
-            <marker date="1493359607796" expanded="true" signature="7478:7541" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1493359607796" expanded="true" signature="7639:7803" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1493359607796" expanded="true" signature="7856:8012" ph="INSERT INTO &quot;missing_value&quot;... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -859,10 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <marker date="1493359607770" expanded="true" signature="256:391" ph="SELECT * FRO... missing_value" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -871,7 +875,7 @@
         <state relative-caret-position="119">
           <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
           <folding>
-            <element signature="e#0#37#0" expanded="false" />
+            <marker date="1494877547087" expanded="true" signature="226:251" ph="..." />
           </folding>
         </state>
       </provider>
@@ -880,9 +884,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#34#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -890,9 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="e#22#47#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -901,9 +900,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#34#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -912,7 +909,7 @@
         <state relative-caret-position="357">
           <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#0#37#0" expanded="false" />
+            <marker date="1494877547087" expanded="true" signature="226:251" ph="..." />
           </folding>
         </state>
       </provider>
@@ -921,9 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#22#47#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -932,9 +926,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="44" column="40" lean-forward="false" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#34#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -942,9 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#22#47#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -953,9 +942,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="44" column="40" lean-forward="true" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#34#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -963,9 +950,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#34#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -973,9 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-          <folding>
-            <element signature="e#22#47#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1037,39 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
           <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <marker date="1493359607770" expanded="true" signature="256:391" ph="SELECT * FRO... missing_value" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-          <folding>
-            <marker date="1493359607796" expanded="true" signature="1726:1833" ph="CREATE TABLE... Answers" />
-            <marker date="1493359607796" expanded="true" signature="2072:2092" ph="DROP TABLE &quot;... " />
-            <marker date="1493359607796" expanded="true" signature="2334:2482" ph="CREATE TABLE... Keywords" />
-            <marker date="1493359607796" expanded="true" signature="2724:2745" ph="DROP TABLE &quot;... " />
-            <marker date="1493359607796" expanded="true" signature="3004:3298" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1493359607796" expanded="true" signature="3564:3593" ph="DROP TABLE &quot;... " />
-            <marker date="1493359607796" expanded="true" signature="3844:4050" ph="CREATE TABLE... Synonyms" />
-            <marker date="1493359607796" expanded="true" signature="4291:4312" ph="DROP TABLE &quot;... " />
-            <marker date="1493359607796" expanded="true" signature="4573:4958" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1493359607796" expanded="true" signature="5228:5258" ph="DROP TABLE &quot;... " />
-            <marker date="1493359607796" expanded="true" signature="5499:5701" ph="CREATE TABLE... Gifs" />
-            <marker date="1493359607796" expanded="true" signature="5930:5947" ph="DROP TABLE &quot;... " />
-            <marker date="1493359607796" expanded="true" signature="6107:6137" ph="DELETE FROM " />
-            <marker date="1493359607796" expanded="true" signature="6166:6187" ph="DELETE FROM " />
-            <marker date="1493359607796" expanded="true" signature="6216:6238" ph="DELETE FROM " />
-            <marker date="1493359607796" expanded="true" signature="6267:6289" ph="DELETE FROM " />
-            <marker date="1493359607796" expanded="true" signature="6318:6336" ph="DELETE FROM " />
-            <marker date="1493359607796" expanded="true" signature="7478:7541" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1493359607796" expanded="true" signature="7639:7803" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1493359607796" expanded="true" signature="7856:8012" ph="INSERT INTO &quot;missing_value&quot;... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1077,7 +1026,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1085,25 +1033,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="76" column="31" lean-forward="false" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#34#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-579">
-          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,56 +1040,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
           <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nltk.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Question_Answers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4592">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/essay_questions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/gifs.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding>
-            <element signature="e#22#47#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/nltk.txt" />
+    <entry file="file://$PROJECT_DIR$/Question_Answers.txt" />
+    <entry file="file://$PROJECT_DIR$/Preprocessing/essay_questions.txt" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1169,23 +1065,88 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="13" column="72" lean-forward="false" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py">
+    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="188" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="188" />
-          <folding />
+        <state relative-caret-position="1088">
+          <caret line="67" column="44" lean-forward="false" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+          <folding>
+            <marker date="1494877547087" expanded="true" signature="226:251" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="195" lean-forward="false" selection-start-line="1" selection-start-column="195" selection-end-line="1" selection-end-column="195" />
+          <caret line="1" column="195" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="195" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/gifs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="116" lean-forward="false" selection-start-line="18" selection-start-column="116" selection-end-line="18" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-935">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <marker date="1494880124511" expanded="true" signature="1903:2016" ph="CREATE TABLE... Answers" />
+            <marker date="1494880124511" expanded="true" signature="2253:2273" ph="DROP TABLE &quot;... " />
+            <marker date="1494880124511" expanded="true" signature="2512:2669" ph="CREATE TABLE... Keywords" />
+            <marker date="1494880124511" expanded="true" signature="2909:2930" ph="DROP TABLE &quot;... " />
+            <marker date="1494880124511" expanded="true" signature="3186:3495" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1494880124511" expanded="true" signature="3759:3788" ph="DROP TABLE &quot;... " />
+            <marker date="1494880124511" expanded="true" signature="4036:4143" ph="CREATE TABLE... Answers" />
+            <marker date="1494880124511" expanded="true" signature="4382:4402" ph="DROP TABLE &quot;... " />
+            <marker date="1494880124511" expanded="true" signature="4644:4792" ph="CREATE TABLE... Keywords" />
+            <marker date="1494880124511" expanded="true" signature="5034:5055" ph="DROP TABLE &quot;... " />
+            <marker date="1494880124511" expanded="true" signature="5314:5608" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1494880124511" expanded="true" signature="5874:5903" ph="DROP TABLE &quot;... " />
+            <marker date="1494880124511" expanded="true" signature="6154:6360" ph="CREATE TABLE... Synonyms" />
+            <marker date="1494880124511" expanded="true" signature="6602:6623" ph="DROP TABLE &quot;... " />
+            <marker date="1494880124511" expanded="true" signature="6881:7181" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1494880124511" expanded="true" signature="7448:7478" ph="DROP TABLE &quot;... " />
+            <marker date="1494880124511" expanded="true" signature="7747:8132" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1494880124511" expanded="true" signature="8402:8432" ph="DROP TABLE &quot;... " />
+            <marker date="1494880124511" expanded="true" signature="8673:8875" ph="CREATE TABLE... Gifs" />
+            <marker date="1494880124511" expanded="true" signature="9104:9121" ph="DROP TABLE &quot;... " />
+            <marker date="1494880124511" expanded="true" signature="9281:9311" ph="DELETE FROM " />
+            <marker date="1494880124511" expanded="true" signature="9340:9361" ph="DELETE FROM " />
+            <marker date="1494880124511" expanded="true" signature="9390:9412" ph="DELETE FROM " />
+            <marker date="1494880124511" expanded="true" signature="9441:9463" ph="DELETE FROM " />
+            <marker date="1494880124511" expanded="true" signature="9492:9510" ph="DELETE FROM " />
+            <marker date="1494880124511" expanded="true" signature="9642:9660" ph="DELETE FROM " />
+            <marker date="1494880124511" expanded="true" signature="10802:10865" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1494880124511" expanded="true" signature="10963:11123" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1494880124511" expanded="true" signature="11176:11329" ph="INSERT INTO &quot;missing_value&quot;... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
