@@ -1,6 +1,9 @@
 import json
 import urllib
+import requests
+import datetime
 from Preprocessing import config
+from Data import Database, DataAccess
 
 class ResponseSelector:
 
@@ -17,6 +20,7 @@ class ResponseSelector:
         event_name = ""
         if ("welcome" in action):
             event_name = "FACEBOOK_WELCOME"
+            registerUser(id, data)
         elif ("help" in action):
             event_name = "help_name_event"
         return {
@@ -27,3 +31,88 @@ class ResponseSelector:
             "source": "prof-3abqarino",
             "followupEvent": {"name": event_name, "data": {"user": name}}
         }
+
+    def registerUser(self, pageScopedID, data):
+        db = Database.Database()
+        appScopedID = getAppScopedID(data)
+        db.insert("User", ["Page_ScopedID", "App_ScopedID"], [pageScopedID, appScopedID], [""], "")
+
+    def getAppScopedID(self, data):
+        message = data.get("message")
+        mid = message.get("mid")
+
+        access_token = config.access_token
+        url = "https://graph.facebook.com/v2.8/m_" + mid + "?access_token=" + access_token + "&fields=from"
+        r = requests.get(url)
+        print(r.status_code, r.reason)
+        result = json.loads(r.text)
+        id = result.get("from").get("id")
+        print(id)
+        return id
+
+    def getUsersToNotify(self):
+        ids = []
+        conversations = getConversations()
+        for conversation in conversations:
+            updated_time = conversation.get("updated_time")
+            updated_time = updated_time.replace("T", " ") #Replace separator of date and time by " " instead of T -- To match current_time format
+            millisecondsIndex = updated_time.find("+") #Get milliseconds index
+            updated_time = updated_time[:millisecondsIndex - len(updated_time)] #Remove milliseconds
+            updated_time = datetime.datetime.strptime(updated_time, "%Y-%m-%d %H:%M:%S") #Convert to datetime object
+            current_time = datetime.datetime.now() - datetime.timedelta(hours = 2) # Convert to GMT
+            resultedTime = current_time - updated_time # Didn't talk since...
+            dayIndex = str(resultedTime).find("day") # Get day index in result, -1 if not exist
+            if(dayIndex > 0 and int(str(resultedTime)[:dayIndex-1]) >= 2): #If day exists and number of days more than 2 ,, then notify user.
+                conversationData = conversation.get("participants").get("data")
+                for participant in conversationData:
+                    if(participant.get("id") != config.page_id): # Current participant isn't the page
+                        appScopedID = participant.get("id")
+                        pageScopedID = DataAccess.DataAccess().select("User", ["Page_ScopedID"], ["App_ScopedID"], [appScopedID], "")
+                        if(pageScopedID != None):
+                            ids.append(pageScopedID)
+                            break
+        return ids
+
+    def getConversations(self):
+        access_token = config.access_token
+        url = "https://graph.facebook.com/v2.9/me/conversations?access_token=" + access_token + "&fields=participants,updated_time"
+
+        r = requests.get(url)
+        print(r.status_code, r.reason)
+        conversations = json.loads(r.text)
+        return conversations.get("data")
+
+    def notifyUser(self):
+        listOfUsersToNotify = getUsersToNotify()
+
+        access_token = config.access_token
+        url = "https://graph.facebook.com/v2.6/me/messages?access_token=" + access_token
+
+        for userID in listOfUsersToNotify:
+            paramRecipient = { "id": userID}
+            content = DataAccess.DataAccess().selectGifsRandom("Notification", ["Message", "Attachment"], [], [], "")
+            msg = content[0]
+            attachment = content[1]
+            if(attachment != None): #If there's an attachment, send it before the message itself
+                attachedGif = DataAccess.DataAccess().selectGifsRandom("Gifs", ["Url"], ["Tag"], ["'" + attachment + "'"], "")
+                paramUrl = {"url":attachedGif}
+                paramPayload = json.dumps(paramUrl, ensure_ascii=False)
+                paramAttachment = {}
+                paramAttachment["type"] = "image"
+                paramAttachment["payload"] = json.dumps(paramPayload, ensure_ascii=False)
+                requestJSON = {}
+                requestJSON["recipient"] = json.dumps(paramRecipient, ensure_ascii=False)
+                requestJSON["message"] = json.dumps(paramAttachment, ensure_ascii=False)
+
+                r = requests.post(url, data=requestJSON, headers={'Content-type': 'application/json'})
+                print(r.status_code, r.reason)
+                print(r.text[:300] + '...')
+
+            paramMessage = {"text": msg}
+            requestJSON = {}
+            requestJSON["recipient"] = json.dumps(paramRecipient, ensure_ascii=False)
+            requestJSON["message"] = json.dumps(paramMessage, ensure_ascii=False)
+    
+            r = requests.post(url, data = requestJSON, headers={'Content-type': 'application/json'})
+            print(r.status_code, r.reason)
+            print(r.text[:300] + '...')
