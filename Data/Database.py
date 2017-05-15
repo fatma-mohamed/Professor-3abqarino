@@ -237,12 +237,6 @@ class Database:
         self.connection.commit()
 
 
-    def deleteDataGif(self):
-        cur = self.connection.cursor()
-        cur.execute('''DELETE FROM "Gifs";''')
-        self.connection.commit()
-
-
     def insert(self, table_name, cols, values, conflict_fields, conflict_do):
         cur = self.connection.cursor()
 
