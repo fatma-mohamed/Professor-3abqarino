@@ -15,6 +15,11 @@ from Preprocessing import *
 app = Flask(__name__)
 responseSelector = ResponseSelector.ResponseSelector()
 
+@app.route('/notify', methods=['POST','GET'])
+def notify():
+    responseSelector = ResponseSelector.ResponseSelector()
+    responseSelector.notifyUser()
+
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
     req = request.get_json(silent=True, force=True)
@@ -40,6 +45,14 @@ def makeWebhookResult(req):
         return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
     elif req.get("result").get("action") == "check-answer":
         return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
+    elif req.get("result").get("action") == "add-menu":
+        return MenuPreprocessing.MenuPreprocessing().addMenu()
+    elif req.get("result").get("action") == "pre2":
+        Database.Database().createTable_Notification()
+        Database.Database().createTable_User()
+        Database.Database().connection.commit()
+        DataPreprocessing.insertNotifications()
+        return
     else:
         return {}
 

@@ -32,6 +32,9 @@ class Database:
         self.createTable_Answers_Keywords()
         self.createTable_Synonyms()
         self.createTable_Questions_Answers()
+        self.createTable_Gifs()
+        self.createTable_User()
+        self.createTable_Notification()
         self.connection.commit()
         print ("--------Tables created successfully--------")
 
@@ -46,6 +49,9 @@ class Database:
         self.deleteTable_Synonyms()
         self.deleteTable_Keywords()
         self.deleteTable_Questions_Answers()
+        self.deleteTable_Gifs()
+        self.deleteTable_User()
+        self.deleteTable_Notification()
         self.connection.commit()
         print ("--------Tables deleted successfully--------")
 
@@ -129,11 +135,71 @@ class Database:
                CONSTRAINT uniqueQAs UNIQUE (Question, Answer_1, Answer_2, Answer_3, Correct_AnswerID));''')
         print ("--------Table Questions_Answers created successfully--------")
 
+
     def deleteTable_Questions_Answers(self):
         print ("--------in Database deleteTable_Questions_Answers--------")
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE "Questions_Answers";''')
         print("--------Table Questions_Answers deleted successfully--------")
+
+    def createTable_Gifs(self):
+        print("--------in Database createTable_Gifs--------")
+        cur = self.connection.cursor()
+        cur.execute('''CREATE TABLE "Gifs"
+                       (ID SERIAL PRIMARY KEY NOT NULL,
+                       Name TEXT NOT NULL,
+                       Url TEXT NOT NULL,
+                       Tag TEXT NOT NULL);''')
+        print("--------Table Gifs created successfully--------")
+
+    def deleteTable_Gifs(self):
+        print ("--------in Database deleteTable_Gifs--------")
+        cur = self.connection.cursor()
+        cur.execute('''DROP TABLE "Gifs";''')
+        print("--------Table Gifs deleted successfully--------")
+
+    def createTable_User(self):
+        print("--------in Database createTable_User--------")
+        cur = self.connection.cursor()
+        cur.execute('''CREATE TABLE "User"
+                       (ID SERIAL PRIMARY KEY NOT NULL,
+                       Page_ScopedID INT NOT NULL UNIQUE,
+                       App_ScopedID INT NOT NULL UNIQUE);''')
+        print("--------Table User created successfully--------")
+
+    def deleteTable_User(self):
+        print ("--------in Database deleteTable_User--------")
+        cur = self.connection.cursor()
+        cur.execute('''DROP TABLE "User";''')
+        print("--------Table User deleted successfully--------")
+
+    def createTable_Notification(self):
+        print("--------in Database createTable_Notification--------")
+        cur = self.connection.cursor()
+        cur.execute('''CREATE TABLE "Notification"
+                       (ID SERIAL PRIMARY KEY NOT NULL,
+                       Message TEXT NOT NULL UNIQUE,
+                       Attachment TEXT,
+                       FOREIGN KEY (Attachment) REFERENCES "Gifs"(Tag));''')
+        print("--------Table Notification created successfully--------")
+
+    def deleteTable_Notification(self):
+        print ("--------in Database deleteTable_Notification--------")
+        cur = self.connection.cursor()
+        cur.execute('''DROP TABLE "Notification";''')
+        print("--------Table Notification deleted successfully--------")
+
+    def deleteData(self):
+        cur = self.connection.cursor()
+        cur.execute('''DELETE FROM "Answers_Keywords";''')
+        cur.execute('''DELETE FROM "Answers";''')
+        cur.execute('''DELETE FROM "Synonyms";''')
+        cur.execute('''DELETE FROM "Keywords";''')
+        cur.execute('''DELETE FROM "Gifs";''')
+        cur.execute('''DELETE FROM "User";''')
+        cur.execute('''DELETE FROM "Notification";''')
+        self.connection.commit()
+
 
     def insert(self, table_name, cols, values, conflict_fields, conflict_do):
         cur = self.connection.cursor()
@@ -169,11 +235,10 @@ class Database:
             cur.execute('''INSERT INTO "''' + table_name + '''" ''' + cols_str + " VALUES " + values_str);
         else:
             if (conflict_do == ''):
-                cur.execute('''INSERT INTO "''' + table_name + '''" ''' + cols_str + " VALUES " + values_str +
-                            " ON CONFLICT " + conflict_fields_str + " DO NOTHING");
+                cur.execute('''INSERT INTO "''' + table_name + '''"( ''' + cols + " ) VALUES ( " + values + " ) " +
+                            "ON CONFLICT ( " + conflict_fields + " ) DO NOTHING");
             else:
-                cur.execute('''INSERT INTO "''' + table_name + '''" ''' + cols_str + " VALUES " + values_str +
-                            " ON CONFLICT " + conflict_fields_str + " DO " + conflict_do);
-
+                cur.execute('''INSERT INTO "''' + table_name + '''" ''' + cols_str + "  VALUES  " + values_str +
+                            "ON CONFLICT  " + conflict_fields_str + "  DO " + conflict_do);
         self.connection.commit()
         cur.close()

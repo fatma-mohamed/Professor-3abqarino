@@ -1,4 +1,6 @@
 from Data import *
+from Preprocessing import config
+from ResponseSelection import ResponseSelector
 
 class DataPreprocessing:
     @staticmethod
@@ -14,6 +16,27 @@ class DataPreprocessing:
         }
 
         ##rest of the preprocessing
+
+    @staticmethod
+    def insertGifs():
+        db = Database()
+        file = open("Preprocessing/gifs.txt", "r")
+
+        while True:
+            line = file.readline()
+            if (line == ''):
+                print("EOF!")
+                break
+            arr = line.split(" ")
+            name = "'" + arr[0].strip("\n") + "'"
+            url = "'" + arr[1].strip("\n") + "'"
+            tag = "'" + arr[2].strip("\n") + "'"
+            db.insert("Gifs", ["Name", "Url", "Tag"], [name, url, tag], "", "")
+
+    @staticmethod
+    def removeSinqleQuotes(s):
+        res = s.replace("'", '"')
+        return res
 
     def insertQuestions_Answers(self):
         f = open("Preprocessing/Question_Answers.txt", 'r')
@@ -40,4 +63,35 @@ class DataPreprocessing:
             "data": {},
             "contextOut": [],
             "source": "insert-Questions_Answers-rows"
+        }
+
+    def insertNotifications(self):
+        f = open("Preprocessing/Notifications.txt", 'r')
+        i = 0
+        while True:
+            Notification = f.readline().rstrip()
+            if Notification == "":
+                print("------Finished reading------")
+                break
+
+            cols = []
+            values = []
+            if "Attachment" in Notification:
+                content = Notification.split(" Attachment: ")
+                cols = ["Message", "Attachment"]
+                values = ["'" + content[0] + "'", "'" + content[1] + "'"]
+            else:
+                cols = ["Message"]
+                values = ["'" + Notification + "'"]
+            conflict_fields = [""]
+            i += 1
+            print ("-----Notification number :: " + (str)(i) + " -----")
+            Database.Database().insert("Notification", cols, values, conflict_fields, '')
+
+        return {
+            "speech": "Inserted Notification messages",
+            "displayText": "",
+            "data": {},
+            "contextOut": [],
+            "source": "insert-Notifications-rows"
         }
