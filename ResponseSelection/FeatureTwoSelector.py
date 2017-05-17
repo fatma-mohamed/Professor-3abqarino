@@ -8,7 +8,7 @@ class FeatureTwoSelector:
        # row = DataAccess.DataAccess().selectRandom('''Questions_Answers''')
         row = DataAccess.DataAccess().selectGifsRandom("Questions_Answers",
                                                        ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"],
-                                                       [""], [""], "")
+                                                       [], [], "")
         if imageURL == "":
             return {
                 "speech": "",
