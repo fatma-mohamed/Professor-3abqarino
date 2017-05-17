@@ -56,7 +56,7 @@ class DataAccess:
         rows = cur.fetchall()
         cur.close()
         print (rows)
-        return rows[0]
+        return rows
 
     def select(self, table_name, cols, parameters, values, operators):
         db = Database.Database()
