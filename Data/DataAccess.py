@@ -55,7 +55,10 @@ class DataAccess:
 
         rows = cur.fetchall()
         cur.close()
+        print ("------------")
         print (rows)
+        print (rows[0])
+        print ("------------")
         return rows
 
     def select(self, table_name, cols, parameters, values, operators):
