@@ -1,4 +1,4 @@
 # Professor 3abqarino
-A chatbot on Facebook Messenger that helps students with their studies. It answers their questions and offers quiz games.
+A chatbot on Facebook Messenger that aims to help students to better study and understand their course. Right now it's adapted to work with World History:Ancient Egypt course. 
 
-<a href="https://heroku.com/deploy" target="_blank"><img src="https://www.herokucdn.com/deploy/button.svg"></a>
+
