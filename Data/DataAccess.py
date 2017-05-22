@@ -99,7 +99,7 @@ class DataAccess:
 
         rows = cur.fetchall()
         cur.close()
-        print("rows ->>> ", rows)
+        print "rows ->>> ", rows
         return rows
 
     def select(self, table_name, cols, parameters, values, operators):
