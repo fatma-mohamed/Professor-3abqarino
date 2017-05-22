@@ -5,7 +5,7 @@ import urllib
 import json
 import os
 
-from flask import Flask
+from flask import Flask ,render_template
 from flask import request
 from flask import make_response
 from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
@@ -15,6 +15,18 @@ from Data import DataAccess
 # Flask app should start in global layout
 app = Flask(__name__)
 responseSelector = None
+
+@app.route('/index')
+@app.route('/',methods=['POST','GET'])
+def Home():
+    return render_template('index.html')
+    
+
+@app.route('/notify',methods=['POST','GET'])
+def notify():
+    responseSelector = ResponseSelector.ResponseSelector()
+    responseSelector.notification()
+
 
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
