@@ -32,6 +32,7 @@ class Database:
         self.createTable_Answers_Keywords()
         self.createTable_Synonyms()
         self.createTable_Questions_Answers()
+        self.createTable_Tag()
         self.createTable_Gifs()
         self.createTable_User()
         self.createTable_Notification()
@@ -52,6 +53,7 @@ class Database:
         self.deleteTable_Gifs()
         self.deleteTable_User()
         self.deleteTable_Notification()
+        self.deleteTable_Tag()
         self.connection.commit()
         print ("--------Tables deleted successfully--------")
 
@@ -142,6 +144,20 @@ class Database:
         cur.execute('''DROP TABLE "Questions_Answers";''')
         print("--------Table Questions_Answers deleted successfully--------")
 
+    def createTable_Tag(self):
+        print("--------in Database createTable_Tag--------")
+        cur = self.connection.cursor()
+        cur.execute('''CREATE TABLE "Tag"
+                       (ID SERIAL PRIMARY KEY NOT NULL,
+                       Tag TEXT NOT NULL UNIQUE);''')
+        print("--------Table Tag created successfully--------")
+
+    def deleteTable_Tag(self):
+        print ("--------in Database deleteTable_Tag--------")
+        cur = self.connection.cursor()
+        cur.execute('''DROP TABLE "Tag";''')
+        print("--------Table Tag deleted successfully--------")
+
     def createTable_Gifs(self):
         print("--------in Database createTable_Gifs--------")
         cur = self.connection.cursor()
@@ -149,7 +165,8 @@ class Database:
                        (ID SERIAL PRIMARY KEY NOT NULL,
                        Name TEXT NOT NULL,
                        Url TEXT NOT NULL,
-                       Tag TEXT NOT NULL);''')
+                       Gif_Tag TEXT NOT NULL,
+                       FOREIGN KEY (Gif_Tag) REFERENCES "Tag"(Tag));''')
         print("--------Table Gifs created successfully--------")
 
     def deleteTable_Gifs(self):
@@ -180,7 +197,7 @@ class Database:
                        (ID SERIAL PRIMARY KEY NOT NULL,
                        Message TEXT NOT NULL UNIQUE,
                        Attachment TEXT,
-                       FOREIGN KEY (Attachment) REFERENCES "Gifs"(Tag));''')
+                       FOREIGN KEY (Attachment) REFERENCES "Tag"(Tag));''')
         print("--------Table Notification created successfully--------")
 
     def deleteTable_Notification(self):
@@ -198,6 +215,7 @@ class Database:
         cur.execute('''DELETE FROM "Gifs";''')
         cur.execute('''DELETE FROM "User";''')
         cur.execute('''DELETE FROM "Notification";''')
+        cur.execute('''DELETE FROM "Tag"''')
         self.connection.commit()
 
 

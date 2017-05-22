@@ -19,11 +19,11 @@ class FeatureTwoSelector:
                 "followupEvent": {
                     "name": "Question_Answers",
                     "data": {
-                        "Question": row[1],
-                        "A1": row[2],
-                        "A2": row[3],
-                        "A3": row[4],
-                        "CA_ID": row[5],
+                        "Question": row[0],
+                        "A1": row[1],
+                        "A2": row[2],
+                        "A3": row[3],
+                        "CA_ID": row[4],
                         "AnswerFeedback": answerFeedback
                     }
                 }
@@ -58,14 +58,16 @@ class FeatureTwoSelector:
                 return self.getRandomQuestion(answerFeedback="Correct Answer :)")
             else:
                 d = DataAccess.DataAccess()
-                url = d.selectGifsRandom("Gifs" , ["url"] , ["tag"] , ["'correct'"], "")
+                rows = d.selectGifsRandom("Gifs" , ["url"] , ["tag"] , ["'correct'"], "")
+                url = rows[0]
                 return self.getRandomQuestion(answerFeedback="Correct Answer :)", imageURL=url)
         elif correctAnswer != chosenAnswer:
             if randomNum < 10:
                 return self.getRandomQuestion(answerFeedback="Wrong Answer :(")
             else:
                 d = DataAccess.DataAccess()
-                url = d.selectGifsRandom("Gifs" , ["url"] , ["tag"] , ["'incorrect'"], "")
+                rows = d.selectGifsRandom("Gifs" , ["url"] , ["tag"] , ["'incorrect'"], "")
+                url = rows[0]
                 return self.getRandomQuestion(answerFeedback="Wrong Answer :(", imageURL=url)
 
 
