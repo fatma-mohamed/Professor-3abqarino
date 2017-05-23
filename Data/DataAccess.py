@@ -30,14 +30,16 @@ class DataAccess:
     def selectGifsRandom(self, table_name, cols, parameters, values, operators):
         db = Database.Database()
         cur = db.connection.cursor()
-        cols_str = "( "
-        cols_size = len(cols)
-        for i in range(0, cols_size):
-            if i == cols_size - 1:
-                cols_str += str(cols[i])
-                break
-            cols_str += (str(cols[i]) + ", ")
-        cols_str += (" )")
+        if (isinstance(cols, list)):
+            cols_str = ""
+            cols_size = len(cols)
+            for i in range(0, cols_size):
+                if i == cols_size - 1:
+                    cols_str += str(cols[i])
+                    break
+                cols_str += (str(cols[i]) + ", ")
+        else:
+            cols_str = "*"
 
         parameters_size = len(parameters)
         conditions = ""
@@ -51,17 +53,34 @@ class DataAccess:
                     '''" WHERE ''' + conditions + ''' ORDER BY RANDOM() limit 1;''')
         rows = cur.fetchall()
         cur.close()
-        print (rows)
-        return rows[0]
-
-    def select(self, table_name, cols, condition, value):
-        conn = Database.Database()
-        cur = conn.connection.cursor()
-        if (condition == ""):
-            cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''"''')
+        return rows
+    
+    def select(self, table_name, cols, parameters, values , operators):
+        db = Database.Database()
+        cur = db.connection.cursor()
+        if (isinstance(cols, list)):
+            cols_str = ""
+            cols_size = len(cols)
+            for i in range(0, cols_size):
+                if i == cols_size - 1:
+                    cols_str += str(cols[i])
+                    break
+                cols_str += (str(cols[i]) + ", ")
         else:
-            cur.execute("SELECT ( " + cols + ''' ) from "''' + table_name + '''" WHERE ''' + condition + " = " + value)
+            cols_str = "*"
+
+        if (not parameters):
+            cur.execute("SELECT " + cols_str + ''' from "''' + table_name + '''"''')
+        else:
+            parameters_size = len(parameters)
+            conditions = ""
+            for j in range(0, parameters_size):
+                if j == parameters_size - 1:
+                    conditions += (str(parameters[j]) + " = " + str(values[j]))
+                    break
+                conditions += (str(parameters[j]) + " = " + str(values[j]) + " " + str(operators[j]) + " ")
+            cur.execute("SELECT " + cols_str + ''' from "''' + table_name + '''" WHERE ''' + conditions)
 
         rows = cur.fetchall()
-        conn.close()
+        cur.close()
         return rows
