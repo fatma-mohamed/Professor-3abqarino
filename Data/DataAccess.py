@@ -29,7 +29,10 @@ class DataAccess:
         print ("ROWS: ",rows)
         l = rows[0]
         print ("ROW :",l)
-        print("C: ", l[0])
+        c = l[0]
+        print("C: ", c)
+        d = c[0]
+        print("D: ", d)
         return rows[0]
 
     def select(self, table_name, cols, parameters, values , operators):
