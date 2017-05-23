@@ -41,12 +41,6 @@ def makeWebhookResult(req):
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         return  responseSelector.getResult()
-    elif action == "gif":
-        db = DataAccess.DataAccess()
-        r = db.selectGifsRandom("Gifs", ["url"], ["tag"], ["'question-mark'"], "")
-        print("row: ",r)
-        print("row[0]: ", r[0])
-        print("row[0][0]: ", r[0][0])
     else:
         return {}
 
