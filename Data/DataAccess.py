@@ -5,7 +5,7 @@ class DataAccess:
     def selectGifsRandom(self, table_name, cols, parameters, values, operators):
         db = Database.Database()
         cur = db.connection.cursor()
-        if (isinstance(cols, tuple)):
+        if (isinstance(cols, list)):
             cols_str = ""
             cols_size = len(cols)
             for i in range(0, cols_size):
@@ -33,7 +33,7 @@ class DataAccess:
     def select(self, table_name, cols, parameters, values , operators):
         db = Database.Database()
         cur = db.connection.cursor()
-        if (isinstance(cols, tuple)):
+        if (isinstance(cols, list)):
             cols_str = ""
             cols_size = len(cols)
             for i in range(0, cols_size):
