@@ -80,7 +80,8 @@ class DataPreprocessing:
             noAttachment = True
             if "Attachment" in Notification:
                 content = Notification.split(" Attachment: ")
-                row = DataAccess.select("Tag", ["Tag"], ["Tag"], [content[1]], "")
+                rows = DataAccess.select("Tag", ["Tag"], ["Tag"], [content[1]], "")
+                row = [0][0]
                 if row is not None: # Check the existence of the tag used as an attachment.
                     cols = ["Message", "Attachment"]
                     values = ["'" + content[0] + "'", "'" + content[1] + "'"]
