@@ -93,6 +93,7 @@ class DataPreprocessing:
             name = "'" + arr[0].strip("\n") + "'"
             url = "'" + arr[1].strip("\n") + "'"
             tag = "'" + arr[2].strip("\n") + "'"
+            db.insert("Tag",["tag"],[tag],["id","tag"],"")
             db.insert("Gifs", ["Name", "Url" , "Tag"], [name,url,tag],"","")
 
     @staticmethod
