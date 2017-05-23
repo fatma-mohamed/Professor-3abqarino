@@ -5,14 +5,17 @@ class DataAccess:
     def selectGifsRandom(self, table_name, cols, parameters, values, operators):
         db = Database.Database()
         cur = db.connection.cursor()
-        cols_str = "( "
-        cols_size = len(cols)
-        for i in range(0, cols_size):
-            if i == cols_size - 1:
-                cols_str += str(cols[i])
-                break
-            cols_str += (str(cols[i]) + ", ")
-        cols_str += (" )")
+        if (isinstance(cols, tuple)):
+            cols_str = "( "
+            cols_size = len(cols)
+            for i in range(0, cols_size):
+                if i == cols_size - 1:
+                    cols_str += str(cols[i])
+                    break
+                cols_str += (str(cols[i]) + ", ")
+            cols_str += (" )")
+        else:
+            cols_str = "*"
 
         parameters_size = len(parameters)
         conditions = ""
@@ -26,30 +29,22 @@ class DataAccess:
                     '''" WHERE ''' + conditions + ''' ORDER BY RANDOM() limit 1;''')
         rows = cur.fetchall()
         cur.close()
-        print ("ROWS: ",rows)
-        l = rows[0]
-        print ("ROW :",l)
-        s = l[0]
-        print("C: ", s)
-        s = s.replace(',', '')
-        s = s.strip('(')
-        s = s.strip(')')
-        d = tuple(s)
-        print("D: ", d)
-        return rows[0]
+        return rows
 
     def select(self, table_name, cols, parameters, values , operators):
         db = Database.Database()
         cur = db.connection.cursor()
-
-        cols_str = "( "
-        cols_size = len(cols)
-        for i in range(0, cols_size):
-            if i == cols_size - 1:
-                cols_str += str(cols[i])
-                break
-            cols_str += (str(cols[i]) + ", ")
-        cols_str += (" )")
+        if (isinstance(cols, tuple)):
+            cols_str = "( "
+            cols_size = len(cols)
+            for i in range(0, cols_size):
+                if i == cols_size - 1:
+                    cols_str += str(cols[i])
+                    break
+                cols_str += (str(cols[i]) + ", ")
+            cols_str += (" )")
+        else:
+            cols_str = "*"
 
         if (not parameters):
             cur.execute("SELECT " + cols_str + ''' from "''' + table_name + '''"''')
