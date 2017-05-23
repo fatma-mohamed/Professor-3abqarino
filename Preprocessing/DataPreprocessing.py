@@ -93,7 +93,8 @@ class DataPreprocessing:
             name = "'" + arr[0].strip("\n") + "'"
             url = "'" + arr[1].strip("\n") + "'"
             tag = "'" + arr[2].strip("\n") + "'"
-            db.insert("Gifs", ["Name", "Url" , "Tag"], [name,url,tag],"","")
+            db.insert("Tag",["tag"],[tag],["tag"],"")
+            db.insert("Gifs", ["name", "url" , "gif_tag"], [name,url,tag],"","")
 
     @staticmethod
     def removeSinqleQuotes(s):
