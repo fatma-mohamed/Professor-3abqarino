@@ -5,13 +5,13 @@ from random import randint
 class FeatureTwoSelector:
     
     def getRandomQuestion(self,answerFeedback = "", imageURL = ""):
-       row = DataAccess.DataAccess().selectRandom("Questions_Answers")
+       # row = DataAccess.DataAccess().selectRandom("Questions_Answers")
        # rows = DataAccess.DataAccess().selectRandom("Questions_Answers",
        #                                            ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"],
        #                                            [], [], "")
-       # row = DataAccess.DataAccess().selectGifsRandom("Questions_Answers",
-       #                                                 ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"],
-       #                                                 [], [], "")
+       row = DataAccess.DataAccess().selectGifsRandom("Questions_Answers",
+                                                       ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"],
+                                                       [], [], "")
 
 
        if imageURL == "":
