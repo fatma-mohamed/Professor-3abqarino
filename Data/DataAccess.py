@@ -27,7 +27,7 @@ class DataAccess:
         rows = cur.fetchall()
         cur.close()
         print (rows)
-        print (rows[0][1])
+        print (rows[0][0])
         return rows[0]
 
     def select(self, table_name, cols, parameters, values , operators):
