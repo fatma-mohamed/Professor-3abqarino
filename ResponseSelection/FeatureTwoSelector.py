@@ -5,53 +5,54 @@ from random import randint
 class FeatureTwoSelector:
     
     def getRandomQuestion(self,answerFeedback = "", imageURL = ""):
-       rows = DataAccess.DataAccess().selectRandom("Questions_Answers",
-                                                  ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"],
-                                                  [], [], "")
+       row = DataAccess.DataAccess().selectRandom('''Questions_Answers''')
+       # rows = DataAccess.DataAccess().selectRandom("Questions_Answers",
+       #                                            ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"],
+       #                                            [], [], "")
        # row = DataAccess.DataAccess().selectGifsRandom("Questions_Answers",
        #                                                 ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"],
        #                                                 [], [], "")
 
-       for row in rows:
-           if imageURL == "":
-               return {
-                   "speech": "",
-                   "displayText": "",
-                   "data": {},
-                   "contextOut": [],
-                   "source": "get-random-question",
-                   "followupEvent": {
-                       "name": "Question_Answers",
-                       "data": {
-                           "Question": row[1],
-                           "A1": row[2],
-                           "A2": row[3],
-                           "A3": row[4],
-                           "CA_ID": row[5],
-                           "AnswerFeedback": answerFeedback
-                       }
+
+       if imageURL == "":
+           return {
+               "speech": "",
+               "displayText": "",
+               "data": {},
+               "contextOut": [],
+               "source": "get-random-question",
+               "followupEvent": {
+                   "name": "Question_Answers",
+                   "data": {
+                       "Question": row[1],
+                       "A1": row[2],
+                       "A2": row[3],
+                       "A3": row[4],
+                       "CA_ID": row[5],
+                       "AnswerFeedback": answerFeedback
                    }
                }
-           else:
-               return {
-                   "speech": "",
-                   "displayText": "",
-                   "data": {},
-                   "contextOut": [],
-                   "source": "get-random-question",
-                   "followupEvent": {
-                       "name": "Question_Answers",
-                       "data": {
-                           "Question": row[1],
-                           "A1": row[2],
-                           "A2": row[3],
-                           "A3": row[4],
-                           "CA_ID": row[5],
-                           "AnswerFeedback": answerFeedback,
-                           "imageURL": imageURL
-                       }
+           }
+       else:
+           return {
+               "speech": "",
+               "displayText": "",
+               "data": {},
+               "contextOut": [],
+               "source": "get-random-question",
+               "followupEvent": {
+                   "name": "Question_Answers",
+                   "data": {
+                       "Question": row[1],
+                       "A1": row[2],
+                       "A2": row[3],
+                       "A3": row[4],
+                       "CA_ID": row[5],
+                       "AnswerFeedback": answerFeedback,
+                       "imageURL": imageURL
                    }
                }
+           }
 
     def CheckAnswerCorrectness(self,request):
         correctAnswer= request.get("correctAnswerID")
