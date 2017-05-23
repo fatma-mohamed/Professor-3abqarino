@@ -44,9 +44,7 @@ def makeWebhookResult(req):
     elif action == "gif":
         db = DataAccess.DataAccess()
         r = db.selectGifsRandom("Gifs", ["id","name","url","tag"], ["tag"], ["'question-mark'"], "")
-        print("0: ",r[0])
-        print("1: ",r[1])
-
+        print("row: ",r)
     else:
         return {}
 
