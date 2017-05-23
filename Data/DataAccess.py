@@ -74,7 +74,7 @@ class DataAccess:
         cols_str += (" )")
 
         if (not parameters):
-            cur.execute('''SELECT ''' + cols_str + ''' FROM "''' + table_name + '''" ORDER BY RANDOM() limit 1;''')
+            cur.execute('''SELECT ''' + "*" + ''' FROM "''' + table_name + '''" ORDER BY RANDOM() limit 1;''')
         else:
             parameters_size = len(parameters)
             conditions = ""
