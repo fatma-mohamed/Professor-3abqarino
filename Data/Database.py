@@ -152,7 +152,6 @@ class Database:
         cur.execute('''CREATE TABLE "Tag"
                        (ID SERIAL PRIMARY KEY NOT NULL,
                        Tag TEXT NOT NULL UNIQUE);''')
-        self.connection.commit()
         print("--------Table Tag created successfully--------")
 
     def deleteTable_Tag(self):
@@ -171,14 +170,12 @@ class Database:
                        Url TEXT NOT NULL,
                        Gif_Tag TEXT NOT NULL,
                        FOREIGN KEY (Gif_Tag) REFERENCES "Tag"(Tag));''')
-        self.connection.commit()
         print("--------Table Gifs created successfully--------")
 
     def deleteTable_Gifs(self):
         print ("--------in Database deleteTable_Gifs--------")
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE "Gifs";''')
-        self.connection.commit()
         print("--------Table Gifs deleted successfully--------")
 
 
