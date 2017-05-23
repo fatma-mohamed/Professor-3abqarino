@@ -32,7 +32,9 @@ class Database:
         self.createTable_Answers_Keywords()
         self.createTable_Synonyms()
         self.createTable_Questions_Answers()
+        self.createTable_Tag()
         self.createTable_Gifs()
+
         self.connection.commit()
         print ("--------Tables created successfully--------")
 
@@ -48,6 +50,8 @@ class Database:
         self.deleteTable_Keywords()
         self.deleteTable_Questions_Answers()
         self.deleteTable_Gifs()
+        self.deleteTable_Tag()
+
         self.connection.commit()
         print ("--------Tables deleted successfully--------")
 
@@ -137,14 +141,31 @@ class Database:
         cur.execute('''DROP TABLE "Questions_Answers";''')
         print("--------Table Questions_Answers deleted successfully--------")
 
+
+    def createTable_Tag(self):
+        print("--------in Database createTable_Tag--------")
+        cur = self.connection.cursor()
+        cur.execute('''CREATE TABLE "Tag"
+                       (ID SERIAL PRIMARY KEY NOT NULL,
+                       Tag TEXT NOT NULL UNIQUE);''')
+        print("--------Table Tag created successfully--------")
+
+    def deleteTable_Tag(self):
+        print ("--------in Database deleteTable_Tag--------")
+        cur = self.connection.cursor()
+        cur.execute('''DROP TABLE "Tag";''')
+        print("--------Table Tag deleted successfully--------")
+
+
     def createTable_Gifs(self):
         print("--------in Database createTable_Gifs--------")
         cur = self.connection.cursor()
         cur.execute('''CREATE TABLE "Gifs"
-                                   (ID SERIAL PRIMARY KEY NOT NULL,
-                                   Name TEXT NOT NULL,
-                                   Url TEXT NOT NULL,
-                                   Tag TEXT NOT NULL);''')
+                       (ID SERIAL PRIMARY KEY NOT NULL,
+                       Name TEXT NOT NULL,
+                       Url TEXT NOT NULL,
+                       Gif_Tag TEXT NOT NULL,
+                       FOREIGN KEY (Gif_Tag) REFERENCES "Tag"(Tag));''')
         print("--------Table Gifs created successfully--------")
 
     def deleteTable_Gifs(self):
@@ -153,14 +174,18 @@ class Database:
         cur.execute('''DROP TABLE "Gifs";''')
         print("--------Table Gifs deleted successfully--------")
 
+
     def deleteData(self):
         cur = self.connection.cursor()
         cur.execute('''DELETE FROM "Answers_Keywords";''')
         cur.execute('''DELETE FROM "Answers";''')
         cur.execute('''DELETE FROM "Synonyms";''')
         cur.execute('''DELETE FROM "Keywords";''')
+        cur.execute('''DELETE FROM "Questions_Answers";''')
         cur.execute('''DELETE FROM "Gifs";''')
+        cur.execute('''DELETE FROM "Tag"''')
         self.connection.commit()
+
 
     def insert(self, table_name, cols, values, conflict_fields, conflict_do):
         cur = self.connection.cursor()
