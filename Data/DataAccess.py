@@ -6,14 +6,13 @@ class DataAccess:
         db = Database.Database()
         cur = db.connection.cursor()
         if (isinstance(cols, tuple)):
-            cols_str = "( "
+            cols_str = ""
             cols_size = len(cols)
             for i in range(0, cols_size):
                 if i == cols_size - 1:
                     cols_str += str(cols[i])
                     break
                 cols_str += (str(cols[i]) + ", ")
-            cols_str += (" )")
         else:
             cols_str = "*"
 
@@ -35,14 +34,13 @@ class DataAccess:
         db = Database.Database()
         cur = db.connection.cursor()
         if (isinstance(cols, tuple)):
-            cols_str = "( "
+            cols_str = ""
             cols_size = len(cols)
             for i in range(0, cols_size):
                 if i == cols_size - 1:
                     cols_str += str(cols[i])
                     break
                 cols_str += (str(cols[i]) + ", ")
-            cols_str += (" )")
         else:
             cols_str = "*"
 
