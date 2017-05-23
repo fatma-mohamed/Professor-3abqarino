@@ -18,22 +18,6 @@ class DataPreprocessing:
         ##rest of the preprocessing
 
     @staticmethod
-    def insertGifs():
-        db = Database()
-        file = open("Preprocessing/gifs.txt", "r")
-
-        while True:
-            line = file.readline()
-            if (line == ''):
-                print("EOF!")
-                break
-            arr = line.split(" ")
-            name = "'" + arr[0].strip("\n") + "'"
-            url = "'" + arr[1].strip("\n") + "'"
-            tag = "'" + arr[2].strip("\n") + "'"
-            db.insert("Gifs", ["Name", "Url", "Tag"], [name, url, tag], "", "")
-
-    @staticmethod
     def removeSinqleQuotes(s):
         res = s.replace("'", '"')
         return res
@@ -65,6 +49,23 @@ class DataPreprocessing:
             "source": "insert-Questions_Answers-rows"
         }
 
+    @staticmethod
+    def insertGifs():
+        db = Database()
+        file = open("Preprocessing/gifs.txt", "r")
+
+        while True:
+            line = file.readline()
+            if (line == ''):
+                print("EOF!")
+                break
+            arr = line.split(" ")
+            name = "'" + arr[0].strip("\n") + "'"
+            url = "'" + arr[1].strip("\n") + "'"
+            tag = "'" + arr[2].strip("\n") + "'"
+            db.insert("Tag", ["tag"], [tag], ["tag"], "")
+            db.insert("Gifs", ["name", "url", "gif_tag"], [name, url, tag], "", "")
+
     def insertNotifications(self):
         f = open("Preprocessing/Notifications.txt", 'r')
         i = 0
@@ -89,10 +90,10 @@ class DataPreprocessing:
             if noAttachment == True:
                 cols = ["Message"]
                 values = ["'" + Notification + "'"]
-            conflict_fields = [""]
+            conflict_fields = []
             i += 1
             print ("-----Notification number :: " + (str)(i) + " -----")
-            Database.Database().insert("Notification", cols, values, conflict_fields, '')
+            Database().insert("Notification", cols, values, conflict_fields, "")
 
         return {
             "speech": "Inserted Notification messages",
