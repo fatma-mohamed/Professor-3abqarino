@@ -53,9 +53,11 @@ class DataAccess:
                 conditions += (str(parameters[j]) + " = " + str(values[j]) + " " + str(operators[j]) + " ")
             cur.execute("SELECT " + cols_str + ''' FROM "''' + table_name + '''" WHERE ''' + conditions +
                         ''' OFFSET floor(random()*(SELECT COUNT(*) FROM "''' + table_name + '''")) LIMIT 1''')
-        rows = cur.fetchall()
 
-       
+        rows = cur.fetchall()
+        print "rows ->>> " , rows
+        print "rows[0] ->>> ", rows[0]
+
 
         return rows[0]
 
