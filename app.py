@@ -55,10 +55,7 @@ def makeWebhookResult(req):
         return
     elif req.get("result").get("action") == "modify-Gifs":
         Database.Database().deleteTable_Gifs()
-        Database.Database().connection.commit
-        Database.Database().createTable_Tag()
-        Database.Database().createTable_Gifs()
-        Database.Database().connection.commit()
+        
         return
     else:
         return {}
