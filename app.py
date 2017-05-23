@@ -47,10 +47,11 @@ def makeWebhookResult(req):
         return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
     elif req.get("result").get("action") == "add-menu":
         return MenuPreprocessing.MenuPreprocessing().addMenu()
+    elif req.get("result").get("action") == "about":
+        return ResponseSelector.ResponseSelector().about()
     elif req.get("result").get("action") == "pre2":
         Database.Database().createTable_Notification()
         Database.Database().createTable_User()
-        Database.Database().connection.commit()
         DataPreprocessing.insertNotifications()
         return
     elif req.get("result").get("action") == "modify-Gifs":

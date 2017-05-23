@@ -35,7 +35,7 @@ class ResponseSelector:
     def registerUser(self, pageScopedID, data):
         db = Database.Database()
         appScopedID = getAppScopedID(data)
-        db.insert("User", ["Page_ScopedID", "App_ScopedID"], [pageScopedID, appScopedID], [""], "")
+        db.insert("User", ["Page_ScopedID", "App_ScopedID"], [pageScopedID, appScopedID], [], "")
 
     def getAppScopedID(self, data):
         message = data.get("message")
@@ -59,7 +59,7 @@ class ResponseSelector:
             millisecondsIndex = updated_time.find("+") #Get milliseconds index
             updated_time = updated_time[:millisecondsIndex - len(updated_time)] #Remove milliseconds
             updated_time = datetime.datetime.strptime(updated_time, "%Y-%m-%d %H:%M:%S") #Convert to datetime object
-            current_time = datetime.datetime.now() - datetime.timedelta(hours = 2) # Convert to GMT
+            current_time = datetime.datetime.now() - datetime.timedelta(hours = 2) # Convert to GMT (now - 2H)
             resultedTime = current_time - updated_time # Didn't talk since...
             dayIndex = str(resultedTime).find("day") # Get day index in result, -1 if not exist
             if(dayIndex > 0 and int(str(resultedTime)[:dayIndex-1]) >= 2): #If day exists and number of days more than 2 ,, then notify user.
@@ -68,7 +68,7 @@ class ResponseSelector:
                     if(participant.get("id") != config.page_id): # Current participant isn't the page
                         appScopedID = participant.get("id")
                         pageScopedID = DataAccess.DataAccess().select("User", ["Page_ScopedID"], ["App_ScopedID"], [appScopedID], "")
-                        if(pageScopedID != None):
+                        if(pageScopedID[0][0] != None):
                             ids.append(pageScopedID)
                             break
         return ids
@@ -91,11 +91,11 @@ class ResponseSelector:
         for userID in listOfUsersToNotify:
             paramRecipient = { "id": userID}
             content = DataAccess.DataAccess().selectGifsRandom("Notification", ["Message", "Attachment"], [], [], "")
-            msg = content[0]
-            attachment = content[1]
+            msg = content[0][0]
+            attachment = content[0][1]
             if(attachment != None): #If there's an attachment, send it before the message itself
-                attachedGif = DataAccess.DataAccess().selectGifsRandom("Gifs", ["Url"], ["Tag"], ["'" + attachment + "'"], "")
-                paramUrl = {"url":attachedGif}
+                attachedGif = DataAccess.DataAccess().selectGifsRandom("Gifs", ["Url"], ["Gif_Tag"], ["'" + attachment + "'"], "")
+                paramUrl = {"url":attachedGif[0][0]}
                 paramPayload = json.dumps(paramUrl, ensure_ascii=False)
                 paramAttachment = {}
                 paramAttachment["type"] = "image"
@@ -116,3 +116,20 @@ class ResponseSelector:
             r = requests.post(url, data = requestJSON, headers={'Content-type': 'application/json'})
             print(r.status_code, r.reason)
             print(r.text[:300] + '...')
+
+    def about(self):
+        page_id = config.page_id
+        access_token = config.access_token
+        url = "https://graph.facebook.com/v2.9/" + page_id + "?access_token=" + access_token + "&fields=about"
+        r = requests.get(url)
+        print(r.status_code, r.reason)
+        result = json.loads(r.text)
+        about = result.get("about")
+        print(about)
+        return {
+            "speech": about,
+            "displayText": "",
+            "data": {},
+            "contextOut": [],
+            "source": "about"
+        }

@@ -185,8 +185,8 @@ class Database:
         cur.execute('''CREATE TABLE "User"
                        (ID SERIAL PRIMARY KEY NOT NULL,
                        Page_ScopedID INT NOT NULL UNIQUE,
-                       App_ScopedID INT NOT NULL UNIQUE,
-                       CONSTRAINT uniqueUIDs UNIQUE (Page_ScopedID, App_ScopedID));''')
+                       App_ScopedID INT NOT NULL UNIQUE);''')
+        self.connection.commit()
         print("--------Table User created successfully--------")
 
     def deleteTable_User(self):
@@ -204,6 +204,7 @@ class Database:
                        Message TEXT NOT NULL UNIQUE,
                        Attachment TEXT,
                        FOREIGN KEY (Attachment) REFERENCES "Tag"(Tag));''')
+        self.connection.commit()
         print("--------Table Notification created successfully--------")
 
     def deleteTable_Notification(self):
