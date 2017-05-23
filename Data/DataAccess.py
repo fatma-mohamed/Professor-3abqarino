@@ -29,9 +29,12 @@ class DataAccess:
         print ("ROWS: ",rows)
         l = rows[0]
         print ("ROW :",l)
-        c = l[0]
-        print("C: ", c)
-        d = c[0]
+        s = l[0]
+        print("C: ", s)
+        s = s.replace(',', '')
+        s = s.strip('(')
+        s = s.strip(')')
+        d = tuple(s)
         print("D: ", d)
         return rows[0]
 
