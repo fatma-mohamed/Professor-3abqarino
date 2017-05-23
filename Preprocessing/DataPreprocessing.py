@@ -76,11 +76,17 @@ class DataPreprocessing:
 
             cols = []
             values = []
+            noAttachment = True
             if "Attachment" in Notification:
                 content = Notification.split(" Attachment: ")
-                cols = ["Message", "Attachment"]
-                values = ["'" + content[0] + "'", "'" + content[1] + "'"]
-            else:
+                row = DataAccess.select("Tag", ["Tag"], ["Tag"], [content[1]], "")
+                if row is not None: # Check the existence of the tag used as an attachment.
+                    cols = ["Message", "Attachment"]
+                    values = ["'" + content[0] + "'", "'" + content[1] + "'"]
+                    noAttachment = False
+                else: # Tag doesn't exist ,, Modify Notification text to be inserted using next if condition.
+                    Notification = content[0]
+            if noAttachment == True:
                 cols = ["Message"]
                 values = ["'" + Notification + "'"]
             conflict_fields = [""]

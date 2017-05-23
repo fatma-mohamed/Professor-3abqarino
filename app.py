@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-from Data import Database
-
 import urllib
 import json
 import os
@@ -8,8 +6,10 @@ import os
 from flask import Flask
 from flask import request
 from flask import make_response
+
 from ResponseSelection import ResponseSelector, FeatureTwoSelector
 from Preprocessing import *
+from Data import Database
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -58,7 +58,6 @@ def makeWebhookResult(req):
         Database.Database().createTable_Tag()
         Database.Database().createTable_Gifs()
         Database.Database().connection.commit()
-        DataPreprocessing.insertGifs()
         return
     else:
         return {}
