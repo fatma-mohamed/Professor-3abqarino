@@ -15,7 +15,7 @@ class FeatureOneSelector():
         answer = self.getAnswer()
         if "sorry" in answer:
             db = DataAccess.DataAccess()
-            url = db.selectGifsRandom("Gifs", ["url"] , ["tag"] , ["'question-mark'"] , "")
+            url = db.selectGifsRandom("Gifs", ["url"] , ["gif_tag"] , ["'question-mark'"] , "")
             url = url[0][0]
             print ("URL: ", url)
             return {
