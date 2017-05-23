@@ -53,9 +53,6 @@ def makeWebhookResult(req):
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         return  responseSelector.getResult()
-    elif action == "gif":
-        db = DataPreprocessing.DataPreprocessing
-        db.insertGifs()
     else:
         return {}
 
