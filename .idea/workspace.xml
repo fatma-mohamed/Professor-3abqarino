@@ -29,8 +29,8 @@
       <file leaf-file-name="DataAccess.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+            <state relative-caret-position="391">
+              <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -394,13 +394,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491849634099</updated>
     </task>
-    <task id="LOCAL-00035" summary="Preprocessing: insertAnswers_and_keywords">
-      <created>1492866927338</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1492866927338</updated>
-    </task>
     <task id="LOCAL-00036" summary="Preprocessing: insertAnswers_and_keywords">
       <created>1492867250661</created>
       <option name="number" value="00036" />
@@ -737,7 +730,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495498970030</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Gif trial">
+      <created>1495499377645</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1495499377646</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1110,8 +1110,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        <state relative-caret-position="391">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding />
         </state>
       </provider>
