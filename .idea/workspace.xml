@@ -42,8 +42,8 @@
       <file leaf-file-name="DataPreprocessing.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="95" column="43" lean-forward="false" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
+            <state relative-caret-position="357">
+              <caret line="96" column="53" lean-forward="false" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -469,13 +469,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491849634099</updated>
     </task>
-    <task id="LOCAL-00032" summary="Preprocessing: insertAnswers_and_keywords">
-      <created>1492864958812</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1492864958812</updated>
-    </task>
     <task id="LOCAL-00033" summary="Preprocessing: insertAnswers_and_keywords">
       <created>1492865182530</created>
       <option name="number" value="00033" />
@@ -812,7 +805,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495562117853</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Gif &amp; Tag insertion">
+      <created>1495562237541</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1495562237542</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1207,8 +1207,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="95" column="43" lean-forward="false" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
+        <state relative-caret-position="357">
+          <caret line="96" column="53" lean-forward="false" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
           <folding />
         </state>
       </provider>
