@@ -200,6 +200,12 @@ class Database:
         cur.execute('''DELETE FROM "Tag"''')
         self.connection.commit()
 
+    def deleteGifData(self):
+        cur = self.connection.cursor()
+        cur.execute('''DELETE FROM "Gifs";''')
+        cur.execute('''DELETE FROM "Tag"''')
+        self.connection.commit()
+
         return {
             "speech": "Deleted data",
             "displayText": "",
