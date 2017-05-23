@@ -5,11 +5,13 @@ from random import randint
 class FeatureTwoSelector:
     
     def getRandomQuestion(self,answerFeedback = "", imageURL = ""):
-       row = DataAccess.DataAccess().selectRandom('''Questions_Answers''')
-       # rows = DataAccess.DataAccess().selectGifsRandom("Questions_Answers",
-       #                                                 ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"],
-       #                                                 [], [], "")
-       
+       # row = DataAccess.DataAccess().selectRandom("Questions_Answers",
+       #                                            ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"],
+       #                                            [], [], "")
+       row = DataAccess.DataAccess().selectGifsRandom("Questions_Answers",
+                                                       ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"],
+                                                       [], [], "")
+
        if imageURL == "":
            return {
                "speech": "",
@@ -20,11 +22,11 @@ class FeatureTwoSelector:
                "followupEvent": {
                    "name": "Question_Answers",
                    "data": {
-                       "Question": row[0],
-                       "A1": row[1],
-                       "A2": row[2],
-                       "A3": row[3],
-                       "CA_ID": row[4],
+                       "Question": row[0][0],
+                       "A1": row[0][1],
+                       "A2": row[0][2],
+                       "A3": row[0][3],
+                       "CA_ID": row[0][4],
                        "AnswerFeedback": answerFeedback
                    }
                }
@@ -39,11 +41,11 @@ class FeatureTwoSelector:
                "followupEvent": {
                    "name": "Question_Answers",
                    "data": {
-                       "Question": row[1],
-                       "A1": row[2],
-                       "A2": row[3],
-                       "A3": row[4],
-                       "CA_ID": row[5],
+                       "Question": row[0][0],
+                       "A1": row[0][1],
+                       "A2": row[0][2],
+                       "A3": row[0][3],
+                       "CA_ID": row[0][4],
                        "AnswerFeedback": answerFeedback,
                        "imageURL": imageURL
                    }
