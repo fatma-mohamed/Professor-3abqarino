@@ -20,7 +20,7 @@ class ResponseSelector:
         event_name = ""
         if ("welcome" in action):
             event_name = "FACEBOOK_WELCOME"
-            registerUser(id, data)
+            self.registerUser(id, data)
         elif ("help" in action):
             event_name = "help_name_event"
         return {
@@ -34,8 +34,8 @@ class ResponseSelector:
 
     def registerUser(self, pageScopedID, data):
         db = Database.Database()
-        appScopedID = getAppScopedID(data)
-        db.insert("User", ["Page_ScopedID", "App_ScopedID"], [pageScopedID, appScopedID], [], "")
+        appScopedID = self.getAppScopedID(data)
+        db.insert("User", ["Page_ScopedID", "App_ScopedID"], [pageScopedID, appScopedID], ["Page_ScopedID", "App_ScopedID"], "")
 
     def getAppScopedID(self, data):
         message = data.get("message")
