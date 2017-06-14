@@ -5,10 +5,9 @@ from random import randint
 class FeatureTwoSelector:
     
     def getRandomQuestion(self,answerFeedback = "", imageURL = ""):
-       # row = DataAccess.DataAccess().selectRandom("Questions_Answers")
-       rows = DataAccess.DataAccess().selectGifsRandom("Questions_Answers",
-                                                       ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"],
-                                                       [], [], "")
+       rows = DataAccess.DataAccess().selectRandom("Questions_Answers",
+                                                   ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"],
+                                                   [], [], "")
 
        row = rows[0]
        if imageURL == "":
@@ -60,7 +59,7 @@ class FeatureTwoSelector:
                 return self.getRandomQuestion(answerFeedback="Correct Answer :)")
             else:
                 d = DataAccess.DataAccess()
-                rows = d.selectGifsRandom("Gifs" , ["url"] , ["gif_tag"] , ["'correct'"], "")
+                rows = d.selectRandom("Gifs", ["url"], ["gif_tag"], ["'correct'"], "")
                 url = rows[0][0]
                 return self.getRandomQuestion(answerFeedback="Correct Answer :)", imageURL=url)
         elif correctAnswer != chosenAnswer:
@@ -68,7 +67,7 @@ class FeatureTwoSelector:
                 return self.getRandomQuestion(answerFeedback="Wrong Answer :(")
             else:
                 d = DataAccess.DataAccess()
-                rows = d.selectGifsRandom("Gifs" , ["url"] , ["gif_tag"] , ["'incorrect'"], "")
+                rows = d.selectRandom("Gifs", ["url"], ["gif_tag"], ["'incorrect'"], "")
                 url = rows[0][0]
                 return self.getRandomQuestion(answerFeedback="Wrong Answer :(", imageURL=url)
 
