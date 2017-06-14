@@ -91,10 +91,9 @@ class DataPreprocessing:
             if noAttachment == True:
                 cols = ["Message"]
                 values = ["'" + Notification + "'"]
-            conflict_fields = ["ID"]
+            conflict_fields = ["Message"]
             i += 1
             print ("-----Notification number :: " + (str)(i) + " -----")
-            
             Database.Database().insert("Notification", cols, values, conflict_fields, "")
 
         return {
