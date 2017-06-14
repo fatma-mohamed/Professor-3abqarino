@@ -66,7 +66,9 @@ class DataPreprocessing:
             db.insert("Tag", ["tag"], [tag], ["tag"], "")
             db.insert("Gifs", ["name", "url", "gif_tag"], [name, url, tag], "", "")
 
+    @staticmethod
     def insertNotifications(self):
+        db = Database()
         f = open("Preprocessing/Notifications.txt", 'r')
         i = 0
         while True:
@@ -94,7 +96,7 @@ class DataPreprocessing:
             conflict_fields = ["Message"]
             i += 1
             print ("-----Notification number :: " + (str)(i) + " -----")
-            Database.Database().insert("Notification", cols, values, conflict_fields, "")
+            db.insert("Notification", cols, values, conflict_fields, "")
 
         return {
             "speech": "Inserted Notification messages",
