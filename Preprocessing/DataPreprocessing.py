@@ -94,7 +94,7 @@ class DataPreprocessing:
             conflict_fields = []
             i += 1
             print ("-----Notification number :: " + (str)(i) + " -----")
-            Database().insert("Notification", cols, values, conflict_fields, "")
+            Database.Database().insert("Notification", cols, values, conflict_fields, "")
 
         return {
             "speech": "Inserted Notification messages",
