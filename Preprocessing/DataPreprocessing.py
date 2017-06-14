@@ -67,7 +67,7 @@ class DataPreprocessing:
             db.insert("Gifs", ["name", "url", "gif_tag"], [name, url, tag], "", "")
 
     @staticmethod
-    def insertNotifications(self):
+    def insertNotifications():
         db = Database()
         f = open("Preprocessing/Notifications.txt", 'r')
         i = 0
