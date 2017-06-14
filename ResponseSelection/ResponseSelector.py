@@ -90,11 +90,11 @@ class ResponseSelector:
 
         for userID in listOfUsersToNotify:
             paramRecipient = { "id": userID}
-            content = DataAccess.DataAccess().selectGifsRandom("Notification", ["Message", "Attachment"], [], [], "")
+            content = DataAccess.DataAccess().selectRandom("Notification", ["Message", "Attachment"], [], [], "")
             msg = content[0][0]
             attachment = content[0][1]
             if(attachment != None): #If there's an attachment, send it before the message itself
-                attachedGif = DataAccess.DataAccess().selectGifsRandom("Gifs", ["Url"], ["Gif_Tag"], ["'" + attachment + "'"], "")
+                attachedGif = DataAccess.DataAccess().selectRandom("Gifs", ["Url"], ["Gif_Tag"], ["'" + attachment + "'"], "")
                 paramUrl = {"url":attachedGif[0][0]}
                 paramPayload = json.dumps(paramUrl, ensure_ascii=False)
                 paramAttachment = {}
