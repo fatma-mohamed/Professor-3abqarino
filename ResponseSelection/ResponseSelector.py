@@ -4,7 +4,6 @@ import requests
 import datetime
 from Preprocessing import config
 from Data import Database, DataAccess
-from ResponseSelection import ResponseSelector
 
 class ResponseSelector:
 
@@ -21,7 +20,7 @@ class ResponseSelector:
         event_name = ""
         if ("welcome" in action):
             event_name = "FACEBOOK_WELCOME"
-            ResponseSelector.ResponseSelector().registerUser(id, data)
+            ResponseSelector().registerUser(id, data)
         elif ("help" in action):
             event_name = "help_name_event"
         return {
