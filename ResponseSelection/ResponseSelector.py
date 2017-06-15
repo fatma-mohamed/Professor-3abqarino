@@ -20,7 +20,7 @@ class ResponseSelector:
         event_name = ""
         if ("welcome" in action):
             event_name = "FACEBOOK_WELCOME"
-            self.registerUser(id, data)
+            ResponseSelector.ResponseSelector().registerUser(id, data)
         elif ("help" in action):
             event_name = "help_name_event"
         return {
