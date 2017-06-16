@@ -66,6 +66,6 @@ class DataAccess:
         db = Database.Database()
         cur = db.connection.cursor()
         for x in arr:
-            cur.execute(sql + "'" + x + "'")
+            cur.execute(sql + '"' + x + '"')
             print (x , ": " , cur.fetchall())
 
