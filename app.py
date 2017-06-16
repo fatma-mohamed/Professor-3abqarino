@@ -58,8 +58,12 @@ def makeWebhookResult(req):
         d.deleteGifData()
         db = DataPreprocessing.DataPreprocessing()
         db.insertGifs()
+    elif action == "trial":
+        d = DataAccess.DataAccess()
+        d.test()
     else:
         return {}
+
 
 
 

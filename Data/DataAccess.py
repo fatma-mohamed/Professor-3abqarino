@@ -59,3 +59,13 @@ class DataAccess:
         rows = cur.fetchall()
         cur.close()
         return rows
+
+    def test(self):
+        sql = "SELECT COUNT(*) FROM "
+        arr = ["Answers","Answers_Keywords","Gifs","Keywords","Notification","Questions_Answers","Synonyms","Tag","User"]
+        db = Database.Database()
+        cur = db.connection.cursor()
+        for x in arr:
+            cur.execute(sql + x)
+            print (x , ": " , cur.fetchall())
+
