@@ -16,18 +16,33 @@ class FeatureOneSelector():
         answer = self.getAnswer()
         if "sorry" in answer:
             webAnswer = self.webSearch(self.question)
-            icon = webAnswer.get("Icon").get("URL")
-            text = webAnswer.get("Text")
-            url = webAnswer.get("FirstURL")
-            return {
-                "speech": "Sorry I couldn't find an answer! Here are ",
-                "displayText": "",
-                "data": {},
-                "contextOut": [],
-                "source": "prof-3abqarino_webhook",
-                "followupEvent": {"name": "ask_question_event",
-                                  "data": {"imageURL": icon, "speech":text, "url":url}}
-            }
+            if(webAnswer == 0):
+                db = DataAccess.DataAccess()
+                url = db.selectGifsRandom("Gifs", ["url"], ["gif_tag"], ["'question-mark'"], "")
+                url = url[0][0]
+                print("URL: ", url)
+                return {
+                    "speech": "",
+                    "displayText": "",
+                    "data": {},
+                    "contextOut": [],
+                    "source": "prof-3abqarino_webhook",
+                    "followupEvent": {"name": "ask_question_event",
+                                      "data": {"imageURL": url, "speech": answer}}
+                }
+            else:
+                icon = webAnswer.get("Icon").get("URL")
+                text = webAnswer.get("Text")
+                url = webAnswer.get("FirstURL")
+                return {
+                    "speech": "Sorry I couldn't find an answer! Here are ",
+                    "displayText": "",
+                    "data": {},
+                    "contextOut": [],
+                    "source": "prof-3abqarino_webhook",
+                    "followupEvent": {"name": "ask_question_event",
+                                      "data": {"imageURL": icon, "speech": text, "url": url}}
+                }
         else:
             return {
                 "speech": answer,
@@ -89,6 +104,8 @@ class FeatureOneSelector():
         response = requests.get(url)
         jData = response.json()
         results = jData.get("RelatedTopics")
+        if(len(results)==0):
+            return 0
         first = results[0]
         return first
         #print("JSON: ", first)
