@@ -59,7 +59,7 @@ class FeatureOneSelector():
         # ner = WordRecognizer.namedEntity(k)
         mostCommenAnswers = self.retriveAnswersID(keywordsID)
         if len(mostCommenAnswers) == 0:
-            return "sorry I have no answers to this question!"
+            return "Sorry I have no answers to this question!"
         answer = self.retriveAnswer(mostCommenAnswers)
         print (answer)
         print ("__________")
@@ -99,6 +99,10 @@ class FeatureOneSelector():
         return Answer
 
     def webSearch(self, query):
+        Tx = TextParser()
+        t = Tx.tokenize(query)
+        k = Tx.removeStopWords(t)
+        query = str(k)
         url = "http://api.duckduckgo.com/?q=" + query \
               + "&format=json&pretty=1"
         response = requests.get(url)
