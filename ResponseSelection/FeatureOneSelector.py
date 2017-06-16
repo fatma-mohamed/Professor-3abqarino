@@ -2,6 +2,7 @@ from NLP.TextParser import TextParser
 from NLP.WordRecognizer import WordRecognizer
 from Data import DataAccess
 from collections import Counter
+import requests
 
 
 class FeatureOneSelector():
@@ -14,18 +15,18 @@ class FeatureOneSelector():
     def getResult(self):
         answer = self.getAnswer()
         if "sorry" in answer:
-            db = DataAccess.DataAccess()
-            url = db.selectGifsRandom("Gifs", ["url"] , ["gif_tag"] , ["'question-mark'"] , "")
-            url = url[0][0]
-            print ("URL: ", url)
+            webAnswer = self.webSearch(self.question)
+            icon = webAnswer.get("Icon").get("URL")
+            text = webAnswer.get("Text")
+            url = webAnswer.get("FirstURL")
             return {
-                "speech": "",
+                "speech": "Sorry I couldn't find an answer! Here are ",
                 "displayText": "",
                 "data": {},
                 "contextOut": [],
                 "source": "prof-3abqarino_webhook",
                 "followupEvent": {"name": "ask_question_event",
-                                  "data": {"imageURL": url, "speech":answer}}
+                                  "data": {"imageURL": icon, "speech":text, "url":url}}
             }
         else:
             return {
@@ -81,3 +82,14 @@ class FeatureOneSelector():
         print (IDs)
         Answer = Da.select("Answers", ["answer"], ["id"] , [str(IDs[0][0][0])],"")
         return Answer
+
+    def webSearch(self, query):
+        url = "http://api.duckduckgo.com/?q=" + query \
+              + "&format=json&pretty=1"
+        response = requests.get(url)
+        jData = response.json()
+        results = jData.get("RelatedTopics")
+        first = results[0]
+        return first
+        #print("JSON: ", first)
+
