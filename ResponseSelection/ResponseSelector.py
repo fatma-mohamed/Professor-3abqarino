@@ -41,7 +41,7 @@ class ResponseSelector:
         name = self.getName(pageScopedID)
 
         # Get conversations, then get the sender with the required name, then get the appScopedID and return it.
-        conversations = getConversations()
+        conversations = self.getConversations()
         for conversation in conversations:
             participants = conversation.get("participants").get("data")
             for participant in participants:
@@ -60,7 +60,7 @@ class ResponseSelector:
 
     def getUsersToNotify(self):
         ids = []
-        conversations = getConversations()
+        conversations = self.getConversations()
         for conversation in conversations:
             updated_time = conversation.get("updated_time")
             updated_time = updated_time.replace("T", " ")  # Replace separator of date and time by " " instead of T -- To match current_time format
