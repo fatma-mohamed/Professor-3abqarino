@@ -109,8 +109,10 @@ class FeatureOneSelector():
         jData = response.json()
         results = jData.get("RelatedTopics")
         if(len(results)==0):
+            print("JSON: ", 0)
             return 0
         first = results[0]
+        print("JSON: ", first)
         return first
-        #print("JSON: ", first)
+
 
