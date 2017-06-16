@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Database.py" afterPath="$PROJECT_DIR$/Data/Database.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DataAccess.py" afterPath="$PROJECT_DIR$/Data/DataAccess.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,59 +29,22 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="231">
+              <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gifs.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Preprocessing/gifs.txt">
+      <file leaf-file-name="DataAccess.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="367">
+              <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Database.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Data/Database.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="206" column="31" lean-forward="false" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="31" />
-              <folding>
-                <marker date="1495567104155" expanded="true" signature="2156:2263" ph="CREATE TABLE... Answers" />
-                <marker date="1495567104155" expanded="true" signature="2502:2522" ph="DROP TABLE &quot;... " />
-                <marker date="1495567104155" expanded="true" signature="2764:2912" ph="CREATE TABLE... Keywords" />
-                <marker date="1495567104155" expanded="true" signature="3154:3175" ph="DROP TABLE &quot;... " />
-                <marker date="1495567104155" expanded="true" signature="3434:3728" ph="CREATE TABLE... Answers_Keywords" />
-                <marker date="1495567104155" expanded="true" signature="3994:4023" ph="DROP TABLE &quot;... " />
-                <marker date="1495567104155" expanded="true" signature="4274:4480" ph="CREATE TABLE... Synonyms" />
-                <marker date="1495567104155" expanded="true" signature="4721:4742" ph="DROP TABLE &quot;... " />
-                <marker date="1495567104155" expanded="true" signature="5003:5388" ph="CREATE TABLE... Questions_Answers" />
-                <marker date="1495567104155" expanded="true" signature="5657:5687" ph="DROP TABLE &quot;... " />
-                <marker date="1495567104155" expanded="true" signature="5927:6050" ph="CREATE TABLE... Tag" />
-                <marker date="1495567104155" expanded="true" signature="6276:6292" ph="DROP TABLE &quot;... " />
-                <marker date="1495567104155" expanded="true" signature="6520:6794" ph="CREATE TABLE... Gifs" />
-                <marker date="1495567104155" expanded="true" signature="7023:7040" ph="DROP TABLE &quot;... " />
-                <marker date="1495567104155" expanded="true" signature="7201:7231" ph="DELETE FROM " />
-                <marker date="1495567104155" expanded="true" signature="7260:7281" ph="DELETE FROM " />
-                <marker date="1495567104155" expanded="true" signature="7310:7332" ph="DELETE FROM " />
-                <marker date="1495567104155" expanded="true" signature="7361:7383" ph="DELETE FROM " />
-                <marker date="1495567104155" expanded="true" signature="7412:7443" ph="DELETE FROM " />
-                <marker date="1495567104155" expanded="true" signature="7472:7490" ph="DELETE FROM " />
-                <marker date="1495567104155" expanded="true" signature="7519:7536" ph="DELETE FROM " />
-                <marker date="1495567104155" expanded="true" signature="7666:7684" ph="DELETE FROM " />
-                <marker date="1495567104155" expanded="true" signature="7713:7730" ph="DELETE FROM " />
-                <marker date="1495567104155" expanded="true" signature="9058:9121" ph="INSERT INTO &quot;missing_value&quot;... " />
-                <marker date="1495567104155" expanded="true" signature="9219:9379" ph="INSERT INTO &quot;missing_value&quot;... " />
-                <marker date="1495567104155" expanded="true" signature="9432:9585" ph="INSERT INTO &quot;missing_value&quot;... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -93,14 +55,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="game-mode" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" />
         <option value="$PROJECT_DIR$/Preprocessing/__init__.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
         <option value="$PROJECT_DIR$/NLP/WordRecognizer.py" />
@@ -109,17 +70,18 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
-        <option value="$PROJECT_DIR$/Data/DataAccess.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
         <option value="$PROJECT_DIR$/Preprocessing/config.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
         <option value="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/gifs.txt" />
-        <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
         <option value="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" />
         <option value="$PROJECT_DIR$/Data/Database.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/gifs.txt" />
+        <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
+        <option value="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/Data/DataAccess.py" />
       </list>
     </option>
   </component>
@@ -130,8 +92,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="678" />
-    <option name="width" value="688" />
+    <option name="x" value="683" />
+    <option name="width" value="683" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -150,8 +112,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -208,6 +168,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -481,27 +443,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491849634099</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Preprocessing: insertAnswers_and_keywords">
-      <created>1492867250661</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1492867250661</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Preprocessing: insertAnswers_and_keywords">
-      <created>1492867519077</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1492867519077</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Preprocessing: insertAnswers_and_keywords">
-      <created>1492867981354</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1492867981354</updated>
     </task>
     <task id="LOCAL-00039" summary="Preprocessing: insertAnswers_and_keywords">
       <created>1492868547256</created>
@@ -825,13 +766,34 @@
       <option name="project" value="LOCAL" />
       <updated>1495566869377</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Gif &amp; Tag insertion">
+      <created>1495567137918</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1495567137918</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Gif &amp; Tag insertion">
+      <created>1495567454522</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1495567454523</updated>
+    </task>
+    <task id="LOCAL-00087" summary="DB row count trial">
+      <created>1497604872914</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1497604872916</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="678" y="0" width="688" height="728" extended-state="0" />
+    <frame x="683" y="0" width="683" height="728" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21496816" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25361156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -897,7 +859,8 @@
     <MESSAGE value="Random GIFs as response&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;Data/DataAccess.py&#10;#&#9;Data/Database.py&#10;#&#9;Preprocessing/config.py&#10;#&#9;ResponseSelection/FeatureTwoSelector.py" />
     <MESSAGE value="Never-expire token" />
     <MESSAGE value="Gif &amp; Tag insertion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gif &amp; Tag insertion" />
+    <MESSAGE value="DB row count trial" />
+    <option name="LAST_COMMIT_MESSAGE" value="DB row count trial" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -905,13 +868,7 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py" />
-    <entry file="file://$PROJECT_DIR$/nltk.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/nltk.txt" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
     <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1090,28 +1047,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nltk.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/nltk.txt" />
     <entry file="file://$PROJECT_DIR$/Question_Answers.txt" />
-    <entry file="file://$PROJECT_DIR$/Preprocessing/essay_questions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/essay_questions.txt" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1147,76 +1085,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="62" lean-forward="false" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/gifs.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="91" column="33" lean-forward="false" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="459">
+          <caret line="27" column="66" lean-forward="false" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/Database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="206" column="31" lean-forward="false" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="31" />
+          <caret line="163" column="0" lean-forward="false" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
           <folding>
-            <marker date="1495567104155" expanded="true" signature="2156:2263" ph="CREATE TABLE... Answers" />
-            <marker date="1495567104155" expanded="true" signature="2502:2522" ph="DROP TABLE &quot;... " />
-            <marker date="1495567104155" expanded="true" signature="2764:2912" ph="CREATE TABLE... Keywords" />
-            <marker date="1495567104155" expanded="true" signature="3154:3175" ph="DROP TABLE &quot;... " />
-            <marker date="1495567104155" expanded="true" signature="3434:3728" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1495567104155" expanded="true" signature="3994:4023" ph="DROP TABLE &quot;... " />
-            <marker date="1495567104155" expanded="true" signature="4274:4480" ph="CREATE TABLE... Synonyms" />
-            <marker date="1495567104155" expanded="true" signature="4721:4742" ph="DROP TABLE &quot;... " />
-            <marker date="1495567104155" expanded="true" signature="5003:5388" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1495567104155" expanded="true" signature="5657:5687" ph="DROP TABLE &quot;... " />
-            <marker date="1495567104155" expanded="true" signature="5927:6050" ph="CREATE TABLE... Tag" />
-            <marker date="1495567104155" expanded="true" signature="6276:6292" ph="DROP TABLE &quot;... " />
-            <marker date="1495567104155" expanded="true" signature="6520:6794" ph="CREATE TABLE... Gifs" />
-            <marker date="1495567104155" expanded="true" signature="7023:7040" ph="DROP TABLE &quot;... " />
-            <marker date="1495567104155" expanded="true" signature="7201:7231" ph="DELETE FROM " />
-            <marker date="1495567104155" expanded="true" signature="7260:7281" ph="DELETE FROM " />
-            <marker date="1495567104155" expanded="true" signature="7310:7332" ph="DELETE FROM " />
-            <marker date="1495567104155" expanded="true" signature="7361:7383" ph="DELETE FROM " />
-            <marker date="1495567104155" expanded="true" signature="7412:7443" ph="DELETE FROM " />
-            <marker date="1495567104155" expanded="true" signature="7472:7490" ph="DELETE FROM " />
-            <marker date="1495567104155" expanded="true" signature="7519:7536" ph="DELETE FROM " />
-            <marker date="1495567104155" expanded="true" signature="7666:7684" ph="DELETE FROM " />
-            <marker date="1495567104155" expanded="true" signature="7713:7730" ph="DELETE FROM " />
-            <marker date="1495567104155" expanded="true" signature="9058:9121" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1495567104155" expanded="true" signature="9219:9379" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1495567104155" expanded="true" signature="9432:9585" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="52" column="27" lean-forward="true" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
           <folding />
         </state>
       </provider>
