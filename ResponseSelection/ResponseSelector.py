@@ -32,43 +32,51 @@ class ResponseSelector:
             "followupEvent": {"name": event_name, "data": {"user": name}}
         }
 
-    def registerUser(self, pageScopedID, data):
+    def registerUser(self, pageScopedID):
         db = Database.Database()
-        appScopedID = self.getAppScopedID(data)
+        appScopedID = self.getAppScopedID(pageScopedID)
         db.insert("User", ["Page_ScopedID", "App_ScopedID"], [pageScopedID, appScopedID], ["Page_ScopedID", "App_ScopedID"], "")
 
-    def getAppScopedID(self, data):
-        message = data.get("message")
-        mid = message.get("mid")
+    def getAppScopedID(self, pageScopedID):
+        name = self.getName(pageScopedID)
 
+        # Get conversations, then get the sender with the required name, then get the appScopedID and return it.
+        conversations = getConversations()
+        for conversation in conversations:
+            participants = conversation.get("participants").get("data")
+            for participant in participants:
+                if participant.get("name") == name:
+                    return participant.get("id")
+
+    def getName(self, pageScopedID):
         access_token = config.access_token
-        url = "https://graph.facebook.com/v2.8/m_" + mid + "?access_token=" + access_token + "&fields=from"
+        url = "https://graph.facebook.com/v2.9/" + str(pageScopedID) + "?access_token=" + access_token + "&fields=first_name,last_name"
         r = requests.get(url)
         print(r.status_code, r.reason)
         result = json.loads(r.text)
-        id = result.get("from").get("id")
-        print(id)
-        return id
+        name = result.get("first_name") + " " + result.get("last_name")
+        print(name)
+        return name
 
     def getUsersToNotify(self):
         ids = []
         conversations = getConversations()
         for conversation in conversations:
             updated_time = conversation.get("updated_time")
-            updated_time = updated_time.replace("T", " ") #Replace separator of date and time by " " instead of T -- To match current_time format
-            millisecondsIndex = updated_time.find("+") #Get milliseconds index
-            updated_time = updated_time[:millisecondsIndex - len(updated_time)] #Remove milliseconds
-            updated_time = datetime.datetime.strptime(updated_time, "%Y-%m-%d %H:%M:%S") #Convert to datetime object
-            current_time = datetime.datetime.now() - datetime.timedelta(hours = 2) # Convert to GMT (now - 2H)
-            resultedTime = current_time - updated_time # Didn't talk since...
-            dayIndex = str(resultedTime).find("day") # Get day index in result, -1 if not exist
-            if(dayIndex > 0 and int(str(resultedTime)[:dayIndex-1]) >= 1): #If day exists and number of days more than 2 ,, then notify user.
+            updated_time = updated_time.replace("T", " ")  # Replace separator of date and time by " " instead of T -- To match current_time format
+            millisecondsIndex = updated_time.find("+")  # Get milliseconds index
+            updated_time = updated_time[:millisecondsIndex - len(updated_time)]  # Remove milliseconds
+            updated_time = datetime.datetime.strptime(updated_time, "%Y-%m-%d %H:%M:%S")  # Convert to datetime object
+            current_time = datetime.datetime.now() - datetime.timedelta(hours=2)  # Convert to GMT (now - 2H)
+            resultedTime = current_time - updated_time  # Didn't talk since...
+            dayIndex = str(resultedTime).find("day")  # Get day index in result, -1 if not exist
+            if(dayIndex > 0 and int(str(resultedTime)[:dayIndex-1]) >= 2):  # If day exists and number of days more than 2 ,, then notify user.
                 conversationData = conversation.get("participants").get("data")
                 for participant in conversationData:
-                    if(participant.get("id") != config.page_id): # Current participant isn't the page
+                    if participant.get("id") != config.page_id:  # Current participant isn't the page
                         appScopedID = participant.get("id")
                         pageScopedID = DataAccess.DataAccess().select("User", ["Page_ScopedID"], ["App_ScopedID"], [appScopedID], "")
-                        if(pageScopedID[0][0] != None):
+                        if pageScopedID[0][0] is not None:
                             ids.append(pageScopedID)
                             break
         return ids
@@ -83,7 +91,7 @@ class ResponseSelector:
         return conversations.get("data")
 
     def notifyUser(self):
-        listOfUsersToNotify = getUsersToNotify()
+        listOfUsersToNotify = self.getUsersToNotify()
 
         access_token = config.access_token
         url = "https://graph.facebook.com/v2.6/me/messages?access_token=" + access_token
