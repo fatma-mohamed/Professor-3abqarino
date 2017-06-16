@@ -42,6 +42,7 @@ class ResponseSelector:
 
         # Get conversations, then get the sender with the required name, then get the appScopedID and return it.
         conversations = self.getConversations()
+        print conversations
         for conversation in conversations:
             participants = conversation.get("participants").get("data")
             for participant in participants:
