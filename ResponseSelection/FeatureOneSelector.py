@@ -102,7 +102,7 @@ class FeatureOneSelector():
         Tx = TextParser()
         t = Tx.tokenize(query)
         k = Tx.removeStopWords(t)
-        query = str(k)
+        query = ''.join(k)
         url = "http://api.duckduckgo.com/?q=" + query \
               + "&format=json&pretty=1"
         response = requests.get(url)
