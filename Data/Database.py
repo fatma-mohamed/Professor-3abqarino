@@ -187,14 +187,12 @@ class Database:
                        Page_ScopedID BIGINT NOT NULL UNIQUE,
                        App_ScopedID BIGINT NOT NULL UNIQUE,
                        CONSTRAINT uniqueUser UNIQUE (Page_ScopedID, App_ScopedID));''')
-        self.connection.commit()
         print("--------Table User created successfully--------")
 
     def deleteTable_User(self):
         print ("--------in Database deleteTable_User--------")
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE "User";''')
-        self.connection.commit()
         print("--------Table User deleted successfully--------")
 
 
