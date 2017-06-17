@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Database.py" afterPath="$PROJECT_DIR$/Data/Database.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+            <state relative-caret-position="238">
+              <caret line="55" column="45" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="56" />
               <folding>
                 <element signature="e#22#35#0" expanded="true" />
               </folding>
@@ -54,49 +52,50 @@
       <file leaf-file-name="DataPreprocessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
+            <state relative-caret-position="936">
               <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Database.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Database.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Data/Database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-718">
-              <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="32" />
+            <state relative-caret-position="171">
+              <caret line="189" column="32" lean-forward="true" selection-start-line="189" selection-start-column="32" selection-end-line="189" selection-end-column="32" />
               <folding>
-                <marker date="1497712511496" expanded="true" signature="1934:2041" ph="CREATE TABLE... Answers" />
-                <marker date="1497712511496" expanded="true" signature="2280:2300" ph="DROP TABLE &quot;... " />
-                <marker date="1497712511496" expanded="true" signature="2542:2690" ph="CREATE TABLE... Keywords" />
-                <marker date="1497712511496" expanded="true" signature="2932:2953" ph="DROP TABLE &quot;... " />
-                <marker date="1497712511496" expanded="true" signature="3212:3506" ph="CREATE TABLE... Answers_Keywords" />
-                <marker date="1497712511496" expanded="true" signature="3772:3801" ph="DROP TABLE &quot;... " />
-                <marker date="1497712511496" expanded="true" signature="4052:4258" ph="CREATE TABLE... Synonyms" />
-                <marker date="1497712511496" expanded="true" signature="4499:4520" ph="DROP TABLE &quot;... " />
-                <marker date="1497712511496" expanded="true" signature="4781:5166" ph="CREATE TABLE... Questions_Answers" />
-                <marker date="1497712511496" expanded="true" signature="5435:5465" ph="DROP TABLE &quot;... " />
-                <marker date="1497712511496" expanded="true" signature="5705:5828" ph="CREATE TABLE... Tag" />
-                <marker date="1497712511496" expanded="true" signature="6054:6070" ph="DROP TABLE &quot;... " />
-                <marker date="1497712511496" expanded="true" signature="6298:6572" ph="CREATE TABLE... Gifs" />
-                <marker date="1497712511496" expanded="true" signature="6801:6818" ph="DROP TABLE &quot;... " />
-                <marker date="1497712511496" expanded="true" signature="7047:7243" ph="CREATE TABLE... User" />
-                <marker date="1497712511496" expanded="true" signature="7505:7522" ph="DROP TABLE &quot;... " />
-                <marker date="1497712511496" expanded="true" signature="7800:8047" ph="CREATE TABLE... Notification" />
-                <marker date="1497712511496" expanded="true" signature="8333:8358" ph="DROP TABLE &quot;... " />
-                <marker date="1497712511496" expanded="true" signature="8527:8557" ph="DELETE FROM " />
-                <marker date="1497712511496" expanded="true" signature="8586:8607" ph="DELETE FROM " />
-                <marker date="1497712511496" expanded="true" signature="8636:8658" ph="DELETE FROM " />
-                <marker date="1497712511496" expanded="true" signature="8687:8709" ph="DELETE FROM " />
-                <marker date="1497712511496" expanded="true" signature="8738:8769" ph="DELETE FROM " />
-                <marker date="1497712511496" expanded="true" signature="8798:8816" ph="DELETE FROM " />
-                <marker date="1497712511496" expanded="true" signature="8845:8863" ph="DELETE FROM " />
-                <marker date="1497712511496" expanded="true" signature="8892:8918" ph="DELETE FROM " />
-                <marker date="1497712511496" expanded="true" signature="8947:8964" ph="DELETE FROM " />
-                <marker date="1497712511496" expanded="true" signature="10105:10168" ph="INSERT INTO &quot;missing_value&quot;... " />
-                <marker date="1497712511496" expanded="true" signature="10266:10426" ph="INSERT INTO &quot;missing_value&quot;... " />
-                <marker date="1497712511496" expanded="true" signature="10479:10632" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1497713104465" expanded="true" signature="1934:2041" ph="CREATE TABLE... Answers" />
+                <marker date="1497713104465" expanded="true" signature="2280:2300" ph="DROP TABLE &quot;... " />
+                <marker date="1497713104465" expanded="true" signature="2542:2690" ph="CREATE TABLE... Keywords" />
+                <marker date="1497713104465" expanded="true" signature="2932:2953" ph="DROP TABLE &quot;... " />
+                <marker date="1497713104465" expanded="true" signature="3212:3506" ph="CREATE TABLE... Answers_Keywords" />
+                <marker date="1497713104465" expanded="true" signature="3772:3801" ph="DROP TABLE &quot;... " />
+                <marker date="1497713104465" expanded="true" signature="4052:4258" ph="CREATE TABLE... Synonyms" />
+                <marker date="1497713104465" expanded="true" signature="4499:4520" ph="DROP TABLE &quot;... " />
+                <marker date="1497713104465" expanded="true" signature="4781:5166" ph="CREATE TABLE... Questions_Answers" />
+                <marker date="1497713104465" expanded="true" signature="5435:5465" ph="DROP TABLE &quot;... " />
+                <marker date="1497713104465" expanded="true" signature="5705:5828" ph="CREATE TABLE... Tag" />
+                <marker date="1497713104465" expanded="true" signature="6054:6070" ph="DROP TABLE &quot;... " />
+                <marker date="1497713104465" expanded="true" signature="6298:6572" ph="CREATE TABLE... Gifs" />
+                <marker date="1497713104465" expanded="true" signature="6801:6818" ph="DROP TABLE &quot;... " />
+                <marker date="1497713104465" expanded="true" signature="7047:7242" ph="CREATE TABLE... User" />
+                <marker date="1497713104465" expanded="true" signature="7047:7326" ph="CREATE TABLE... User" />
+                <marker date="1497713104465" expanded="true" signature="7588:7605" ph="DROP TABLE &quot;... " />
+                <marker date="1497713104465" expanded="true" signature="7883:8130" ph="CREATE TABLE... Notification" />
+                <marker date="1497713104465" expanded="true" signature="8383:8408" ph="DROP TABLE &quot;... " />
+                <marker date="1497713104465" expanded="true" signature="8577:8607" ph="DELETE FROM " />
+                <marker date="1497713104465" expanded="true" signature="8636:8657" ph="DELETE FROM " />
+                <marker date="1497713104465" expanded="true" signature="8686:8708" ph="DELETE FROM " />
+                <marker date="1497713104465" expanded="true" signature="8737:8759" ph="DELETE FROM " />
+                <marker date="1497713104465" expanded="true" signature="8788:8819" ph="DELETE FROM " />
+                <marker date="1497713104465" expanded="true" signature="8848:8866" ph="DELETE FROM " />
+                <marker date="1497713104465" expanded="true" signature="8895:8913" ph="DELETE FROM " />
+                <marker date="1497713104465" expanded="true" signature="8942:8968" ph="DELETE FROM " />
+                <marker date="1497713104465" expanded="true" signature="8997:9014" ph="DELETE FROM " />
+                <marker date="1497713104465" expanded="true" signature="10155:10218" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1497713104465" expanded="true" signature="10316:10476" ph="INSERT INTO &quot;missing_value&quot;... " />
+                <marker date="1497713104465" expanded="true" signature="10529:10682" ph="INSERT INTO &quot;missing_value&quot;... " />
               </folding>
             </state>
           </provider>
@@ -1061,13 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="67" lean-forward="false" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1076,10 +1068,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
+    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="-357">
+          <caret line="6" column="67" lean-forward="false" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -1094,51 +1086,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Database.py">
+    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-718">
-          <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="32" />
-          <folding>
-            <marker date="1497712511496" expanded="true" signature="1934:2041" ph="CREATE TABLE... Answers" />
-            <marker date="1497712511496" expanded="true" signature="2280:2300" ph="DROP TABLE &quot;... " />
-            <marker date="1497712511496" expanded="true" signature="2542:2690" ph="CREATE TABLE... Keywords" />
-            <marker date="1497712511496" expanded="true" signature="2932:2953" ph="DROP TABLE &quot;... " />
-            <marker date="1497712511496" expanded="true" signature="3212:3506" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1497712511496" expanded="true" signature="3772:3801" ph="DROP TABLE &quot;... " />
-            <marker date="1497712511496" expanded="true" signature="4052:4258" ph="CREATE TABLE... Synonyms" />
-            <marker date="1497712511496" expanded="true" signature="4499:4520" ph="DROP TABLE &quot;... " />
-            <marker date="1497712511496" expanded="true" signature="4781:5166" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1497712511496" expanded="true" signature="5435:5465" ph="DROP TABLE &quot;... " />
-            <marker date="1497712511496" expanded="true" signature="5705:5828" ph="CREATE TABLE... Tag" />
-            <marker date="1497712511496" expanded="true" signature="6054:6070" ph="DROP TABLE &quot;... " />
-            <marker date="1497712511496" expanded="true" signature="6298:6572" ph="CREATE TABLE... Gifs" />
-            <marker date="1497712511496" expanded="true" signature="6801:6818" ph="DROP TABLE &quot;... " />
-            <marker date="1497712511496" expanded="true" signature="7047:7243" ph="CREATE TABLE... User" />
-            <marker date="1497712511496" expanded="true" signature="7505:7522" ph="DROP TABLE &quot;... " />
-            <marker date="1497712511496" expanded="true" signature="7800:8047" ph="CREATE TABLE... Notification" />
-            <marker date="1497712511496" expanded="true" signature="8333:8358" ph="DROP TABLE &quot;... " />
-            <marker date="1497712511496" expanded="true" signature="8527:8557" ph="DELETE FROM " />
-            <marker date="1497712511496" expanded="true" signature="8586:8607" ph="DELETE FROM " />
-            <marker date="1497712511496" expanded="true" signature="8636:8658" ph="DELETE FROM " />
-            <marker date="1497712511496" expanded="true" signature="8687:8709" ph="DELETE FROM " />
-            <marker date="1497712511496" expanded="true" signature="8738:8769" ph="DELETE FROM " />
-            <marker date="1497712511496" expanded="true" signature="8798:8816" ph="DELETE FROM " />
-            <marker date="1497712511496" expanded="true" signature="8845:8863" ph="DELETE FROM " />
-            <marker date="1497712511496" expanded="true" signature="8892:8918" ph="DELETE FROM " />
-            <marker date="1497712511496" expanded="true" signature="8947:8964" ph="DELETE FROM " />
-            <marker date="1497712511496" expanded="true" signature="10105:10168" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1497712511496" expanded="true" signature="10266:10426" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1497712511496" expanded="true" signature="10479:10632" ph="INSERT INTO &quot;missing_value&quot;... " />
-          </folding>
+        <state relative-caret-position="936">
+          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+        <state relative-caret-position="238">
+          <caret line="55" column="45" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="56" />
           <folding>
             <element signature="e#22#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="189" column="32" lean-forward="true" selection-start-line="189" selection-start-column="32" selection-end-line="189" selection-end-column="32" />
+          <folding>
+            <marker date="1497713104465" expanded="true" signature="1934:2041" ph="CREATE TABLE... Answers" />
+            <marker date="1497713104465" expanded="true" signature="2280:2300" ph="DROP TABLE &quot;... " />
+            <marker date="1497713104465" expanded="true" signature="2542:2690" ph="CREATE TABLE... Keywords" />
+            <marker date="1497713104465" expanded="true" signature="2932:2953" ph="DROP TABLE &quot;... " />
+            <marker date="1497713104465" expanded="true" signature="3212:3506" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1497713104465" expanded="true" signature="3772:3801" ph="DROP TABLE &quot;... " />
+            <marker date="1497713104465" expanded="true" signature="4052:4258" ph="CREATE TABLE... Synonyms" />
+            <marker date="1497713104465" expanded="true" signature="4499:4520" ph="DROP TABLE &quot;... " />
+            <marker date="1497713104465" expanded="true" signature="4781:5166" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1497713104465" expanded="true" signature="5435:5465" ph="DROP TABLE &quot;... " />
+            <marker date="1497713104465" expanded="true" signature="5705:5828" ph="CREATE TABLE... Tag" />
+            <marker date="1497713104465" expanded="true" signature="6054:6070" ph="DROP TABLE &quot;... " />
+            <marker date="1497713104465" expanded="true" signature="6298:6572" ph="CREATE TABLE... Gifs" />
+            <marker date="1497713104465" expanded="true" signature="6801:6818" ph="DROP TABLE &quot;... " />
+            <marker date="1497713104465" expanded="true" signature="7047:7242" ph="CREATE TABLE... User" />
+            <marker date="1497713104465" expanded="true" signature="7047:7326" ph="CREATE TABLE... User" />
+            <marker date="1497713104465" expanded="true" signature="7588:7605" ph="DROP TABLE &quot;... " />
+            <marker date="1497713104465" expanded="true" signature="7883:8130" ph="CREATE TABLE... Notification" />
+            <marker date="1497713104465" expanded="true" signature="8383:8408" ph="DROP TABLE &quot;... " />
+            <marker date="1497713104465" expanded="true" signature="8577:8607" ph="DELETE FROM " />
+            <marker date="1497713104465" expanded="true" signature="8636:8657" ph="DELETE FROM " />
+            <marker date="1497713104465" expanded="true" signature="8686:8708" ph="DELETE FROM " />
+            <marker date="1497713104465" expanded="true" signature="8737:8759" ph="DELETE FROM " />
+            <marker date="1497713104465" expanded="true" signature="8788:8819" ph="DELETE FROM " />
+            <marker date="1497713104465" expanded="true" signature="8848:8866" ph="DELETE FROM " />
+            <marker date="1497713104465" expanded="true" signature="8895:8913" ph="DELETE FROM " />
+            <marker date="1497713104465" expanded="true" signature="8942:8968" ph="DELETE FROM " />
+            <marker date="1497713104465" expanded="true" signature="8997:9014" ph="DELETE FROM " />
+            <marker date="1497713104465" expanded="true" signature="10155:10218" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1497713104465" expanded="true" signature="10316:10476" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1497713104465" expanded="true" signature="10529:10682" ph="INSERT INTO &quot;missing_value&quot;... " />
           </folding>
         </state>
       </provider>
