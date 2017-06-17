@@ -62,6 +62,9 @@ class ResponseSelector:
     def getUsersToNotify(self):
         ids = []
         conversations = self.getConversations()
+        print "------------conversationssss"
+        print conversations
+        print "------------conversationssss end"
         for conversation in conversations:
             updated_time = conversation.get("updated_time")
             updated_time = updated_time.replace("T", " ")  # Replace separator of date and time by " " instead of T -- To match current_time format
