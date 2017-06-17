@@ -13,6 +13,7 @@ class FeatureOneSelector():
 
 
     def getResult(self):
+        print ("QUES:", self.question)
         answer = self.getAnswer()
         if "Sorry" in answer:
             webAnswer = self.webSearch(self.question)
@@ -101,7 +102,7 @@ class FeatureOneSelector():
 
     def webSearch(self, query):
         Tx = TextParser()
-        t = Tx.tokenize(query)
+        t = Tx.tokenize(query.lower())
         k = Tx.removeStopWords(t)
         query = ''.join(k)
         print ("Q:", query)
