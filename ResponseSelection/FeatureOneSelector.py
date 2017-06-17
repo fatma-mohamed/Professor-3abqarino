@@ -104,12 +104,14 @@ class FeatureOneSelector():
         t = Tx.tokenize(query)
         k = Tx.removeStopWords(t)
         query = ''.join(k)
+        print ("Q:", query)
         url = "http://api.duckduckgo.com/?q=" + query \
               + "&format=json&pretty=1"
         response = requests.get(url)
         jData = response.json()
         results = jData.get("RelatedTopics")
-        if(len(results)==0):
+        print("RES: ",results)
+        if len(results)==0:
             print("JSON: ", 0)
             return 0
         first = results[0]
