@@ -78,7 +78,7 @@ class ResponseSelector:
                         appScopedID = participant.get("id")
                         pageScopedID = DataAccess.DataAccess().select("User", ["Page_ScopedID"], ["App_ScopedID"], [appScopedID], "")
                         print "-----------------------------------"
-                        print pageScopedID[0]
+                        print pageScopedID
                         print pageScopedID[1]
                         print pageScopedID[0][0]
                         print "-----------------------------------"
