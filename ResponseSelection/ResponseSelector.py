@@ -76,11 +76,13 @@ class ResponseSelector:
                 for participant in conversationData:
                     if participant.get("id") != config.page_id:  # Current participant isn't the page
                         appScopedID = participant.get("id")
+                        print "--------app scoped id"
+                        print appScopedID
+                        print "---------appp scode"
                         pageScopedID = DataAccess.DataAccess().select("User", ["Page_ScopedID"], ["App_ScopedID"], [appScopedID], "")
                         print "-----------------------------------"
                         print pageScopedID
-                        print pageScopedID[1]
-                        print pageScopedID[0][0]
+                        print pageScopedID[0]
                         print "-----------------------------------"
                         if pageScopedID[0][0] is not None:
                             ids.append(pageScopedID)
