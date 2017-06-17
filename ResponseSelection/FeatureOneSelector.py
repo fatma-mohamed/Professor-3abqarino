@@ -14,8 +14,9 @@ class FeatureOneSelector():
 
     def getResult(self):
         answer = self.getAnswer()
-        if "sorry" in answer:
+        if "Sorry" in answer:
             webAnswer = self.webSearch(self.question)
+            print("WEB: ", webAnswer)
             if(webAnswer == 0):
                 db = DataAccess.DataAccess()
                 url = db.selectGifsRandom("Gifs", ["url"], ["gif_tag"], ["'question-mark'"], "")
