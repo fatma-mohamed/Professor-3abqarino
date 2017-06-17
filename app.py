@@ -53,10 +53,9 @@ def makeWebhookResult(req):
         # Database.Database().createTable_Notification()
         # Database.Database().createTable_User()
         return DataPreprocessing.DataPreprocessing().insertNotifications()
-    elif req.get("result").get("action") == "modify-Gifs":
-        # Database.Database().deleteTable_Gifs()
-        # Database.Database().createTable_Tag()
-        # Database.Database().createTable_Gifs()
+    elif req.get("result").get("action") == "modify-User":
+        Database.Database().deleteTable_User()
+        Database.Database().createTable_User()
         return
     else:
         return {}
