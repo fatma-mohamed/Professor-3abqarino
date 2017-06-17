@@ -77,6 +77,11 @@ class ResponseSelector:
                     if participant.get("id") != config.page_id:  # Current participant isn't the page
                         appScopedID = participant.get("id")
                         pageScopedID = DataAccess.DataAccess().select("User", ["Page_ScopedID"], ["App_ScopedID"], [appScopedID], "")
+                        print "-----------------------------------"
+                        print pageScopedID[0]
+                        print pageScopedID[1]
+                        print pageScopedID[0][0]
+                        print "-----------------------------------"
                         if pageScopedID[0][0] is not None:
                             ids.append(pageScopedID)
                             break
