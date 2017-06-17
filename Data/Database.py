@@ -184,8 +184,8 @@ class Database:
         cur = self.connection.cursor()
         cur.execute('''CREATE TABLE "User"
                        (ID SERIAL PRIMARY KEY NOT NULL,
-                       Page_ScopedID INT NOT NULL UNIQUE,
-                       App_ScopedID INT NOT NULL UNIQUE);''')
+                       Page_ScopedID BIGINT NOT NULL UNIQUE,
+                       App_ScopedID BIGINT NOT NULL UNIQUE);''')
         self.connection.commit()
         print("--------Table User created successfully--------")
 
@@ -193,6 +193,7 @@ class Database:
         print ("--------in Database deleteTable_User--------")
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE "User";''')
+        self.connection.commit()
         print("--------Table User deleted successfully--------")
 
 
