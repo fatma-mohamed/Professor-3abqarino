@@ -63,9 +63,6 @@ class ResponseSelector:
         ids = []
         conversations = self.getConversations()
         for conversation in conversations:
-            print "---------------- name"
-            print conversation.get("participants").get("data")[0].get("name")
-            print "-------------name end"
             updated_time = conversation.get("updated_time")
             updated_time = updated_time.replace("T", " ")  # Replace separator of date and time by " " instead of T -- To match current_time format
             millisecondsIndex = updated_time.find("+")  # Get milliseconds index
@@ -79,16 +76,9 @@ class ResponseSelector:
                 for participant in conversationData:
                     if participant.get("id") != config.page_id:  # Current participant isn't the page
                         appScopedID = participant.get("id")
-                        print "--------app scoped id"
-                        print appScopedID
-                        print "---------appp scode"
                         pageScopedID = DataAccess.DataAccess().select("User", ["Page_ScopedID"], ["App_ScopedID"], [appScopedID], "")
-                        print "---------------- Page scoped iD----"
-                        print pageScopedID
-                        print "---------------- Page scoped ID end"
                         if pageScopedID != []:
-                            print "in not none"
-                            ids.append(pageScopedID)
+                            ids.append(pageScopedID[0][0])
                             break
         return ids
 
