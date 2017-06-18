@@ -85,7 +85,6 @@ class ResponseSelector:
                         pageScopedID = DataAccess.DataAccess().select("User", ["Page_ScopedID"], ["App_ScopedID"], [appScopedID], "")
                         print "---------------- Page scoped iD----"
                         print pageScopedID
-                        print pageScopedID[0][0]
                         print "---------------- Page scoped ID end"
                         if pageScopedID is not None:
                             print "in not none"
