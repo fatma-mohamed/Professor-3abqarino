@@ -83,6 +83,9 @@ class ResponseSelector:
                         print appScopedID
                         print "---------appp scode"
                         pageScopedID = DataAccess.DataAccess().select("User", ["Page_ScopedID"], ["App_ScopedID"], [appScopedID], "")
+                        print "---------------- Page scoped iD----"
+                        print pageScopedID
+                        print "---------------- Page scoped ID end"
                         if pageScopedID is not None:
                             ids.append(pageScopedID)
                             break
