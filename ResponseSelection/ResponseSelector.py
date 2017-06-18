@@ -86,7 +86,7 @@ class ResponseSelector:
                         print "---------------- Page scoped iD----"
                         print pageScopedID
                         print "---------------- Page scoped ID end"
-                        if pageScopedID is not None:
+                        if pageScopedID != []:
                             print "in not none"
                             ids.append(pageScopedID)
                             break
