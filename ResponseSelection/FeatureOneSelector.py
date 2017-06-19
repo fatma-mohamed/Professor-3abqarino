@@ -27,6 +27,19 @@ class FeatureOneSelector():
                 return {
                     "speech": "",
                     "displayText": "",
+                    "data": {},
+                    "contextOut": [],
+                    "source": "webhook-FeatureOneSelector",
+                    "followupEvent": {"name": "ask_question_event",
+                                      "data": {"imageURL": url, "speech": answer}}
+                }
+            else:
+                icon = (webAnswer.get("Icon")).get("URL")
+                text = webAnswer.get("Text")
+                url = webAnswer.get("FirstURL")
+                return {
+                    "speech": "",
+                    "displayText": "",
                     "data": {
                         "facebook": {
                             "attachment": {
@@ -35,8 +48,8 @@ class FeatureOneSelector():
                                     "template_type": "generic",
                                     "elements": [
                                         {
-                                            "title": "Title",
-                                            "image_url": "https://fb-s-d-a.akamaihd.net/h-ak-fbx/v/t39.2365-6/13509251_1026555627430343_1803381600_n.png?oh=4a27063a7edce4c753841dd7fc4a76d8&oe=599F2B71&__gda__=1506377749_5ac51b72a7593180e84ca132abba40c3"
+                                            "title": url,
+                                            "image_url": icon
                                         }
                                     ]
                                 }
@@ -45,21 +58,6 @@ class FeatureOneSelector():
                     },
                     "contextOut": [],
                     "source": "webhook-FeatureOneSelector"
-                }
-            # "followupEvent": {"name": "ask_question_event",
-            #                   "data": {"imageURL": url, "speech": answer}}
-            else:
-                icon = (webAnswer.get("Icon")).get("URL")
-                text = webAnswer.get("Text")
-                url = webAnswer.get("FirstURL")
-                return {
-                    "speech": "", #Sorry I couldn't find an answer! Here is a web search result
-                    "displayText": "",
-                    "data": {},
-                    "contextOut": [],
-                    "source": "webhook-FeatureOneSelector",
-                    "followupEvent": {"name": "ask_question_event",
-                                      "data": {"imageURL": icon, "speech": text, "url": url}}
                 }
         else:
             return {
