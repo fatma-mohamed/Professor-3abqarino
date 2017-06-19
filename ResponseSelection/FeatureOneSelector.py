@@ -1,6 +1,6 @@
 from NLP.TextParser import TextParser
 from NLP.WordRecognizer import WordRecognizer
-from ResponseSelection.ResponseSelector import ResponseSelector
+from ResponseSelection import ResponseSelector
 from Data import DataAccess
 from collections import Counter
 
@@ -16,7 +16,7 @@ class FeatureOneSelector():
         print ("QUES:", self.question)
         answer = self.getAnswer()
         if "Sorry" in answer:
-            res = ResponseSelector()
+            res = ResponseSelector.ResponseSelector()
             webAnswer = res.webSearch(self.question)
             print("WEB: ", webAnswer)
             if(webAnswer == 0):

@@ -37,14 +37,6 @@ class ResponseSelector:
 
 
     def webSearch(self, query):
-        if '?' in query:
-            featureOne = FeatureOneSelector.FeatureOneSelector(query)
-            return featureOne.getAnswer()
-        else:
-            return self.webSearch(query)
-
-
-    def webSearch(self, query):
         Tx = TextParser()
         t = Tx.tokenize(query.lower())
         k = Tx.removeStopWords(t)
