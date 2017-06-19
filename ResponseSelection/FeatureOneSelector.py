@@ -1,8 +1,8 @@
 from NLP.TextParser import TextParser
 from NLP.WordRecognizer import WordRecognizer
+from ResponseSelection.ResponseSelector import ResponseSelector
 from Data import DataAccess
 from collections import Counter
-import requests
 
 
 class FeatureOneSelector():
@@ -16,7 +16,8 @@ class FeatureOneSelector():
         print ("QUES:", self.question)
         answer = self.getAnswer()
         if "Sorry" in answer:
-            webAnswer = self.webSearch(self.question)
+            res = ResponseSelector()
+            webAnswer = res.webSearch(self.question)
             print("WEB: ", webAnswer)
             if(webAnswer == 0):
                 db = DataAccess.DataAccess()
@@ -100,26 +101,6 @@ class FeatureOneSelector():
         Answer = Da.select("Answers", ["answer"], ["id"] , [str(IDs[0][0][0])],"")
         return Answer
 
-    def webSearch(self, query):
-        Tx = TextParser()
-        t = Tx.tokenize(query.lower())
-        k = Tx.removeStopWords(t)
-        query = ''.join(k)
-        if query == '':
-            print ("NO QUERY")
-            return 0
-        print ("Q:", query)
-        url = "http://api.duckduckgo.com/?q=" + query \
-              + "&format=json&pretty=1"
-        response = requests.get(url)
-        jData = response.json()
-        results = jData.get("RelatedTopics")
-        print("RES: ",results)
-        if len(results)==0:
-            print("JSON: ", 0)
-            return 0
-        first = results[0]
-        print("JSON: ", first)
-        return first
+
 
 

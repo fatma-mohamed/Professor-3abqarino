@@ -1,8 +1,10 @@
 import json
+import requests
 import urllib
 from Preprocessing import config
 from Data import Database
 from ResponseSelection import FeatureOneSelector
+from NLP.TextParser import TextParser
 
 class ResponseSelector:
 
@@ -40,6 +42,29 @@ class ResponseSelector:
             return featureOne.getAnswer()
         else:
             return self.webSearch(query)
+
+
+    def webSearch(self, query):
+        Tx = TextParser()
+        t = Tx.tokenize(query.lower())
+        k = Tx.removeStopWords(t)
+        query = ''.join(k)
+        if query == '':
+            print ("NO QUERY")
+            return 0
+        print ("Q:", query)
+        url = "http://api.duckduckgo.com/?q=" + query \
+              + "&format=json&pretty=1"
+        response = requests.get(url)
+        jData = response.json()
+        results = jData.get("RelatedTopics")
+        print("RES: ",results)
+        if len(results)==0:
+            print("JSON: ", 0)
+            return 0
+        first = results[0]
+        print("JSON: ", first)
+        return first
 
 
 
