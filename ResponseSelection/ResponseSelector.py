@@ -39,11 +39,7 @@ class ResponseSelector:
             featureOne = FeatureOneSelector.FeatureOneSelector(query)
             return featureOne.getAnswer()
         else:
-            return{
-                "speech": "",
-                "displayText": "",
-                "source": "webhook-ResponseSelector",
-            }
+            return self.webSearch(query)
 
 
 
