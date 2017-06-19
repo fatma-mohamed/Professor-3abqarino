@@ -105,6 +105,9 @@ class FeatureOneSelector():
         t = Tx.tokenize(query.lower())
         k = Tx.removeStopWords(t)
         query = ''.join(k)
+        if query == '':
+            print ("NO QUERY")
+            return 0
         print ("Q:", query)
         url = "http://api.duckduckgo.com/?q=" + query \
               + "&format=json&pretty=1"
