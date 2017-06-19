@@ -49,7 +49,7 @@ def makeWebhookResult(req):
     if "request_user_name" in action:
         responseSelector = ResponseSelector.ResponseSelector()
         return responseSelector.requestUserName(req, action)
-    elif action == "Ask-a-question.Ask-a-question-custom":
+    elif action == "Ask-a-question":
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         return  responseSelector.getResult()
