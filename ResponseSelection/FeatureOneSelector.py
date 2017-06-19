@@ -28,7 +28,7 @@ class FeatureOneSelector():
                     "displayText": "",
                     "data": {},
                     "contextOut": [],
-                    "source": "prof-3abqarino_webhook",
+                    "source": "webhook-FeatureOneSelector",
                     "followupEvent": {"name": "ask_question_event",
                                       "data": {"imageURL": url, "speech": answer}}
                 }
@@ -37,18 +37,18 @@ class FeatureOneSelector():
                 text = webAnswer.get("Text")
                 url = webAnswer.get("FirstURL")
                 return {
-                    "speech": "Sorry I couldn't find an answer! Here are ",
+                    "speech": "Sorry I couldn't find an answer! Here is a web search result",
                     "displayText": "",
                     "data": {},
                     "contextOut": [],
-                    "source": "prof-3abqarino_webhook",
+                    "source": "webhook-FeatureOneSelector",
                     "followupEvent": {"name": "ask_question_event",
                                       "data": {"imageURL": icon, "speech": text, "url": url}}
                 }
         else:
             return {
                 "speech": answer,
-                "source": "prof-3abqarino_webhook",
+                "source": "webhook-FeatureOneSelector",
                 "displayText": answer
 
             }

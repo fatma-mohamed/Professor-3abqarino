@@ -2,6 +2,8 @@ import json
 import urllib
 from Preprocessing import config
 from Data import Database
+from ResponseSelection import FeatureOneSelector
+
 class ResponseSelector:
 
     @staticmethod
@@ -27,9 +29,21 @@ class ResponseSelector:
             "displayText": "",
             "data": {},
             "contextOut": [],
-            "source": "prof-3abqarino",
+            "source": "webhook-ResponseSelector",
             "followupEvent": {"name": event_name, "data": {"user": name}}
         }
+
+
+    def webSearch(self, query):
+        if '?' in query:
+            featureOne = FeatureOneSelector.FeatureOneSelector(query)
+            return featureOne.getAnswer()
+        else:
+            return{
+                "speech": "",
+                "displayText": "",
+                "source": "webhook-ResponseSelector",
+            }
 
 
 
