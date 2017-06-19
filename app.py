@@ -53,6 +53,10 @@ def makeWebhookResult(req):
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = ResponseSelector.ResponseSelector()
         return  responseSelector.webSearch(question)
+    elif action == "Ask-a-question":
+        question = ((req.get("result")).get("parameters")).get("query")
+        responseSelector = FeatureOneSelector.FeatureOneSelector(question)
+        return responseSelector.getAnswer()
     elif action == "gif":
         d = Database.Database()
         d.deleteGifData()
