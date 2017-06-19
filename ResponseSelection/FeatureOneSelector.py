@@ -33,7 +33,7 @@ class FeatureOneSelector():
                                       "data": {"imageURL": url, "speech": answer}}
                 }
             else:
-                icon = webAnswer.get("Icon").get("URL")
+                icon = (webAnswer.get("Icon")).get("URL")
                 text = webAnswer.get("Text")
                 url = webAnswer.get("FirstURL")
                 return {
