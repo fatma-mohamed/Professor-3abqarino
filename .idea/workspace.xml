@@ -67,8 +67,8 @@
       <file leaf-file-name="FeatureOneSelector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="67" column="51" lean-forward="true" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
+            <state relative-caret-position="449">
+              <caret line="66" column="58" lean-forward="false" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -507,13 +507,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491849634099</updated>
     </task>
-    <task id="LOCAL-00063" summary="selectGifsRandom">
-      <created>1493273933401</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1493273933403</updated>
-    </task>
     <task id="LOCAL-00064" summary="selectGifsRandom">
       <created>1493274179283</created>
       <option name="number" value="00064" />
@@ -850,7 +843,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497922427470</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="webSearch : add followupEvent to card response">
+      <created>1497922844787</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1497922844787</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -932,7 +932,8 @@
     <MESSAGE value="webSearch function in ResponseSelector&#10;'input.unknown' action in app.py" />
     <MESSAGE value="webSearch : add card response" />
     <MESSAGE value="webSearch : add button to card response" />
-    <option name="LAST_COMMIT_MESSAGE" value="webSearch : add button to card response" />
+    <MESSAGE value="webSearch : add followupEvent to card response" />
+    <option name="LAST_COMMIT_MESSAGE" value="webSearch : add followupEvent to card response" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1226,8 +1227,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="67" column="51" lean-forward="true" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
+        <state relative-caret-position="449">
+          <caret line="66" column="58" lean-forward="false" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>

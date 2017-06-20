@@ -64,8 +64,7 @@ class FeatureOneSelector():
                         }
                     },
                     "contextOut": [],
-                    "source": "webhook-FeatureOneSelector",
-                    "followupEvent": {"name": "ask_question_event"}
+                    "source": "webhook-FeatureOneSelector"
                 }
         else:
             return {
