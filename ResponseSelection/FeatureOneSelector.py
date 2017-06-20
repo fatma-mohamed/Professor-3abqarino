@@ -33,6 +33,7 @@ class FeatureOneSelector():
                                 "type": "template",
                                 "payload": {
                                     "template_type": "generic",
+                                    "image_aspect_ratio":"square",
                                     "elements": [
                                         {
                                             "title": answer,
@@ -51,9 +52,7 @@ class FeatureOneSelector():
         else:
             return {
                 "speech": answer,
-                "source": "webhook-FeatureOneSelector",
-                "displayText": answer
-
+                "source": "webhook-FeatureOneSelector"
             }
 
     def getAnswer(self):
