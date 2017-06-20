@@ -25,21 +25,14 @@ class FeatureOneSelector():
                 url = url[0][0]
                 print("URL: ", url)
                 return {
-                    "speech": "",
+                    "speech": answer,
                     "displayText": "",
                     "data": {
                         "facebook": {
                             "attachment": {
-                                "type": "template",
+                                "type": "image",
                                 "payload": {
-                                    "template_type": "generic",
-                                    "image_aspect_ratio":"square",
-                                    "elements": [
-                                        {
-                                            "title": answer,
-                                            "image_url": url
-                                        }
-                                    ]
+                                    "url": url
                                 }
                             }
                         }
