@@ -75,77 +75,82 @@ class ResponseSelector:
             "speech": "",
             "displayText": "",
             "data": {
-                "facebook": {
-                    "attachment": {
-                        "type": "template",
-                        "payload": {
-                            "template_type": "list",
-                            "top_element_style":"compact",
-                            "elements": [
-                                {
-                                    "title":first.get("title"),
-                                    "subtitle":first.get("snippet"),
-                                    "default_action":{
-                                        "type":"web_url",
-                                        "url": first.get("link")
-                                    },
-                                    "buttons": [
-                                        {
-                                            "title": "View",
+                "facebook": [
+                    {
+                        "text":"Here are the top results from the web"
+                    },
+                    {
+                        "attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "list",
+                                "top_element_style": "compact",
+                                "elements": [
+                                    {
+                                        "title": first.get("title"),
+                                        "subtitle": first.get("snippet"),
+                                        "default_action": {
                                             "type": "web_url",
                                             "url": first.get("link")
-                                        }
-                                    ]
-                                },
-                                {
-                                    "title": second.get("title"),
-                                    "subtitle": second.get("snippet"),
-                                    "default_action": {
-                                        "type": "web_url",
-                                        "url": second.get("link")
+                                        },
+                                        "buttons": [
+                                            {
+                                                "title": "View",
+                                                "type": "web_url",
+                                                "url": first.get("link")
+                                            }
+                                        ]
                                     },
-                                    "buttons":[
-                                        {
-                                            "title":"View",
-                                            "type":"web_url",
+                                    {
+                                        "title": second.get("title"),
+                                        "subtitle": second.get("snippet"),
+                                        "default_action": {
+                                            "type": "web_url",
                                             "url": second.get("link")
-                                        }
-                                    ]
-                                },
-                                {
-                                    "title": third.get("title"),
-                                    "subtitle": third.get("snippet"),
-                                    "default_action": {
-                                        "type": "web_url",
-                                        "url": third.get("link")
+                                        },
+                                        "buttons": [
+                                            {
+                                                "title": "View",
+                                                "type": "web_url",
+                                                "url": second.get("link")
+                                            }
+                                        ]
                                     },
-                                    "buttons": [
-                                        {
-                                            "title": "View",
+                                    {
+                                        "title": third.get("title"),
+                                        "subtitle": third.get("snippet"),
+                                        "default_action": {
                                             "type": "web_url",
                                             "url": third.get("link")
-                                        }
-                                    ]
-                                },
-                                {
-                                    "title": fourth.get("title"),
-                                    "subtitle": fourth.get("snippet"),
-                                    "default_action": {
-                                        "type": "web_url",
-                                        "url": fourth.get("link")
+                                        },
+                                        "buttons": [
+                                            {
+                                                "title": "View",
+                                                "type": "web_url",
+                                                "url": third.get("link")
+                                            }
+                                        ]
                                     },
-                                    "buttons": [
-                                        {
-                                            "title": "View",
+                                    {
+                                        "title": fourth.get("title"),
+                                        "subtitle": fourth.get("snippet"),
+                                        "default_action": {
                                             "type": "web_url",
                                             "url": fourth.get("link")
-                                        }
-                                    ]
-                                }
-                            ]
+                                        },
+                                        "buttons": [
+                                            {
+                                                "title": "View",
+                                                "type": "web_url",
+                                                "url": fourth.get("link")
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         }
                     }
-                }
+                ]
             },
             "contextOut": [],
             "source": "webhook-FeatureOneSelector"

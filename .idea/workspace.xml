@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" afterPath="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" afterPath="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResponseSelector.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ResponseSelector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="68" selection-end-column="13" />
+            <state relative-caret-position="75">
+              <caret line="79" column="69" lean-forward="false" selection-start-line="79" selection-start-column="69" selection-end-line="79" selection-end-column="69" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FeatureOneSelector.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FeatureOneSelector.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+            <state relative-caret-position="136">
+              <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -77,6 +77,16 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>first</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>second</replace>
+      <replace>third</replace>
+      <replace>fourth</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,7 +108,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/config.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
         <option value="$PROJECT_DIR$/Data/Database.py" />
         <option value="$PROJECT_DIR$/Preprocessing/gifs.txt" />
@@ -109,8 +118,9 @@
         <option value="$PROJECT_DIR$/Data/DataAccess.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_10.py" />
-        <option value="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" />
         <option value="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/config.py" />
+        <option value="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" />
       </list>
     </option>
   </component>
@@ -508,55 +518,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491849634099</updated>
     </task>
-    <task id="LOCAL-00069" summary="selectGifsRandom">
-      <created>1493347008847</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1493347008847</updated>
-    </task>
-    <task id="LOCAL-00070" summary="selectGifsRandom">
-      <created>1493347511660</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1493347511660</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Updated deleteData function , Preprocessing update">
-      <created>1493350195619</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1493350195619</updated>
-    </task>
-    <task id="LOCAL-00072" summary="selectGifsRandom">
-      <created>1493350671791</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1493350671791</updated>
-    </task>
-    <task id="LOCAL-00073" summary="selectGifsRandom">
-      <created>1493350790806</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1493350790806</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Preprocessing: modified gifs urls">
-      <created>1493351587454</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1493351587454</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Random GIFs as response&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;Data/DataAccess.py&#10;#&#9;Data/Database.py&#10;#&#9;Preprocessing/config.py&#10;#&#9;ResponseSelection/FeatureTwoSelector.py&#10;#&#9;app.py">
-      <created>1493355078366</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1493355078366</updated>
-    </task>
     <task id="LOCAL-00076" summary="Random GIFs as response&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;Data/DataAccess.py&#10;#&#9;Data/Database.py&#10;#&#9;Preprocessing/config.py&#10;#&#9;ResponseSelection/FeatureTwoSelector.py">
       <created>1493355706501</created>
       <option name="number" value="00076" />
@@ -851,13 +812,62 @@
       <option name="project" value="LOCAL" />
       <updated>1497927096740</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="webSearch : add fallback response">
+      <created>1497927178295</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1497927178296</updated>
+    </task>
+    <task id="LOCAL-00119" summary="getResult : gif response">
+      <created>1497929134300</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1497929134300</updated>
+    </task>
+    <task id="LOCAL-00120" summary="getResult : gif+text response">
+      <created>1497929999886</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1497929999886</updated>
+    </task>
+    <task id="LOCAL-00121" summary="webSearch: cse">
+      <created>1497967443284</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1497967443284</updated>
+    </task>
+    <task id="LOCAL-00122" summary="webSearch: list response">
+      <created>1497968171769</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1497968171769</updated>
+    </task>
+    <task id="LOCAL-00123" summary="webSearch: list response">
+      <created>1497968521006</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1497968521006</updated>
+    </task>
+    <task id="LOCAL-00124" summary="webSearch: list response">
+      <created>1497968611279</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1497968611279</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="683" y="0" width="683" height="728" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24146341" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24077046" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -910,10 +920,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="GIFs added to response" />
-    <MESSAGE value="createTable_Gifs, deleteTable_Gifs, Gifs preprocessing" />
-    <MESSAGE value="Updated deleteData function , Preprocessing update" />
-    <MESSAGE value="selectGifsRandom" />
     <MESSAGE value="Preprocessing: modified gifs urls" />
     <MESSAGE value="Random GIFs as response&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;Data/DataAccess.py&#10;#&#9;Data/Database.py&#10;#&#9;Preprocessing/config.py&#10;#&#9;ResponseSelection/FeatureTwoSelector.py&#10;#&#9;app.py" />
     <MESSAGE value="Random GIFs as response&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;Data/DataAccess.py&#10;#&#9;Data/Database.py&#10;#&#9;Preprocessing/config.py&#10;#&#9;ResponseSelection/FeatureTwoSelector.py" />
@@ -935,7 +941,11 @@
     <MESSAGE value="webSearch return json" />
     <MESSAGE value="&quot;image_aspect_ratio&quot;:&quot;square&quot;" />
     <MESSAGE value="webSearch : add fallback response" />
-    <option name="LAST_COMMIT_MESSAGE" value="webSearch : add fallback response" />
+    <MESSAGE value="getResult : gif response" />
+    <MESSAGE value="getResult : gif+text response" />
+    <MESSAGE value="webSearch: cse" />
+    <MESSAGE value="webSearch: list response" />
+    <option name="LAST_COMMIT_MESSAGE" value="webSearch: list response" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1137,13 +1147,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/gifs.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="66" lean-forward="false" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/Database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1155,23 +1158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="29" column="4" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="83" lean-forward="true" selection-start-line="66" selection-start-column="83" selection-end-line="66" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#34#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1217,22 +1203,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
+    <entry file="file://$PROJECT_DIR$/Preprocessing/gifs.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="68" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="27" column="61" lean-forward="false" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="33" column="27" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        <state relative-caret-position="136">
+          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="79" column="69" lean-forward="false" selection-start-line="79" selection-start-column="69" selection-end-line="79" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
