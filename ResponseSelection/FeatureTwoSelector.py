@@ -32,7 +32,11 @@ class FeatureTwoSelector:
         if correctAnswer == chosenAnswer:
             return self.getRandomQuestion("Correct Answer :)")
         elif correctAnswer != chosenAnswer:
-            return self.getRandomQuestion("Wrong Answer :(")
+            return
+
+
+
+
 
 
 
