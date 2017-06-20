@@ -16,26 +16,23 @@ class DataPreprocessing:
         ##rest of the preprocessing
 
     def insertQuestions_Answers(self):
-        f = open("Question_Answers.txt", 'r')
+        f = open("Preprocessing/Question_Answers.txt", 'r')
         i=0
         while True:
             Question = f.readline().rstrip()
             if Question == "":
-                print "------Finished reading------"
+                print( "------Finished reading------")
                 break
             A1 = f.readline().rstrip()
             A2 = f.readline().rstrip()
             A3 = f.readline().rstrip()
             CA_ID = f.readline().rstrip()
-
+            cols = ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"]
+            values=[ "'" + Question + "'" , "'" + A1 + "'" , "'" + A2 + "'" ,  "'" + A3 + "'" , "'" + str(CA_ID)+"'"]
+            conflict_fields=["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"]
             i += 1
-            print "-----Row " + (str)(i) + " -----"
-            Database.Database().insert("Questions_Answers",
-                                       "Question, Answer_1, Answer_2, Answer_3, Correct_AnswerID",
-                                       "'" + Question + "'" + ", " + "'" + A1 + "'" + ", " + "'" + A2 + "'" + ", "
-                                       + "'" + A3 + "'" + ", " + str(CA_ID),
-                                       "Question, Answer_1, Answer_2, Answer_3, Correct_AnswerID",
-                                       '')
+            print ("-----Row " + (str)(i) + " -----")
+            Database.Database().insert("Questions_Answers",cols,values,conflict_fields,'')
 
         return {
             "speech": "Inserted Questions_Answers rows",
@@ -44,3 +41,20 @@ class DataPreprocessing:
             "contextOut": [],
             "source": "insert-Questions_Answers-rows"
         }
+
+    @staticmethod
+    def insertGifs():
+        db = Database()
+        file = open("Preprocessing/gifs.txt", "r")
+
+        while True:
+            line = file.readline()
+            if (line == ''):
+                print("EOF!")
+                break
+            arr = line.split(" ")
+            name = "'" + arr[0].strip("\n") + "'"
+            url = "'" + arr[1].strip("\n") + "'"
+            tag = "'" + arr[2].strip("\n") + "'"
+            db.insert("Tag",["tag"],[tag],["tag"],"")
+            db.insert("Gifs", ["name", "url" , "gif_tag"], [name,url,tag],"","")
