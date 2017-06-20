@@ -14,7 +14,7 @@ class ResponseSelector:
         sender = data.get("sender")
         id = sender.get("id")
         access_token = config.access_token
-        rs = urllib.urlopen("https://graph.facebook.com/v2.6/" + id + "?fields=first_name&access_token=" + access_token)
+        rs = urllib.urlopen(config.graph_api_url + id + "?fields=first_name&access_token=" + access_token)
         name = json.load(rs).get("first_name")
         print(name)
         event_name = ""
@@ -51,7 +51,7 @@ class ResponseSelector:
 
     def getName(self, pageScopedID):
         access_token = config.access_token
-        url = "https://graph.facebook.com/v2.9/" + str(pageScopedID) + "?access_token=" + access_token + "&fields=first_name,last_name"
+        url = config.graph_api_url + str(pageScopedID) + "?access_token=" + access_token + "&fields=first_name,last_name"
         r = requests.get(url)
         print(r.status_code, r.reason)
         result = json.loads(r.text)
@@ -70,6 +70,13 @@ class ResponseSelector:
             updated_time = datetime.datetime.strptime(updated_time, "%Y-%m-%d %H:%M:%S")  # Convert to datetime object
             current_time = datetime.datetime.now() - datetime.timedelta(hours=2)  # Convert to GMT (now - 2H)
             resultedTime = current_time - updated_time  # Didn't talk since...
+            print "----------Updated time"
+            print updated_time
+            print "--------- current time"
+            print current_time
+            print "-----------resulted time"
+            print resultedTime
+            print "-------------------------"
             dayIndex = str(resultedTime).find("day")  # Get day index in result, -1 if not exist
             if dayIndex > 0 and int(str(resultedTime)[:dayIndex-1]) >= 2:  # If day exists and number of days more than 2 ,, then notify user.
                 conversationData = conversation.get("participants").get("data")
@@ -85,7 +92,7 @@ class ResponseSelector:
 
     def getConversations(self):
         access_token = config.access_token
-        url = "https://graph.facebook.com/v2.9/me/conversations?access_token=" + access_token + "&fields=participants,updated_time"
+        url = config.graph_api_url + "me/conversations?access_token=" + access_token + "&fields=participants,updated_time"
 
         r = requests.get(url)
         print(r.status_code, r.reason)
@@ -96,7 +103,7 @@ class ResponseSelector:
         listOfUsersToNotify = self.getUsersToNotify()
 
         access_token = config.access_token
-        url = "https://graph.facebook.com/v2.6/me/messages?access_token=" + access_token
+        url = config.graph_api_url + "me/messages?access_token=" + access_token
 
         for userID in listOfUsersToNotify:
             paramRecipient = { "id": userID}
@@ -130,7 +137,7 @@ class ResponseSelector:
     def about(self):
         page_id = config.page_id
         access_token = config.access_token
-        url = "https://graph.facebook.com/v2.9/" + page_id + "?access_token=" + access_token + "&fields=about"
+        url = config.graph_api_url + page_id + "?access_token=" + access_token + "&fields=about"
         r = requests.get(url)
         print(r.status_code, r.reason)
         result = json.loads(r.text)
