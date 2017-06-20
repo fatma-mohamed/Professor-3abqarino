@@ -35,6 +35,7 @@ class FeatureOneSelector():
                 }
             else:
                 icon = (webAnswer.get("Icon")).get("URL")
+                print ("ICON: ", icon)
                 text = webAnswer.get("Text")
                 url = webAnswer.get("FirstURL")
                 return {
@@ -63,7 +64,8 @@ class FeatureOneSelector():
                         }
                     },
                     "contextOut": [],
-                    "source": "webhook-FeatureOneSelector"
+                    "source": "webhook-FeatureOneSelector",
+                    "followupEvent": {"name": "ask_question_event"}
                 }
         else:
             return {
