@@ -2,7 +2,7 @@ import json
 import requests
 import urllib
 from Preprocessing import config
-from Data import Database
+from Data import Database, DataAccess
 from ResponseSelection import FeatureOneSelector
 from NLP.TextParser import TextParser
 
@@ -43,7 +43,14 @@ class ResponseSelector:
         query = ''.join(k)
         if query == '':
             print ("NO QUERY")
-            return 0
+            return {
+                "speech": "",
+                "displayText": "",
+                "data": {},
+                "contextOut": [],
+                "source": "webhook-ResponseSelector",
+                "followupEvent": {"name": "fallback"}
+            }
         print ("Q:", query)
         url = "http://api.duckduckgo.com/?q=" + query \
               + "&format=json&pretty=1"
@@ -52,7 +59,14 @@ class ResponseSelector:
         results = jData.get("RelatedTopics")
         if len(results)==0:
             print("JSON: ", 0)
-            return 0
+            return {
+                "speech": "",
+                "displayText": "",
+                "data": {},
+                "contextOut": [],
+                "source": "webhook-ResponseSelector",
+                "followupEvent": {"name": "fallback"}
+            }
         first = results[0]
         print("JSON: ", first)
         icon = (first.get("Icon")).get("URL")
