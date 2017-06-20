@@ -50,13 +50,43 @@ class ResponseSelector:
         response = requests.get(url)
         jData = response.json()
         results = jData.get("RelatedTopics")
-        print("RES: ",results)
         if len(results)==0:
             print("JSON: ", 0)
             return 0
         first = results[0]
         print("JSON: ", first)
-        return first
+        icon = (first.get("Icon")).get("URL")
+        print("ICON: ", icon)
+        text = first.get("Text")
+        url = first.get("FirstURL")
+        return {
+            "speech": "",
+            "displayText": "",
+            "data": {
+                "facebook": {
+                    "attachment": {
+                        "type": "template",
+                        "payload": {
+                            "template_type": "generic",
+                            "elements": [
+                                {
+                                    "title": text,
+                                    "image_url": icon,
+                                    "buttons": [{
+                                        "type": "web_url",
+                                        "url": url,
+                                        "title": "View"
+                                    }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "contextOut": [],
+            "source": "webhook-FeatureOneSelector"
+        }
 
 
 

@@ -47,38 +47,7 @@ class FeatureOneSelector():
                     "source": "webhook-FeatureOneSelector"
                 }
             else:
-                icon = (webAnswer.get("Icon")).get("URL")
-                print ("ICON: ", icon)
-                text = webAnswer.get("Text")
-                url = webAnswer.get("FirstURL")
-                return {
-                    "speech": "",
-                    "displayText": "",
-                    "data": {
-                        "facebook": {
-                            "attachment": {
-                                "type": "template",
-                                "payload": {
-                                    "template_type": "generic",
-                                    "elements": [
-                                        {
-                                            "title": text,
-                                            "image_url": icon,
-                                            "buttons": [{
-                                                "type": "web_url",
-                                                "url": url,
-                                                "title": "View"
-                                            }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    },
-                    "contextOut": [],
-                    "source": "webhook-FeatureOneSelector"
-                }
+                return webAnswer
         else:
             return {
                 "speech": answer,
