@@ -68,10 +68,9 @@ class ResponseSelector:
                 "followupEvent": {"name": "fallback"}
             }
         first = results[0]
-        print("JSON: ", first)
-        text = first.get("title")
-        displayLink = first.get("displayLink")
-        url = first.get("link")
+        second = results[1]
+        third = results[2]
+        fourth = results[3]
         return {
             "speech": "",
             "displayText": "",
@@ -80,19 +79,40 @@ class ResponseSelector:
                     "attachment": {
                         "type": "template",
                         "payload": {
-                            "template_type": "generic",
-                            "image_aspect_ratio":"square",
+                            "template_type": "list",
+                            "top_element_style":"compact",
                             "elements": [
                                 {
-                                    "title": text,
-                                    "subtitle":displayLink,
-
-                                    "buttons": [{
-                                        "type": "web_url",
-                                        "url": url,
-                                        "title": "View"
+                                    "title":first.get("title"),
+                                    "subtitle":first.get("displayLink"),
+                                    "default_action":{
+                                        "type":"web_url",
+                                        "url": first.get("link")
                                     }
-                                    ]
+                                },
+                                {
+                                    "title": second.get("title"),
+                                    "subtitle": second.get("displayLink"),
+                                    "default_action": {
+                                        "type": "web_url",
+                                        "url": second.get("link")
+                                    }
+                                },
+                                {
+                                    "title": third.get("title"),
+                                    "subtitle": third.get("displayLink"),
+                                    "default_action": {
+                                        "type": "web_url",
+                                        "url": third.get("link")
+                                    }
+                                },
+                                {
+                                    "title": fourth.get("title"),
+                                    "subtitle": fourth.get("displayLink"),
+                                    "default_action": {
+                                        "type": "web_url",
+                                        "url": fourth.get("link")
+                                    }
                                 }
                             ]
                         }
