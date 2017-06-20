@@ -19,7 +19,7 @@ class FeatureOneSelector():
             res = ResponseSelection.ResponseSelector.ResponseSelector()
             webAnswer = res.webSearch(self.question)
             print("WEB: ", webAnswer)
-            if(webAnswer == 0):
+            if not webAnswer.get("data"):
                 db = DataAccess.DataAccess()
                 url = db.selectGifsRandom("Gifs", ["url"], ["gif_tag"], ["'question-mark'"], "")
                 url = url[0][0]
