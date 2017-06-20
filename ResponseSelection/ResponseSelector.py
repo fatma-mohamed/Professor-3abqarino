@@ -52,11 +52,11 @@ class ResponseSelector:
                 "followupEvent": {"name": "fallback"}
             }
         print ("Q:", query)
-        url = "http://api.duckduckgo.com/?q=" + query \
-              + "&format=json&pretty=1"
+        url = "https://www.googleapis.com/customsearch/v1?key=" \
+              + config.api_key + "&cx=" + config.engine_id + "&q=" + query
         response = requests.get(url)
         jData = response.json()
-        results = jData.get("RelatedTopics")
+        results = jData.get("items")
         if len(results)==0:
             print("JSON: ", 0)
             return {
@@ -69,10 +69,9 @@ class ResponseSelector:
             }
         first = results[0]
         print("JSON: ", first)
-        icon = (first.get("Icon")).get("URL")
-        print("ICON: ", icon)
-        text = first.get("Text")
-        url = first.get("FirstURL")
+        text = first.get("title")
+        displayLink = first.get("displayLink")
+        url = first.get("link")
         return {
             "speech": "",
             "displayText": "",
@@ -86,7 +85,8 @@ class ResponseSelector:
                             "elements": [
                                 {
                                     "title": text,
-                                    "image_url": icon,
+                                    "subtitle":displayLink,
+
                                     "buttons": [{
                                         "type": "web_url",
                                         "url": url,
