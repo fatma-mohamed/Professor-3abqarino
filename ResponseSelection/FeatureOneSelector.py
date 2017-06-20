@@ -27,11 +27,24 @@ class FeatureOneSelector():
                 return {
                     "speech": "",
                     "displayText": "",
-                    "data": {},
+                    "data": {
+                        "facebook": {
+                            "attachment": {
+                                "type": "template",
+                                "payload": {
+                                    "template_type": "generic",
+                                    "elements": [
+                                        {
+                                            "title": answer,
+                                            "image_url": url
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
                     "contextOut": [],
-                    "source": "webhook-FeatureOneSelector",
-                    "followupEvent": {"name": "ask_question_event",
-                                      "data": {"imageURL": url, "speech": answer}}
+                    "source": "webhook-FeatureOneSelector"
                 }
             else:
                 icon = (webAnswer.get("Icon")).get("URL")
