@@ -28,14 +28,19 @@ class FeatureOneSelector():
                     "speech": answer,
                     "displayText": "",
                     "data": {
-                        "facebook": {
-                            "attachment": {
-                                "type": "image",
-                                "payload": {
-                                    "url": url
+                        "facebook": [
+                            {
+                                "text" : answer
+                            },
+                            {
+                                "attachment": {
+                                    "type": "image",
+                                    "payload": {
+                                        "url": url
+                                    }
                                 }
                             }
-                        }
+                        ]
                     },
                     "contextOut": [],
                     "source": "webhook-FeatureOneSelector"
