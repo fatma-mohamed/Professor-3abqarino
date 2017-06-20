@@ -48,8 +48,14 @@ class FeatureOneSelector():
                                     "template_type": "generic",
                                     "elements": [
                                         {
-                                            "title": url,
-                                            "image_url": icon
+                                            "title": text,
+                                            "image_url": icon,
+                                            "buttons": [{
+                                                "type": "web_url",
+                                                "url": url,
+                                                "title": "View"
+                                            }
+                                            ]
                                         }
                                     ]
                                 }
