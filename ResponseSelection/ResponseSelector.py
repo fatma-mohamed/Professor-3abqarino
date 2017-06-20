@@ -84,7 +84,7 @@ class ResponseSelector:
                             "elements": [
                                 {
                                     "title":first.get("title"),
-                                    "subtitle":first.get("htmlSnippet"),
+                                    "subtitle":first.get("snippet"),
                                     "default_action":{
                                         "type":"web_url",
                                         "url": first.get("link")
@@ -99,7 +99,7 @@ class ResponseSelector:
                                 },
                                 {
                                     "title": second.get("title"),
-                                    "subtitle": second.get("htmlSnippet"),
+                                    "subtitle": second.get("snippet"),
                                     "default_action": {
                                         "type": "web_url",
                                         "url": second.get("link")
@@ -114,7 +114,7 @@ class ResponseSelector:
                                 },
                                 {
                                     "title": third.get("title"),
-                                    "subtitle": third.get("htmlSnippet"),
+                                    "subtitle": third.get("snippet"),
                                     "default_action": {
                                         "type": "web_url",
                                         "url": third.get("link")
@@ -129,7 +129,7 @@ class ResponseSelector:
                                 },
                                 {
                                     "title": fourth.get("title"),
-                                    "subtitle": fourth.get("htmlSnippet"),
+                                    "subtitle": fourth.get("snippet"),
                                     "default_action": {
                                         "type": "web_url",
                                         "url": fourth.get("link")
