@@ -84,35 +84,63 @@ class ResponseSelector:
                             "elements": [
                                 {
                                     "title":first.get("title"),
-                                    "subtitle":first.get("displayLink"),
+                                    "subtitle":first.get("htmlSnippet"),
                                     "default_action":{
                                         "type":"web_url",
                                         "url": first.get("link")
-                                    }
+                                    },
+                                    "buttons": [
+                                        {
+                                            "title": "View",
+                                            "type": "web_url",
+                                            "url": first.get("link")
+                                        }
+                                    ]
                                 },
                                 {
                                     "title": second.get("title"),
-                                    "subtitle": second.get("displayLink"),
+                                    "subtitle": second.get("htmlSnippet"),
                                     "default_action": {
                                         "type": "web_url",
                                         "url": second.get("link")
-                                    }
+                                    },
+                                    "buttons":[
+                                        {
+                                            "title":"View",
+                                            "type":"web_url",
+                                            "url": second.get("link")
+                                        }
+                                    ]
                                 },
                                 {
                                     "title": third.get("title"),
-                                    "subtitle": third.get("displayLink"),
+                                    "subtitle": third.get("htmlSnippet"),
                                     "default_action": {
                                         "type": "web_url",
                                         "url": third.get("link")
-                                    }
+                                    },
+                                    "buttons": [
+                                        {
+                                            "title": "View",
+                                            "type": "web_url",
+                                            "url": third.get("link")
+                                        }
+                                    ]
                                 },
                                 {
                                     "title": fourth.get("title"),
-                                    "subtitle": fourth.get("displayLink"),
+                                    "subtitle": fourth.get("htmlSnippet"),
                                     "default_action": {
                                         "type": "web_url",
                                         "url": fourth.get("link")
-                                    }
+                                    },
+                                    "buttons": [
+                                        {
+                                            "title": "View",
+                                            "type": "web_url",
+                                            "url": fourth.get("link")
+                                        }
+                                    ]
                                 }
                             ]
                         }
