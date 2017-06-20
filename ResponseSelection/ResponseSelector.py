@@ -68,7 +68,7 @@ class ResponseSelector:
             millisecondsIndex = updated_time.find("+")  # Get milliseconds index
             updated_time = updated_time[:millisecondsIndex - len(updated_time)]  # Remove milliseconds
             updated_time = datetime.datetime.strptime(updated_time, "%Y-%m-%d %H:%M:%S")  # Convert to datetime object
-            current_time = datetime.datetime.now() - datetime.timedelta(hours=2)  # Convert to GMT (now - 2H)
+            current_time = datetime.datetime.now() + datetime.timedelta(hours=2)  # Convert to GMT (now - 2H)
             resultedTime = current_time - updated_time  # Didn't talk since...
             print "----------Updated time"
             print updated_time
