@@ -54,7 +54,7 @@ def makeWebhookResult(req):
         responseSelector = ResponseSelector.ResponseSelector()
         return  responseSelector.webSearch(question)
     elif action == "Ask-a-question":
-        question = ((req.get("result")).get("parameters")).get("query")
+        question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         return responseSelector.getResult()
     elif action == "gif":
