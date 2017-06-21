@@ -49,10 +49,10 @@ def makeWebhookResult(req):
     if "request_user_name" in action:
         responseSelector = ResponseSelector.ResponseSelector()
         return responseSelector.requestUserName(req, action)
-    elif action == "input.unknown":
-        question = (req.get("result")).get("resolvedQuery")
-        responseSelector = ResponseSelector.ResponseSelector()
-        return  responseSelector.webSearch(question)
+    # elif action == "input.unknown":
+    #     question = (req.get("result")).get("resolvedQuery")
+    #     responseSelector = ResponseSelector.ResponseSelector()
+    #     return  responseSelector.webSearch(question)
     elif action == "Ask-a-question":
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
