@@ -1,0 +1,62 @@
+
+html,body{
+	height :100%;
+}
+*{
+	margin: 0;
+	padding: 0px;
+}
+body{
+}
+#cover{
+	width: 98.9%;
+	margin: 0 auto;
+	display: block;
+	height: 48%;
+
+}
+#logo
+{
+	margin: -150px auto 0;
+	display: block;
+	width: 290px;
+	height: 290px;
+
+}
+#fbm{
+	width: 130px;
+	height: 130px;
+	display: block;
+	margin :0 25%;	
+	float: left;
+
+
+
+}
+#fb{
+	width: 130px;
+	height: 130px;
+	display: block;
+	margin :0 70%;	
+
+
+
+}
+h1{
+	margin-top: -20px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+/*
+#mass{
+	background-color: #006eff;
+	height: 100px;
+	display: inline-block;
+
+
+}
+#mass p {
+	color: white;
+	display: inline;
+}
+*/
