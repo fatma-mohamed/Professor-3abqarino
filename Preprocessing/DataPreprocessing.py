@@ -1,9 +1,7 @@
 from Data import *
-from Preprocessing import config
-from ResponseSelection import ResponseSelector
 
 class DataPreprocessing:
-    @staticmethod
+
     def __run__(self, db):
         db.__createTables__()
 
@@ -14,13 +12,6 @@ class DataPreprocessing:
             "contextOut": [],
             "source": "create-database"
         }
-
-        ##rest of the preprocessing
-
-    @staticmethod
-    def removeSinqleQuotes(s):
-        res = s.replace("'", '"')
-        return res
 
     def insertQuestions_Answers(self):
         f = open("Preprocessing/Question_Answers.txt", 'r')
@@ -105,3 +96,8 @@ class DataPreprocessing:
             "contextOut": [],
             "source": "insert-Notifications-rows"
         }
+
+    @staticmethod
+    def removeSinqleQuotes(s):
+        res = s.replace("'", '"')
+        return res
