@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/professor-3abqarino.iml" afterPath="$PROJECT_DIR$/.idea/professor-3abqarino.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DataAccess.py" afterPath="$PROJECT_DIR$/Data/DataAccess.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Database.py" afterPath="$PROJECT_DIR$/Data/Database.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" afterPath="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/config.py" afterPath="$PROJECT_DIR$/Preprocessing/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" afterPath="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +25,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -44,6 +40,9 @@
       <find>https://graph.facebook.com/v2.</find>
       <find>config.graph_api_url</find>
       <find>https://graph.facebook.com/v</find>
+      <find>2.7</find>
+      <find>inter</find>
+      <find>interp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,6 +78,7 @@
         <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
         <option value="$PROJECT_DIR$/Data/Database.py" />
         <option value="$PROJECT_DIR$/Preprocessing/config.py" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -96,7 +96,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Changed Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -111,9 +111,22 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GP-Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 2.7.11 (E:\Programs\Python\Python 2.7\python.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="GP-Code" />
@@ -182,12 +195,30 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Changed Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="GP-Code">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT=".idea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python" />
-    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -779,8 +810,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -982,7 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="72" column="37" lean-forward="false" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -990,7 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -998,7 +1025,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,38 +1032,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4080">
           <caret line="249" column="4" lean-forward="false" selection-start-line="249" selection-start-column="4" selection-end-line="249" selection-end-column="4" />
-          <folding>
-            <marker date="1498099922495" expanded="true" signature="2300:2407" ph="CREATE TABLE... Answers" />
-            <marker date="1498099922495" expanded="true" signature="2646:2666" ph="DROP TABLE &quot;... " />
-            <marker date="1498099922495" expanded="true" signature="2908:3056" ph="CREATE TABLE... Keywords" />
-            <marker date="1498099922495" expanded="true" signature="3298:3319" ph="DROP TABLE &quot;... " />
-            <marker date="1498099922495" expanded="true" signature="3578:3872" ph="CREATE TABLE... Answers_Keywords" />
-            <marker date="1498099922495" expanded="true" signature="4138:4167" ph="DROP TABLE &quot;... " />
-            <marker date="1498099922495" expanded="true" signature="4418:4624" ph="CREATE TABLE... Synonyms" />
-            <marker date="1498099922495" expanded="true" signature="4865:4886" ph="DROP TABLE &quot;... " />
-            <marker date="1498099922495" expanded="true" signature="5147:5532" ph="CREATE TABLE... Questions_Answers" />
-            <marker date="1498099922495" expanded="true" signature="5801:5831" ph="DROP TABLE &quot;... " />
-            <marker date="1498099922495" expanded="true" signature="6071:6194" ph="CREATE TABLE... Tag" />
-            <marker date="1498099922495" expanded="true" signature="6420:6436" ph="DROP TABLE &quot;... " />
-            <marker date="1498099922495" expanded="true" signature="6664:6938" ph="CREATE TABLE... Gifs" />
-            <marker date="1498099922495" expanded="true" signature="7167:7184" ph="DROP TABLE &quot;... " />
-            <marker date="1498099922495" expanded="true" signature="7413:7692" ph="CREATE TABLE... User" />
-            <marker date="1498099922495" expanded="true" signature="7921:7938" ph="DROP TABLE &quot;... " />
-            <marker date="1498099922495" expanded="true" signature="8183:8430" ph="CREATE TABLE... Notification" />
-            <marker date="1498099922495" expanded="true" signature="8683:8708" ph="DROP TABLE &quot;... " />
-            <marker date="1498099922495" expanded="true" signature="8877:8907" ph="DELETE FROM " />
-            <marker date="1498099922495" expanded="true" signature="8936:8957" ph="DELETE FROM " />
-            <marker date="1498099922495" expanded="true" signature="8986:9008" ph="DELETE FROM " />
-            <marker date="1498099922495" expanded="true" signature="9037:9059" ph="DELETE FROM " />
-            <marker date="1498099922495" expanded="true" signature="9088:9119" ph="DELETE FROM " />
-            <marker date="1498099922495" expanded="true" signature="9148:9166" ph="DELETE FROM " />
-            <marker date="1498099922495" expanded="true" signature="9195:9213" ph="DELETE FROM " />
-            <marker date="1498099922495" expanded="true" signature="9242:9268" ph="DELETE FROM " />
-            <marker date="1498099922495" expanded="true" signature="9297:9314" ph="DELETE FROM " />
-            <marker date="1498099922495" expanded="true" signature="10642:10705" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1498099922495" expanded="true" signature="10803:10963" ph="INSERT INTO &quot;missing_value&quot;... " />
-            <marker date="1498099922495" expanded="true" signature="11016:11169" ph="INSERT INTO &quot;missing_value&quot;... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1045,7 +1039,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1053,7 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1061,7 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1069,9 +1060,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="71" column="78" lean-forward="false" selection-start-line="71" selection-start-column="78" selection-end-line="71" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/professor-3abqarino.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1700">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
