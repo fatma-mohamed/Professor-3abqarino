@@ -35,7 +35,7 @@ class DataAccess:
         cur.close()
         return rows
 
-    def select(self, table_name, cols, parameters, values, operators):
+    def select(self, table_name, cols, parameters, values , operators):
         db = Database.Database()
         cur = db.connection.cursor()
         if (isinstance(cols, list)):

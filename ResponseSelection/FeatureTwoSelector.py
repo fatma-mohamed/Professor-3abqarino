@@ -59,17 +59,11 @@ class FeatureTwoSelector:
                 return self.getRandomQuestion(answerFeedback="Correct Answer :)")
             else:
                 d = DataAccess.DataAccess()
-                rows = d.selectRandom("Gifs", ["url"], ["gif_tag"], ["'correct'"], "")
-                url = rows[0][0]
+                url = d.selectRandom("Gifs", ["url"], ["gif_tag"], ["'correct'"], "")
+                url = url[0][0]
                 return self.getRandomQuestion(answerFeedback="Correct Answer :)", imageURL=url)
         elif correctAnswer != chosenAnswer:
-            if randomNum < 10:
-                return self.getRandomQuestion(answerFeedback="Wrong Answer :(")
-            else:
-                d = DataAccess.DataAccess()
-                rows = d.selectRandom("Gifs", ["url"], ["gif_tag"], ["'incorrect'"], "")
-                url = rows[0][0]
-                return self.getRandomQuestion(answerFeedback="Wrong Answer :(", imageURL=url)
+            return
 
 
 
