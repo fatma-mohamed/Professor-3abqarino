@@ -68,15 +68,8 @@ class ResponseSelector:
             millisecondsIndex = updated_time.find("+")  # Get milliseconds index
             updated_time = updated_time[:millisecondsIndex - len(updated_time)]  # Remove milliseconds
             updated_time = datetime.datetime.strptime(updated_time, "%Y-%m-%d %H:%M:%S")  # Convert to datetime object
-            current_time = datetime.datetime.now() + datetime.timedelta(hours=2)  # Convert to GMT (now - 2H)
+            current_time = datetime.datetime.now() + datetime.timedelta(hours=2)  # Convert to GMT (now + (-2)H)
             resultedTime = current_time - updated_time  # Didn't talk since...
-            print "----------Updated time"
-            print updated_time
-            print "--------- current time"
-            print current_time
-            print "-----------resulted time"
-            print resultedTime
-            print "-------------------------"
             dayIndex = str(resultedTime).find("day")  # Get day index in result, -1 if not exist
             if dayIndex > 0 and int(str(resultedTime)[:dayIndex-1]) >= 2:  # If day exists and number of days more than 2 ,, then notify user.
                 conversationData = conversation.get("participants").get("data")
