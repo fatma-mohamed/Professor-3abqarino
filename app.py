@@ -3,17 +3,21 @@ import urllib
 import json
 import os
 
-from flask import Flask
+from flask import Flask ,render_template
 from flask import request
 from flask import make_response
 
 from ResponseSelection import ResponseSelector, FeatureTwoSelector
 from Preprocessing import *
-from Data import Database
 
 # Flask app should start in global layout
 app = Flask(__name__)
 responseSelector = ResponseSelector.ResponseSelector()
+
+@app.route('/index')
+@app.route('/',methods=['POST','GET'])
+def Home():
+    return render_template('index.html')
 
 @app.route('/notify', methods=['POST','GET'])
 def notify():
@@ -49,10 +53,6 @@ def makeWebhookResult(req):
         return MenuPreprocessing.MenuPreprocessing().addMenu()
     elif req.get("result").get("action") == "about":
         return ResponseSelector.ResponseSelector().about()
-    elif req.get("result").get("action") == "pre2":
-        # Database.Database().createTable_Notification()
-        # Database.Database().createTable_User()
-        return DataPreprocessing.DataPreprocessing().insertNotifications()
     else:
         return {}
 
