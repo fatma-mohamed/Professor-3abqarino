@@ -5,30 +5,31 @@ import urllib
 import json
 import os
 
-from flask import Flask ,render_template
+from flask import Flask, render_template
 from flask import request
 from flask import make_response
 from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
-from Preprocessing import DataPreprocessing
+from Preprocessing import DataPreprocessing, MenuPreprocessing
 from Data import DataAccess
 
 # Flask app should start in global layout
 app = Flask(__name__)
 responseSelector = None
 
+
 @app.route('/index')
-@app.route('/',methods=['POST','GET'])
+@app.route('/', methods=['POST', 'GET'])
 def Home():
     return render_template('index.html')
-    
 
-@app.route('/notify',methods=['POST','GET'])
+
+@app.route('/notify', methods=['POST', 'GET'])
 def notify():
     responseSelector = ResponseSelector.ResponseSelector()
     responseSelector.notification()
 
 
-@app.route('/webhook', methods=['POST','GET'])
+@app.route('/webhook', methods=['POST', 'GET'])
 def webhook():
     req = request.get_json(silent=True, force=True)
 
@@ -57,16 +58,18 @@ def makeWebhookResult(req):
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         return responseSelector.getResult()
+    elif req.get("result").get("action") == "request-game":
+        return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
+    elif req.get("result").get("action") == "check-answer":
+        return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
     else:
         return {}
-
-
 
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
 
-    #print "Starting app on port %d" % port
+    # print "Starting app on port %d" % port
 
     app.run(debug=True, port=port, host='0.0.0.0')
 
