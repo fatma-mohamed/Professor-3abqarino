@@ -17,8 +17,8 @@ class ResponseSelector:
         event_name = ""
         if ("welcome" in action):
             event_name = "FACEBOOK_WELCOME"
-            db  = Database.Database()
-            db.insert("User",["FBID"],[id],"","")
+            #db  = Database.Database()
+            #db.insert("User",["FBID"],[id],"","")
 
         elif ("help" in action):
             event_name = "help_name_event"
