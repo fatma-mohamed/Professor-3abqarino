@@ -37,27 +37,12 @@ class ResponseSelector:
 
 
     def webSearch(self, query):
-        Tx = TextParser()
-        t = Tx.tokenize(query.lower())
-        k = Tx.removeStopWords(t)
-        query = ''.join(k)
-        if query == '':
-            print ("NO QUERY")
-            return {
-                "speech": "",
-                "displayText": "",
-                "data": {},
-                "contextOut": [],
-                "source": "webhook-ResponseSelector",
-                "followupEvent": {"name": "fallback"}
-            }
-        print ("Q:", query)
         url = "https://www.googleapis.com/customsearch/v1?key=" \
               + config.api_key + "&cx=" + config.engine_id + "&q=" + query
         response = requests.get(url)
         jData = response.json()
         results = jData.get("items")
-        if len(results)==0:
+        if not results:
             print("JSON: ", 0)
             return {
                 "speech": "",
