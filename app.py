@@ -9,7 +9,7 @@ from flask import Flask ,render_template
 from flask import request
 from flask import make_response
 from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
-from Preprocessing import DataPreprocessing, MenuPreprocessing
+from Preprocessing import DataPreprocessing
 from Data import DataAccess
 
 # Flask app should start in global layout
@@ -49,16 +49,17 @@ def makeWebhookResult(req):
     if "request_user_name" in action:
         responseSelector = ResponseSelector.ResponseSelector()
         return responseSelector.requestUserName(req, action)
-    elif action == "Ask-a-question.Ask-a-question-custom":
+    elif action == "input.unknown":
+        query = (req.get("result")).get("resolvedQuery")
+        responseSelector = ResponseSelector.ResponseSelector()
+        return responseSelector.webSearch(query)
+    elif action == "Ask-a-question":
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
-        return  responseSelector.getResult()
-    elif req.get("result").get("action") == "request-game":
-        return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
-    elif req.get("result").get("action") == "check-answer":
-        return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
+        return responseSelector.getResult()
     else:
         return {}
+
 
 
 

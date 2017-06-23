@@ -34,13 +34,19 @@ class Database:
         self.createTable_Questions_Answers()
         self.createTable_Tag()
         self.createTable_Gifs()
-        
+
         self.connection.commit()
         print ("--------Tables created successfully--------")
 
        ### conn.close()
        ### print "--------Connection closed--------"
-        return
+        return {
+            "speech": "Created tables",
+            "displayText": "",
+            "data": {},
+            "contextOut": [],
+            "source": "create-tables"
+        }
 
     def __deleteTables__(self):
         print ("--------in Database deleteTables--------")
@@ -54,6 +60,14 @@ class Database:
 
         self.connection.commit()
         print ("--------Tables deleted successfully--------")
+
+        return {
+            "speech": "Deleted tables",
+            "displayText": "",
+            "data": {},
+            "contextOut": [],
+            "source": "delete-tables"
+        }
 
 
     def createTable_Answers(self):
@@ -185,6 +199,20 @@ class Database:
         cur.execute('''DELETE FROM "Gifs";''')
         cur.execute('''DELETE FROM "Tag"''')
         self.connection.commit()
+
+    def deleteGifData(self):
+        cur = self.connection.cursor()
+        cur.execute('''DELETE FROM "Gifs";''')
+        cur.execute('''DELETE FROM "Tag"''')
+        self.connection.commit()
+
+        return {
+            "speech": "Deleted data",
+            "displayText": "",
+            "data": {},
+            "contextOut": [],
+            "source": "delete-data"
+        }
 
 
     def insert(self, table_name, cols, values, conflict_fields, conflict_do):

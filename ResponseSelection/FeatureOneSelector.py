@@ -1,5 +1,6 @@
 from NLP.TextParser import TextParser
 from NLP.WordRecognizer import WordRecognizer
+import ResponseSelection
 from Data import DataAccess
 from collections import Counter
 
@@ -8,31 +9,48 @@ class FeatureOneSelector():
     question = ""
 
     def __init__(self, question):
-        self.question = self.removeSinqleQuotes(question)
+        self.question = question
 
 
     def getResult(self):
+        print ("QUES:", self.question)
         answer = self.getAnswer()
-        if "sorry" in answer:
-            db = DataAccess.DataAccess()
-            url = db.selectGifsRandom("Gifs", ["url"] , ["gif_tag"] , ["'question-mark'"] , "")
-            url = url[0][0]
-            print ("URL: ", url)
-            return {
-                "speech": "",
-                "displayText": "",
-                "data": {},
-                "contextOut": [],
-                "source": "prof-3abqarino_webhook",
-                "followupEvent": {"name": "ask_question_event",
-                                  "data": {"imageURL": url, "speech":answer}}
-            }
+        if "Sorry" in answer:
+            res = ResponseSelection.ResponseSelector.ResponseSelector()
+            webAnswer = res.webSearch(self.question)
+            print("WEB: ", webAnswer)
+            if not webAnswer.get("data"):
+                db = DataAccess.DataAccess()
+                url = db.selectGifsRandom("Gifs", ["url"], ["gif_tag"], ["'question-mark'"], "")
+                url = url[0][0]
+                print("URL: ", url)
+                return {
+                    "speech": answer,
+                    "displayText": "",
+                    "data": {
+                        "facebook": [
+                            {
+                                "text" : answer
+                            },
+                            {
+                                "attachment": {
+                                    "type": "image",
+                                    "payload": {
+                                        "url": url
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "contextOut": [],
+                    "source": "webhook-FeatureOneSelector"
+                }
+            else:
+                return webAnswer
         else:
             return {
                 "speech": answer,
-                "source": "prof-3abqarino_webhook",
-                "displayText": answer
-
+                "source": "webhook-FeatureOneSelector"
             }
 
     def getAnswer(self):
@@ -43,7 +61,7 @@ class FeatureOneSelector():
         # ner = WordRecognizer.namedEntity(k)
         mostCommenAnswers = self.retriveAnswersID(keywordsID)
         if len(mostCommenAnswers) == 0:
-            return "sorry I have no answers to this question!"
+            return "Sorry I have no answers to this question!"
         answer = self.retriveAnswer(mostCommenAnswers)
         print (answer)
         print ("__________")
@@ -83,7 +101,5 @@ class FeatureOneSelector():
         return Answer
 
 
-    @staticmethod
-    def removeSinqleQuotes(s):
-        res = s.replace("'", '"')
-        return res
+
+
