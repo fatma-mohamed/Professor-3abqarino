@@ -50,18 +50,13 @@ def makeWebhookResult(req):
         responseSelector = ResponseSelector.ResponseSelector()
         return responseSelector.requestUserName(req, action)
     elif action == "input.unknown":
+        query = (req.get("result")).get("resolvedQuery")
+        responseSelector = ResponseSelector.ResponseSelector()
+        return responseSelector.webSearch(query)
+    elif action == "Ask-a-question":
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         return responseSelector.getResult()
-    elif action == "input.unknown":
-        question = (req.get("result")).get("resolvedQuery")
-        responseSelector = FeatureOneSelector.FeatureOneSelector(question)
-        return responseSelector.getResult()
-    elif action == "gif":
-        d = Database.Database()
-        d.deleteGifData()
-        db = DataPreprocessing.DataPreprocessing()
-        db.insertGifs()
     else:
         return {}
 
