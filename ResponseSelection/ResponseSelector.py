@@ -38,7 +38,7 @@ class ResponseSelector:
         db.insert("User", ["Page_ScopedID", "App_ScopedID"], [pageScopedID, appScopedID], ["Page_ScopedID", "App_ScopedID"], "")
 
         def getAppScopedID(self, pageScopedID):
-        first_name, last_name = self.getName(pageScopedID)
+            first_name, last_name = self.getName(pageScopedID)
 
         # Get conversations, then get the sender with the required name, then get the appScopedID and return it.
         conversations = self.getConversations()
