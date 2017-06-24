@@ -1,6 +1,7 @@
 import json
 import requests
 import urllib
+import datetime
 from Preprocessing import config
 from Data import Database, DataAccess
 from ResponseSelection import FeatureOneSelector
@@ -43,7 +44,7 @@ class ResponseSelector:
 
         # Get conversations, then get the sender with the required name, then get the appScopedID and return it.
         conversations = self.getConversations()
-        print conversations
+        print (conversations)
         for conversation in conversations:
             participants = conversation.get("participants").get("data")
             for participant in participants:
@@ -79,7 +80,7 @@ class ResponseSelector:
                         appScopedID = participant.get("id")
                         pageScopedID = DataAccess.DataAccess().select("User", ["Page_ScopedID"], ["App_ScopedID"], [appScopedID], "")
                         if pageScopedID != []:
-                            print conversation.get("participants").get("data")[0].get("name")
+                            print (conversation.get("participants").get("data")[0].get("name"))
                             ids.append(pageScopedID[0][0])
                             break
         return ids
