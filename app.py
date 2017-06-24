@@ -62,6 +62,8 @@ def makeWebhookResult(req):
         return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
     elif req.get("result").get("action") == "check-answer":
         return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
+    elif req.get("result").get("action") == "get-correct-answer":
+        return FeatureTwoSelector.FeatureTwoSelector().getCorrectAnswer(req.get("result").get("parameters"))
     elif req.get("result").get("action") == "about":
         return ResponseSelector.ResponseSelector().about()
     else:
