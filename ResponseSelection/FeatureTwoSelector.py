@@ -71,7 +71,7 @@ class FeatureTwoSelector:
         print "-------Sent Question :: ", question
         print "---------CA_ID :: ", CA_ID
         CA_ID = CA_ID[:CA_ID.find(".") - len(CA_ID)] #Remove .0 ,, CA_ID = 1.0 or 2.0 or 3.0
-        row = DataAccess.DataAccess().select("Questions_Answers", ["Answer_" + CA_ID], ["Question"], [question], '')
+        row = DataAccess.DataAccess().select("Questions_Answers", ["Answer_" + CA_ID], ["Question"], ["'" + question + "'"], '')
         answer = row[0][0]
         return {
             "speech": "",
