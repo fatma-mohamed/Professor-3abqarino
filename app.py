@@ -23,10 +23,10 @@ def Home():
     return render_template('index.html')
 
 
-@app.route('/notify', methods=['POST', 'GET'])
+@app.route('/notify', methods=['POST','GET'])
 def notify():
     responseSelector = ResponseSelector.ResponseSelector()
-    responseSelector.notification()
+    responseSelector.notifyUser()
 
 
 @app.route('/webhook', methods=['POST', 'GET'])
@@ -62,6 +62,8 @@ def makeWebhookResult(req):
         return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
     elif req.get("result").get("action") == "check-answer":
         return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
+    elif req.get("result").get("action") == "about":
+        return ResponseSelector.ResponseSelector().about()
     else:
         return {}
 

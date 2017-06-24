@@ -21,7 +21,7 @@ class FeatureOneSelector():
             print("WEB: ", webAnswer)
             if not webAnswer.get("data"):
                 db = DataAccess.DataAccess()
-                url = db.selectGifsRandom("Gifs", ["url"], ["gif_tag"], ["'question-mark'"], "")
+                url = db.selectRandom("Gifs", ["url"], ["gif_tag"], ["'question-mark'"], "")
                 url = url[0][0]
                 print("URL: ", url)
                 return {

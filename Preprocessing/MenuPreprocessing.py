@@ -15,7 +15,7 @@ class MenuPreprocessing:
         browse_submenu = [{
                 "title":"Answers",
                 "type":"postback",
-                "payload":"I have a question"
+                "payload":"Help_Get_Answers"
             },
             {
                 "title":"Quiz games",
@@ -27,6 +27,11 @@ class MenuPreprocessing:
                 "title":"About",
                 "type":"postback",
                 "payload":"about"
+            },
+            {
+                "title": "Feedback",
+                "type": "web_url",
+                "url": "https://www.surveymonkey.com/r/8MC3BQ2"
             },
             {
                 "title":"Restart",
@@ -66,7 +71,7 @@ class MenuPreprocessing:
         r = requests.post(url, data = values, headers={'Content-type': 'application/json'})
         print(r.status_code, r.reason)
         print(r.text[:300] + '...')
-        print "--------------------->>>>>>>>>>>>>>" + "<<<<<<<<<<<<--------------------"
+        print ("--------------------->>>>>>>>>>>>>>" + "<<<<<<<<<<<<--------------------")
 
     def deleteMenu(self):
         access_token = config.access_token
@@ -80,5 +85,5 @@ class MenuPreprocessing:
         r = requests.delete(url, data = values, headers={'Content-type': 'application/json'})
         print(r.status_code, r.reason)
         print(r.text[:300] + '...')
-        print "--------------------->>>>>>>>>>>>>>" + "SUCCESS" + "<<<<<<<<<<<<--------------------"
+        print ("--------------------->>>>>>>>>>>>>>" + "SUCCESS" + "<<<<<<<<<<<<--------------------")
         
