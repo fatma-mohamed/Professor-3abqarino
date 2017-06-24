@@ -38,7 +38,7 @@ class ResponseSelector:
         db.insert("User", ["Page_ScopedID", "App_ScopedID"], [pageScopedID, appScopedID], ["Page_ScopedID", "App_ScopedID"], "")
 
     def getAppScopedID(self, pageScopedID):
-        name = self.getName(pageScopedID)
+        first_name, last_name = self.getName(pageScopedID)
 
         # Get conversations, then get the sender with the required name, then get the appScopedID and return it.
         conversations = self.getConversations()
@@ -46,7 +46,7 @@ class ResponseSelector:
         for conversation in conversations:
             participants = conversation.get("participants").get("data")
             for participant in participants:
-                if participant.get("name") == name:
+                if participant.get("name").startswith(first_name) and participant.get("name").endswith(last_name):
                     return participant.get("id")
 
     def getName(self, pageScopedID):
@@ -57,7 +57,7 @@ class ResponseSelector:
         result = json.loads(r.text)
         name = result.get("first_name") + " " + result.get("last_name")
         print(name)
-        return name
+        return result.get("first_name"), result.get("last_name")
 
     def getUsersToNotify(self):
         ids = []
