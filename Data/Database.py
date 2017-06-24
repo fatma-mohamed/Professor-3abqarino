@@ -34,6 +34,8 @@ class Database:
         self.createTable_Questions_Answers()
         self.createTable_Tag()
         self.createTable_Gifs()
+        self.createTable_User()
+        self.createTable_Notification()
 
         self.connection.commit()
         print ("--------Tables created successfully--------")
@@ -56,6 +58,8 @@ class Database:
         self.deleteTable_Keywords()
         self.deleteTable_Questions_Answers()
         self.deleteTable_Gifs()
+        self.deleteTable_User()
+        self.deleteTable_Notification()
         self.deleteTable_Tag()
 
         self.connection.commit()
@@ -189,6 +193,40 @@ class Database:
         print("--------Table Gifs deleted successfully--------")
 
 
+    def createTable_User(self):
+        print("--------in Database createTable_User--------")
+        cur = self.connection.cursor()
+        cur.execute('''CREATE TABLE "User"
+                       (ID SERIAL PRIMARY KEY NOT NULL,
+                       Page_ScopedID BIGINT NOT NULL UNIQUE,
+                       App_ScopedID BIGINT NOT NULL UNIQUE,
+                       CONSTRAINT uniqueUser UNIQUE (Page_ScopedID, App_ScopedID));''')
+        print("--------Table User created successfully--------")
+
+    def deleteTable_User(self):
+        print ("--------in Database deleteTable_User--------")
+        cur = self.connection.cursor()
+        cur.execute('''DROP TABLE "User";''')
+        print("--------Table User deleted successfully--------")
+
+
+    def createTable_Notification(self):
+        print("--------in Database createTable_Notification--------")
+        cur = self.connection.cursor()
+        cur.execute('''CREATE TABLE "Notification"
+                       (ID SERIAL PRIMARY KEY NOT NULL,
+                       Message TEXT NOT NULL UNIQUE,
+                       Attachment TEXT,
+                       FOREIGN KEY (Attachment) REFERENCES "Tag"(Tag));''')
+        print("--------Table Notification created successfully--------")
+
+    def deleteTable_Notification(self):
+        print ("--------in Database deleteTable_Notification--------")
+        cur = self.connection.cursor()
+        cur.execute('''DROP TABLE "Notification";''')
+        print("--------Table Notification deleted successfully--------")
+
+
     def deleteData(self):
         cur = self.connection.cursor()
         cur.execute('''DELETE FROM "Answers_Keywords";''')
@@ -197,6 +235,8 @@ class Database:
         cur.execute('''DELETE FROM "Keywords";''')
         cur.execute('''DELETE FROM "Questions_Answers";''')
         cur.execute('''DELETE FROM "Gifs";''')
+        cur.execute('''DELETE FROM "User";''')
+        cur.execute('''DELETE FROM "Notification";''')
         cur.execute('''DELETE FROM "Tag"''')
         self.connection.commit()
 
