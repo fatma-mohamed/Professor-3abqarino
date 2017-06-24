@@ -63,6 +63,7 @@ def makeWebhookResult(req):
         m = MenuPreprocessing.MenuPreprocessing()
         m.deleteMenu()
         m.addMenu()
+        return {}
     else:
         return {}
 
