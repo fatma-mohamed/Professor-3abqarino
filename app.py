@@ -59,11 +59,6 @@ def makeWebhookResult(req):
         return responseSelector.getResult()
     elif action == "about":
         return ResponseSelector.ResponseSelector().about()
-    elif action == "menuPP":
-        m = MenuPreprocessing.MenuPreprocessing()
-        m.deleteMenu()
-        m.addMenu()
-        return {}
     else:
         return {}
 
