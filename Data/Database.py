@@ -226,7 +226,7 @@ class Database:
         cur.execute('''DROP TABLE "Notification";''')
         print("--------Table Notification deleted successfully--------")
 
-
+        
     def deleteData(self):
         cur = self.connection.cursor()
         cur.execute('''DELETE FROM "Answers_Keywords";''')

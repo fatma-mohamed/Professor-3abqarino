@@ -78,6 +78,33 @@ class DataPreprocessing:
                 conflict_fields = ["answer_id", "keyword_id"]
                 db.insert("Answers_Keywords", cols, values, conflict_fields, "")
 
+    def insertQuestions_Answers(self):
+        f = open("Preprocessing/Question_Answers.txt", 'r')
+        i=0
+        while True:
+            Question = f.readline().rstrip()
+            if Question == "":
+                print( "------Finished reading------")
+                break
+            A1 = f.readline().rstrip()
+            A2 = f.readline().rstrip()
+            A3 = f.readline().rstrip()
+            CA_ID = f.readline().rstrip()
+            cols = ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"]
+            values=[ "'" + Question + "'" , "'" + A1 + "'" , "'" + A2 + "'" ,  "'" + A3 + "'" , "'" + str(CA_ID)+"'"]
+            conflict_fields=["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"]
+            i += 1
+            print ("-----Row " + (str)(i) + " -----")
+            Database.Database().insert("Questions_Answers",cols,values,conflict_fields,'')
+
+        return {
+            "speech": "Inserted Questions_Answers rows",
+            "displayText": "",
+            "data": {},
+            "contextOut": [],
+            "source": "insert-Questions_Answers-rows"
+        }
+
     @staticmethod
     def insertGifs():
         db = Database()
@@ -135,37 +162,7 @@ class DataPreprocessing:
             "source": "insert-Notifications-rows"
         }
 
-
     @staticmethod
     def removeSinqleQuotes(s):
         res = s.replace("'", '"')
         return res
-
-
-
-    def insertQuestions_Answers(self):
-        f = open("Question_Answers.txt", 'r')
-        i=0
-        while True:
-            Question = f.readline().rstrip()
-            if Question == "":
-                print( "------Finished reading------")
-                break
-            A1 = f.readline().rstrip()
-            A2 = f.readline().rstrip()
-            A3 = f.readline().rstrip()
-            CA_ID = f.readline().rstrip()
-            cols = ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"]
-            values=[ "'" + Question + "'" , "'" + A1 + "'" , "'" + A2 + "'" ,  "'" + A3 + "'" , "'" + str(CA_ID)+"'"]
-            conflict_fields=["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"]
-            i += 1
-            print ("-----Row " + (str)(i) + " -----")
-            Database.Database().insert("Questions_Answers",cols,values,conflict_fields,'')
-
-        return {
-            "speech": "Inserted Questions_Answers rows",
-            "displayText": "",
-            "data": {},
-            "contextOut": [],
-            "source": "insert-Questions_Answers-rows"
-        }
