@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" afterPath="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py" afterPath="$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,17 +26,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FeatureTwoSelector.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="73" column="121" lean-forward="false" selection-start-line="73" selection-start-column="121" selection-end-line="73" selection-end-column="121" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResponseSelector.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ResponseSelector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1054">
@@ -90,7 +81,6 @@
         <option value="$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py" />
         <option value="$PROJECT_DIR$/Preprocessing/gifs.txt" />
         <option value="$PROJECT_DIR$/Preprocessing/Notifications.txt" />
-        <option value="$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py" />
         <option value="$PROJECT_DIR$/Data/DataAccess.py" />
         <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
         <option value="$PROJECT_DIR$/Data/Database.py" />
@@ -99,6 +89,7 @@
         <option value="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py" />
       </list>
     </option>
   </component>
@@ -232,6 +223,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ResponseSelection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GP-Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GP-Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Preprocessing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1025,13 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="72" column="37" lean-forward="false" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureOneSelector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1071,6 +1069,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-448">
           <caret line="236" column="20" lean-forward="false" selection-start-line="236" selection-start-column="20" selection-end-line="236" selection-end-column="20" />
+          <folding>
+            <marker date="1498133142134" expanded="true" signature="2300:2407" ph="CREATE TABLE... Answers" />
+            <marker date="1498133142134" expanded="true" signature="2646:2666" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="2908:3056" ph="CREATE TABLE... Keywords" />
+            <marker date="1498133142134" expanded="true" signature="3298:3319" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="3578:3872" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1498133142134" expanded="true" signature="4138:4167" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="4418:4624" ph="CREATE TABLE... Synonyms" />
+            <marker date="1498133142134" expanded="true" signature="4865:4886" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="5147:5532" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1498133142134" expanded="true" signature="5801:5831" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="6071:6194" ph="CREATE TABLE... Tag" />
+            <marker date="1498133142134" expanded="true" signature="6420:6436" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="6664:6938" ph="CREATE TABLE... Gifs" />
+            <marker date="1498133142134" expanded="true" signature="7167:7184" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="7413:7692" ph="CREATE TABLE... User" />
+            <marker date="1498133142134" expanded="true" signature="7921:7938" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="8183:8430" ph="CREATE TABLE... Notification" />
+            <marker date="1498133142134" expanded="true" signature="8683:8708" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="8877:8907" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="8936:8957" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="8986:9008" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="9037:9059" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="9088:9119" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="9148:9166" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="9195:9213" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="9242:9268" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="9297:9314" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="10642:10705" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1498133142134" expanded="true" signature="10803:10963" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1498133142134" expanded="true" signature="11016:11169" ph="INSERT INTO &quot;missing_value&quot;... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1085,6 +1115,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,18 +1134,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
+    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="54" />
+        <state relative-caret-position="312">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py">
+    <entry file="file://$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="73" column="121" lean-forward="false" selection-start-line="73" selection-start-column="121" selection-end-line="73" selection-end-column="121" />
+        <state relative-caret-position="1428">
+          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="54" />
           <folding />
         </state>
       </provider>
