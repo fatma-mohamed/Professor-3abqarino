@@ -15,7 +15,7 @@ class MenuPreprocessing:
         browse_submenu = [{
                 "title":"Answers",
                 "type":"postback",
-                "payload":"I have a question"
+                "payload":"Help_Get_Answers"
             },
             {
                 "title":"Quiz games",
@@ -27,6 +27,11 @@ class MenuPreprocessing:
                 "title":"About",
                 "type":"postback",
                 "payload":"about"
+            },
+            {
+                "title": "Feedback",
+                "type": "web_url",
+                "url": "https://www.surveymonkey.com/r/8MC3BQ2"
             },
             {
                 "title":"Restart",
