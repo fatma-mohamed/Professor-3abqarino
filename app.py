@@ -49,6 +49,8 @@ def makeWebhookResult(req):
         return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
     elif req.get("result").get("action") == "check-answer":
         return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
+    elif req.get("result").get("action") == "get-correct-answer":
+        return FeatureTwoSelector.FeatureTwoSelector().getCorrectAnswer(req.get("result").get("parameters"))
     elif req.get("result").get("action") == "add-menu":
         return MenuPreprocessing.MenuPreprocessing().addMenu()
     elif req.get("result").get("action") == "about":
