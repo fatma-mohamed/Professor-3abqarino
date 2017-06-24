@@ -9,7 +9,7 @@ from flask import Flask ,render_template
 from flask import request
 from flask import make_response
 from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
-from Preprocessing import DataPreprocessing
+from Preprocessing import DataPreprocessing, MenuPreprocessing
 from Data import DataAccess
 
 # Flask app should start in global layout
@@ -57,8 +57,12 @@ def makeWebhookResult(req):
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         return responseSelector.getResult()
-    elif req.get("result").get("action") == "about":
+    elif action == "about":
         return ResponseSelector.ResponseSelector().about()
+    elif action == "menuPP":
+        m = MenuPreprocessing.MenuPreprocessing()
+        m.deleteMenu()
+        m.addMenu()
     else:
         return {}
 
