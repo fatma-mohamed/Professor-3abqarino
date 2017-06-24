@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" afterPath="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" afterPath="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,7 +25,28 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="FeatureTwoSelector.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResponseSelector.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -71,14 +92,14 @@
         <option value="$PROJECT_DIR$/Preprocessing/gifs.txt" />
         <option value="$PROJECT_DIR$/Preprocessing/Notifications.txt" />
         <option value="$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py" />
-        <option value="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" />
         <option value="$PROJECT_DIR$/Data/DataAccess.py" />
         <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
         <option value="$PROJECT_DIR$/Data/Database.py" />
         <option value="$PROJECT_DIR$/Preprocessing/config.py" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" />
       </list>
     </option>
   </component>
@@ -211,6 +232,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ResponseSelection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GP-Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GP-Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -762,8 +797,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16398244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16398244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -969,13 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/Question_Answers.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -997,13 +1026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/Notifications.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1015,41 +1037,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4080">
-          <caret line="249" column="4" lean-forward="false" selection-start-line="249" selection-start-column="4" selection-end-line="249" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1067,17 +1054,107 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/Notifications.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-448">
+          <caret line="236" column="20" lean-forward="false" selection-start-line="236" selection-start-column="20" selection-end-line="236" selection-end-column="20" />
+          <folding>
+            <marker date="1498133142134" expanded="true" signature="2300:2407" ph="CREATE TABLE... Answers" />
+            <marker date="1498133142134" expanded="true" signature="2646:2666" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="2908:3056" ph="CREATE TABLE... Keywords" />
+            <marker date="1498133142134" expanded="true" signature="3298:3319" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="3578:3872" ph="CREATE TABLE... Answers_Keywords" />
+            <marker date="1498133142134" expanded="true" signature="4138:4167" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="4418:4624" ph="CREATE TABLE... Synonyms" />
+            <marker date="1498133142134" expanded="true" signature="4865:4886" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="5147:5532" ph="CREATE TABLE... Questions_Answers" />
+            <marker date="1498133142134" expanded="true" signature="5801:5831" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="6071:6194" ph="CREATE TABLE... Tag" />
+            <marker date="1498133142134" expanded="true" signature="6420:6436" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="6664:6938" ph="CREATE TABLE... Gifs" />
+            <marker date="1498133142134" expanded="true" signature="7167:7184" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="7413:7692" ph="CREATE TABLE... User" />
+            <marker date="1498133142134" expanded="true" signature="7921:7938" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="8183:8430" ph="CREATE TABLE... Notification" />
+            <marker date="1498133142134" expanded="true" signature="8683:8708" ph="DROP TABLE &quot;... " />
+            <marker date="1498133142134" expanded="true" signature="8877:8907" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="8936:8957" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="8986:9008" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="9037:9059" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="9088:9119" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="9148:9166" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="9195:9213" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="9242:9268" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="9297:9314" ph="DELETE FROM " />
+            <marker date="1498133142134" expanded="true" signature="10642:10705" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1498133142134" expanded="true" signature="10803:10963" ph="INSERT INTO &quot;missing_value&quot;... " />
+            <marker date="1498133142134" expanded="true" signature="11016:11169" ph="INSERT INTO &quot;missing_value&quot;... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/DataPreprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="27" column="55" lean-forward="false" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/DataAccess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="895">
-          <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+        <state relative-caret-position="215">
+          <caret line="50" column="75" lean-forward="true" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+          <folding>
+            <element signature="e#22#35#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="49" column="48" lean-forward="true" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+        <state relative-caret-position="105">
+          <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
           <folding />
         </state>
       </provider>
