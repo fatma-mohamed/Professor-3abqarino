@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-from Data import Database
 
 import urllib
 import json
@@ -10,7 +9,6 @@ from flask import request
 from flask import make_response
 from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
 from Preprocessing import DataPreprocessing, MenuPreprocessing
-from Data import DataAccess
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -58,14 +56,24 @@ def makeWebhookResult(req):
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         return responseSelector.getResult()
-    elif req.get("result").get("action") == "request-game":
+    elif action == "request-game":
         return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
-    elif req.get("result").get("action") == "check-answer":
+    elif action == "check-answer":
         return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
-    elif req.get("result").get("action") == "get-correct-answer":
+    elif action == "get-correct-answer":
         return FeatureTwoSelector.FeatureTwoSelector().getCorrectAnswer(req.get("result").get("parameters"))
-    elif req.get("result").get("action") == "about":
+    elif action == "about":
         return ResponseSelector.ResponseSelector().about()
+    elif action == "DataPreprocessing":
+        p = DataPreprocessing.DataPreprocessing()
+        p.insertGifs()
+        p.insertAnswers_and_keywords()
+        p.insertNotifications()
+        p.insertQuestions_Answers()
+    elif action == "MenuPreprocessing":
+        m = MenuPreprocessing.MenuPreprocessing()
+        m.deleteMenu()
+        m.addMenu()
     else:
         return {}
 

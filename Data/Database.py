@@ -47,7 +47,7 @@ class Database:
             "displayText": "",
             "data": {},
             "contextOut": [],
-            "source": "create-tables"
+            "source": "webhook-Database-create_tables"
         }
 
     def __deleteTables__(self):
@@ -70,7 +70,7 @@ class Database:
             "displayText": "",
             "data": {},
             "contextOut": [],
-            "source": "delete-tables"
+            "source": "webhook-Database-delete_tables"
         }
 
 
@@ -251,7 +251,7 @@ class Database:
             "displayText": "",
             "data": {},
             "contextOut": [],
-            "source": "delete-data"
+            "source": "webhook-Database-delete_gif_data"
         }
 
 

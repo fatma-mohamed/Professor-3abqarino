@@ -43,14 +43,14 @@ class FeatureOneSelector():
                         ]
                     },
                     "contextOut": [],
-                    "source": "webhook-FeatureOneSelector"
+                    "source": "webhook-FeatureOneSelector-getResult"
                 }
             else:
                 return webAnswer
         else:
             return {
                 "speech": answer,
-                "source": "webhook-FeatureOneSelector"
+                "source": "webhook-FeatureOneSelector-getResult"
             }
 
     def getAnswer(self):

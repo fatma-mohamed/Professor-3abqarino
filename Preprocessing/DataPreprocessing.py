@@ -14,7 +14,7 @@ class DataPreprocessing:
             "displayText": "",
             "data": {},
             "contextOut": [],
-            "source": "create-database"
+            "source": "webhook-DataPreprocessing-create_database"
         }
 
     @staticmethod
@@ -102,7 +102,7 @@ class DataPreprocessing:
             "displayText": "",
             "data": {},
             "contextOut": [],
-            "source": "insert-Questions_Answers-rows"
+            "source": "webhook-DataPreprocessing-insert-Questions_Answers-rows"
         }
 
     @staticmethod
@@ -159,7 +159,7 @@ class DataPreprocessing:
             "displayText": "",
             "data": {},
             "contextOut": [],
-            "source": "insert-Notifications-rows"
+            "source": "webhook-DataPreprocessing-insert-Notifications-rows"
         }
 
     @staticmethod

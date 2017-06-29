@@ -4,8 +4,6 @@ import urllib
 import datetime
 from Preprocessing import config
 from Data import Database, DataAccess
-from ResponseSelection import FeatureOneSelector
-from NLP.TextParser import TextParser
 
 class ResponseSelector:
 
@@ -30,7 +28,7 @@ class ResponseSelector:
             "displayText": "",
             "data": {},
             "contextOut": [],
-            "source": "prof-3abqarino",
+            "source": "webhook-ResponseSelector-requestUserName",
             "followupEvent": {"name": event_name, "data": {"user": name}}
         }
 
@@ -143,7 +141,7 @@ class ResponseSelector:
             "displayText": "",
             "data": {},
             "contextOut": [],
-            "source": "about"
+            "source": "webhook-ResponseSelector-about"
         }
 
     def webSearch(self, query):
@@ -159,7 +157,7 @@ class ResponseSelector:
                 "displayText": "",
                 "data": {},
                 "contextOut": [],
-                "source": "webhook-ResponseSelector",
+                "source": "webhook-ResponseSelector-webSearch",
                 "followupEvent": {"name": "fallback"}
             }
         first = results[0]
@@ -248,5 +246,5 @@ class ResponseSelector:
                 ]
             },
             "contextOut": [],
-            "source": "webhook-FeatureOneSelector"
+            "source": "webhook-FeatureOneSelector-webSearch"
         }
