@@ -85,7 +85,7 @@ class Database:
     def deleteTable_Answers(self):
         print ("--------in Database deleteTable_Answers--------")
         cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "Answers";''')
+        cur.execute('''DROP TABLE IF EXISTS "Answers";''')
         print ("--------Table Answers deleted successfully--------")
 
 
@@ -101,7 +101,7 @@ class Database:
     def deleteTable_Keywords(self):
         print ("--------in Database deleteTable_Keywords--------")
         cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "Keywords";''')
+        cur.execute('''DROP TABLE IF EXISTS "Keywords";''')
         print ("--------Table Keywords deleted successfully--------")
 
 
@@ -120,7 +120,7 @@ class Database:
     def deleteTable_Answers_Keywords(self):
         print ("--------in Database deleteTable_Answers_Keywords--------")
         cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "Answers_Keywords";''')
+        cur.execute('''DROP TABLE IF EXISTS "Answers_Keywords";''')
         print ("--------Table Answers_Keywords deleted successfully--------")
 
 
@@ -137,7 +137,7 @@ class Database:
     def deleteTable_Synonyms(self):
         print("--------in Database deleteTable_Synonyms--------")
         cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "Synonyms";''')
+        cur.execute('''DROP TABLE IF EXISTS "Synonyms";''')
         print ("--------Table Synonyms deleted successfully--------")
 
 
@@ -157,7 +157,7 @@ class Database:
     def deleteTable_Questions_Answers(self):
         print ("--------in Database deleteTable_Questions_Answers--------")
         cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "Questions_Answers";''')
+        cur.execute('''DROP TABLE IF EXISTS "Questions_Answers";''')
         print("--------Table Questions_Answers deleted successfully--------")
 
 
@@ -172,7 +172,7 @@ class Database:
     def deleteTable_Tag(self):
         print ("--------in Database deleteTable_Tag--------")
         cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "Tag";''')
+        cur.execute('''DROP TABLE IF EXISTS "Tag";''')
         print("--------Table Tag deleted successfully--------")
 
 
@@ -190,7 +190,7 @@ class Database:
     def deleteTable_Gifs(self):
         print ("--------in Database deleteTable_Gifs--------")
         cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "Gifs";''')
+        cur.execute('''DROP TABLE IF EXISTS "Gifs";''')
         print("--------Table Gifs deleted successfully--------")
 
 
@@ -207,7 +207,7 @@ class Database:
     def deleteTable_User(self):
         print ("--------in Database deleteTable_User--------")
         cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "User";''')
+        cur.execute('''DROP TABLE IF EXISTS "User";''')
         print("--------Table User deleted successfully--------")
 
 
@@ -224,7 +224,7 @@ class Database:
     def deleteTable_Notification(self):
         print ("--------in Database deleteTable_Notification--------")
         cur = self.connection.cursor()
-        cur.execute('''DROP TABLE "Notification";''')
+        cur.execute('''DROP TABLE IF EXISTS "Notification";''')
         print("--------Table Notification deleted successfully--------")
 
         
