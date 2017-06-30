@@ -83,13 +83,13 @@ class DataPreprocessing:
         f = open("Preprocessing/Question_Answers.txt", 'r')
         i=0
         while True:
-            Question = f.readline().rstrip()
+            Question = Question = DataPreprocessing.removeSinqleQuotes(f.readline().rstrip())
             if Question == "":
                 print( "------Finished reading------")
                 break
-            A1 = f.readline().rstrip()
-            A2 = f.readline().rstrip()
-            A3 = f.readline().rstrip()
+            A1 = DataPreprocessing.removeSinqleQuotes(f.readline().rstrip())
+            A2 = DataPreprocessing.removeSinqleQuotes(f.readline().rstrip())
+            A3 = DataPreprocessing.removeSinqleQuotes(f.readline().rstrip())
             CA_ID = f.readline().rstrip()
             cols = ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"]
             values=[ "'" + Question + "'" , "'" + A1 + "'" , "'" + A2 + "'" ,  "'" + A3 + "'" , "'" + str(CA_ID)+"'"]
@@ -124,7 +124,7 @@ class DataPreprocessing:
         f = open("Preprocessing/Notifications.txt", 'r')
         i = 0
         while True:
-            Notification = f.readline().rstrip()
+            Notification = DataPreprocessing.removeSinqleQuotes(f.readline().rstrip())
             if Notification == "":
                 print("------Finished reading------")
                 break
@@ -154,4 +154,9 @@ class DataPreprocessing:
     @staticmethod
     def removeSinqleQuotes(s):
         res = s.replace("'", '"')
+        return res
+    
+    @staticmethod
+    def addSinqleQuotes(s):
+        res = s.replace('"', "'")
         return res
