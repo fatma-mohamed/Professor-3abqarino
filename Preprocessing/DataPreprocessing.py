@@ -6,7 +6,6 @@ class DataPreprocessing:
         d = Database()
         d.__deleteTables__()
         d.__createTables__()
-        self.insertAnswers_and_keywords()
         self.insertQuestions_Answers()
         self.insertGifs()
         self.insertNotifications()
