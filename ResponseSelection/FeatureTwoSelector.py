@@ -1,6 +1,8 @@
 from ResponseSelection.ResponseSelector import ResponseSelector
 from Data import DataAccess
+from Preprocessing import DataPreprocessing
 from random import randint
+
 
 class FeatureTwoSelector:
     
@@ -20,10 +22,10 @@ class FeatureTwoSelector:
                "followupEvent": {
                    "name": "Question_Answers",
                    "data": {
-                       "Question": row[0],
-                       "A1": row[1],
-                       "A2": row[2],
-                       "A3": row[3],
+                       "Question": DataPreprocessing.DataPreprocessing().addSinqleQuotes(row[0]),
+                       "A1": DataPreprocessing.DataPreprocessing().addSinqleQuotes(row[1]),
+                       "A2": DataPreprocessing.DataPreprocessing().addSinqleQuotes(row[2]),
+                       "A3": DataPreprocessing.DataPreprocessing().addSinqleQuotes(row[3]),
                        "CA_ID": row[4],
                        "AnswerFeedback": answerFeedback
                    }

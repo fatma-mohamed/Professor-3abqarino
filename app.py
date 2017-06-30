@@ -24,6 +24,13 @@ def notify():
     responseSelector = ResponseSelector.ResponseSelector()
     responseSelector.notifyUser()
 
+@app.route('/preprocessing', methods=['POST','GET'])
+def preprocess():
+    m = MenuPreprocessing.MenuPreprocessing()
+    m.__run__()
+    p = DataPreprocessing.DataPreprocessing()
+    p.__run__()
+
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
     req = request.get_json(silent=True, force=True)

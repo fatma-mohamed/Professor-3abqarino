@@ -3,6 +3,7 @@ import urllib
 import requests
 import datetime
 from Preprocessing import config
+from Preprocessing import DataPreprocessing
 from Data import Database, DataAccess
 
 class ResponseSelector:
@@ -101,7 +102,7 @@ class ResponseSelector:
         for userID in listOfUsersToNotify:
             paramRecipient = { "id": userID}
             content = DataAccess.DataAccess().selectRandom("Notification", ["Message", "Attachment"], [], [], "")
-            msg = content[0][0]
+            msg = DataPreprocessing.DataPreprocessing().addSinqleQuotes(content[0][0])
             attachment = content[0][1]
             if(attachment != None): #If there's an attachment, send it before the message itself
                 attachedGif = DataAccess.DataAccess().selectRandom("Gifs", ["Url"], ["Gif_Tag"], ["'" + attachment + "'"], "")
