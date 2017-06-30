@@ -78,7 +78,7 @@ Double Crown
 The Great Pyramids
 Trade
 1
-The time when Egypt`s early pharaohs worked to build unity in the country.
+The time when Egypt's early pharaohs worked to build unity in the country.
 The Middle Kingdom
 The Old Kingdom
 The Ancient Times
@@ -150,11 +150,11 @@ monotheism
 1
 What is Mehen?
 A Sacred statue
-Egyptian board game
+Another Egyptian board game
 Jewelry
 2
 What is Senet?
-Egyptian board game
+An Egyptian board game
 Jewelry
 A famous Pharaoh
 1
@@ -213,7 +213,7 @@ sixth
 first
 fourth
 2
-What organ didn`t get removed during mummification?
+What organ didn't get removed during mummification?
 stomach
 heart
 lungs
