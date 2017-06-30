@@ -76,9 +76,10 @@ class DataPreprocessing:
                 values = [str(answer_id[0][0]) + "," + str(i)]
                 conflict_fields = ["answer_id", "keyword_id"]
                 db.insert("Answers_Keywords", cols, values, conflict_fields, "")
-            print ("Inserted Answers_Keywords rows")
+        print ("Inserted Answers_Keywords rows")
             
     def insertQuestions_Answers(self):
+        db = Database()
         f = open("Preprocessing/Question_Answers.txt", 'r')
         i=0
         while True:
@@ -95,7 +96,7 @@ class DataPreprocessing:
             conflict_fields=["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"]
             i += 1
             print ("-----Row " + (str)(i) + " -----")
-            Database.Database().insert("Questions_Answers",cols,values,conflict_fields,'')
+            db.insert("Questions_Answers",cols,values,conflict_fields,'')
         print ("Inserted Questions_Answers rows")
 
     @staticmethod
