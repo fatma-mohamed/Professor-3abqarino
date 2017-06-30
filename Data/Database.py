@@ -113,7 +113,7 @@ class Database:
                Keyword_ID INT NOT NULL,
                FOREIGN KEY (Answer_ID) REFERENCES "Answers"(ID),
                FOREIGN KEY (Keyword_ID) REFERENCES "Keywords"(ID),
-               PRIMARY KEY(Answer_ID, Keyword_ID)
+               PRIMARY KEY(Answer_ID, Keyword_ID),
                CONSTRAINT uniqueAKs UNIQUE (Answer_ID, Keyword_ID));''')
         print ("--------Table Answers_Keywords created successfully--------")
 
