@@ -1,5 +1,6 @@
 from NLP.TextParser import TextParser
 from NLP.WordRecognizer import WordRecognizer
+from Preprocessing.DataPreprocessing import DataPreprocessing
 import ResponseSelection
 from Data import DataAccess
 from collections import Counter
@@ -49,7 +50,7 @@ class FeatureOneSelector():
                 return webAnswer
         else:
             return {
-                "speech": answer,
+                "speech": DataPreprocessing.addSinqleQuotes(answer),
                 "source": "webhook-FeatureOneSelector-getResult"
             }
 
