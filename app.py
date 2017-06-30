@@ -9,6 +9,7 @@ from flask import request
 from flask import make_response
 from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
 from Preprocessing import DataPreprocessing, MenuPreprocessing
+from Data import Database
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -25,6 +26,13 @@ def Home():
 def notify():
     responseSelector = ResponseSelector.ResponseSelector()
     responseSelector.notifyUser()
+
+@app.route('/preprocessing', methods=['POST','GET'])
+def preprocess():
+    m = MenuPreprocessing.MenuPreprocessing()
+    m.__run__()
+    p = DataPreprocessing.DataPreprocessing()
+    p.__run__()
 
 
 @app.route('/webhook', methods=['POST', 'GET'])
@@ -64,16 +72,6 @@ def makeWebhookResult(req):
         return FeatureTwoSelector.FeatureTwoSelector().getCorrectAnswer(req.get("result").get("parameters"))
     elif action == "about":
         return ResponseSelector.ResponseSelector().about()
-    elif action == "DataPreprocessing":
-        p = DataPreprocessing.DataPreprocessing()
-        p.insertGifs()
-        p.insertAnswers_and_keywords()
-        p.insertNotifications()
-        p.insertQuestions_Answers()
-    elif action == "MenuPreprocessing":
-        m = MenuPreprocessing.MenuPreprocessing()
-        m.deleteMenu()
-        m.addMenu()
     else:
         return {}
 

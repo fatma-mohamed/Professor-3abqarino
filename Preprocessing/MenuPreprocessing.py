@@ -5,8 +5,10 @@ from Preprocessing import config
 
 class MenuPreprocessing:
 
-    def __run__(self, db):
-        return;
+    def __run__(self):
+        self.deleteMenu()
+        self.addMenu()
+        print("Menu preprocessing done!")
 
     def addMenu(self):
         access_token = config.access_token

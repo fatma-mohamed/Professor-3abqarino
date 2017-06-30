@@ -6,16 +6,15 @@ from NLP.WordRecognizer import WordRecognizer
 
 class DataPreprocessing:
 
-    def __run__(self, db):
-        db.__createTables__()
-
-        return {
-            "speech": "Created tables",
-            "displayText": "",
-            "data": {},
-            "contextOut": [],
-            "source": "webhook-DataPreprocessing-create_database"
-        }
+    def __run__(self):
+        d = Database()
+        d.__deleteTables__()
+        d.__createTables__()
+        self.insertAnswers_and_keywords()
+        self.insertQuestions_Answers()
+        self.insertGifs()
+        self.insertNotifications()
+        print("Data preprocessing done!")
 
     @staticmethod
     def insertAnswers_and_keywords():
