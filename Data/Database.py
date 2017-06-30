@@ -95,7 +95,7 @@ class Database:
         cur.execute('''CREATE TABLE "Keywords"
                (ID SERIAL PRIMARY KEY NOT NULL,
                Keyword TEXT NOT NULL UNIQUE,
-               Category TEXT NOT NULL);''')
+               Category TEXT);''')
         print ("--------Table Keywords created successfully--------")
 
     def deleteTable_Keywords(self):
