@@ -115,11 +115,12 @@ class DataPreprocessing:
             tag = "'" + arr[2].strip("\n") + "'"
             db.insert("Tag",["tag"],[tag],["tag"],"")
             db.insert("Gifs", ["name", "url" , "gif_tag"], [name,url,tag],"","")
-        print ("Inserted Gifs")
+        print ("Inserted Tags & Gifs")
         
     @staticmethod
     def insertNotifications():
         db = Database()
+        db_access = DataAccess()
         f = open("Preprocessing/Notifications.txt", 'r')
         i = 0
         while True:
@@ -133,7 +134,7 @@ class DataPreprocessing:
             noAttachment = True
             if "Attachment" in Notification:
                 content = Notification.split(" Attachment: ")
-                rows = DataAccess.DataAccess().select("Tag", ["Tag"], ["Tag"], ["'" + content[1] + "'"], "")
+                rows = db_access.select("Tag", ["Tag"], ["Tag"], ["'" + content[1] + "'"], "")
                 row = rows[0][0]
                 if row is not None: # Check the existence of the tag used as an attachment.
                     cols = ["Message", "Attachment"]
