@@ -76,7 +76,8 @@ class DataPreprocessing:
                 values = [str(answer_id[0][0]) + "," + str(i)]
                 conflict_fields = ["answer_id", "keyword_id"]
                 db.insert("Answers_Keywords", cols, values, conflict_fields, "")
-
+            print ("Inserted Answers_Keywords rows")
+            
     def insertQuestions_Answers(self):
         f = open("Preprocessing/Question_Answers.txt", 'r')
         i=0
@@ -95,14 +96,7 @@ class DataPreprocessing:
             i += 1
             print ("-----Row " + (str)(i) + " -----")
             Database.Database().insert("Questions_Answers",cols,values,conflict_fields,'')
-
-        return {
-            "speech": "Inserted Questions_Answers rows",
-            "displayText": "",
-            "data": {},
-            "contextOut": [],
-            "source": "webhook-DataPreprocessing-insert-Questions_Answers-rows"
-        }
+        print ("Inserted Questions_Answers rows")
 
     @staticmethod
     def insertGifs():
@@ -120,7 +114,8 @@ class DataPreprocessing:
             tag = "'" + arr[2].strip("\n") + "'"
             db.insert("Tag",["tag"],[tag],["tag"],"")
             db.insert("Gifs", ["name", "url" , "gif_tag"], [name,url,tag],"","")
-
+        print ("Inserted Gifs")
+        
     @staticmethod
     def insertNotifications():
         db = Database()
@@ -152,14 +147,7 @@ class DataPreprocessing:
             i += 1
             print ("-----Notification number :: " + (str)(i) + " -----")
             db.insert("Notification", cols, values, conflict_fields, "")
-
-        return {
-            "speech": "Inserted Notification messages",
-            "displayText": "",
-            "data": {},
-            "contextOut": [],
-            "source": "webhook-DataPreprocessing-insert-Notifications-rows"
-        }
+        print ("Inserted Notification messages")
 
     @staticmethod
     def removeSinqleQuotes(s):
