@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e59076f-3a22-4108-9c1e-04009f8a6243" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Database.py" afterPath="$PROJECT_DIR$/Data/Database.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" afterPath="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/Notifications.txt" afterPath="$PROJECT_DIR$/Preprocessing/Notifications.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" afterPath="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" afterPath="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py" afterPath="$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/Question_Answers.txt" afterPath="$PROJECT_DIR$/Preprocessing/Question_Answers.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResponseSelector.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ResponseSelector.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ResponseSelection/ResponseSelector.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
@@ -61,6 +56,28 @@
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="e#22#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuPreprocessing.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,12 +131,12 @@
         <option value="$PROJECT_DIR$/Data/DataAccess.py" />
         <option value="$PROJECT_DIR$/Preprocessing/config.py" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py" />
         <option value="$PROJECT_DIR$/Data/Database.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/Preprocessing/DataPreprocessing.py" />
         <option value="$PROJECT_DIR$/ResponseSelection/FeatureTwoSelector.py" />
         <option value="$PROJECT_DIR$/ResponseSelection/ResponseSelector.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py" />
       </list>
     </option>
   </component>
@@ -1111,13 +1128,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/Database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
@@ -1127,14 +1137,6 @@
             <marker date="1498839718603" expanded="true" signature="11216:11376" ph="INSERT INTO &quot;missing_value&quot;... " />
             <marker date="1498839718603" expanded="true" signature="11429:11582" ph="INSERT INTO &quot;missing_value&quot;... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1163,6 +1165,24 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/MenuPreprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
