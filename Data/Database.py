@@ -94,7 +94,7 @@ class Database:
         cur = self.connection.cursor()
         cur.execute('''CREATE TABLE "Keywords"
                (ID SERIAL PRIMARY KEY NOT NULL,
-               Keyword TEXT NOT NULL,
+               Keyword TEXT NOT NULL UNIQUE,
                Category TEXT NOT NULL);''')
         print ("--------Table Keywords created successfully--------")
 
@@ -113,7 +113,8 @@ class Database:
                Keyword_ID INT NOT NULL,
                FOREIGN KEY (Answer_ID) REFERENCES "Answers"(ID),
                FOREIGN KEY (Keyword_ID) REFERENCES "Keywords"(ID),
-               PRIMARY KEY(Answer_ID, Keyword_ID));''')
+               PRIMARY KEY(Answer_ID, Keyword_ID)
+               CONSTRAINT uniqueAKs UNIQUE (Answer_ID, Keyword_ID));''')
         print ("--------Table Answers_Keywords created successfully--------")
 
     def deleteTable_Answers_Keywords(self):
