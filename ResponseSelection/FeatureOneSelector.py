@@ -61,8 +61,8 @@ class FeatureOneSelector():
         keywordsID = self.retriveSynonymID(k)
         # ner = WordRecognizer.namedEntity(k)
         mostCommenAnswers = self.retriveAnswersID(keywordsID)
-        print("MM:" , mostCommenAnswers[0][1])
         if len(mostCommenAnswers) == 0 | mostCommenAnswers[0][1] < 3:
+            print("MM:" , mostCommenAnswers)
             return "Sorry I have no answers to this question!"
         answer = self.retriveAnswer(mostCommenAnswers)
         print (answer)
