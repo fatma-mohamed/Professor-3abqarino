@@ -35,7 +35,7 @@ class DataPreprocessing:
             values = ["'" + answer + "'"]
             answer_id = db_access.select("Answers", cols, parameters, values, "")
 
-            tokens = parser.tokenize(question)
+            tokens = parser.tokenize(question.lower())
             keywords = parser.removeStopWords(tokens)
             keywords_id = []
             for k in keywords:
