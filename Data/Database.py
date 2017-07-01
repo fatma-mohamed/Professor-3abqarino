@@ -241,6 +241,14 @@ class Database:
         cur.execute('''DELETE FROM "Tag"''')
         self.connection.commit()
 
+    def deleteAAData(self):
+        cur = self.connection.cursor()
+        cur.execute('''DELETE FROM "Answers_Keywords";''')
+        cur.execute('''DELETE FROM "Answers";''')
+        cur.execute('''DELETE FROM "Synonyms";''')
+        cur.execute('''DELETE FROM "Keywords";''')
+        self.connection.commit()
+
     def deleteGifData(self):
         cur = self.connection.cursor()
         cur.execute('''DELETE FROM "Gifs";''')

@@ -8,7 +8,7 @@ from flask import Flask, render_template
 from flask import request
 from flask import make_response
 from ResponseSelection import ResponseSelector, FeatureOneSelector
-from Preprocessing import MenuPreprocessing
+from Preprocessing import MenuPreprocessing, DataPreprocessing
 from Data import Database
 
 # Flask app should start in global layout
@@ -64,6 +64,11 @@ def makeWebhookResult(req):
         return responseSelector.getResult()
     elif action == "about":
         return ResponseSelector.ResponseSelector().about()
+    elif action == "pre":
+        m = Database.Database()
+        m.deleteAAData()
+        d = DataPreprocessing.DataPreprocessing()
+        d.insertAnswers_and_keywords()
     else:
         return {}
 
