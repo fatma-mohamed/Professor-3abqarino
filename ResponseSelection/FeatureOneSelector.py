@@ -10,7 +10,7 @@ class FeatureOneSelector():
     question = ""
 
     def __init__(self, question):
-        self.question = question
+        self.question = question.lower()
 
 
     def getResult(self):
