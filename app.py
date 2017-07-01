@@ -7,8 +7,8 @@ import os
 from flask import Flask, render_template
 from flask import request
 from flask import make_response
-from ResponseSelection import ResponseSelector, FeatureOneSelector, FeatureTwoSelector
-from Preprocessing import DataPreprocessing, MenuPreprocessing
+from ResponseSelection import ResponseSelector, FeatureOneSelector
+from Preprocessing import MenuPreprocessing
 from Data import Database
 
 # Flask app should start in global layout
@@ -31,8 +31,6 @@ def notify():
 def preprocess():
     m = MenuPreprocessing.MenuPreprocessing()
     m.__run__()
-    p = DataPreprocessing.DataPreprocessing()
-    p.__run__()
 
 
 @app.route('/webhook', methods=['POST', 'GET'])
@@ -64,12 +62,6 @@ def makeWebhookResult(req):
         question = (req.get("result")).get("resolvedQuery")
         responseSelector = FeatureOneSelector.FeatureOneSelector(question)
         return responseSelector.getResult()
-    elif action == "request-game":
-        return FeatureTwoSelector.FeatureTwoSelector().getRandomQuestion()
-    elif action == "check-answer":
-        return FeatureTwoSelector.FeatureTwoSelector().CheckAnswerCorrectness(req.get("result").get("parameters"))
-    elif action == "get-correct-answer":
-        return FeatureTwoSelector.FeatureTwoSelector().getCorrectAnswer(req.get("result").get("parameters"))
     elif action == "about":
         return ResponseSelector.ResponseSelector().about()
     else:

@@ -6,15 +6,6 @@ from NLP.WordRecognizer import WordRecognizer
 
 class DataPreprocessing:
 
-    def __run__(self):
-        d = Database()
-        d.__deleteTables__()
-        d.__createTables__()
-        self.insertAnswers_and_keywords()
-        self.insertQuestions_Answers()
-        self.insertGifs()
-        self.insertNotifications()
-        print("Data preprocessing done!")
 
     @staticmethod
     def insertAnswers_and_keywords():
@@ -77,27 +68,7 @@ class DataPreprocessing:
                 conflict_fields = ["answer_id", "keyword_id"]
                 db.insert("Answers_Keywords", cols, values, conflict_fields, "")
         print ("Inserted Answers_Keywords rows")
-            
-    def insertQuestions_Answers(self):
-        db = Database()
-        f = open("Preprocessing/Question_Answers.txt", 'r')
-        i=0
-        while True:
-            Question = Question = DataPreprocessing.removeSinqleQuotes(f.readline().rstrip())
-            if Question == "":
-                print( "------Finished reading------")
-                break
-            A1 = DataPreprocessing.removeSinqleQuotes(f.readline().rstrip())
-            A2 = DataPreprocessing.removeSinqleQuotes(f.readline().rstrip())
-            A3 = DataPreprocessing.removeSinqleQuotes(f.readline().rstrip())
-            CA_ID = f.readline().rstrip()
-            cols = ["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"]
-            values=[ "'" + Question + "'" , "'" + A1 + "'" , "'" + A2 + "'" ,  "'" + A3 + "'" , "'" + str(CA_ID)+"'"]
-            conflict_fields=["Question", "Answer_1", "Answer_2", "Answer_3", "Correct_AnswerID"]
-            i += 1
-            print ("-----Row " + (str)(i) + " -----")
-            db.insert("Questions_Answers",cols,values,conflict_fields,'')
-        print ("Inserted Questions_Answers rows")
+
 
     @staticmethod
     def insertGifs():
