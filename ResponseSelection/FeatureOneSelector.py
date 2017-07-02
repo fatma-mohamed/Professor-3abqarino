@@ -78,8 +78,8 @@ class FeatureOneSelector():
         synonymKey = []
         Da = DataAccess.DataAccess()
         for word in keywords:
-            w="'"+word+"'"
-            word =DataPreprocessing.removeSinqleQuotes(w)
+            word =DataPreprocessing.removeSinqleQuotes(word)
+            w = "'" + word + "'"
             ids = Da.select("Keywords", ["id"], ["keyword"],[word],"")
             if len(ids)==0:
                 ids = Da.select("Synonyms", ["key_id"], ["synonym"],[word],"")
