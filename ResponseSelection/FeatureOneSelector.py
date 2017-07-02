@@ -10,7 +10,7 @@ class FeatureOneSelector():
     question = ""
 
     def __init__(self, question):
-        self.question = question
+        self.question = question.lower()
 
 
     def getResult(self):
@@ -61,7 +61,10 @@ class FeatureOneSelector():
         keywordsID = self.retriveSynonymID(k)
         # ner = WordRecognizer.namedEntity(k)
         mostCommenAnswers = self.retriveAnswersID(keywordsID)
+        print("MM:" , mostCommenAnswers)
         if len(mostCommenAnswers) == 0:
+            return "Sorry I have no answers to this question!"
+        elif  mostCommenAnswers[0][1] < 2:
             return "Sorry I have no answers to this question!"
         answer = self.retriveAnswer(mostCommenAnswers)
         print (answer)
@@ -77,7 +80,9 @@ class FeatureOneSelector():
         for word in keywords:
             w="'"+word+"'"
             word =w
-            ids = Da.select("Synonyms", ["key_id"], ["synonym"],[word],"")
+            ids = Da.select("Keywords", ["id"], ["keyword"],[word],"")
+            if len(ids)==0:
+                ids = Da.select("Synonyms", ["key_id"], ["synonym"],[word],"")
             synonymKey += ids
             # for  id  in ids:
             #     keyWord =Da.select("Keywords","keyword","id = "+id)
