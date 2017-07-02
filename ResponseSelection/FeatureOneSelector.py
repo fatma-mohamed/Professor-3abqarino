@@ -63,6 +63,8 @@ class FeatureOneSelector():
         mostCommenAnswers = self.retriveAnswersID(keywordsID)
         if len(mostCommenAnswers) == 0:
             return "Sorry I have no answers to this question!"
+        elif mostCommenAnswers[0][1] < 2:
+            return "Sorry I have no answers to this question!"
         answer = self.retriveAnswer(mostCommenAnswers)
         print (answer)
         print ("__________")
