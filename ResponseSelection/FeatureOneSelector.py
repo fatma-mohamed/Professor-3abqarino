@@ -75,12 +75,14 @@ class FeatureOneSelector():
         return answer[0][0]
 
     def retriveSynonymID(self, keywords):
-        synonymKey = keywords
+        synonymKey = []
         Da = DataAccess.DataAccess()
         for word in keywords:
             w="'"+word+"'"
             word =w
-            ids = Da.select("Synonyms", ["key_id"], ["synonym"],[word],"")
+            ids = Da.select("Keywords", ["id"], ["keyword"],[word],"")
+            if len(ids)==0:
+                ids = Da.select("Synonyms", ["key_id"], ["synonym"],[word],"")
             synonymKey += ids
             # for  id  in ids:
             #     keyWord =Da.select("Keywords","keyword","id = "+id)
