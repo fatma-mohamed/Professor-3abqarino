@@ -39,7 +39,6 @@ class DataPreprocessing:
             keywords = parser.removeStopWords(tokens)
             keywords_id = []
             for k in keywords:
-
                 cols = ["id"]
                 parameters = ["keyword"]
                 values = [ "'" + k + "'"]
@@ -49,7 +48,6 @@ class DataPreprocessing:
                     values = ["'" + k + "'"]
                     conflict_fields = ["keyword"]
                     db.insert("Keywords", cols, values, conflict_fields, "")
-
                     cols = ["id"]
                     parameters = ["keyword"]
                     values = ["'" + k + "'"]
