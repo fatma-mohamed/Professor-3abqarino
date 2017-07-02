@@ -64,11 +64,6 @@ def makeWebhookResult(req):
         return responseSelector.getResult()
     elif action == "about":
         return ResponseSelector.ResponseSelector().about()
-    elif action == "pre":
-        m = Database.Database()
-        m.deleteAAData()
-        d = DataPreprocessing.DataPreprocessing()
-        d.insertAnswers_and_keywords()
     else:
         return {}
 
