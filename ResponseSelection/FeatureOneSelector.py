@@ -75,7 +75,7 @@ class FeatureOneSelector():
         return answer[0][0]
 
     def retriveSynonymID(self, keywords):
-        synonymKey = []
+        synonymKey = keywords
         Da = DataAccess.DataAccess()
         for word in keywords:
             w="'"+word+"'"
