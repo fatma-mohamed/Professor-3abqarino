@@ -6,6 +6,7 @@ class WordRecognizer:
 
 	def getSynonym(self, word):
 		list = set()
+		list.add(word)
 		for w in wn.synsets(word):
 			list.add(w.lemmas()[0].name())
 		return list
