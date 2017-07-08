@@ -82,7 +82,7 @@ class ResponseSelector:
                             print conversation.get("participants").get("data")[0].get("name")
                             if pageScopedID[0][0] == 1194774927301799:
                                 print conversation.get("participants").get("data")[0].get("name")
-                                ids.append(pageScopedID[0][0]
+                                ids.append(pageScopedID[0][0])
                                 break
         return ids
 
