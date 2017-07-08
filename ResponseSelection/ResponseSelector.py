@@ -80,8 +80,9 @@ class ResponseSelector:
                         pageScopedID = DataAccess.DataAccess().select("User", ["Page_ScopedID"], ["App_ScopedID"], [appScopedID], "")
                         if pageScopedID != []:
                             print conversation.get("participants").get("data")[0].get("name")
-                            ids.append(pageScopedID[0][0])
-                            break
+                            if pageScopedID[0][0] == 1194774927301799:
+                                ids.append(pageScopedID[0][0])
+                                break
         return ids
 
     def getConversations(self):

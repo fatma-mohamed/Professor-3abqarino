@@ -63,10 +63,6 @@ def makeWebhookResult(req):
         return MenuPreprocessing.MenuPreprocessing().addMenu()
     elif req.get("result").get("action") == "about":
         return ResponseSelector.ResponseSelector().about()
-    elif req.get("result").get("action") == "notify":
-        Database.Database().deleteTable_Notification()
-        Database.Database().createTable_Notification()
-        DataPreprocessing.DataPreprocessing().insertNotifications()
     else:
         return {}
 
