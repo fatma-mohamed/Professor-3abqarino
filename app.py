@@ -9,6 +9,7 @@ from flask import make_response
 
 from ResponseSelection import ResponseSelector, FeatureTwoSelector
 from Preprocessing import *
+from Data import Database
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -23,6 +24,13 @@ def Home():
 def notify():
     responseSelector = ResponseSelector.ResponseSelector()
     responseSelector.notifyUser()
+
+@app.route('/preprocessing', methods=['POST','GET'])
+def preprocess():
+    m = MenuPreprocessing.MenuPreprocessing()
+    m.__run__()
+    p = DataPreprocessing.DataPreprocessing()
+    p.__run__()
 
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
@@ -66,5 +74,4 @@ if __name__ == '__main__':
     #print "Starting app on port %d" % port
 
     app.run(debug=True, port=port, host='0.0.0.0')
-
 

@@ -1,7 +1,5 @@
 from Data import Database
 
-import psycopg2
-
 class DataAccess:
     def selectRandom(self, table_name, cols, parameters, values, operators):
         db = Database.Database()
