@@ -74,11 +74,11 @@ class DataPreprocessing:
                     row = rows[0][0]
                     if row is not None:  # Check the existence of the tag used as an attachment.
                         cols = ["Message", "Attachment", "Type"]
-                        values = ["'" + Notification + "'", "'" + content[0] + "'", 'GIF']
+                        values = ["'" + Notification + "'", "'" + content[0] + "'", "GIF"]
                         noAttachment = False
                 elif content[1] == "Button":
                     cols = ["Message", "Attachment", "Type"]
-                    values = ["'" + Notification + "'", "'" + content[0] + "'", 'Button']
+                    values = ["'" + Notification + "'", "'" + content[0] + "'", "Button"]
                     noAttachment = False
             if noAttachment == True:
                 cols = ["Message"]
