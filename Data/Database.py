@@ -210,6 +210,7 @@ class Database:
                        (ID SERIAL PRIMARY KEY NOT NULL,
                        Message TEXT NOT NULL UNIQUE,
                        Attachment TEXT,
+                       Type TEXT,
                        FOREIGN KEY (Attachment) REFERENCES "Tag"(Tag));''')
         print("--------Table Notification created successfully--------")
 

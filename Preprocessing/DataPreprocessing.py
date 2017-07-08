@@ -67,14 +67,19 @@ class DataPreprocessing:
             noAttachment = True
             if "Attachment" in Notification:
                 content = Notification.split(" Attachment: ")
-                rows = db_access.select("Tag", ["Tag"], ["Tag"], ["'" + content[1] + "'"], "")
-                row = rows[0][0]
-                if row is not None:  # Check the existence of the tag used as an attachment.
-                    cols = ["Message", "Attachment"]
-                    values = ["'" + content[0] + "'", "'" + content[1] + "'"]
+                Notification = content[0]
+                content = content[1].split("-")
+                if content[1] == "GIF":
+                    rows = db_access.select("Tag", ["Tag"], ["Tag"], ["'" + content[0] + "'"], "")
+                    row = rows[0][0]
+                    if row is not None:  # Check the existence of the tag used as an attachment.
+                        cols = ["Message", "Attachment", "Type"]
+                        values = ["'" + Notification + "'", "'" + content[0] + "'", 'GIF']
+                        noAttachment = False
+                elif content[1] == "Button":
+                    cols = ["Message", "Attachment", "Type"]
+                    values = ["'" + Notification + "'", "'" + content[0] + "'", 'Button']
                     noAttachment = False
-                else:  # Tag doesn't exist ,, Modify Notification text to be inserted using next if condition.
-                    Notification = content[0]
             if noAttachment == True:
                 cols = ["Message"]
                 values = ["'" + Notification + "'"]

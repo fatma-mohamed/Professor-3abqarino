@@ -9,6 +9,7 @@ from flask import make_response
 
 from ResponseSelection import ResponseSelector, FeatureTwoSelector
 from Preprocessing import *
+from Data import Database
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -62,6 +63,10 @@ def makeWebhookResult(req):
         return MenuPreprocessing.MenuPreprocessing().addMenu()
     elif req.get("result").get("action") == "about":
         return ResponseSelector.ResponseSelector().about()
+    elif req.get("result").get("action") == "notify":
+        Database.Database().deleteTable_Notification()
+        Database.Database().createTable_Notification()
+        DataPreprocessing.DataPreprocessing().insertNotifications()
     else:
         return {}
 
