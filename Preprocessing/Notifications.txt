@@ -1,10 +1,10 @@
 Hey :D Long time no see!
 Hey! It has been a while :D Do u have any questions?
-Hey what's up? Would u like to play a game?
-Hey do u need any help? Attachment: help
-I'm bored, come play with me.
+Hey what's up? Would u like to play a game? Attachment: game-Button
+Hey do u need any help? Attachment: help-GIF
+I'm bored, come play with me. Attachment: game-Button
 How is your study, no questions?
-I'm just reminding you, I'm here to help you.
-What about a quick quiz? Attachment: game
-Don't you need any help? Attachment: help
+I'm just reminding you, I'm here to help you. Attachment: help-Button
+What about a quick quiz? Attachment: game-Button
+Don't you need any help? Attachment: help-GIF
 You have to keep studying and I'm here to help you.

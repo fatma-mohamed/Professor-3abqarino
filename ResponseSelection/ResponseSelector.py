@@ -101,32 +101,34 @@ class ResponseSelector:
 
         for userID in listOfUsersToNotify:
             paramRecipient = { "id": userID}
-            content = DataAccess.DataAccess().selectRandom("Notification", ["Message", "Attachment"], [], [], "")
+            content = DataAccess.DataAccess().selectRandom("Notification", ["Message", "Attachment", "Type"], [], [], "")
             msg = DataPreprocessing.DataPreprocessing().addSinqleQuotes(content[0][0])
             attachment = content[0][1]
             if(attachment != None): #If there's an attachment, send it before the message itself
-                attachedGif = DataAccess.DataAccess().selectRandom("Gifs", ["Url"], ["Gif_Tag"], ["'" + attachment + "'"], "")
-                paramUrl = {"url":attachedGif[0][0]}
-                paramPayload = json.dumps(paramUrl, ensure_ascii=False)
-                paramAttachment = {}
-                paramAttachment["type"] = "image"
-                paramAttachment["payload"] = json.dumps(paramPayload, ensure_ascii=False)
+                if content[0][2] == "GIF":
+                    attachedGif = DataAccess.DataAccess().selectRandom("Gifs", ["Url"], ["Gif_Tag"], ["'" + attachment + "'"], "")
+                    requestJSON = {'recipient': '{"id": ' + userID + '}',
+                                   "message": '{ "attachment": { "type":"image", "payload":{ "url":' + '"' + attachedGif[0][0] + '"' + ' } } }'
+                                   }
+                    r = requests.post(url, data=requestJSON, headers={'Content-type': 'application/json'})
+                    print(r.status_code, r.reason)
+                    print(r.text[:300] + '...')
+                elif content[0][2] == "Button":
+                    requestJSON = { "recipient": '{ "id": ' + str(userID) + ' }',
+           "message": '{ "attachment": { "type":"template", "payload":{ "template_type":"button", "text":' + '"' + msg + '"' + ', "buttons":[ { "type":"postback", "title":"' + attachment + '"' + ', "payload":"' + attachment + '"' + ' }]}}}'
+    }
+                    r = requests.post(url, data=requestJSON, headers={'Content-type': 'application/json'})
+                    print(r.status_code, r.reason)
+                    print(r.text[:300] + '...')
+            elif attachment == None or content[0][2] == "GIF": #If no attachment or there were a GIF then send the message, if button then the message was already sent
+                paramMessage = {"text": msg}
                 requestJSON = {}
                 requestJSON["recipient"] = json.dumps(paramRecipient, ensure_ascii=False)
-                requestJSON["message"] = json.dumps(paramAttachment, ensure_ascii=False)
+                requestJSON["message"] = json.dumps(paramMessage, ensure_ascii=False)
 
-                r = requests.post(url, data=requestJSON, headers={'Content-type': 'application/json'})
+                r = requests.post(url, data = requestJSON, headers={'Content-type': 'application/json'})
                 print(r.status_code, r.reason)
                 print(r.text[:300] + '...')
-
-            paramMessage = {"text": msg}
-            requestJSON = {}
-            requestJSON["recipient"] = json.dumps(paramRecipient, ensure_ascii=False)
-            requestJSON["message"] = json.dumps(paramMessage, ensure_ascii=False)
-    
-            r = requests.post(url, data = requestJSON, headers={'Content-type': 'application/json'})
-            print(r.status_code, r.reason)
-            print(r.text[:300] + '...')
 
     def about(self):
         page_id = config.page_id
