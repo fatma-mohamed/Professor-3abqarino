@@ -212,12 +212,14 @@ class Database:
                        Attachment TEXT,
                        Type TEXT,
                        FOREIGN KEY (Attachment) REFERENCES "Tag"(Tag));''')
+        self.connection.commit()
         print("--------Table Notification created successfully--------")
 
     def deleteTable_Notification(self):
         print ("--------in Database deleteTable_Notification--------")
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE IF EXISTS "Notification";''')
+        self.connection.commit()
         print("--------Table Notification deleted successfully--------")
 
     def deleteData(self):
