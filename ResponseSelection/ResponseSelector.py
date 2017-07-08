@@ -108,7 +108,7 @@ class ResponseSelector:
             if(attachment != None): #If there's an attachment, send it before the message itself
                 if content[0][2] == "GIF":
                     attachedGif = DataAccess.DataAccess().selectRandom("Gifs", ["Url"], ["Gif_Tag"], ["'" + attachment + "'"], "")
-                    requestJSON = {'recipient': '{"id": ' + userID + '}',
+                    requestJSON = {'recipient': '{"id": ' + str(userID) + '}',
                                    "message": '{ "attachment": { "type":"image", "payload":{ "url":' + '"' + attachedGif[0][0] + '"' + ' } } }'
                                    }
                     r = requests.post(url, data=requestJSON, headers={'Content-type': 'application/json'})
