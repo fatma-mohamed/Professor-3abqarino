@@ -7,17 +7,6 @@ from NLP.WordRecognizer import WordRecognizer
 class DataPreprocessing:
 
 
-    def __run__(self, db):
-        db.__createTables__()
-
-        return {
-            "speech": "Created tables",
-            "displayText": "",
-            "data": {},
-            "contextOut": [],
-            "source": "create-database"
-        }
-
     @staticmethod
     def insertAnswers_and_keywords():
         db = Database()
@@ -46,11 +35,10 @@ class DataPreprocessing:
             values = ["'" + answer + "'"]
             answer_id = db_access.select("Answers", cols, parameters, values, "")
 
-            tokens = parser.tokenize(question)
+            tokens = parser.tokenize(question.lower())
             keywords = parser.removeStopWords(tokens)
             keywords_id = []
             for k in keywords:
-
                 cols = ["id"]
                 parameters = ["keyword"]
                 values = [ "'" + k + "'"]
@@ -60,7 +48,6 @@ class DataPreprocessing:
                     values = ["'" + k + "'"]
                     conflict_fields = ["keyword"]
                     db.insert("Keywords", cols, values, conflict_fields, "")
-
                     cols = ["id"]
                     parameters = ["keyword"]
                     values = ["'" + k + "'"]
@@ -78,6 +65,8 @@ class DataPreprocessing:
                 values = [str(answer_id[0][0]) + "," + str(i)]
                 conflict_fields = ["answer_id", "keyword_id"]
                 db.insert("Answers_Keywords", cols, values, conflict_fields, "")
+        print ("Inserted Answers_Keywords rows")
+
 
     @staticmethod
     def insertGifs():
@@ -93,9 +82,50 @@ class DataPreprocessing:
             name = "'" + arr[0].strip("\n") + "'"
             url = "'" + arr[1].strip("\n") + "'"
             tag = "'" + arr[2].strip("\n") + "'"
-            db.insert("Gifs", ["Name", "Url" , "Tag"], [name,url,tag],"","")
+            db.insert("Tag",["tag"],[tag],["tag"],"")
+            db.insert("Gifs", ["name", "url" , "gif_tag"], [name,url,tag],"","")
+        print ("Inserted Tags & Gifs")
+        
+    @staticmethod
+    def insertNotifications():
+        db = Database()
+        db_access = DataAccess()
+        f = open("Preprocessing/Notifications.txt", 'r')
+        i = 0
+        while True:
+            Notification = DataPreprocessing.removeSinqleQuotes(f.readline().rstrip())
+            if Notification == "":
+                print("------Finished reading------")
+                break
+
+            cols = []
+            values = []
+            noAttachment = True
+            if "Attachment" in Notification:
+                content = Notification.split(" Attachment: ")
+                rows = db_access.select("Tag", ["Tag"], ["Tag"], ["'" + content[1] + "'"], "")
+                row = rows[0][0]
+                if row is not None: # Check the existence of the tag used as an attachment.
+                    cols = ["Message", "Attachment"]
+                    values = ["'" + content[0] + "'", "'" + content[1] + "'"]
+                    noAttachment = False
+                else: # Tag doesn't exist ,, Modify Notification text to be inserted using next if condition.
+                    Notification = content[0]
+            if noAttachment == True:
+                cols = ["Message"]
+                values = ["'" + Notification + "'"]
+            conflict_fields = ["Message"]
+            i += 1
+            print ("-----Notification number :: " + (str)(i) + " -----")
+            db.insert("Notification", cols, values, conflict_fields, "")
+        print ("Inserted Notification messages")
 
     @staticmethod
     def removeSinqleQuotes(s):
         res = s.replace("'", '"')
+        return res
+    
+    @staticmethod
+    def addSinqleQuotes(s):
+        res = s.replace('"', "'")
         return res

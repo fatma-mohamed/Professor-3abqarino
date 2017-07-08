@@ -1,5 +1,7 @@
 from NLP.TextParser import TextParser
 from NLP.WordRecognizer import WordRecognizer
+from Preprocessing.DataPreprocessing import DataPreprocessing
+import ResponseSelection
 from Data import DataAccess
 from collections import Counter
 
@@ -8,30 +10,48 @@ class FeatureOneSelector():
     question = ""
 
     def __init__(self, question):
-        self.question = question
+        self.question = question.lower()
 
 
     def getResult(self):
+        print ("QUES:", self.question)
         answer = self.getAnswer()
-        if "sorry" in answer:
-            db = DataAccess.DataAccess()
-            url = db.selectGifsRandom("Gifs", ["url"] , ["tag"] , ["'question-mark'"] , "")
-            print ("URL: ", url)
-            return {
-                "speech": "",
-                "displayText": "",
-                "data": {},
-                "contextOut": [],
-                "source": "prof-3abqarino_webhook",
-                "followupEvent": {"name": "ask_question_event",
-                                  "data": {"imageURL": url, "speech":answer}}
-            }
+        if "Sorry" in answer:
+            res = ResponseSelection.ResponseSelector.ResponseSelector()
+            webAnswer = res.webSearch(self.question)
+            print("WEB: ", webAnswer)
+            if not webAnswer.get("data"):
+                db = DataAccess.DataAccess()
+                url = db.selectRandom("Gifs", ["url"], ["gif_tag"], ["'question-mark'"], "")
+                url = url[0][0]
+                print("URL: ", url)
+                return {
+                    "speech": answer,
+                    "displayText": "",
+                    "data": {
+                        "facebook": [
+                            {
+                                "text" : answer
+                            },
+                            {
+                                "attachment": {
+                                    "type": "image",
+                                    "payload": {
+                                        "url": url
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "contextOut": [],
+                    "source": "webhook-FeatureOneSelector-getResult"
+                }
+            else:
+                return webAnswer
         else:
             return {
-                "speech": answer,
-                "source": "prof-3abqarino_webhook",
-                "displayText": answer
-
+                "speech": DataPreprocessing.addSinqleQuotes(answer),
+                "source": "webhook-FeatureOneSelector-getResult"
             }
 
     def getAnswer(self):
@@ -41,8 +61,11 @@ class FeatureOneSelector():
         keywordsID = self.retriveSynonymID(k)
         # ner = WordRecognizer.namedEntity(k)
         mostCommenAnswers = self.retriveAnswersID(keywordsID)
+        print("MM:" , mostCommenAnswers)
         if len(mostCommenAnswers) == 0:
-            return "sorry I have no answers to this question!"
+            return "Sorry I have no answers to this question!"
+        elif  mostCommenAnswers[0][1] < 2:
+            return "Sorry I have no answers to this question!"
         answer = self.retriveAnswer(mostCommenAnswers)
         print (answer)
         print ("__________")
@@ -57,7 +80,9 @@ class FeatureOneSelector():
         for word in keywords:
             w="'"+word+"'"
             word =w
-            ids = Da.select("Synonyms", ["key_id"], ["synonym"],[word],"")
+            ids = Da.select("Keywords", ["id"], ["keyword"],[word],"")
+            if len(ids)==0:
+                ids = Da.select("Synonyms", ["key_id"], ["synonym"],[word],"")
             synonymKey += ids
             # for  id  in ids:
             #     keyWord =Da.select("Keywords","keyword","id = "+id)
@@ -80,3 +105,7 @@ class FeatureOneSelector():
         print (IDs)
         Answer = Da.select("Answers", ["answer"], ["id"] , [str(IDs[0][0][0])],"")
         return Answer
+
+
+
+

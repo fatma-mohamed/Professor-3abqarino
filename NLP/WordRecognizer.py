@@ -1,9 +1,12 @@
 from nltk.corpus import wordnet as wn
 from nltk import word_tokenize, pos_tag, ne_chunk
+
+
 class WordRecognizer:
 
 	def getSynonym(self, word):
 		list = set()
+		list.add(word)
 		for w in wn.synsets(word):
 			list.add(w.lemmas()[0].name())
 		return list
