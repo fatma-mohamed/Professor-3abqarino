@@ -72,7 +72,7 @@ class ResponseSelector:
             current_time = datetime.datetime.now() + datetime.timedelta(hours=2)  # Convert to GMT (now + (-2)H)
             resultedTime = current_time - updated_time  # Didn't talk since...
             dayIndex = str(resultedTime).find("day")  # Get day index in result, -1 if not exist
-            if dayIndex > 0 and int(str(resultedTime)[:dayIndex-1]) >= 2:  # If day exists and number of days more than 2 ,, then notify user.
+            if True or dayIndex > 0 and int(str(resultedTime)[:dayIndex-1]) >= 2:  # If day exists and number of days more than 2 ,, then notify user.
                 conversationData = conversation.get("participants").get("data")
                 for participant in conversationData:
                     if participant.get("id") != config.page_id:  # Current participant isn't the page
@@ -80,8 +80,9 @@ class ResponseSelector:
                         pageScopedID = DataAccess.DataAccess().select("User", ["Page_ScopedID"], ["App_ScopedID"], [appScopedID], "")
                         if pageScopedID != []:
                             print conversation.get("participants").get("data")[0].get("name")
-                            ids.append(pageScopedID[0][0])
-                            break
+                            if pageScopedID[0][0] == 1194774927301799:
+                                ids.append(pageScopedID[0][0])
+                                break
         return ids
 
     def getConversations(self):
