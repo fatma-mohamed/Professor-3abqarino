@@ -81,7 +81,6 @@ class ResponseSelector:
                         if pageScopedID != []:
                             print conversation.get("participants").get("data")[0].get("name")
                             if pageScopedID[0][0] == 1194774927301799:
-                                print conversation.get("participants").get("data")[0].get("name")
                                 ids.append(pageScopedID[0][0])
                                 break
         return ids
@@ -116,7 +115,7 @@ class ResponseSelector:
                     print(r.status_code, r.reason)
                     print(r.text[:300] + '...')
                 elif content[0][2] == "Button":
-                    requestJSON = { "recipient": '{ "id": ' + userID + ' }',
+                    requestJSON = { "recipient": '{ "id": ' + str(userID) + ' }',
            "message": '{ "attachment": { "type":"template", "payload":{ "template_type":"button", "text":' + '"' + msg + '"' + ', "buttons":[ { "type":"postback", "title":"' + attachment + '"' + ', "payload":"' + attachment + '"' + ' }]}}}'
     }
                     r = requests.post(url, data=requestJSON, headers={'Content-type': 'application/json'})
