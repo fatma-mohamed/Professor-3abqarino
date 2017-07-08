@@ -121,7 +121,7 @@ class ResponseSelector:
                     r = requests.post(url, data=requestJSON, headers={'Content-type': 'application/json'})
                     print(r.status_code, r.reason)
                     print(r.text[:300] + '...')
-            elif attachment == None or content[0][2] == "GIF": #If no attachment or there were a GIF then send the message, if button then the message was already sent
+            if attachment == None or content[0][2] == "GIF": #If no attachment or there were a GIF then send the message, if button then the message was already sent
                 paramMessage = {"text": msg}
                 requestJSON = {}
                 requestJSON["recipient"] = json.dumps(paramRecipient, ensure_ascii=False)
