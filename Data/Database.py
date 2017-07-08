@@ -9,19 +9,20 @@ from flask import make_response
 import psycopg2
 import urlparse
 
+
 class Database:
     connection = None
-    
+
     def __init__(self):
         print ("--------in Database __init__--------")
         urlparse.uses_netloc.append("postgres")
         url = urlparse.urlparse(os.environ["DATABASE_URL"])
         self.connection = psycopg2.connect(
-        database=url.path[1:],
-        user=url.username,
-        password=url.password,
-        host=url.hostname,
-        port=url.port
+            database=url.path[1:],
+            user=url.username,
+            password=url.password,
+            host=url.hostname,
+            port=url.port
         )
         print ("--------Opened database successfully--------")
 
@@ -40,8 +41,8 @@ class Database:
         self.connection.commit()
         print ("--------Tables created successfully--------")
 
-       ### conn.close()
-       ### print "--------Connection closed--------"
+        ### conn.close()
+        ### print "--------Connection closed--------"
         return {
             "speech": "Created tables",
             "displayText": "",
@@ -73,7 +74,6 @@ class Database:
             "source": "webhook-Database-delete_tables"
         }
 
-
     def createTable_Answers(self):
         print ("--------in Database createTable_Answers--------")
         cur = self.connection.cursor()
@@ -87,7 +87,6 @@ class Database:
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE IF EXISTS "Answers";''')
         print ("--------Table Answers deleted successfully--------")
-
 
     def createTable_Keywords(self):
         print ("--------in Database createTable_Keywords--------")
@@ -103,7 +102,6 @@ class Database:
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE IF EXISTS "Keywords";''')
         print ("--------Table Keywords deleted successfully--------")
-
 
     def createTable_Answers_Keywords(self):
         print ("--------in Database createTable_Answers_Keywords--------")
@@ -123,7 +121,6 @@ class Database:
         cur.execute('''DROP TABLE IF EXISTS "Answers_Keywords";''')
         print ("--------Table Answers_Keywords deleted successfully--------")
 
-
     def createTable_Synonyms(self):
         print ("--------in Database createTable_Synonyms--------")
         cur = self.connection.cursor()
@@ -139,7 +136,6 @@ class Database:
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE IF EXISTS "Synonyms";''')
         print ("--------Table Synonyms deleted successfully--------")
-
 
     def createTable_Questions_Answers(self):
         print ("--------in Database createTable_Questions_Answers--------")
@@ -160,7 +156,6 @@ class Database:
         cur.execute('''DROP TABLE IF EXISTS "Questions_Answers";''')
         print("--------Table Questions_Answers deleted successfully--------")
 
-
     def createTable_Tag(self):
         print("--------in Database createTable_Tag--------")
         cur = self.connection.cursor()
@@ -174,7 +169,6 @@ class Database:
         cur = self.connection.cursor()
         cur.execute('''DROP TABLE IF EXISTS "Tag";''')
         print("--------Table Tag deleted successfully--------")
-
 
     def createTable_Gifs(self):
         print("--------in Database createTable_Gifs--------")
@@ -193,7 +187,6 @@ class Database:
         cur.execute('''DROP TABLE IF EXISTS "Gifs";''')
         print("--------Table Gifs deleted successfully--------")
 
-
     def createTable_User(self):
         print("--------in Database createTable_User--------")
         cur = self.connection.cursor()
@@ -210,7 +203,6 @@ class Database:
         cur.execute('''DROP TABLE IF EXISTS "User";''')
         print("--------Table User deleted successfully--------")
 
-
     def createTable_Notification(self):
         print("--------in Database createTable_Notification--------")
         cur = self.connection.cursor()
@@ -218,6 +210,7 @@ class Database:
                        (ID SERIAL PRIMARY KEY NOT NULL,
                        Message TEXT NOT NULL UNIQUE,
                        Attachment TEXT,
+                       Type TEXT,
                        FOREIGN KEY (Attachment) REFERENCES "Tag"(Tag));''')
         print("--------Table Notification created successfully--------")
 
@@ -227,7 +220,6 @@ class Database:
         cur.execute('''DROP TABLE IF EXISTS "Notification";''')
         print("--------Table Notification deleted successfully--------")
 
-        
     def deleteData(self):
         cur = self.connection.cursor()
         cur.execute('''DELETE FROM "Answers_Keywords";''')
@@ -254,7 +246,6 @@ class Database:
             "contextOut": [],
             "source": "webhook-Database-delete_gif_data"
         }
-
 
     def insert(self, table_name, cols, values, conflict_fields, conflict_do):
         cur = self.connection.cursor()
