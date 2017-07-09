@@ -23,6 +23,6 @@ pip install psycopg2
 
 
 ## Messenger QR code
-![QR-Code-Messenger](https://www.mediafire.com/?nyt53ykbf051k01)
+![QR-Code-Messenger](http://www.mediafire.com/convkey/8562/nyt53ykbf051k01zg.jpg)
 
 
