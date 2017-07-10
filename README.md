@@ -8,8 +8,9 @@ A Python web framework. You can find its documentation <a href="http://flask.poc
 ### NLTK
 A platform used for building Python programs that work with human language data for applying in statistical natural language processing. You can download it from <a href="https://pypi.python.org/pypi/nltk">here</a>.
 
-### Psycopg
-PostgreSQL adapter for the Python programming language. You can download it using pip:
+### Psycopg2
+PostgreSQL adapter for the Python programming language. You can find its documentation <a href="http://initd.org/psycopg/docs/">here</a>.
+Can be easily downloaded using pip:
 <pre>
 <code>
 pip install psycopg2
@@ -23,7 +24,5 @@ pip install psycopg2
 
 
 ## Messenger QR code
-![QR-Code-Messenger](https://www.facebook.com/messenger_code/generate/?image_format=image%2Fpng&image_size=420&profile_id=225552284515947&ext=1499903337&hash=AeR7bkWja7acQ0Yh)
-
-
+<img src="http://www.mediafire.com/convkey/0309/a3q99odjazxromuzg.jpg" alt="QR-Code-Messenger" width="200" height="200">
 
