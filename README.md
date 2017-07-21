@@ -1,5 +1,5 @@
 # Professor 3abqarino
-An educational chatbot running on Facebook Messenger that aims to help students better study and understand their course. Right now it's adapted to work with World History:Ancient Egypt course.
+An educational chatbot running on <a href="http://m.me/Prof.3abq">Facebook Messenger</a> that aims to help students better study and understand their course. Right now it's adapted to work with World History:Ancient Egypt course.
 
 ## Prerequisites
 ### Flask
