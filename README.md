@@ -20,7 +20,7 @@ pip install psycopg2
 
 
 ## Built with
-<a href="https://api.ai">Api.ai</a>
+<a href="https://api.ai">Dialogflow (previously known as Api.ai)</a>
 
 
 ## Messenger QR code
